@@ -1,0 +1,535 @@
+{% extends ('baseuser.html.twig') %}
+
+
+{%  block body %}
+
+    <!-- TOP AREA -->
+    <div class="top-area">
+        <div class="owl-carousel owl-slider" id="owl-carousel-slider" data-inner-pagination="true" data-white-pagination="true">
+            <div>
+                <div class="bg-holder">
+                    <img src="{{ asset('img/bridge_1200x480.jpg') }}" alt="Image Alternative text" title="Bridge" />
+                    <div class="vert-center text-white text-center slider-caption">
+                        <h2 class="text-uc">London Weekends</h2>
+                        <div class="countdown countdown-big" data-countdown="Jul 18, 2014 5:30:00"></div><a class="btn btn-lg btn-ghost btn-white" href="#">Save 50% Now</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-holder">
+                    <img src="{{ asset('img/4_strokes_of_fun_1200x480.jpg') }}" alt="Image Alternative text" title="4 Strokes of Fun" />
+                    <div class="vert-center text-white text-center slider-caption">
+                        <h2 class="text-uc">Adrenaline Madness</h2>
+                        <div class="countdown countdown-big" data-countdown="Jul 16, 2014 5:30:00"></div><a class="btn btn-lg btn-ghost btn-white" href="#">Save 50% Now</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="bg-holder">
+                    <img src="{{ asset('img/lhotel_porto_bay_sao_paulo_luxury_suite_1200x480.jpg') }}" alt="Image Alternative text" title="LHOTEL PORTO BAY SAO PAULO luxury suite" />
+                    <div class="vert-center text-white text-center slider-caption">
+                        <h2 class="text-uc">Premium Apartments</h2>
+                        <div class="countdown countdown-big" data-countdown="Jul 6, 2014 5:30:00"></div><a class="btn btn-lg btn-ghost btn-white" href="#">Save 80% Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END TOP AREA -->
+<!-- //////////////////////////////////
+//////////////PAGE CONTENT/////////////
+////////////////////////////////////-->
+
+
+    <div class="gap"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="text-center">
+                <h1>Explore Best Deals in Your City</h1>
+                <p class="text-bigger">Platea luctus aliquet per torquent nam varius hendrerit non odio risus aenean mus amet ad quisque velit nullam nunc curae metus proin blandit felis maecenas donec habitant semper morbi imperdiet</p>
+            </div>
+        </div>
+    </div>
+    <div class="gap"></div>
+</div>
+<div class="bg-holder">
+    <div class="bg-mask"></div>
+    <div class="bg-blur" style="background-image:url({{ asset('img/backgrounds/phone.jpg') }})"></div>
+    <div class="container bg-holder-content">
+        <div class="gap gap-big text-center">
+            <h1 class="mb30 text-white">Weekly Featured Items</h1>
+            <div class="row row-wrap">
+                <a class="col-md-3" href="#">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="{{ asset('img/our_coffee_miss_u_800x600.jpg') }}" alt="Image Alternative text" title="Our Coffee miss u" />
+                        </header>
+                        <div class="product-inner">
+                            <h5 class="product-title">Coffe Shop Discount</h5>
+                            <p class="product-desciption">Congue congue suspendisse fusce curabitur metus pulvinar platea</p>
+                            <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 6 days 43 h remaining</span>
+                                <ul class="product-price-list">
+                                    <li><span class="product-price">$183</span>
+                                    </li>
+                                    <li><span class="product-old-price">$261</span>
+                                    </li>
+                                    <li><span class="product-save">Save 70%</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="col-md-3" href="#">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="{{ asset('img/nikon_prime_love_800x600.jpg') }}" alt="Image Alternative text" title="Nikon Prime love" />
+                        </header>
+                        <div class="product-inner">
+                            <h5 class="product-title">Best Camera Lenthes</h5>
+                            <p class="product-desciption">Congue congue suspendisse fusce curabitur metus pulvinar platea</p>
+                            <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 7 days 4 h remaining</span>
+                                <ul class="product-price-list">
+                                    <li><span class="product-price">$61</span>
+                                    </li>
+                                    <li><span class="product-old-price">$104</span>
+                                    </li>
+                                    <li><span class="product-save">Save 59%</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="col-md-3" href="#">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="{{ asset('img/amaze_800x600.jpg') }}" alt="Image Alternative text" title="AMaze" />
+                        </header>
+                        <div class="product-inner">
+                            <h5 class="product-title">New Glass Collection</h5>
+                            <p class="product-desciption">Congue congue suspendisse fusce curabitur metus pulvinar platea</p>
+                            <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 7 days 32 h remaining</span>
+                                <ul class="product-price-list">
+                                    <li><span class="product-price">$123</span>
+                                    </li>
+                                    <li><span class="product-old-price">$300</span>
+                                    </li>
+                                    <li><span class="product-save">Save 41%</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="col-md-3" href="#">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="{{ asset('img/my_ice_cream_and_your_ice_cream_spoons_800x600.jpg') }}" alt="Image Alternative text" title="My Ice Cream and Your Ice Cream Spoons" />
+                        </header>
+                        <div class="product-inner">
+                            <h5 class="product-title">Lovely Ice Cream Spoons</h5>
+                            <p class="product-desciption">Congue congue suspendisse fusce curabitur metus pulvinar platea</p>
+                            <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 8 days 2 h remaining</span>
+                                <ul class="product-price-list">
+                                    <li><span class="product-price">$70</span>
+                                    </li>
+                                    <li><span class="product-old-price">$101</span>
+                                    </li>
+                                    <li><span class="product-save">Save 69%</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                        </div>
+                    </div>
+                </a>
+            </div>	<a href="#" class="btn btn-white btn-lg btn-ghost">Find More</a>
+        </div>
+    </div>
+</div>
+<div class="gap"></div>
+<div class="container">
+    <div class="text-center">
+        <h2 class="mb30">New Deals in Your City</h2>
+        <div class="row row-wrap" id="masonry">
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/cascada_800x600.jpg') }}" alt="Image Alternative text" title="cascada" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Adventure in Woods</h5>
+                        <div class="product-desciption">Vulputate interdum magna cubilia faucibus sodales</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 3 days 22 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$151</span>
+                                </li>
+                                <li><span class="product-old-price">$260</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/my_ice_cream_and_your_ice_cream_spoons_800x600.jpg') }}" alt="Image Alternative text" title="My Ice Cream and Your Ice Cream Spoons" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Lovely Ice Cream Spoons</h5>
+                        <div class="product-desciption">Vel sit feugiat natoque orci</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 7 days 7 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$99</span>
+                                </li>
+                                <li><span class="product-old-price">$144</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/iphone_5_ipad_mini_ipad_3_800x600.jpg') }}" alt="Image Alternative text" title="iPhone 5 iPad mini iPad 3" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Electronics Big Deal</h5>
+                        <div class="product-desciption">Ut nibh feugiat molestie adipiscing metus aenean</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 1 day 57 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$68</span>
+                                </li>
+                                <li><span class="product-old-price">$115</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/a_turn_800x600.jpg') }}" alt="Image Alternative text" title="a turn" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Diving with Sharks</h5>
+                        <div class="product-desciption">Pellentesque penatibus suscipit enim potenti nascetur dapibus</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i>  55 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$48</span>
+                                </li>
+                                <li><span class="product-old-price">$142</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/waipio_valley_800x600.jpg') }}" alt="Image Alternative text" title="waipio valley" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Awesome Vacation</h5>
+                        <div class="product-desciption">Neque amet a vel arcu vel consectetur</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i>  51 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$78</span>
+                                </li>
+                                <li><span class="product-old-price">$147</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/green_furniture_800x600.jpg') }}" alt="Image Alternative text" title="Green Furniture" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Green Furniture Pack</h5>
+                        <div class="product-desciption">Suscipit adipiscing a et duis sed ut</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 2 days 3 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$90</span>
+                                </li>
+                                <li><span class="product-old-price">$139</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/the_violin_800x600.jpg') }}" alt="Image Alternative text" title="The Violin" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Violin Lessons</h5>
+                        <div class="product-desciption">At nisi varius proin tortor duis himenaeos</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 3 days 54 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$51</span>
+                                </li>
+                                <li><span class="product-old-price">$113</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/our_coffee_miss_u_800x600.jpg') }}" alt="Image Alternative text" title="Our Coffee miss u" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Coffe Shop Discount</h5>
+                        <div class="product-desciption">Massa semper elementum convallis placerat cras</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 5 days 15 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$62</span>
+                                </li>
+                                <li><span class="product-old-price">$200</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/the_best_mode_of_transport_here_in_maldives_800x600.jpg') }}" alt="Image Alternative text" title="the best mode of transport here in maldives" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Finshing in Maldives</h5>
+                        <div class="product-desciption">Lobortis pellentesque magna est augue eleifend</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 2 days 51 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$53</span>
+                                </li>
+                                <li><span class="product-old-price">$165</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/the_hidden_power_of_the_heart_800x600.jpg') }}" alt="Image Alternative text" title="The Hidden Power of the Heart" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Beach Holidays</h5>
+                        <div class="product-desciption">Eleifend dui eget ante curabitur lacinia in</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 5 days 34 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$157</span>
+                                </li>
+                                <li><span class="product-old-price">$275</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/food_is_pride_800x600.jpg') }}" alt="Image Alternative text" title="Food is Pride" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Best Pasta</h5>
+                        <div class="product-desciption">Egestas donec eleifend parturient leo parturient</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 9 days 12 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$162</span>
+                                </li>
+                                <li><span class="product-old-price">$289</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/nikon_prime_love_800x600.jpg') }}" alt="Image Alternative text" title="Nikon Prime love" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Best Camera Lenthes</h5>
+                        <div class="product-desciption">Leo dictumst nascetur fusce arcu</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 8 days 51 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$71</span>
+                                </li>
+                                <li><span class="product-old-price">$204</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/amaze_800x600.jpg') }}" alt="Image Alternative text" title="AMaze" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">New Glass Collection</h5>
+                        <div class="product-desciption">Suspendisse nunc tristique sapien vel ac metus</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i>  22 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$68</span>
+                                </li>
+                                <li><span class="product-old-price">$185</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/gamer_chick_800x600.jpg') }}" alt="Image Alternative text" title="Gamer Chick" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Playstation Accessories</h5>
+                        <div class="product-desciption">Mi congue per elit aliquet nunc etiam</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 4 days 54 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$96</span>
+                                </li>
+                                <li><span class="product-old-price">$169</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/hot_mixer_800x600.jpg') }}" alt="Image Alternative text" title="Hot mixer" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Modern DJ Set</h5>
+                        <div class="product-desciption">Nam vehicula vestibulum tristique suspendisse eu</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 7 days 28 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$155</span>
+                                </li>
+                                <li><span class="product-old-price">$282</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/aspen_lounge_chair_800x600.jpg') }}" alt="Image Alternative text" title="Aspen Lounge Chair" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Aspen Lounge Chair</h5>
+                        <div class="product-desciption">A himenaeos tellus hac velit</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 8 days 9 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$65</span>
+                                </li>
+                                <li><span class="product-old-price">$120</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/cup_on_red_800x600.jpg') }}" alt="Image Alternative text" title="Cup on red" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Fancy Coffe Cup</h5>
+                        <div class="product-desciption">Vivamus dignissim porta porttitor cum per nostra</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 3 days 14 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$71</span>
+                                </li>
+                                <li><span class="product-old-price">$125</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+            <a class="col-md-2 col-masonry" href="#">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <img src="{{ asset('img/ana_29_800x600.jpg') }}" alt="Image Alternative text" title="Ana 29" />
+                    </header>
+                    <div class="product-inner">
+                        <h5 class="product-title">Hot Summer Collection</h5>
+                        <div class="product-desciption">Taciti per dui adipiscing quam lectus bibendum</div>
+                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 10 days 48 h</span>
+                            <ul class="product-price-list">
+                                <li><span class="product-price">$61</span>
+                                </li>
+                                <li><span class="product-old-price">$152</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                    </div>
+                </div>
+            </a>
+        </div>	<a href="#" class="btn btn-primary btn-ghost">Explore All New Deals</a>
+    </div>
+    <div class="gap"></div>
+</div>
+
+
+<!-- //////////////////////////////////
+//////////////END PAGE CONTENT/////////
+////////////////////////////////////-->
+
+
+
+
+
+{% endblock %}
+

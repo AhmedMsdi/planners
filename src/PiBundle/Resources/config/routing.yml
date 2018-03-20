@@ -1,0 +1,10 @@
+pi_homepage:
+    path:     /
+    defaults: { _controller: PiBundle:Default:index }
+
+profil:
+    path:     /profil
+    defaults: { _controller: PiBundle:Default:profil }
+
+
+

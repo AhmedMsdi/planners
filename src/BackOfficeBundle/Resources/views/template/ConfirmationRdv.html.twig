@@ -1,0 +1,50 @@
+
+
+<h5>Vos Rendez-vous :</h5>
+<table class="table">
+    <thead>
+    <tr>
+        <th>Patient</th>
+        <th>Date</th>
+        <th>Heure</th>
+        <th>Confirmer</th>
+        <th>Annuler RDV</th>
+        <th>Etat</th>
+        <th>Fiche patient</th>
+    </tr>
+    </thead>
+    {% for j in rdvall %}
+    {% if j.medecin.id == app.user.id %}
+        <tbody>
+        {%  if j.confirme==0 %}
+            <tr style="background-color: #dca7a7;opacity: 1;color: black;font-size: large;text-align: center">
+                <td style="color: #0c1923">{{ j.utilisateur.nom  }} {{ j.utilisateur.prenom }}</td>
+                <td scope="row" style="color: #0c1923">{{ j.date }}</td>
+                <td style="color: #0c1923">{{ j.heure }}</td>
+                <td><button onclick="confirmer('{{ j.id}}')" style="background-color: transparent"><span class="glyphicon glyphicon-check" style="color: green;background-color: transparent"></span></button></td>
+                {#<td style="color: #0c1923"><button style="background-color: transparent" data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></td>#}
+                <td style="color: #0c1923"> <span class="glyphicon glyphicon-lock"></span></td>
+                <td>    <p style="height: 10px;"><span class="glyphicon glyphicon-time"></span>En Attente</p></td>
+                <td style="color: #0c1923"> <span class="glyphicon glyphicon-lock"></span></td>
+            </tr>
+        {% endif %}
+        {%  if j.confirme==1 %}
+            <tr style="background-color: #6dc068;opacity: 1;color: black;font-size: large;text-align: center">
+                <td style="color: #0c1923">{{ j.utilisateur.nom  }} {{ j.utilisateur.prenom }}</td>
+                <td scope="row" style="color: #0c1923">{{ j.date }}</td>
+                <td style="color: #0c1923">{{ j.heure }}</td>
+                <td><span class="glyphicon glyphicon-check"></span></td>
+                {#<td style="color: #0c1923"><button data-toggle="modal" data-target="#edit"><span class="glyphicon glyphicon-pencil"></span></button></td>#}
+                <td style="color: #0c1923"><button style="background-color: transparent" onclick="annuler('{{ j.id }}')" > <span class="glyphicon glyphicon-remove-circle"></span> </button></td>
+                <td><p style="height: 10px;"><span class="glyphicon glyphicon-check"></span>Validé</p></td>
+                <td><a href="{{ path('pdf_rdv',{'id': j.id}) }}" class="glyphicon glyphicon-file"></a></td>
+            </tr>
+        {% endif %}
+
+
+
+    {% endif %}
+        {% endfor %}
+        </tbody>
+    </table>
+

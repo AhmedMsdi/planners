@@ -1,0 +1,27 @@
+back_office_homepage:
+    path:     /admin
+    defaults: { _controller: BackOfficeBundle:Default:index }
+
+layout:
+    path:     /layout
+    defaults: { _controller: BackOfficeBundle:Default:layout }
+
+widget:
+    path:     /widget
+    defaults: { _controller: BackOfficeBundle:Default:widget}
+
+chart:
+    path:     /chart
+    defaults: { _controller: BackOfficeBundle:Default:chart }
+table:
+    path:     /table
+    defaults: { _controller: BackOfficeBundle:Default:table }
+form:
+    path:     /form
+    defaults: { _controller: BackOfficeBundle:Default:form }
+panel:
+    path:     /panel
+    defaults: { _controller: BackOfficeBundle:Default:panel }
+icon:
+    path:     /icon
+    defaults: { _controller: BackOfficeBundle:Default:icon }

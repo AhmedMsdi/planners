@@ -1,0 +1,56 @@
+
+
+            {#<div class="sonata-ba-delete">#}
+
+                {#<div class="box box-danger">#}
+                    {#<div class="box-body col-md-12">#}
+            <div class="modal-body">
+                        <form class="form-horizontal-interview" role="form" enctype="multipart/form-data"
+                        action="{{ path('ajaxEdit',{'id':medecin.id}) }}"
+                        method="POST">
+
+                                <div class="form-group">
+                                    <p>Nom</p>
+                                    {#{{ form_start(edit_form) }}#}
+                                    <input class="form-control " type="text" placeholder="nom" id="nom" name="nom" value={{ medecin.nom }}>
+                                    {#{{form_widget(edit_form.nom ,{ 'attr': {'class': "form-control",'placeholder': "Nom"}})}}#}
+                                </div>
+                                <div class="form-group">
+                                    <p>Prénom</p>
+                                    <input class="form-control " type="text" placeholder="prenom" id="prenom" name="prenom" value={{ medecin.prenom }}>
+                                    {#{{form_widget(edit_form.prenom ,{ 'attr': {'class': "form-control",'placeholder': "Prenom"}})}}#}
+                                </div>
+                                <div class="form-group">
+                                    <p>Spécialité</p>
+                                    <input type="text" class="form-control" placeholder="specialite" id="specialite" name="specialite" value={{ medecin.specialite }}>
+                                    {#{{form_widget(edit_form.specialite ,{ 'attr': {'class': "form-control",'placeholder': "adresse"}})}}#}
+                                </div>
+                                <div class="form-group">
+                                    <p>Adresse</p>
+                                    <input type="text" class="form-control" placeholder="adresse" id="adresse" name="adresse" value={{ medecin.adresse }}>
+                                    {#{{form_widget(edit_form.specialite ,{ 'attr': {'class': "form-control",'placeholder': "adresse"}})}}#}
+                                </div>
+
+
+                            <div class="modal-footer ">
+                                <input value="Modifier" type="submit" onclick="saveData()" class="btn btn-success btn-lg glyphicon glyphicon-ok-sign" style="width: 100%" >  
+                            </div>
+
+
+                            </form>
+
+
+                    {#</div>#}
+
+
+
+        {#</div>#}
+            {#</div>#}
+
+
+
+
+            </div>
+
+{#</div>#}
+

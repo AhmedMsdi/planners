@@ -1,0 +1,83 @@
+
+{% trans_default_domain 'FOSUserBundle' %}
+{% extends ('baseuser.html.twig') %}
+{%  block body %}
+    <div class="top-content">
+
+    <div class="inner-bg">
+        <div class="container" style="position: relative;margin-left: 400px;">
+
+            <div class="col-sm-5">
+
+                <div class="form-box">
+                    <div class="form-top" style="">
+                        <div class="form-top-left">
+                            <h3>Sign up now</h3>
+
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-bottom">
+
+                        {#<form role="form" action="{{ path('fos_user_registration_register') }}" method="post" class="registration-form fos_user_registration_register">#}
+                        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+                        <div class="form-group">
+                            {#<label class="sr-only " for="form-first-name">Nom</label>#}
+                            {#<input type="text" name="nom" placeholder="Nom.." class="form-first-name form-control" id="form-first-name">#}
+                            {{ form_widget(form.nom,{'attr':{'class':'form-first-name form-control','placeholder':'Nom'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {#<label class="sr-only " for="form-first-name">Prenom</label>#}
+                            {#<input type="text" name="nom" placeholder="Nom.." class="form-first-name form-control" id="form-first-name">#}
+                            {{ form_widget(form.prenom,{'attr':{'class':'form-first-name form-control','placeholder':'Prenom'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {#<label class="sr-only" for="form-last-name">Email</label>#}
+                            {#<input type="text" name="prenom" placeholder="Prenom..." class="form-last-name form-control" id="form-last-name">#}
+                            {{ form_widget(form.email,{'attr':{'class':'form-first-name form-control','placeholder':'email'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {#<label class="sr-only" for="form-email">Username</label>#}
+                            {#<input type="text" name="email" placeholder="Email..." class="form-email form-control" id="form-email">#}
+                            {{ form_widget(form.username,{'attr':{'class':'form-first-name form-control','placeholder':'Username'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {#<label class="sr-only" for="form-email">Password</label>#}
+                            {#<input type="text" name="email" placeholder="Email..." class="form-email form-control" id="form-email">#}
+                            {{ form_widget(form.plainPassword.first,{'attr':{'class':'form-first-name form-control','placeholder':'Password'}}) }}
+                        </div>
+                        <div class="form-group">
+                            {#<label class="sr-only" for="form-email">Password</label>#}
+                            {#<input type="text" name="email" placeholder="Email..." class="form-email form-control" id="form-email">#}
+                            {{ form_widget(form.plainPassword.second,{'attr':{'class':'form-first-name form-control','placeholder':'Confirm Password'}}) }}
+                        </div>
+
+
+
+                        <div class="form-group">
+                            {#<label class="sr-only" for="form-email">Roles</label>#}
+                            {#<input type="text" name="email" placeholder="Email..." class="form-email form-control" id="form-email">#}
+                            {{ form_widget(form.roles,{'attr':{'class':'form-first-name form-control','placeholder':'Password'}}) }}
+                        </div>
+                        {#<input type="submit" value="{{ 'registration.submit'|trans }}" class="btn btn-success" style="width: 100%"/>#}
+                        {{ form_widget(form.Valider,{'attr':{'class':'btn btn-success'}}) }}
+                        {{ form_end(form) }}
+                        {#<button type="submit" class="btn" ><a href="{{ path('medecin_ajout') }}" style="color: white">Register </a> </button>#}
+
+
+                        {#</form>#}
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
