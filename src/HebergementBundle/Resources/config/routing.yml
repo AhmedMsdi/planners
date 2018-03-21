@@ -1,0 +1,3 @@
+hebergement_homepage:
+    path:     /
+    defaults: { _controller: HebergementBundle:Default:index }
