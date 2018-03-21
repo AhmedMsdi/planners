@@ -1,0 +1,3 @@
+plan_homepage:
+    path:     /
+    defaults: { _controller: PlanBundle:Default:index }
