@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new PiBundle\PiBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new BackOfficeBundle\BackOfficeBundle(),
+            new EventBundle\EventBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
