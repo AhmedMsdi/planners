@@ -1,3 +1,11 @@
+plan:
+    resource: "@PlanBundle/Resources/config/routing.yml"
+    prefix:   /
+
+hebergement:
+    resource: "@HebergementBundle/Resources/config/routing.yml"
+    prefix:   /
+
 hebergement:
     resource: "@HebergementBundle/Resources/config/routing.yml"
     prefix:   /

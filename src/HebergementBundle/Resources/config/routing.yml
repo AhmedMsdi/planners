@@ -2,3 +2,6 @@ hebergement_hebergement:
     resource: "@HebergementBundle/Resources/config/routing/hebergement.yml"
     prefix:   /hebergement
 
+hebergement_homepage:
+    path:     /homeheber
+    defaults: { _controller: HebergementBundle:Default:index }
