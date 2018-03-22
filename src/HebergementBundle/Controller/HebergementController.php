@@ -22,9 +22,23 @@ class HebergementController extends Controller
 
         $hebergements = $em->getRepository('HebergementBundle:Hebergement')->findAll();
 
-        return $this->render('hebergement/index.html.twig', array(
+        return $this->render('@Hebergement/hebergement/index.html.twig', array(
             'hebergements' => $hebergements,
         ));
+    }
+    public function indexhotelsAction()
+    {
+        return $this->render('@Hebergement/hebergement/hotels.html.twig');
+    }
+
+    public function indexmaisonsAction()
+    {
+        return $this->render('@Hebergement/hebergement/maisons.html.twig');
+    }
+
+    public function indexpensionsAction()
+    {
+        return $this->render('@Hebergement/hebergement/pensions.html.twig');
     }
 
     /**
@@ -45,7 +59,7 @@ class HebergementController extends Controller
             return $this->redirectToRoute('hebergement_show', array('id' => $hebergement->getId()));
         }
 
-        return $this->render('hebergement/new.html.twig', array(
+        return $this->render('@Hebergement/hebergement/new.html.twig', array(
             'hebergement' => $hebergement,
             'form' => $form->createView(),
         ));
@@ -59,7 +73,7 @@ class HebergementController extends Controller
     {
         $deleteForm = $this->createDeleteForm($hebergement);
 
-        return $this->render('hebergement/show.html.twig', array(
+        return $this->render('@Hebergement/hebergement/show.html.twig', array(
             'hebergement' => $hebergement,
             'delete_form' => $deleteForm->createView(),
         ));
@@ -81,7 +95,7 @@ class HebergementController extends Controller
             return $this->redirectToRoute('hebergement_edit', array('id' => $hebergement->getId()));
         }
 
-        return $this->render('hebergement/edit.html.twig', array(
+        return $this->render('@Hebergement/hebergement/edit.html.twig', array(
             'hebergement' => $hebergement,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),

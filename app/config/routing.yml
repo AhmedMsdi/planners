@@ -6,6 +6,10 @@ hebergement:
     resource: "@HebergementBundle/Resources/config/routing.yml"
     prefix:   /
 
+hebergement:
+    resource: "@HebergementBundle/Resources/config/routing.yml"
+    prefix:   /
+
 event:
     resource: "@EventBundle/Resources/config/routing.yml"
     prefix:   /

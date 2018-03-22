@@ -22,6 +22,118 @@ class Hebergement
     private $id;
 
     /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
+
+    /**
+     * @param string $categorie
+     */
+    public function setCategorie($categorie)
+    {
+        $this->categorie = $categorie;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLieu()
+    {
+        return $this->lieu;
+    }
+
+    /**
+     * @param string $lieu
+     */
+    public function setLieu($lieu)
+    {
+        $this->lieu = $lieu;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return float
+     */
+    public function getPrix()
+    {
+        return $this->prix;
+    }
+
+    /**
+     * @param float $prix
+     */
+    public function setPrix($prix)
+    {
+        $this->prix = $prix;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTel()
+    {
+        return $this->tel;
+    }
+
+    /**
+     * @param int $tel
+     */
+    public function setTel($tel)
+    {
+        $this->tel = $tel;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSiteWeb()
+    {
+        return $this->siteWeb;
+    }
+
+    /**
+     * @param string $siteWeb
+     */
+    public function setSiteWeb($siteWeb)
+    {
+        $this->siteWeb = $siteWeb;
+    }
+
+    /**
      * @var string
      *
      * @ORM\Column(name="categorie", type="string", length=255, nullable=false)
