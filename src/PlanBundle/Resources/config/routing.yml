@@ -1,3 +1,25 @@
-plan_homepage:
-    path:     /
-    defaults: { _controller: PlanBundle:Default:index }
+plan_plan:
+    resource: "@PlanBundle/Resources/config/routing/plan.yml"
+    prefix:   /plan
+
+plan_Filter_Gaspage:
+    path:     /filterGas
+    defaults: { _controller: PlanBundle:Plan:GastronomieFilter }
+plan_Filter_Divpage:
+    path:     /FilterDiv
+    defaults: { _controller: PlanBundle:Plan:DivertissementFilterPage}
+plan_FilterBE:
+    path:     /filterBe
+    defaults: { _controller: PlanBundle:Plan:BienEtretFilterPage}
+
+plan_FilterDIVHorizontale:
+    path:     /FilterDivHorizontal
+    defaults: { _controller: PlanBundle:Plan:DivertissementFilterHorizontalePage}
+
+plan_FilterGasHorizontale:
+    path:     /FilterGasHorizontal
+    defaults: { _controller: PlanBundle:Plan:GastronomieFilterHorizontalePage}
+
+plan_FilterBEHorizontale:
+    path:     /FilterBEHorizontal
+    defaults: { _controller: PlanBundle:Plan:BEFilterHorizontalePage}
