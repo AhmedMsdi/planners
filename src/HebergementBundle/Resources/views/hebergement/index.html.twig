@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Hebergements list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Categorie</th>
+                <th>Lieu</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Tel</th>
+                <th>Siteweb</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hebergement in hebergements %}
+            <tr>
+                <td><a href="{{ path('hebergement_show', { 'id': hebergement.id }) }}">{{ hebergement.id }}</a></td>
+                <td>{{ hebergement.categorie }}</td>
+                <td>{{ hebergement.lieu }}</td>
+                <td>{{ hebergement.description }}</td>
+                <td>{{ hebergement.prix }}</td>
+                <td>{{ hebergement.tel }}</td>
+                <td>{{ hebergement.siteWeb }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('hebergement_show', { 'id': hebergement.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('hebergement_edit', { 'id': hebergement.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('hebergement_new') }}">Create a new hebergement</a>
+        </li>
+    </ul>
+{% endblock %}
