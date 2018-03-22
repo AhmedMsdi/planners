@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Plan</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Idp</th>
+                <td>{{ plan.idP }}</td>
+            </tr>
+            <tr>
+                <th>Libelle</th>
+                <td>{{ plan.libelle }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ plan.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ plan.description }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ plan.ville }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ plan.image }}</td>
+            </tr>
+            <tr>
+                <th>Avis</th>
+                <td>{{ plan.avis }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ plan.email }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ plan.prix }}</td>
+            </tr>
+            <tr>
+                <th>Longitude</th>
+                <td>{{ plan.longitude }}</td>
+            </tr>
+            <tr>
+                <th>Latitude</th>
+                <td>{{ plan.latitude }}</td>
+            </tr>
+            <tr>
+                <th>Etat</th>
+                <td>{{ plan.etat }}</td>
+            </tr>
+            <tr>
+                <th>Etatnotif</th>
+                <td>{{ plan.etatnotif }}</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>{{ plan.note }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('plan_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('plan_edit', { 'idP': plan.idP }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Hebergement</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ hebergement.id }}</td>
+            </tr>
+            <tr>
+                <th>Categorie</th>
+                <td>{{ hebergement.categorie }}</td>
+            </tr>
+            <tr>
+                <th>Lieu</th>
+                <td>{{ hebergement.lieu }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ hebergement.description }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ hebergement.prix }}</td>
+            </tr>
+            <tr>
+                <th>Tel</th>
+                <td>{{ hebergement.tel }}</td>
+            </tr>
+            <tr>
+                <th>Siteweb</th>
+                <td>{{ hebergement.siteWeb }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('hebergement_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('hebergement_edit', { 'id': hebergement.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

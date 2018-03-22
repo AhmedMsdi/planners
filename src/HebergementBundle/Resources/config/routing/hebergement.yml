@@ -1,0 +1,41 @@
+hebergement_index:
+    path:     /
+    defaults: { _controller: "HebergementBundle:Hebergement:index" }
+    methods:  GET
+
+hebergement_show:
+    path:     /{id}/show
+    defaults: { _controller: "HebergementBundle:Hebergement:show" }
+    methods:  GET
+
+hebergement_new:
+    path:     /new
+    defaults: { _controller: "HebergementBundle:Hebergement:new" }
+    methods:  [GET, POST]
+
+hebergement_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HebergementBundle:Hebergement:edit" }
+    methods:  [GET, POST]
+
+hebergement_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HebergementBundle:Hebergement:delete" }
+    methods:  DELETE
+
+hotels_index:
+    path:     /hotels
+    defaults: { _controller: "HebergementBundle:Hebergement:indexhotels" }
+    methods:  GET
+
+maisons_index:
+    path:     /maisons
+    defaults: { _controller: "HebergementBundle:Hebergement:indexmaisons" }
+    methods:  GET
+
+pensions_index:
+    path:     /pensions
+    defaults: { _controller: "HebergementBundle:Hebergement:indexpensions" }
+    methods:  GET
+
+
