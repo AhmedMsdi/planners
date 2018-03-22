@@ -22,3 +22,20 @@ hebergement_delete:
     path:     /{id}/delete
     defaults: { _controller: "HebergementBundle:Hebergement:delete" }
     methods:  DELETE
+
+hotels_index:
+    path:     /hotels
+    defaults: { _controller: "HebergementBundle:Hebergement:indexhotels" }
+    methods:  GET
+
+maisons_index:
+    path:     /maisons
+    defaults: { _controller: "HebergementBundle:Hebergement:indexmaisons" }
+    methods:  GET
+
+pensions_index:
+    path:     /pensions
+    defaults: { _controller: "HebergementBundle:Hebergement:indexpensions" }
+    methods:  GET
+
+
