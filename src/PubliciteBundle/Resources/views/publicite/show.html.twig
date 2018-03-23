@@ -1,0 +1,97 @@
+{% extends 'baseuser.html.twig' %}
+
+{% block body %}
+
+
+    <!-- //////////////////////////////////
+  //////////////PAGE CONTENT/////////////
+  ////////////////////////////////////-->
+
+    <div class="gap"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="fotorama" data-nav="thumbs" data-allowfullscreen="1" data-thumbheight="150" data-thumbwidth="150">
+                            <img src="{{ asset('img/our_coffee_miss_u_800x600.jpg') }}" alt="Image Alternative text" title="" />
+
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="product-info box">
+                            <ul class="icon-group icon-list-rating text-color" title="4.5/5 rating">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-half-empty"></i>
+                                </li>
+                            </ul>	<small><a href="#" class="text-muted">based on 8 reviews</a></small>
+                            <h3>{{ publicite.text }}</h3>
+                            <p class="product-info-price">{{ publicite.nbClick }} clicks</p>
+                            <p class="text-smaller text-muted"><a href="http://{{ publicite.siteWeb }}" >{{ publicite.siteWeb }}</a></p>
+                            <ul class="icon-list list-space product-info-list">
+                                <li><i class="fa fa-check"></i>Etat du publicite: {{ publicite.etat }}</li>
+
+                            </ul>
+                            <ul class="list-inline">
+                                <li><a href="{{ path('publicite_edit', { 'idPub': publicite.idPub }) }}" class="btn">
+                                        <i class="fa fa-pencil-square-o"></i> Modifier</a>
+                                </li>
+
+
+                                <li>
+                                    {{ form_start(delete_form) }}
+                                   <div class="btn"> <i class="fa fa-trash-o"></i> <input type="submit" value="Delete"></div>
+                                    {{ form_end(delete_form) }}
+                                </li>
+
+
+
+                                <li><a href="{{ path('publicite_index') }}" class="btn btn-primary">
+                                        <i class="fa fa-toggle-left (alias)"></i> Retour</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="gap"></div>
+                <div class="tabbable">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a href="#tab-1" data-toggle="tab"><i class="fa fa-info"></i>Desciption</a>
+                        </li>
+                        <li><a href="#tab-2" data-toggle="tab"><i class="fa fa-tags"></i>Les mots clés</a>
+                        </li>
+
+
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab-1">
+                         <p>{{ publicite.description }}</p>
+                        </div>
+                        <div class="tab-pane fade" id="tab-2">
+                           <p>{{ publicite.tags }}</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="gap"></div>
+
+                <div class="gap gap-small"></div>
+            </div>
+        </div></div>
+
+    </div>
+
+
+    <!-- //////////////////////////////////
+//////////////END PAGE CONTENT/////////
+////////////////////////////////////-->
+{% endblock %}

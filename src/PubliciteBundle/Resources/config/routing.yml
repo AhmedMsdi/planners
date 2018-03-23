@@ -1,0 +1,7 @@
+publicite_publicite:
+    resource: "@PubliciteBundle/Resources/config/routing/publicite.yml"
+    prefix:   /publicite
+
+publicite_homepage:
+    path:     /pub
+    defaults: { _controller: PubliciteBundle:Default:index }

@@ -1,0 +1,70 @@
+Publicite:
+    type: entity
+    table: publicite
+    indexes:
+        fk1_pub:
+            columns:
+                - id_u
+    id:
+        idPub:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: id_pub
+            generator:
+                strategy: IDENTITY
+    fields:
+        image:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        text:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        siteWeb:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+            column: site_web
+        description:
+            type: string
+            nullable: false
+            length: 20
+            options:
+                fixed: false
+        idU:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+            column: id_u
+        nbClick:
+            type: integer
+            nullable: true
+            options:
+                unsigned: false
+                default: '0'
+            column: nb_click
+        etat:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+                default: '0'
+            column: ETAT
+        tags:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }

@@ -1,3 +1,7 @@
+publicite:
+    resource: "@PubliciteBundle/Resources/config/routing.yml"
+    prefix:   /
+
 plan:
     resource: "@PlanBundle/Resources/config/routing.yml"
     prefix:   /
