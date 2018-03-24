@@ -34,10 +34,12 @@ class PubliciteController extends Controller
     public function newAction(Request $request)
     {
         $publicite = new Publicite();
+        $user = $this->getUser();
         $form = $this->createForm('PubliciteBundle\Form\PubliciteType', $publicite);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $publicite->setUser($user);
             $em = $this->getDoctrine()->getManager();
             $em->persist($publicite);
             $em->flush();

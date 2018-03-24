@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Publicite
  *
- * @ORM\Table(name="publicite", indexes={@ORM\Index(name="fk1_pub", columns={"id_u"})})
+ * @ORM\Table(name="publicite")
  * @ORM\Entity
  */
 class Publicite
@@ -53,7 +53,7 @@ class Publicite
      * @ORM\ManyToOne(targetEntity="PiBundle\Entity\User")
      * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
      */
-    private $idU;
+    private $user;
 
     /**
      * @var integer
@@ -79,6 +79,16 @@ class Publicite
 
 
 
+
+    /**
+     * Get idPub
+     *
+     * @return integer
+     */
+    public function getIdPub()
+    {
+        return $this->idPub;
+    }
 
     /**
      * Set image
@@ -177,30 +187,6 @@ class Publicite
     }
 
     /**
-     * Set idU
-     *
-     * @param integer $idU
-     *
-     * @return Publicite
-     */
-    public function setIdU($idU)
-    {
-        $this->idU = $idU;
-
-        return $this;
-    }
-
-    /**
-     * Get idU
-     *
-     * @return integer
-     */
-    public function getIdU()
-    {
-        return $this->idU;
-    }
-
-    /**
      * Set nbClick
      *
      * @param integer $nbClick
@@ -273,12 +259,26 @@ class Publicite
     }
 
     /**
-     * Get idPub
+     * Set user
      *
-     * @return integer
+     * @param \PiBundle\Entity\User $user
+     *
+     * @return Publicite
      */
-    public function getIdPub()
+    public function setUser(\PiBundle\Entity\User $user = null)
     {
-        return $this->idPub;
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \PiBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }

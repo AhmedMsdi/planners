@@ -1,56 +1,8 @@
+
 {% extends 'baseuser.html.twig' %}
 
 {% block body %}
- <!--   <h1>Publicites list</h1>
 
-    <table>
-        <thead>
-            <tr>
-                <th></th>
-                <th>Image</th>
-                <th>Text</th>
-                <th>Siteweb</th>
-                <th>Description</th>
-                <th>Idu</th>
-                <th>Nbclick</th>
-                <th>Etat</th>
-                <th>Tags</th>
-                <th>Idpub</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for publicite in publicites %}
-            <tr>
-                <td><a href="{{ path('publicite_show', { 'idPub': publicite.idPub }) }}">{{ publicite.image }}</a></td>
-                <td>{{ publicite.text }}</td>
-                <td>{{ publicite.siteWeb }}</td>
-                <td>{{ publicite.description }}</td>
-                <td>{{ publicite.idU }}</td>
-                <td>{{ publicite.nbClick }}</td>
-                <td>{{ publicite.etat }}</td>
-                <td>{{ publicite.tags }}</td>
-                <td>{{ publicite.idPub }}</td>
-                <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('publicite_show', { 'idPub': publicite.idPub }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('publicite_edit', { 'idPub': publicite.idPub }) }}">edit</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <ul>
-        <li>
-            <a href="{{ path('publicite_new') }}">Create a new publicite</a>
-        </li>
-    </ul> -->
 
 
     <div class="gap" style=" margin-left: 120px;">
@@ -81,6 +33,7 @@
                 <div class="row row-wrap">
 
                     {% for publicite in publicites %}
+                        {% if app.user.id == publicite.user.id %}
                         <div class="col-md-4">
                             <div class="product-thumb">
                                 <header class="product-header">
@@ -124,6 +77,7 @@
                          <!--       <a class="btn btn-ghost btn-sm" href=""><i class="fa fa-times"></i> Supprimer</a> -->
                             </div>
                         </div>
+                    {% endif %}
                     {% endfor %}
 
                 </div>

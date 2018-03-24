@@ -13,7 +13,7 @@ class PubliciteType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('image')->add('text')->add('siteWeb')->add('description')->add('idU')->add('nbClick')->add('etat')->add('tags');
+        $builder->add('image')->add('text')->add('siteWeb')->add('description')->add('nbClick')->add('etat')->add('tags');
     }/**
      * {@inheritdoc}
      */
