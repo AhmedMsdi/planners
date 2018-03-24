@@ -2,42 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="lina EVENTBundle changement au niveau du baseUser">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/CategorieEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/EvennementBundle.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Form/CategorieEventType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Form/EvennementType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/CategorieEventRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/config/routing.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/public/css/css_event.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Tests/Controller/CategorieEventControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Tests/Controller/EvennementControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/EvennementBundle/Controller/DefaultControllerTest.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/EventBundle/Controller/DefaultController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/EventBundle/Entity/CategorieEvent.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/EventBundle/EventBundle.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/EventBundle/Resources/config/routing.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/EventBundle/Resources/views/Default/EventVues/AjoutEvent.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/EventBundle/Resources/views/Default/index.html.twig" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/EventBundle/Entity/Evennement.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/EventBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pidev.iml" afterPath="$PROJECT_DIR$/.idea/pidev.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -515,7 +480,7 @@
       <workItem from="1521671958833" duration="264000" />
       <workItem from="1521680749631" duration="2383000" />
       <workItem from="1521683214824" duration="129000" />
-      <workItem from="1521898983507" duration="436000" />
+      <workItem from="1521898983507" duration="543000" />
     </task>
     <task id="LOCAL-00001" summary="lina">
       <created>1521680998570</created>
@@ -528,10 +493,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94929000" />
+    <option name="totallyTimeSpent" value="95036000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
