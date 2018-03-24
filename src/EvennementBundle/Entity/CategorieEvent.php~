@@ -1,0 +1,41 @@
+<?php
+
+namespace EvennementBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * CategorieEvent
+ *
+ * @ORM\Table(name="categorie_event")
+ * @ORM\Entity(repositoryClass="EvennementBundle\Repository\CategorieEventRepository")
+ */
+class CategorieEvent
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    /**
+     * @ORM\Column(type="string",length=255)
+     */
+    private $libelle;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}
+

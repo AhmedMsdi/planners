@@ -4,7 +4,7 @@ imports:
     - { resource: services.yml }
     - { resource: "@PiBundle/Resources/config/services.yml" }
     - { resource: "@BackOfficeBundle/Resources/config/services.yml" }
-    - { resource: "@EventBundle/Resources/config/services.yml" }
+    - { resource: "@EvennementBundle/Resources/config/services.yml" }
 
 
 # Put parameters here that don't need to change on each machine where the app is deployed

@@ -1,6 +1,11 @@
-event:
-    resource: "@EventBundle/Resources/config/routing.yml"
-    prefix:   /
+evennement_categorie_event:
+    resource: "@EvennementBundle/Controller/CategorieEventController.php"
+    type:     annotation
+
+evennement_evennement:
+    resource: "@EvennementBundle/Controller/EvennementController.php"
+    type:     annotation
+
 back_office:
     resource: "@BackOfficeBundle/Resources/config/routing.yml"
     prefix:   /
