@@ -4,7 +4,7 @@ imports:
     - { resource: services.yml }
     - { resource: "@PiBundle/Resources/config/services.yml" }
     - { resource: "@BackOfficeBundle/Resources/config/services.yml" }
-    - { resource: "@EventBundle/Resources/config/services.yml" }
+    - { resource: "@EvennementBundle/Resources/config/services.yml" }
     - { resource: "@PlanBundle/Resources/config/services.yml" }
     - { resource: "@PubliciteBundle/Resources/config/services.yml" }
 

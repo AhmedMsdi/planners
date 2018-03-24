@@ -1,0 +1,93 @@
+<?php
+
+namespace EvennementBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Evennement
+ *
+ * @ORM\Table(name="evennement")
+ * @ORM\Entity(repositoryClass="EvennementBundle\Repository\EvennementRepository")
+ */
+class Evennement
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @ORM\Column(type="string",length=255)
+     */
+    private $titre;
+
+    /**
+     * @ORM\Column(type="string",length=255)
+     */
+    private $adresse;
+
+    /**
+     * @ORM\Column(type="string",length=255)
+     */
+    private $ville;
+
+    /**
+     * @ORM\Column(type="date",name="date_event")
+     */
+    private $date_event;
+
+    /**
+     * @ORM\Column(type="date",name="$time_event")
+     */
+    private $time_event;
+
+    /**
+     * @ORM\Column(type="string",length=255)
+     */
+    private $description;
+
+    /**
+     * @ORM\Column(type="string",length=255)
+     */
+    private $image;
+
+
+    /**
+     * @ORM\Column(type="float")
+     */
+    private  $prix;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $contact;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="CategorieEvent")
+     * @ORM\JoinColumn(name="CatEvent",referencedColumnName="id_cat_event",nullable=false)
+     */
+    private $CatEvent;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="PiBundle\Entity\User")
+     * @ORM\JoinColumn(name="User",referencedColumnName="id",nullable=false)
+     */
+    private $User;
+}
+
