@@ -1,0 +1,11 @@
+.list_btn_action{
+    list-style: none;
+    -webkit-padding-start: 0px;
+}
+.list_btn_action li{
+    float: left;
+    margin-left: 10px;
+}
+.td_action{
+    width: 180px;
+}

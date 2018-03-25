@@ -19,7 +19,7 @@ class AppKernel extends Kernel
             new PiBundle\PiBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new BackOfficeBundle\BackOfficeBundle(),
-            new EventBundle\EventBundle(),
+            new EvennementBundle\EvennementBundle(),
             new HebergementBundle\HebergementBundle(),
             new PlanBundle\PlanBundle(),
             new PubliciteBundle\PubliciteBundle(),

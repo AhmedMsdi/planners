@@ -1,7 +1,0 @@
-event_homepage:
-    path:     /Event
-    defaults: { _controller: EventBundle:Default:index }
-event_Ajout:
-    path:     /ajoutEvent
-    defaults: { _controller: EventBundle:Default:ajout }
-

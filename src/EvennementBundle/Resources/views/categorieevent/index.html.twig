@@ -1,0 +1,37 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block body %}
+
+    <link rel="stylesheet" href="{{ asset('bundles/evennement/css/css_event.css') }}">
+    <h1>Categorieevents list</h1>
+
+    <table class="table table-bordered table-hover">
+            <tr>
+                <th>Libelle</th>
+                <th class="td_action">Actions</th>
+            </tr>
+        <tbody>
+        {% for categorieEvent in categorieEvents %}
+            <tr>
+                <td>{{ categorieEvent.libelle }}</td>
+                <td>
+                    <ul class="list_btn_action">
+                        <li>
+                            <a href="{{ path('categorieevent_show', { 'id': categorieEvent.id }) }}" class="btn btn-info btn-xs">Détail</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('categorieevent_edit', { 'id': categorieEvent.id }) }}" class="btn btn-warning btn-xs">Modifier</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('categorieevent_new') }}">Create a new categorieEvent</a>
+        </li>
+    </ul>
+{% endblock %}
