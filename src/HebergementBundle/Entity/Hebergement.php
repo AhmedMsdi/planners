@@ -24,6 +24,52 @@ class Hebergement
     /**
      * @return int
      */
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="categorie", type="string", length=255, nullable=false)
+     */
+    private $categorie;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lieu", type="string", length=255, nullable=false)
+     */
+    private $lieu;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=255, nullable=false)
+     */
+    private $description;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="prix", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $prix;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tel", type="integer", nullable=false)
+     */
+    private $tel;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="site_web", type="string", length=255, nullable=false)
+     */
+    private $siteWeb;
+
+
+
     public function getId()
     {
         return $this->id;
@@ -133,47 +179,6 @@ class Hebergement
         $this->siteWeb = $siteWeb;
     }
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="categorie", type="string", length=255, nullable=false)
-     */
-    private $categorie;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="lieu", type="string", length=255, nullable=false)
-     */
-    private $lieu;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="description", type="string", length=255, nullable=false)
-     */
-    private $description;
-
-    /**
-     * @var float
-     *
-     * @ORM\Column(name="prix", type="float", precision=10, scale=0, nullable=false)
-     */
-    private $prix;
-
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="tel", type="integer", nullable=false)
-     */
-    private $tel;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="site_web", type="string", length=255, nullable=false)
-     */
-    private $siteWeb;
 
 
 }
