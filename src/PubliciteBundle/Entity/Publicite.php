@@ -24,14 +24,14 @@ class Publicite
     /**
      * @var string
      *
-     * @ORM\Column(name="image", type="string", length=20, nullable=false)
+     * @ORM\Column(name="image", type="string", length=255, nullable=false)
      */
     private $image;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="text", type="string", length=20, nullable=false)
+     * @ORM\Column(name="text", type="string", length=255, nullable=false)
      */
     private $text;
 
@@ -45,7 +45,7 @@ class Publicite
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="string", length=20, nullable=false)
+     * @ORM\Column(name="description", type="string", length=255, nullable=false)
      */
     private $description;
 

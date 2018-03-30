@@ -1,7 +1,11 @@
 {% extends 'baseuser.html.twig' %}
 
 {% block body %}
-<div class="gap"></div>
+    <script src="{{ asset('bundles/ckeditor/ckeditor.js') }}"></script>
+
+
+
+    <div class="gap"></div>
 <div class="top-content">
 
     <div class="inner-bg">
@@ -12,9 +16,12 @@
     <h1>Ajout d'une nouvelle publicité</h1>
                     <div class="col-md-9">
                         <div class="row">
+                            {{ form_start(form) }}
+                            {{ form_widget(form) }}
+                            {{ form_widget(form.description) }}
                             <div class="col-md-6">
-    {{ form_start(form) }}
-        {{ form_widget(form) }}
+
+
                     <div class="btn"> <i class="fa fa-check-square"></i>  <input type="submit" value="Create" /></div>
     {{ form_end(form) }}
                             </div></div></div>

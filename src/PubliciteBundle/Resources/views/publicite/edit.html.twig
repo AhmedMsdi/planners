@@ -1,10 +1,10 @@
 {% extends 'baseuser.html.twig' %}
 
 {% block body %}
-
+    <script src="{{ asset('bundles/ckeditor/ckeditor.js') }}"></script>
     <div class="gap gap-small"></div>
 
-
+<div class="top-content">
     <div class="inner-bg">
         <div class="container" style="position: relative;margin-left: 400px;">
             <div class="col-sm-5">
@@ -13,11 +13,14 @@
         <h1>Modification de la publicité</h1>
                     <div class="col-md-9">
                         <div class="row">
+                            {{ form_start(edit_form) }}
+
+                            {{ form_widget(edit_form) }}
+
+                            <input type="submit" value="Valider Modification" />
+                            {{ form_end(edit_form) }}
                     <div class="col-md-6">
-    {{ form_start(edit_form) }}
-        {{ form_widget(edit_form) }}
-        <input type="submit" value="Valider Modification" />
-    {{ form_end(edit_form) }}
+
                     </div></div></div>
     <ul class="list-inline">
         <li><a href="{{ path('publicite_index') }}" class="btn btn-primary">
@@ -29,6 +32,6 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
-                </div></div></div></div>
+                </div></div></div></div></div>
     <div class="gap gap-small"></div>
 {% endblock %}

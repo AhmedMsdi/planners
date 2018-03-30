@@ -1,0 +1,46 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<div class="col-md-9" class="chartjs-wrapper"><canvas id="chartjs-1" class="chartjs" width="undefined" height="undefined"></canvas>
+    <script>
+        var dataSQL=[];
+        var dataNames=[];
+    </script>
+    <h2 align="center">La liste de mes publicites</h2>
+    <h2 align="center">Nom et prenom: {{ app.user.nom }} {{ app.user.prenom }}</h2>
+
+    <table border="4" align="center" >
+
+        <tr>
+            <th>Titre</th>
+            <th>Nbre de clicks</th>
+            <th>Description</th>
+            <th>Site Web</th>
+            <th>Tags</th>
+            <th>Etat(0:non valide, 1:valide)</th>
+        </tr>
+    {% for publicite in publicites %}
+        {% if app.user.id == publicite.user.id %}
+            <tr>
+            <td>{{ publicite.text }}</td>
+            <td>{{ publicite.nbClick }}</td>
+            <td>{{ publicite.description | raw }}</td>
+                <td>{{ publicite.siteWeb }}</td>
+                <td>{{ publicite.tags }}</td>
+                <td>{{ publicite.etat }}</td>
+            </tr>
+            <script>
+                dataSQL.push({{ publicite.nbClick }});
+                dataNames.push("{{ publicite.text }}");
+            </script>
+        {% endif %}
+    {% endfor %}
+    </table>
+    <div class="chartjs-wrapper"><canvas id="chartjs-1" class="chartjs" width="undefined" height="undefined"></canvas>
+        <script>new Chart(document.getElementById("chartjs-1"),{"type":"bar","data":{"labels":dataNames,"datasets":[{"label":"Nbre de clicks","data":dataSQL,"fill":false,
+                        "backgroundColor":["rgba(255, 99, 132, 0.2)","rgba(255, 159, 64, 0.2)","rgba(255, 205, 86, 0.2)","rgba(75, 192, 192, 0.2)","rgba(54, 162, 235, 0.2)","rgba(153, 102, 255, 0.2)","rgba(201, 203, 207, 0.2)"],
+                        "borderColor":["rgb(255, 99, 132)","rgb(255, 159, 64)","rgb(255, 205, 86)","rgb(75, 192, 192)","rgb(54, 162, 235)","rgb(153, 102, 255)","rgb(201, 203, 207)"],"borderWidth":1}]},
+                "options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}});</script></div>
+
+
+
+</div>
