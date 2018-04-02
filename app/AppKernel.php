@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new HebergementBundle\HebergementBundle(),
             new PlanBundle\PlanBundle(),
             new PubliciteBundle\PubliciteBundle(),
+            new ReviewBundle\ReviewBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

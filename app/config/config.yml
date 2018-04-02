@@ -7,6 +7,8 @@ imports:
     - { resource: "@EvennementBundle/Resources/config/services.yml" }
     - { resource: "@PlanBundle/Resources/config/services.yml" }
     - { resource: "@PubliciteBundle/Resources/config/services.yml" }
+    - { resource: "@ReviewBundle/Resources/config/services.yml" }
+
 
 
 # Put parameters here that don't need to change on each machine where the app is deployed

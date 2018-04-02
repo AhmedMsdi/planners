@@ -1,0 +1,3 @@
+commentaire_ajout:
+    path:     /ajoutcom
+    defaults: { _controller: "" }
