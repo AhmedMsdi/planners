@@ -2,31 +2,55 @@
 {% trans_default_domain 'FOSUserBundle' %}
 {% extends ('baseuser.html.twig') %}
 {%  block body %}
+    <style>
 
-    <div class="gap"></div>
+        #map {
+            height: 400px;
+            width: 400px;
+
+        }
+        .pac-container {
+            font-family: Roboto;
+        }
+
+        #type-selector {
+            color: #fff;
+            background-color: #4d90fe;
+            padding: 5px 11px 0px 11px;
+        }
+
+        #type-selector label {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 300;
+        }
+    </style>
 
     <div class="top-content">
-
+<br>
     <div class="inner-bg">
-        <div class="container" style="position: relative;margin-left: 400px;">
-
-            <div class="col-sm-5">
+        <div class="container">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-5">
 
                 <div class="form-box">
                     <div class="form-top" style="">
                         <div class="form-top-left">
-                            <h3>Ajouter un plan</h3>
+                            <h3>Ajouter un plan                                 <i class="fa fa-pencil"></i>
+                            </h3>
+                        </div>
 
-                        </div>
-                        <div class="form-top-right">
-                            <i class="fa fa-pencil"></i>
-                        </div>
                     </div>
 
                     <div class="form-bottom">
 
                         {{ form_start(form, {'method': 'post', 'action': path('hebergement_new')}) }}
 
+                        <div class="form-group">
+                            <label for="">Nom</label>
+                            {{ form_widget(form.titre,{'attr':{'class':'form-control','placeholder':'Nom'}}) }}
+                        </div>
                         <div class="form-group">
                             <label for="">Choisir type d'hébergement</label>
                             {{ form_widget(form.categorie,{'attr':{'class':'form-control','placeholder':'Catégorie'}}) }}
@@ -40,6 +64,10 @@
                             {{ form_widget(form.description,{'attr':{'class':'form-control','placeholder':'Description'}}) }}
                         </div>
                         <div class="form-group">
+                            <label for="">Photo :</label>
+                            {{ form_widget(form.photo,{'attr':{'class':'form-control','placeholder':'Photo'}}) }}
+                        </div>
+                        <div class="form-group">
                             <label for="">Prix par nuit :</label>
                             {{ form_widget(form.prix,{'attr':{'class':'form-control','placeholder':'Prix/nuit'}}) }}
                         </div>
@@ -49,22 +77,145 @@
                         </div>
                         <div class="form-group">
                             <label for="">Ton site s'il existe :</label>
-                            {{ form_widget(form.siteWeb,{'attr':{'class':'form-control','placeholder':'xxxxxx@xxxx.xxx'}}) }}
+                            {{ form_widget(form.siteWeb,{'attr':{'class':'form-control','placeholder':'http:\\\\domain.com'}}) }}
                         </div>
 
                         <input type="submit" value="{{ 'Ajouter' }}" class="btn btn-success" style="width: 100%"/>
-                        {{ form_end(form) }}
+
 
                     </div>
 
                 </div>
-
-
-
             </div>
-        </div>
-    </div>
+                <div class="col-md-2" >
+                    <div id="map"></div>
+                    <hr>
+                    Coordonnées:
 
-    <div class="gap"></div>
+                    <div class="col-md-12">
+                            {{ form_widget(form.x,{'attr':{'class':'form-control','placeholder':'x'}}) }}
+
+                            {{ form_widget(form.y,{'attr':{'class':'form-control','placeholder':'y'}}) }}
+                    </div>
+                </div>
+
+        </div>  {{ form_end(form) }}
+    </div>
+    </div>
+    <br><br>
+
+
+
+    <script>
+
+
+
+
+
+
+        // This example requires the Places library. Include the libraries=places
+        // parameter when you first load the API. For example:
+        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+        var marker;
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 36, lng: 10},
+                zoom: 10
+            });
+            var input = /** @type {!HTMLInputElement} */(
+                document.getElementById('hebergementbundle_hebergement_lieu'));
+
+
+            var autocomplete = new google.maps.places.Autocomplete(input);
+            autocomplete.bindTo('bounds', map);
+
+            var infowindow = new google.maps.InfoWindow();
+            var marker = new google.maps.Marker({
+                map: map,
+                anchorPoint: new google.maps.Point(0, -29)
+
+            });
+            marker = new google.maps.Marker({
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                position: map.center
+
+
+            });
+            marker.setMap(map);
+            marker.addListener('click', toggleBounce);
+
+            google.maps.event.addListener(marker, 'drag', function(event) {
+                document.getElementById('hebergementbundle_hebergement_x').value =event.latLng.lat();
+                document.getElementById('hebergementbundle_hebergement_y').value= event.latLng.lng();
+
+            });
+
+
+
+
+
+
+
+            autocomplete.addListener('place_changed', function() {
+                infowindow.close();
+                marker.setVisible(false);
+
+                var place = autocomplete.getPlace();
+
+                // If the place has a geometry, then present it on a map.
+                if (place.geometry.viewport) {
+                    map.fitBounds(place.geometry.viewport);
+
+                } else {
+
+                    map.setCenter(place.geometry.location);
+                    map.setZoom(10);  // Why 17? Because it looks good.
+
+                }
+
+
+
+                marker.setPosition(place.geometry.location);
+                marker.setVisible(true);
+
+
+                var address = '';
+                if (place.address_components) {
+                    address = [
+                        (place.address_components[0] && place.address_components[0].short_name || ', '),
+                        (place.address_components[1] && place.address_components[1].short_name || ', '),
+                        (place.address_components[2] && place.address_components[2].short_name || ', ')
+                    ].join(' ');
+                }
+
+                infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+                document.getElementById('hebergementbundle_hebergement_lieu').value=address;
+
+                infowindow.open(map, marker);
+            });
+
+            // Sets a listener on a radio button to change the filter type on Places
+            // Autocomplete.
+            function setupClickListener(id, types) {
+                var radioButton = document.getElementById(id);
+                radioButton.addEventListener('click', function() {
+                    autocomplete.setTypes(types);
+                });
+            }
+
+
+        }
+        function toggleBounce() {
+            if (marker.getAnimation() !== null) {
+                marker.setAnimation(null);
+            } else {
+                marker.setAnimation(google.maps.Animation.BOUNCE);
+            }
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWb0i4faRZm8P5oEN-ukUF_CACQzWt480&libraries=places&callback=initMap"
+            async defer></script>
 
 {% endblock %}

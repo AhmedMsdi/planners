@@ -1,0 +1,24 @@
+publicite_index:
+    path:     /
+    defaults: { _controller: "PubliciteBundle:Publicite:index" }
+    methods:  GET
+
+publicite_show:
+    path:     /{idPub}/show
+    defaults: { _controller: "PubliciteBundle:Publicite:show" }
+    methods:  GET
+
+publicite_new:
+    path:     /new
+    defaults: { _controller: "PubliciteBundle:Publicite:new" }
+    methods:  [GET, POST]
+
+publicite_edit:
+    path:     /{idPub}/edit
+    defaults: { _controller: "PubliciteBundle:Publicite:edit" }
+    methods:  [GET, POST]
+
+publicite_delete:
+    path:     /{idPub}/delete
+    defaults: { _controller: "PubliciteBundle:Publicite:delete" }
+    methods:  DELETE

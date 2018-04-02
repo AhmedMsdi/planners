@@ -4,14 +4,17 @@ imports:
     - { resource: services.yml }
     - { resource: "@PiBundle/Resources/config/services.yml" }
     - { resource: "@BackOfficeBundle/Resources/config/services.yml" }
-    - { resource: "@EventBundle/Resources/config/services.yml" }
+    - { resource: "@EvennementBundle/Resources/config/services.yml" }
     - { resource: "@PlanBundle/Resources/config/services.yml" }
+    - { resource: "@PubliciteBundle/Resources/config/services.yml" }
 
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    images_directory: '%kernel.root_dir%/../web/uploads'
+
 
 framework:
     #esi: ~
@@ -81,5 +84,8 @@ fos_user:
     from_email:
                   address: "noreply@yourcompany.com"
                   sender_name: "No Reply"
-
-
+services:
+    twig.extension.text:
+       class: Twig_Extensions_Extension_Text
+       tags:
+           - { name: twig.extension }

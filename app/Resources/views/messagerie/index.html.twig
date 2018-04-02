@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Messageries list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Typemessage</th>
+                <th>Iduser</th>
+                <th>Idclient</th>
+                <th>Etat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for messagerie in messageries %}
+            <tr>
+                <td><a href="{{ path('messagerie_show', { 'id': messagerie.id }) }}">{{ messagerie.id }}</a></td>
+                <td>{{ messagerie.typemessage }}</td>
+                <td>{{ messagerie.idUser }}</td>
+                <td>{{ messagerie.idClient }}</td>
+                <td>{% if messagerie.etat %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('messagerie_show', { 'id': messagerie.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('messagerie_edit', { 'id': messagerie.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('messagerie_new') }}">Create a new messagerie</a>
+        </li>
+    </ul>
+{% endblock %}

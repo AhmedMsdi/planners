@@ -35,7 +35,7 @@
 
 <body>
 
-
+<div class="global-wrap">
 
 <!-- //////////////////////////////////
 //////////////MAIN HEADER/////////////
@@ -118,7 +118,7 @@
                         <li><a href="product-shop-sidebar.html">Evenements </a>
                             <ul>
 
-                                <li><a href="{{ path('event_Ajout') }}">Art et théatre</a>
+                                <li><a href="#">Art et théatre</a>
 
                                 </li>
                                 <li><a href="product-coupon-default.html">Camping&Randonnés</a>
@@ -137,8 +137,10 @@
                                 </li>
                                 <li><a href="{{ path('pensions_index') }}">Pensions</a>
                                 </li>
-                                <li><a href="{{ path('hebergement_new') }}">Ajouter un hébergement</a>
+                                {% if app.user %}
+                                <li><a href="{{ path('esp') }}">Espace Personnel</a>
                                 </li>
+                                {% endif %}
                             </ul>
                         </li>
                   <!--      <li><a href="blog-sidebar-right.html">Blog</a>
@@ -264,21 +266,21 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 clearfix">
-                <label><i class="fa fa-search"></i><span>I am searching for</span>
+                <label><i class="fa fa-search"></i><span>Je cherche</span>
                 </label>
                 <div class="search-area-division search-area-division-input">
-                    <input class="form-control" type="text" placeholder="Travel Vacation" />
+                    <input class="form-control" type="text" placeholder="un bon plan" />
                 </div>
             </div>
             <div class="col-md-3 clearfix">
-                <label><i class="fa fa-map-marker"></i><span>In</span>
+                <label><i class="fa fa-map-marker"></i><span>à</span>
                 </label>
                 <div class="search-area-division search-area-division-location">
-                    <input class="form-control" type="text" placeholder="Boston" />
+                    <input class="form-control" type="text" placeholder="Region" />
                 </div>
             </div>
             <div class="col-md-1">
-                <button class="btn btn-block btn-white search-btn" type="submit">Search</button>
+                <button class="btn btn-block btn-white search-btn" type="submit">Chercher</button>
             </div>
         </div>
     </div>
@@ -315,6 +317,9 @@
 <!-- Custom scripts -->
 <script src="{{ asset('js/custom.js') }}"></script>
 <script src="{{ asset('js/switcher.js') }}"></script>
+
+
+
 {% block body %}
 {% endblock %}
 
@@ -446,6 +451,7 @@
 <!-- //////////////////////////////////
 //////////////END MAIN  FOOTER/////////
 ////////////////////////////////////-->
+</div>
 </body>
 
 

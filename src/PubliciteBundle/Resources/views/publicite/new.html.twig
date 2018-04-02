@@ -1,0 +1,28 @@
+{% extends 'baseuser.html.twig' %}
+
+{% block body %}
+<div class="gap"></div>
+<div class="top-content">
+
+    <div class="inner-bg">
+        <div class="container" style="position: relative;margin-left: 400px;">
+            <div class="col-sm-5">
+
+                <div class="form-box">
+    <h1>Ajout d'une nouvelle publicité</h1>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-6">
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+                    <div class="btn"> <i class="fa fa-check-square"></i>  <input type="submit" value="Create" /></div>
+    {{ form_end(form) }}
+                            </div></div></div>
+    <ul class="list-inline">
+        <li><a href="{{ path('publicite_index') }}" class="btn btn-primary">
+                <i class="fa fa-toggle-left (alias)"></i> Retour</a>
+        </li>
+    </ul>
+                </div></div></div></div></div>
+    <div class="gap gap-small"></div>
+{% endblock %}

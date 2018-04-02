@@ -1,0 +1,85 @@
+
+{% extends ('baseuser.html.twig') %}
+
+
+{%  block body %}
+<!-- //////////////////////////////////
+//////////////PAGE CONTENT/////////////
+////////////////////////////////////-->
+    <div class="gap"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <aside class="sidebar-left">
+                <ul class="nav nav-pills nav-stacked nav-arrow">
+                    <li ><a href="{{ path('profil') }}">Settings</a>
+                    </li>
+                    <li><a href="page-my-account-addresses.html">Mes plans</a>
+                    </li>
+                    <li><a href="page-my-account-orders.html">Mes evenements</a>
+                    </li>
+                    <li><a href="page-my-account-wishlist.html">Mes hebergements</a>
+                    </li>
+                    <li class="active"><a href="{{ path('publicite_homepage') }}">Mes publicites</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+        <div class="col-md-9">
+            <div class="row row-wrap">
+
+    {% for publicite in publicites %}
+                <div class="col-md-4">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="{{ asset('img/our_coffee_miss_u_800x600.jpg') }}" alt="Image Alternative text" title="Our Coffee miss u" />
+                        </header>
+                        <div class="product-inner">
+                            <ul class="icon-group icon-list-rating" title="4/5 rating">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-o"></i>
+                                </li>
+                            </ul>
+                            <h5 class="product-title">{{ publicite.idPub }}</h5>
+                            <p class="product-desciption">{{ publicite.description }}</p>
+                            <div class="product-meta">
+                                <ul class="product-price-list">
+                                    <li><span class="product-price">$241</span>
+                                    </li>
+                                </ul>
+                                <ul class="product-actions-list">
+                                    <li><a class="btn btn-sm" href="{{ path('publicite_edit', { 'idPub': publicite.idPub }) }}">
+                                            <i class="fa fa-shopping-cart"></i> Modifier</a>
+                                    </li>
+                                    <li><a class="btn btn-sm" href="{{ path('publicite_show', { 'idPub': publicite.idPub }) }}">
+                                            <i class="fa fa-bars"></i> Afficher</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-wishlist-remove"><a class="btn btn-ghost btn-sm"><i class="fa fa-times"></i> Remove from wishlist</a>
+                    </div>
+                </div>
+    {% endfor %}
+
+            </div>
+            <div class="gap gap-small"></div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- //////////////////////////////////
+//////////////END PAGE CONTENT/////////
+////////////////////////////////////-->
+{% endblock %}

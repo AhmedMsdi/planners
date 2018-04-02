@@ -39,3 +39,24 @@ pensions_index:
     methods:  GET
 
 
+recherchebyregion:
+    path:     /{name}/rech
+    defaults: { _controller: "HebergementBundle:Hebergement:rech" }
+    methods:  GET
+
+
+rechprix:
+    path:     /maxprix
+    defaults: { _controller: "HebergementBundle:Hebergement:rech2" }
+    methods:  GET
+
+
+esp:
+    path:     /esp
+    defaults: { _controller: "HebergementBundle:Hebergement:esp" }
+    methods:  GET
+
+mesbonplan:
+    path:     /mesbonplan
+    defaults: { _controller: "HebergementBundle:Hebergement:mesbonplan" }
+    methods:  GET
