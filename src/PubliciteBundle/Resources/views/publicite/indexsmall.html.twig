@@ -1,0 +1,51 @@
+
+    {% for publicite in publicites2 %}
+        {% if app.user.id == publicite.user.id %}
+            <div class="col-md-4">
+                <div class="product-thumb">
+                    <header class="product-header">
+                        <a href="{{ path('publicite_show', { 'idPub': publicite.idPub }) }}">
+                            <img  src="{{ asset(publicite.image) }}" alt="Image Alternative text" title="" />
+                        </a>
+                    </header>
+                    <div class="product-inner">
+                        <ul class="icon-group icon-list-rating" title="4/5 rating">
+                            <li><i class="fa fa-star"></i>
+                            </li>
+                            <li><i class="fa fa-star"></i>
+                            </li>
+                            <li><i class="fa fa-star"></i>
+                            </li>
+                            <li><i class="fa fa-star"></i>
+                            </li>
+                            <li><i class="fa fa-star-o"></i>
+                            </li>
+                        </ul>
+                        <h5 class="product-title">{{ publicite.text }}</h5>
+                        <p class="product-desciption">{{ publicite.description | raw }}</p>
+                        <div class="product-meta">
+                            <ul class="product-price-list">
+                                <li><span class="product-price">{{ publicite.nbClick }} clicks</span>
+                                </li>
+                            </ul>
+                            <ul class="product-actions-list">
+                                <li><a class="btn btn-sm" href="{{ path('publicite_edit', { 'idPub': publicite.idPub }) }}">
+                                        <i class="fa fa-pencil-square-o"></i> Modifier</a>
+                                </li>
+                                <li><a class="btn btn-sm" href="{{ path('publicite_show', { 'idPub': publicite.idPub }) }}">
+                                        <i class="fa fa-bars"></i> Afficher</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-wishlist-remove">
+
+                    <!--       <a class="btn btn-ghost btn-sm" href=""><i class="fa fa-times"></i> Supprimer</a> -->
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+    <div class="navigation text-center">
+        {{ knp_pagination_render(publicites2) }}
+    </div>

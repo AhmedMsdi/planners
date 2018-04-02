@@ -22,3 +22,16 @@ publicite_delete:
     path:     /{idPub}/delete
     defaults: { _controller: "PubliciteBundle:Publicite:delete" }
     methods:  DELETE
+
+recherche_publicite:
+    path:     /chercher
+    defaults: { _controller: "PubliciteBundle:Publicite:chercher" }
+
+chart_publicite:
+    path:     /chart
+    defaults: { _controller: "PubliciteBundle:Publicite:chart" }
+
+pdf:
+    path:     /pdf
+    defaults: { _controller: "PubliciteBundle:Publicite:pdf" }
+

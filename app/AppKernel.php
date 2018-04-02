@@ -22,8 +22,10 @@ class AppKernel extends Kernel
             new EvennementBundle\EvennementBundle(),
             new HebergementBundle\HebergementBundle(),
             new PlanBundle\PlanBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Nomaya\SocialBundle\NomayaSocialBundle(),
             new PubliciteBundle\PubliciteBundle(),
-            new ReviewBundle\ReviewBundle(),
+            new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
