@@ -15,6 +15,8 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    images_directory: '%kernel.root_dir%/../web/uploads'
+
 
 framework:
     #esi: ~
@@ -143,5 +145,8 @@ fos_user:
     from_email:
                   address: "noreply@yourcompany.com"
                   sender_name: "No Reply"
-
-
+services:
+    twig.extension.text:
+       class: Twig_Extensions_Extension_Text
+       tags:
+           - { name: twig.extension }

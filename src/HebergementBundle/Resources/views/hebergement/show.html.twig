@@ -1,52 +1,206 @@
-{% extends 'base.html.twig' %}
-
+{% extends ('baseuser.html.twig') %}
 {% block body %}
-    <h1>Hebergement</h1>
+    <style>
+        #map {
+            height: 300px;
+            width: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ hebergement.id }}</td>
-            </tr>
-            <tr>
-                <th>Categorie</th>
-                <td>{{ hebergement.categorie }}</td>
-            </tr>
-            <tr>
-                <th>Lieu</th>
-                <td>{{ hebergement.lieu }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ hebergement.description }}</td>
-            </tr>
-            <tr>
-                <th>Prix</th>
-                <td>{{ hebergement.prix }}</td>
-            </tr>
-            <tr>
-                <th>Tel</th>
-                <td>{{ hebergement.tel }}</td>
-            </tr>
-            <tr>
-                <th>Siteweb</th>
-                <td>{{ hebergement.siteWeb }}</td>
-            </tr>
-        </tbody>
-    </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('hebergement_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('hebergement_edit', { 'id': hebergement.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    </style>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-8 col-xs-12 block">
+            <div class="panel panel-default">
+                <img src="{{ asset('uploads/'~hebergement.photo) }}" alt="image" class="img-responsive">
+                <div class="panel-body">
+                    <h3 class="color-1">{{ hebergement.categorie|capitalize }}</h3>
+                    <p align="justify" style="word-wrap: break-word">{{ hebergement.description }}</p>
+                </div>
+
+
+
+            </div></div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <aside>
+                    <div class="sidebar-right hidden-phone">
+                        <div class="sidebar-box">
+                            <div class="panel-heading">
+                                <h2 style="color: #2a8fbd"><u>Informations Utils</u></h2>
+                            </div>
+                            <div class="panel-body">
+                                <ul class="media-list">
+                                    <li class="media">
+                                        <div class="media-left iconContent bg-color-2">
+                                        </div>
+                                        <div class="media-body iconContent">
+                                            <h4 class="media-heading color-2"><i class="fa fa-map-marker" style="color: #2a8fbd" aria-hidden="true"></i>
+                                                 Lieu</h4>
+                                            <p>{{ hebergement.lieu }}</p>
+                                        </div>
+                                    </li>
+
+
+
+                                        <li class="media iconContet">
+                                            <div class="media-left iconContent bg-color-4">
+
+                                            </div>
+                                            <div class="media-body iconContent">
+                                                <h4 class="media-heading color-4"><i class="fa fa-usd" style="color: #2a8fbd" aria-hidden="true"></i> Prix/nuit</h4>
+                                                <p>{{ hebergement.prix }}</p>
+                                            </div>
+                                        </li>
+
+                                    <li class="media iconContet">
+                                        <div class="media-left iconContent bg-color-4">
+
+                                        </div>
+                                        <div class="media-body iconContent">
+                                            <h4 class="media-heading color-4"><i class="fa fa-phone" style="color: #2a8fbd" ></i>
+                                                Telephone </h4>
+                                            <p><a href="tel:{{ hebergement.tel }}"> {{ hebergement.tel }}</a></p>
+                                        </div>
+                                    </li>
+                                    <li class="media iconContet">
+                                        <div class="media-left iconContent bg-color-4">
+                                        </div>
+                                        <div class="media-body iconContent">
+                                            <h4 class="media-heading color-4"><i class="fa fa-globe" style="color: #2a8fbd"></i>
+
+                                                Site Web </h4>
+                                            <p><a href="{{ hebergement.Siteweb }}">{{ hebergement.Siteweb }}</a></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        {% if app.user!=hebergement.idUser %}
+                            {% if etat==1 %}
+                                <div class="btnPart">
+                                    <a href="#" style="background-color: #4cae4c" class="btn btn-info btn-block "><i class="fa fa-clock-o"></i>  En attente</a>
+                                </div>
+                                {% elseif etat==2 %}
+                                    <div class="btnPart">
+                                        <a href="#" disabled="disabled" style="background-color: #fcbe2c" class="btn btn-primary btn-block bg-color-6">Confirmé</a>
+                                    </div>
+                                {% else %}
+
+                                        {{ form_start(formres, {'method': 'post', 'action': path('messagerie_new', { 'idh': hebergement.id })}) }}
+                                        <div class="col-md-6">
+                                            {{ form_widget(formres.datedebut,{'attr':{'class':'form-control','placeholder':'x'}}) }}
+                                        </div> <div class="col-md-6">
+
+                                            {{ form_widget(formres.datefin,{'attr':{'class':'form-control','placeholder':'y'}}) }}
+                                        </div>
+
+                                    <br>
+                                    <br>
+                                    <div class="btnPart">
+                                        <button type="submit" class="btn btn-primary btn-block bg-color-6">Reserver</button>
+
+                                    </div>
+                                    {{ form_end(formres) }}
+                                {% endif %}
+                        {% endif %}
+                    </div>
+                </aside>
+                <hr>
+                <div id="map">
+
+                </div>
+            </div>
+
+
+
+</div>
+    {% if app.user==hebergement.iduser %}
+        <div class="col-md-8">
+            <div class="col-md-4">
+
+                <div class="btnArea">
+                    <a href="{{ path('hebergement_index') }}" class="btn btn-primary">Tout les offres</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="btnArea">
+                    <a href="{{ path('hebergement_edit', { 'id': hebergement.id }) }}" class="btn btn-success">Modifier l'offre</a>
+                </div>
+            </div>
+
+                <div class="col-md-4">
+                    <div class="btnArea">
+                        {{ form_start(delete_form) }}
+                        <input class="btn btn-primary" type="submit" value="Supprimer l'offre">
+                        {{ form_end(delete_form) }}
+                    </div>
+                </div>
+                   </div>
+    {% else %}
+        <div class="col-md-8">
+            <div class="btnArea">
+                <a href="{{ path('hebergement_index') }}"  class="btn btn-primary">Retourner à la liste des offres</a>
+            </div>
+        </div>
+    {% endif %}
+</div>
+   <br>
+   <br>
+   <br>
+<script>
+
+    // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+    // Australia.
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: {lat: {{ hebergement.x }}, lng: {{ hebergement.y }}}
+        });
+
+        var infoWindow = new google.maps.InfoWindow({map: map});
+        marker = new google.maps.Marker({
+            map: map,
+            draggable: false,
+            animation: google.maps.Animation.DROP,
+            position: {lat: {{ hebergement.x }}, lng: {{ hebergement.y}} }
+
+
+        });
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var pos = {
+                    lat: {{ hebergement.x }},
+                    lng: {{ hebergement.y }}
+                };
+
+                infoWindow.setPosition(pos);
+                infoWindow.setContent('{{ hebergement.titre }}');
+                map.setCenter(pos);
+            }, function() {
+                handleLocationError(true, infoWindow, map.getCenter());
+            });
+        } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+        }
+    }
+
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+            'Error: The Geolocation service failed.' :
+            'Error: Your browser doesn\'t support geolocation.');
+    }
+</script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWb0i4faRZm8P5oEN-ukUF_CACQzWt480&callback=initMap">
+</script>
+
+
 {% endblock %}

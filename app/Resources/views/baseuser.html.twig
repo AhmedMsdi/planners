@@ -137,8 +137,10 @@
                                 </li>
                                 <li><a href="{{ path('pensions_index') }}">Pensions</a>
                                 </li>
-                                <li><a href="{{ path('hebergement_new') }}">Ajouter un hébergement</a>
+                                {% if app.user %}
+                                <li><a href="{{ path('esp') }}">Espace Personnel</a>
                                 </li>
+                                {% endif %}
                             </ul>
                         </li>
                   <!--      <li><a href="blog-sidebar-right.html">Blog</a>

@@ -30,11 +30,12 @@
                     <div class="sidebar-box">
                         <h5>Maximum Prix</h5>
                         <form action="{{ path('rechprix') }}">
-
                             <input type="text" name="maxprix" id="price-slider" style="width: 40%">
-                            <button class=" btn btn-success"  style="width: 50%">Recherche</button>                        </form>
+                            <button class=" btn btn-success"  style="width: 50%">Recherche</button>
+                        </form>
                     </div>
                 </aside>
+
                 <div class="sidebar-box">
                     <h4>Location</h4>
                     <ul class="checkbox-list">
@@ -182,14 +183,13 @@
 
                         <li class="checkbox">
                             <label>
-                                    <a href="{{ path('recherchebyregion',{'name':'Kairouane'}) }}" >Kairouane</a>
+                                <a href="{{ path('recherchebyregion',{'name':'Kairouane'}) }}" >Kairouane</a>
                             </label>
                         </li>
 
 
                     </ul>
                 </div>
-
             </div>
             <div class="col-md-9">
                 <div class="row">
@@ -216,7 +216,7 @@
                                 <div class="product-inner">
                                     <h5 class="product-title">{{ heb.titre|truncate(10, false, '') }}</h5>
                                     <p class="product-desciption">{{ heb.description|truncate(20, false, '') }}</p>
-                                    <div class="product-meta"><span class="product-time"></span>
+                                    <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i></span>
                                         <ul class="product-price-list">
                                             <li><span class="product-price">{{ heb.prix }} TND</span>
                                             </li>
@@ -231,7 +231,7 @@
 
             </div>
 
-        </div>
+</div>
 
         <div class="col-md-12">
             <center>
@@ -257,8 +257,8 @@
                 <br>
             </center>
         </div>
-    </div>
 
+    </div>
 
     <!-- //////////////////////////////////
 //////////////END PAGE CONTENT/////////

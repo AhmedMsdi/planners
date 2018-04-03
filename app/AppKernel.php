@@ -26,6 +26,8 @@ class AppKernel extends Kernel
             new Nomaya\SocialBundle\NomayaSocialBundle(),
             new PubliciteBundle\PubliciteBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+            new ReviewBundle\ReviewBundle(),
+
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

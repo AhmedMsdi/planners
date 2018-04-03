@@ -5,3 +5,6 @@ hebergement_hebergement:
 hebergement_homepage:
     path:     /homeheber
     defaults: { _controller: HebergementBundle:Default:index }
+hebergement_messagerie:
+    resource: "@HebergementBundle/Resources/config/routing/messagerie.yml"
+    prefix:   /messagerie
