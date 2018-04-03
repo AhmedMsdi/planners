@@ -16,7 +16,7 @@
                 <div class="row">
                     <div class="col-md-7">
                         <div class="fotorama" data-nav="thumbs" data-allowfullscreen="1" data-thumbheight="150" data-thumbwidth="150">
-                            <img src="{{ asset('img/our_coffee_miss_u_800x600.jpg') }}" alt="Image Alternative text" title="" />
+                            <img src="{{ asset(publicite.image) }}" alt="Image Alternative text" title="" />
 
                         </div>
                     </div>
@@ -41,8 +41,15 @@
                                 <li><i class="fa fa-check"></i>Etat du publicite: {{ publicite.etat }}</li>
 
                             </ul>
+                            {{ twitterButton() }}
+                            <div class="gap-small"></div>
+                            {% if app.user == null %}
+
+                            {% elseif app.user.id != publicite.user.id %}
+                            {% elseif app.user.id == publicite.user.id %}
                             <ul class="list-inline">
                                 <li><a href="{{ path('publicite_edit', { 'idPub': publicite.idPub }) }}" class="btn">
+
                                         <i class="fa fa-pencil-square-o"></i> Modifier</a>
                                 </li>
 
@@ -59,6 +66,7 @@
                                         <i class="fa fa-toggle-left (alias)"></i> Retour</a>
                                 </li>
                             </ul>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -74,10 +82,12 @@
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab-1">
-                         <p>{{ publicite.description }}</p>
+                         <p>{{ publicite.description | raw }}</p>
+
                         </div>
                         <div class="tab-pane fade" id="tab-2">
                            <p>{{ publicite.tags }}</p>
+                            {{ twitterButton() }}
                         </div>
 
                     </div>
