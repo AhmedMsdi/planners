@@ -1,0 +1,24 @@
+messagerie_index:
+    path:     /
+    defaults: { _controller: "HebergementBundle:Messagerie:index" }
+    methods:  GET
+
+messagerie_show:
+    path:     /{id}/show
+    defaults: { _controller: "HebergementBundle:Messagerie:show" }
+    methods:  GET
+
+messagerie_new:
+    path:     /{idh}/new
+    defaults: { _controller: "HebergementBundle:Messagerie:new" }
+    methods:  [GET, POST]
+
+messagerie_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "HebergementBundle:Messagerie:edit" }
+    methods:  [GET, POST]
+
+messagerie_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "HebergementBundle:Messagerie:delete" }
+    methods:  GET

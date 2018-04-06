@@ -1,3 +1,7 @@
+review:
+    resource: "@ReviewBundle/Resources/config/routing.yml"
+    prefix:   /
+
 publicite:
     resource: "@PubliciteBundle/Resources/config/routing.yml"
     prefix:   /

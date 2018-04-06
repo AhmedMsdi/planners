@@ -2,6 +2,8 @@
 
 namespace HebergementBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -24,6 +26,99 @@ class Hebergement
     /**
      * @return int
      */
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="categorie", type="string", length=255, nullable=false)
+     */
+    private $categorie;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lieu", type="string", length=255, nullable=false)
+     */
+    private $lieu;
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="enable", type="boolean", nullable=false)
+     */
+    private $enable;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=255, nullable=false)
+     */
+    private $titre;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="\PiBundle\Entity\User")
+     * @ORM\JoinColumn(name="idUser", referencedColumnName="id")
+     */
+    private $idUser;
+
+
+    /**
+     * @var string
+     * @Assert\Image()
+     * @Assert\NotBlank(message="Ajouter une image")
+     * @ORM\Column(name="photo", type="string", nullable=false)
+     */
+    private $photo;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="string", length=10000, nullable=false)
+     */
+    private $description;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="prix", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $prix;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="tel", type="integer", nullable=false)
+     */
+    private $tel;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="datecreation", type="datetime", nullable=false)
+     */
+    private $datecreation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="site_web", type="string", length=255, nullable=false)
+     */
+    private $siteWeb;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="x", type="float", nullable=false)
+     */
+    private $x;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="y", type="float", nullable=false)
+     */
+    private $y;
+
     public function getId()
     {
         return $this->id;
@@ -134,46 +229,117 @@ class Hebergement
     }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="categorie", type="string", length=255, nullable=false)
+     * @return mixed
      */
-    private $categorie;
+    public function getIdUser()
+    {
+        return $this->idUser;
+    }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="lieu", type="string", length=255, nullable=false)
+     * @param mixed $idUser
      */
-    private $lieu;
+    public function setIdUser($idUser)
+    {
+        $this->idUser = $idUser;
+    }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="description", type="string", length=255, nullable=false)
+     * @return string
      */
-    private $description;
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
 
     /**
-     * @var float
-     *
-     * @ORM\Column(name="prix", type="float", precision=10, scale=0, nullable=false)
+     * @param string $photo
      */
-    private $prix;
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+    }
 
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="tel", type="integer", nullable=false)
+     * @return string
      */
-    private $tel;
+    public function getTitre()
+    {
+        return $this->titre;
+    }
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="site_web", type="string", length=255, nullable=false)
+     * @param string $titre
      */
-    private $siteWeb;
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDatecreation()
+    {
+        return $this->datecreation;
+    }
+
+    /**
+     * @param \DateTime $datecreation
+     */
+    public function setDatecreation($datecreation)
+    {
+        $this->datecreation = $datecreation;
+    }
+
+    /**
+     * @return float
+     */
+    public function getX()
+    {
+        return $this->x;
+    }
+
+    /**
+     * @param float $x
+     */
+    public function setX($x)
+    {
+        $this->x = $x;
+    }
+
+    /**
+     * @return float
+     */
+    public function getY()
+    {
+        return $this->y;
+    }
+
+    /**
+     * @param float $y
+     */
+    public function setY($y)
+    {
+        $this->y = $y;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isEnable()
+    {
+        return $this->enable;
+    }
+
+    /**
+     * @param bool $enable
+     */
+    public function setEnable($enable)
+    {
+        $this->enable = $enable;
+    }
+
 
 
 }
