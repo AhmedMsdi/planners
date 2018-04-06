@@ -1,0 +1,87 @@
+
+{% extends 'baseuser.html.twig' %}
+
+{% block body %}
+
+
+    <div class="gap" style=" margin-left: 120px;">
+        <a href="" class="btn btn-success"><div class="fa  fa-plus-square"></div>    Ajouter une publicité</a>
+        <a href="{{ path('stat_stat') }}" class="btn btn-warning"><div class="fa  fa-bar-chart-o"></div> Mes statistiques</a>
+
+        <a href="{{ path('pdf') }}" class="btn btn-inverse"><div class="fa fa-file-pdf-o"></div> Extrait PDF</a>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-md-3">
+                <aside class="sidebar-left">
+                    <ul class="nav nav-pills nav-stacked nav-arrow">
+                        <li  ><a href="{{ path('profil') }}">Settings</a>
+                        </li>
+                        <li class="active"><a href="{{ path('Profil_index') }}">Mes plans</a>
+                        </li>
+                        <li><a href="page-my-account-orders.html">Mes evenements</a>
+                        </li>
+                        <li><a href="page-my-account-wishlist.html">Mes hebergements</a>
+                        </li>
+                        <li ><a href="{{ path('publicite_index') }}">Mes publicites</a>
+
+                        </li>
+                        <div class="gap gap-small"></div>
+
+                    </ul>
+                </aside>
+            </div>
+
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+            <div class="col-md-9" class="chartjs-wrapper"><canvas
+                        id="chartjs-1" class="chartjs" width="undefined" height="undefined"></canvas>
+                <script>
+                    var dataSQL=[];
+                    var dataNames=[];
+                </script>
+                {% for p in plans%}
+                    {% if app.user.id == p.user.id %}
+
+                        <script>
+                            dataSQL.push({{ p.etat }});
+                            dataNames.push("{{ p.libelle }}");
+                        </script>
+                    {% endif %}
+                {% endfor %}
+
+                <div class="chartjs-wrapper">
+                    <canvas id="chartjs-1" class="chartjs" width="undefined" height="undefined"></canvas>
+
+                    <script>new Chart(document.getElementById("chartjs-1"),
+                            {"type":"bar","data":{"labels":dataNames,"datasets":[{"label":"Les plans Valider",
+                                        "data":dataSQL,"fill":false,
+                                    "backgroundColor":["rgba(255, 99, 132, 0.2)",
+                                        "rgba(255, 159, 64, 0.2)","rgba(255, 205, 86, 0.2)",
+                                        "rgba(75, 192, 192, 0.2)","rgba(54, 162, 235, 0.2)","rgba(153, 102, 255, 0.2)",
+                                        "rgba(201, 203, 207, 0.2)"],
+                                    "borderColor":["rgb(255, 99, 132)","rgb(255, 159, 64)",
+                                        "rgb(255, 205, 86)","rgb(75, 192, 192)",
+                                        "rgb(54, 162, 235)",
+                                        "rgb(153, 102, 255)","rgb(201, 203, 207)"],
+                                        "borderWidth":1}]},
+                            "options":{"scales":{"yAxes":[{"ticks":{"beginAtZero":true}}]}}});
+                    </script></div>
+
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="gap gap-small"></div>
+
+
+
+
+{% endblock %}
