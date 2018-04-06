@@ -1,0 +1,184 @@
+{% extends 'baseuser.html.twig' %}
+
+{% block body %}
+
+    <link rel="stylesheet" href="{{ asset('bundles/evennement/css/css_event.css') }}">
+    <div class="container margin_container" >
+
+        <div class="row">
+            <div class="col-md-3" id="element_search" searchurl="{{ path('resultat_search') }}">
+                <aside class="sidebar-left">
+                    <ul class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left">
+
+                        {%  set act_all="active" %}
+                        {%  if id_categ !=0 %}
+                            {%  set act_all="" %}
+                        {%  endif %}
+                        <li  class="search_categ {{ act_all }}" idcateg="0"><a href="#"><i class="fa fa-ticket"></i>Tous<span>{{ tab_nb_event['all'] }}</span></a>
+                        </li>
+                        {%  for categ in list_categ %}
+
+                            {%  set act_event="" %}
+                            {%  if id_categ ==categ.id %}
+                                {%  set act_event="active" %}
+                            {%  endif %}
+
+                            <li class="search_categ {{ act_event }}" idcateg="{{ categ.id }}"><a href="#"><i class="fa fa-arrows"></i>{{ categ.libelle }}<span>{{ tab_nb_event[categ.id] }}</span></a></li>
+                        {%  endfor %}
+                    </ul>
+                    <input type="hidden" id="search_categ" value="{{ id_categ }}">
+                    <div class="sidebar-box">
+                        <h5>Recheche par Prix</h5>
+                        <input type="text" id="search_prix">
+                    </div>
+                    <div class="sidebar-box">
+                        <h5>Recheche par Adresse</h5>
+                        <input type="text" id="search_ville">
+                    </div>
+                    <div class="sidebar-box">
+                        <h5>Product Feature</h5>
+                        <ul class="checkbox-list">
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">New <small>(50)</small>
+                                </label>
+                            </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">Ending Soon <small>(70)</small>
+                                </label>
+                            </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">Popular <small>(32)</small>
+                                </label>
+                            </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">Featured <small>(27)</small>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-box">
+                        <h5>When</h5>
+                        <ul class="checkbox-list">
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">This Week <small>(60)</small>
+                                </label>
+                            </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">Next Week <small>(37)</small>
+                                </label>
+                            </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">Later <small>(23)</small>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-box">
+                        <h5>Location</h5>
+                        <ul class="checkbox-list">
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">All <small>(657)</small>
+                                </label>
+                            </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">All Washington <small>(120)</small>
+                                </label>
+                            </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">NoMa <small>(13)</small>
+                                </label>
+                            </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">Chinatown <small>(32)</small>
+                                </label>
+                            </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">Penn Quarter <small>(53)</small>
+                                </label>
+                            </li>
+                            <li class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="i-check">Adams Morgan <small>(21)</small>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="product-sort">
+                            <select class="form-control" id="liste_trie">
+                                <option selected value="prix_asc">Tier par prix de - à +</option>
+                                <option value="prix_desc">Tier par prix de + à -</option>
+                                <option value="ville_asc">Tier par ville de a à z</option>
+                                <option value="ville_desc">Tier par ville de z à a</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-7">
+                        <div class="product-view pull-right">
+                            <a class="fa fa-th-large active" href="#"></a>
+
+                                <a href="{{ path('evennement_list') }}" class="btn btn-info"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Liste</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-wrap"  id="div_all_event">
+                    {% for event in evennements %}
+                    <a class="col-md-4 section_event" href="{{ path('evennement_info',{'id': event.id }) }}">
+                        <div class="product-thumb">
+                            <header class="product-header">
+                                <img src="{{ asset('imageEvent/'~event.image )}}" alt="Image Alternative text" title="Ana 29" />
+                            </header>
+                            <div class="product-inner">
+                                <h5 class="product-title">{{ event.titre }}</h5>
+                                <p class="product-desciption">{{ event.description }}</p>
+                                <div class="product-meta">
+                                    <span class="product-time"><i class="fa fa-calendar"></i> {{ event.dateEvent |date('d-m-Y') }} <i class="fa fa-clock-o"></i> {{ event.timeEvent |date('h:i')}}
+                                        <br><i class="fa fa-mobile"></i> {{ event.contact }}
+                                    </span>
+
+                                    <ul class="product-price-list">
+                                        <li><span class="product-price">{{ event.prix |number_format(3,'.','') }} TND</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="product-location"><i class="fa fa-map-marker"></i> {{ event.ville}}</p>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade" id="detailEvent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="my-modal-large" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="idModalTitre"></h4>
+                </div>
+                <div class="modal-body" id="idModalBody">
+
+                </div>
+        </div>
+    </div>
+{% endblock %}

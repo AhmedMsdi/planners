@@ -1,7 +1,7 @@
 <?php
 
 namespace EvennementBundle\Entity;
-
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -34,31 +34,37 @@ class Evennement
 
     /**
      * @ORM\Column(type="string",length=255)
+     * @Assert\NotBlank(message="Champs obligatoire")
      */
     private $titre;
 
     /**
      * @ORM\Column(type="string",length=255)
+     * @Assert\NotBlank(message="Champs obligatoire")
      */
     private $adresse;
 
     /**
      * @ORM\Column(type="string",length=255)
+     * @Assert\NotBlank(message="Champs obligatoire")
      */
     private $ville;
 
     /**
      * @ORM\Column(type="date",name="date_event")
+     * @Assert\NotBlank(message="Champs obligatoire")
      */
     private $date_event;
 
     /**
-     * @ORM\Column(type="date",name="time_event")
+     * @ORM\Column(type="time",name="time_event")
+     * @Assert\NotBlank(message="Champs obligatoire")
      */
     private $time_event;
 
     /**
-     * @ORM\Column(type="string",length=255)
+     * @ORM\Column(type="text")
+     * @Assert\NotBlank(message="Champs obligatoire")
      */
     private $description;
 
@@ -70,25 +76,52 @@ class Evennement
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\NotBlank(message="Champs obligatoire")
      */
     private  $prix;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Champs obligatoire")
      */
     private $contact;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    private $etat;
+
+    /**
+     * @return mixed
+     */
+    public function getEtat()
+    {
+        return $this->etat;
+    }
+
+    /**
+     * @param mixed $etat
+     */
+    public function setEtat($etat)
+    {
+        $this->etat = $etat;
+    }
+
+
+    /**
      * @ORM\ManyToOne(targetEntity="CategorieEvent")
      * @ORM\JoinColumn(name="CatEvent",referencedColumnName="id",nullable=false)
+     * @Assert\NotBlank(message="Champs obligatoire")
      */
     private $CatEvent;
 
     /**
      * @ORM\ManyToOne(targetEntity="PiBundle\Entity\User")
-     * @ORM\JoinColumn(name="User",referencedColumnName="id",nullable=false)
+     * @ORM\JoinColumn(name="User",referencedColumnName="id",nullable=true)
      */
     private $User;
+
+    private $editImage;
 
     /**
      * Set titre
@@ -210,29 +243,6 @@ class Evennement
         return $this->time_event;
     }
 
-    /**
-     * Set description
-     *
-     * @param string $description
-     *
-     * @return Evennement
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
 
     /**
      * Set image
@@ -352,5 +362,54 @@ class Evennement
     public function getUser()
     {
         return $this->User;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Evennement
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set editImage
+     *
+     * @param string $editImage
+     *
+     * @return Evennement
+     */
+    public function setEditImage($editImage)
+    {
+        $this->editImage = $editImage;
+
+        return $this;
+    }
+
+
+    /**
+     * Get editImage
+     *
+     * @return string
+     */
+    public function getEditImage()
+    {
+        return $this->editImage;
     }
 }

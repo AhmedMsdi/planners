@@ -9,6 +9,7 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/datepicker3.css') }}" rel="stylesheet">
     <link href="{{ asset('css/stylesADMIN.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/font_awesome.css') }}">
 
     <!--Icons-->
     <script src="{{ asset('js/lumino.glyphs.js') }}"></script>
@@ -52,7 +53,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><span>Gestion utilisateurs</span>Admin</a>
+            <a class="navbar-brand" href="#"><span>Tunisia Planners </span> Admin </a>
             <ul class="user-menu">
                 <li class="dropdown pull-right">
                     <ul class="dropdown-menu" role="menu">
@@ -70,18 +71,18 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <form role="search">
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
+            <input type="text" class="form-control" placeholder="Recherche">
         </div>
     </form>
     <ul class="nav menu">
-        <li class="active"><a href="{{ path('back_office_homepage') }}"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
-        <li><a href="{{ path('chart') }}"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Statistiques</a></li>
-        <li><a href="{{ path('form') }}"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Forms</a></li>
-        <li><a href="{{ path('panel') }}"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Alerts &amp; Panels</a></li>
-        <li><a href="{{ path('icon') }}"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg> Icons</a></li>
+        <li class="active"><a href="{{ path('back_office_homepage') }}"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial" ></use></svg>Acceuil</a></li>
+        <li><a href="{{ path('chart') }}"><svg class="glyph stroked line-graph"><use xlink:href="#stroked-line-graph"></use></svg> Mes Evennements</a></li>
+        <li><a href="{{ path('form') }}"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg> Hebergements</a></li>
+        <li><a href="{{ path('panel') }}"><svg class="glyph stroked app-window"><use xlink:href="#stroked-app-window"></use></svg> Mes Plans</a></li>
+        <li><a href="{{ path('icon') }}"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg> Mes Publicités</a></li>
         <li class="parent ">
             <a href="#">
-                <span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Dropdown
+                <span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Review
             </a>
             <ul class="children collapse" id="sub-item-1">
                 <li>
@@ -102,7 +103,7 @@
             </ul>
         </li>
         <li role="presentation" class="divider"></li>
-        <li><a href="{{ path('fos_user_security_login') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Login Page</a></li>
+        <li><a href="{{ path('fos_user_security_login') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Mon Profile</a></li>
     </ul>
 
 </div><!--/.sidebar-->
@@ -120,7 +121,9 @@
 <script src="{{ asset('js/chart-data.js') }}"></script>
 <script src="{{ asset('js/easypiechart.js') }}"></script>
 <script src="{{ asset('js/easypiechart-data.js') }}"></script>
+<script src="{{ asset('js/general_main.js') }}"></script>
 <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
+<script src="{{ asset('js/bootstrap-datepicker.fr.js') }}"></script>
 <script>
     $('#calendar').datepicker({
     });

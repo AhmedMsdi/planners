@@ -1,18 +1,30 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseadmin.html.twig' %}
 
 {% block body %}
     <h1>Categorieevent</h1>
+    <link rel="stylesheet" href="{{ asset('bundles/evennement/css/css_event.css') }}">
 
-    <table>
+
+<div class="container margin_container">
+    <div class="row">
+    <table class="table table-bordered table-hover">
         <tbody>
+
             <tr>
+
                 <th>Id</th>
+                <div class="col-md-4">
                 <td>{{ categorieEvent.id }}</td>
+                </div>
+
             </tr>
+
+
             <tr>
                 <th>Libelle</th>
                 <td>{{ categorieEvent.libelle }}</td>
             </tr>
+        </div>
         </tbody>
     </table>
 
@@ -29,4 +41,5 @@
             {{ form_end(delete_form) }}
         </li>
     </ul>
+</div>
 {% endblock %}

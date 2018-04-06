@@ -23,6 +23,7 @@ class AppKernel extends Kernel
             new HebergementBundle\HebergementBundle(),
             new PlanBundle\PlanBundle(),
             new PubliciteBundle\PubliciteBundle(),
+            new PianoSolo\WeatherBundle\PianoSoloWeatherBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
