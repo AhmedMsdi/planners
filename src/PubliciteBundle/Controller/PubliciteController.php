@@ -166,7 +166,7 @@ class PubliciteController extends Controller
             ->getForm();
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-             $rating->setPublicite($mark->getIdPub());
+            $rating->setPublicite($mark->getIdPub());
             $em->persist($rating);
             $em->flush();
 
