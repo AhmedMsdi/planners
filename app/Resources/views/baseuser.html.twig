@@ -111,10 +111,10 @@
 
                                 <li><a href="{{ path('plan_FilterBE') }}">Bien-Etre</a>
                                 </li>
-                                <li><a href="{{ path('plan_new') }}">Ajouter Plan</a>
-                                </li>
+
                             </ul>
                         </li>
+
                         <li><a href="product-shop-sidebar.html">Evenements </a>
                             <ul>
 
@@ -280,8 +280,10 @@
                 </div>
             </div>
             <div class="col-md-1">
-                <button class="btn btn-block btn-white search-btn" type="submit">Chercher</button>
+               <button class="btn btn-block btn-white search-btn" type="submit"
+                        action="{{ path('Find_Filter') }}"   >Chercher</button>
             </div>
+
         </div>
     </div>
 </form>

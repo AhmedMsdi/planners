@@ -1,0 +1,91 @@
+{% extends 'baseuser.html.twig' %}
+
+{% block body %}
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <style>
+        #map {
+            height: 500px;
+            width: 300%;
+        }
+    </style>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <!-- BLOG POST -->
+                <article class="post">
+                    <header class="post-header">
+                        <!-- HOVER IMAGE -->
+                        <a class="hover-img" href="post-sidebar-right.html">
+                            <i
+                                    class="fa fa-link hover-icon"></i>
+                        </a>
+                    </header>
+                    <div class="post-inner">
+                        <h4 class="post-title">
+                            <img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}" ></h4>
+                       <h3> {{ plan.libelle }}</h3>
+                        <p class="post-desciption">{{ plan.description }}</p>
+                    </div>
+
+                </article>
+                <!-- BLOG POST -->
+                <article class="post">
+                    <header class="post-header">
+                        <blockquote >
+                            {{ msg }}
+                        </blockquote>
+
+                    </header>
+
+                </article>
+                <!-- BLOG POST -->
+                <!-- BLOG POST -->
+                <!-- BLOG POST -->
+                <!-- BLOG POST -->
+                <!-- BLOG POST -->
+
+                <br><br><br>
+                {#{{ socialButtons() }}#}
+                <div class="gap"></div>
+            </div>
+            <div class="col-md-3">
+                <aside class="sidebar-right hidden-phone">
+                    <div class="sidebar-box">
+                        <h3>Informations Utils</h3>
+                        <ul class="icon-list blog-category-list">
+                            <li><i class="glyphicon glyphicon-home"></i> Adresse : {{ plan.adresse }}
+                            </li>
+                            <li><i class="glyphicon glyphicon-map-marker"></i> Ville : {{ plan.ville }}
+                            </li>
+                            <li><a href="#"><i class="glyphicon glyphicon-euro"></i> Prix : {{ plan.prix }}</a>
+                            </li>
+                            <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> €mail : {{ plan.email }}</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    {{ socialButtons( {'googleplus':false,
+                        'linkedin':false,'twitter':false,'pinterest':false,
+                        'facebook': {'locale':'fr_FR', 'url':''~ plan.avis ,
+                            'send':true}} ) }}
+
+                </aside>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- //////////////////////////////////
+    //////////////END PAGE CONTENT/////////
+    ////////////////////////////////////-->
+
+
+
+    <!-- //////////////////////////////////
+    //////////////MAIN FOOTER//////////////
+    ////////////////////////////////////-->
+
+{% endblock %}

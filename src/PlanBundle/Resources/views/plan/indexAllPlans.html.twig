@@ -1,56 +1,53 @@
 {% extends ('baseuser.html.twig') %}
- {% block stylesheets %}
-     <link rel="stylesheet" href="{{ asset('css\css\chaima.css') }}" />
 
-
- {% endblock %}
 {% block body %}
-    <h1>Plan</h1>
-
+    <h1 >Tous les Plans</h1>
+    <link rel="stylesheet" href="{{ asset('css/chaimaDesign.css') }}" />
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
 
     <div class="container">
         <div class="row col-md-6 col-md-offset-2 custyle">
-            <table class="table table-striped custab" border="2">
+            <table class="table table-striped custab" border="1">
 
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Image</th>
                     <th>libelle</th>
                     <th>Adresse</th>
                     <th>Ville</th>
                     <th>Prix</th>
                     <th>description</th>
-                    <th>image</th>
+
                     <th>longitude</th>
                     <th>latitude</th>
                     <th> #</th>
 
                 </tr>
                 </thead>
+                {% for plan in plans %}
                 <tr>
-                    <td>{{ plan.idP }}</td>{
-                    <td><img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}" ></td>
+                    <td>{{ plan.idP }}</td>
                     <td>{{ plan.libelle }}</td>
                     <td>{{ plan.adresse }}</td>
                     <td>{{ plan.ville }}</td>
                     <td>{{ plan.prix }}</td>
-
                     <td>{{ plan.description }}</td>
-                    <td>{{ plan.image }}</td>
                     <td>{{ plan.longitude }}</td>
                     <td>{{ plan.latitude }}</td>
 
-                    <td class="text-center">
-                        <a class='btn btn-info btn-xs' href="#">
-                            <span class="glyphicon glyphicon-edit"></span> Edit</a>
-                        {{ form_start(delete_form) }}
-                        <div class="btn"> <i class="fa fa-trash-o"></i> <input type="submit" value="Delete"></div>
-                        {{ form_end(delete_form) }}
+                    <td class="text-center"><a class='btn btn-info btn-xs'
+                                               href="{{ path('plan_edit', { 'idP': plan.idP  }) }}">
+                            <span class="glyphicon glyphicon-edit"></span> Modifier  </a>
+
+                    </td>
+                    <td class="text-center"><a class='btn btn-info btn-xs'
+                  href="{{ path('delete_modele', { 'idP': plan.idP  }) }}">
+                            <span class="glyphicon glyphicon-removes"></span> delete  </a>
+
                     </td>
                 </tr>
-
+{% endfor %}
             </table>
         </div>
     </div>

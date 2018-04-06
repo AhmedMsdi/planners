@@ -1,0 +1,101 @@
+
+
+{% extends 'baseuser.html.twig' %}
+
+{% block body %}
+
+
+    <!-- //////////////////////////////////
+  //////////////PAGE CONTENT/////////////
+  ////////////////////////////////////-->
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <div class="gap"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="fotorama" data-nav="thumbs"
+                             data-allowfullscreen="1" data-thumbheight="150" data-thumbwidth="150">
+                            <img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}" >
+
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="product-info box">
+                            <ul style="padding-left: 130px" class="icon-group icon-list-rating text-color" title="4.5/5 rating">
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star"></i>
+                                </li>
+                                <li><i class="fa fa-star-half-empty"></i>
+                                </li>
+                            </ul>
+
+                            <small>
+                                <a href="#" class="text-muted" style="padding-left: 120px">based on 8 reviews</a></small>
+                            <h2 style="padding-left: 110px">{{ plan.libelle }}</h2>
+                            <p class="product-info-price" style="padding-left: 120px" >{{ plan.prix }} Dt</p>
+                            <p class="text-smaller text-muted"><i class="glyphicon glyphicon-home">{{ plan.adresse }}</i></p>
+                            <p class="text-smaller text-muted"><i class="glyphicon glyphicon-map-marker">{{ plan.Ville }}</i>
+
+                                    </p>
+                            <ul class="icon-list list-space product-info-list">
+                                <li><i class="fa fa-check"> {{ plan.etat }}</i></li>
+
+                            </ul>
+                            {{ facebookButton() }}
+                            <div class="gap-small"></div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="gap"></div>
+                <div class="tabbable">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a href="#tab-1" data-toggle="tab"><i class="fa fa-info"></i>Desciption</a>
+                        </li>
+                        <li>
+                        </li>
+
+
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="tab-1">
+                            <p>{{ plan.description | raw }}</p>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="gap"></div>
+
+                <div class="gap gap-small">
+                    <article class="post">
+                        <header class="post-header">
+                            <blockquote >
+                                {{ msg }}
+                            </blockquote>
+
+                        </header>
+
+                    </article>
+                </div>
+            </div>
+        </div></div>
+
+    </div>
+
+
+    <!-- //////////////////////////////////
+//////////////END PAGE CONTENT/////////
+////////////////////////////////////-->
+{% endblock %}

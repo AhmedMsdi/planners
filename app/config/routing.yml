@@ -14,10 +14,6 @@ hebergement:
     resource: "@HebergementBundle/Resources/config/routing.yml"
     prefix:   /
 
-hebergement:
-    resource: "@HebergementBundle/Resources/config/routing.yml"
-    prefix:   /
-
 evennement_categorie_event:
     resource: "@EvennementBundle/Controller/CategorieEventController.php"
     type:     annotation

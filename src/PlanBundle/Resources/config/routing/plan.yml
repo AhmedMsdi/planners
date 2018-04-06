@@ -1,24 +1,71 @@
 plan_index:
     path:     /
     defaults: { _controller: "PlanBundle:Plan:index" }
-    methods:  GET
 
+Profil_index:
+    path:     /pa
+    defaults: { _controller: "PlanBundle:Default:Ahmed" }
+    methods:  GET
+plan_MAP2:
+    path:     /ch2/{id}
+    defaults: { _controller: "PlanBundle:Plan:showFrontCom" }
+    methods:  GET
+plan_div:
+    path:     /Div
+    defaults: { _controller: "PlanBundle:Plan:FilterDivertissement" }
+    methods:  GET
+plan_gas:
+    path:     /Gas
+    defaults: { _controller: "PlanBundle:Plan:FilterGastronomie" }
+    methods:  GET
+plan_be:
+    path:     /BE
+    defaults: { _controller: "PlanBundle:Plan:FilterBE" }
+    methods:  GET
+plan_indextableau:
+    path:     /AfficherLesPlansTab
+    defaults: { _controller: "PlanBundle:Plan:indexAll" }
+    methods:  [GET, POST]
+plan_indexableau2:
+    path:     /AjouterPlanM2
+    defaults: { _controller: "PlanBundle:Plan:indexAllMethode2" }
+    methods:  [GET, POST]
 plan_show:
     path:     /{idP}/show
     defaults: { _controller: "PlanBundle:Plan:show" }
     methods:  GET
-
 plan_new:
-    path:     /new
+    path:     /AjouterPlan
     defaults: { _controller: "PlanBundle:Plan:new" }
     methods:  [GET, POST]
-
 plan_edit:
-    path:     /{idP}/edit
+    path:     /edit/{idP}
     defaults: { _controller: "PlanBundle:Plan:edit" }
     methods:  [GET, POST]
-
 plan_delete:
     path:     /{idP}/delete
     defaults: { _controller: "PlanBundle:Plan:delete" }
     methods:  DELETE
+plan_NewPlanDesign:
+    path:     /NPD
+    defaults: { _controller: "PlanBundle:Plan:newPlanDesign" }
+    methods:  [GET, POST]
+plan_N:
+    path:     /{idP}/ph
+    defaults: { _controller: "PlanBundle:Plan:ModifPhoto" }
+    methods:  [GET, POST]
+delete_modele:
+    path:     /delete/{idP}
+    defaults: { _controller: PlanBundle:Plan:delete2}
+Details_plans:
+    path:     /detailG/{idP}
+    defaults: { _controller: "PlanBundle:Plan:Details" }
+Gelaterie_Filter:
+    path:     /GF
+    defaults: { _controller: "PlanBundle:Plan:GelaterieFilter" }
+Find_Filter:
+    path:     /Find
+    defaults: { _controller: "PlanBundle:Plan:RechercheFilter" }
+stat_stat:
+    path:     /stat
+    defaults: { _controller: "PlanBundle:Plan:Stat" }

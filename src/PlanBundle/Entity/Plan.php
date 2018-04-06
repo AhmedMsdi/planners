@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Plan
  *
  * @ORM\Table(name="plan", indexes={@ORM\Index(name="IDX_DD5A5B7D510DF12F", columns={"id_sc"})})
- * @ORM\Entity
+ * @ORM\Entity (repositoryClass="PlanBundle\Repository\PlanRepository")
  */
 class Plan
 {
@@ -31,7 +31,7 @@ class Plan
     /**
      * @var string
      *
-     * @ORM\Column(name="adresse", type="string", length=20, nullable=true)
+     * @ORM\Column(name="adresse", type="string", length=100, nullable=true)
      */
     private $adresse;
 
@@ -45,7 +45,7 @@ class Plan
     /**
      * @var string
      *
-     * @ORM\Column(name="ville", type="string", length=50, nullable=true)
+     * @ORM\Column(name="ville", type="string", length=100, nullable=true)
      */
     private $ville;
 
@@ -111,6 +111,14 @@ class Plan
      * @ORM\Column(name="note", type="integer", nullable=true)
      */
     private $note;
+
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="PiBundle\Entity\User")
+     * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
+     */
+    private $user;
 
     /**
      * @var \SousCategorie
@@ -362,6 +370,30 @@ class Plan
         $this->idSc = $idSc;
     }
 
+
+    /**
+     * Set user
+     *
+     * @param \PiBundle\Entity\User $user
+     *
+     * @return Plan
+     */
+    public function setUser(\PiBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \PiBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 
 }
 
