@@ -59,9 +59,10 @@ class MessagerieController extends Controller
             $messageries->setDatedebut(new \DateTime($req['datedebut']));
             $messageries->setDatefin(new \DateTime($req['datefin']));
             $messageries->setEtat(1);
+            $messageries->setNbrPerson($req['nbrPerson']);
             $em->persist($messageries);
             $em->flush();
-            if ($user!=$messageries->getIdUser())
+            if ($user->getId()!=$messageries->getIdUser())
             return $this->redirectToRoute('hebergement_show', array('id' => $idh));
             else
                 return $this->redirectToRoute('hebergement_index');

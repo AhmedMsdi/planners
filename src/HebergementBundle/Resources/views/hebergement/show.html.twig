@@ -86,7 +86,10 @@
                                 </div>
                                 {% elseif etat==2 %}
                                     <div class="btnPart">
-                                        <a href="#" disabled="disabled" style="background-color: #fcbe2c" class="btn btn-primary btn-block bg-color-6">Confirmé</a>
+                                    <a href="#" disabled="disabled" style="background-color: #fcbe2c" class="btn btn-primary btn-block bg-color-6">Confirmé</a>
+                                </div>
+                                    <div class="btnPart">
+                                        <a href="#" disabled="disabled" style="background-color: #000" class="btn btn-primary btn-block bg-color-6"><i class="fa fa-file-pdf-o"></i> Téléchargé le reçu</a>
                                     </div>
                                 {% else %}
 
@@ -97,6 +100,16 @@
 
                                             {{ form_widget(formres.datefin,{'attr':{'class':'form-control','placeholder':'y'}}) }}
                                         </div>
+
+                                <br>
+                                <br>
+                                <div class="col-md-8">
+                                            Nombre de personnes :
+                                </div>
+                                             <div class="col-md-3">
+                                            {{ form_widget(formres.nbrPerson,{'attr':{'class':'form-control','placeholder':'----'}}) }}
+                                        </div>
+
 
                                     <br>
                                     <br>
