@@ -21,7 +21,9 @@ class PubliciteType extends AbstractType
             ->add('text')
             ->add('siteWeb')
             ->add('description',TextareaType::class,array('attr'=>array('class'=>'ckeditor','placeholder'=>'Description')))
-            ->add('nbClick')->add('etat')->add('tags');
+            ->add('nbClick')
+            ->add('etat')
+            ->add('tags');
     }/**
      * {@inheritdoc}
      */

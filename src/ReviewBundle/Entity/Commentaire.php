@@ -4,7 +4,8 @@ namespace ReviewBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Commentaire
+ * Commentaireomar
+ * @ORM\Entity
  */
 class Commentaire
 {
@@ -25,12 +26,13 @@ class Commentaire
 
     /**
      * @ORM\ManyToOne(targetEntity="PlanBundle\Entity\Plan")
-     * @ORM\JoinColumn(name="id_plan",referencedColumnName="idP")
+     * @ORM\JoinColumn(name="id_plan",referencedColumnName="id_p")
      */
     private $idPlan;
 
     /**
      * @var string
+     * @ORM\Column(name="contenu", type="string", length=255, nullable=true)
      */
     private $contenu;
 

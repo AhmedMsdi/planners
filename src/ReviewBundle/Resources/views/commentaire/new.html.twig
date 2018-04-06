@@ -1,0 +1,26 @@
+{% extends '::baseuser.html.twig' %}
+
+{% block body %}
+
+
+    <!--contact form-->
+
+
+
+
+
+
+
+    <h1>Commentaire creation</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+    <input id="contact-form-submit" class="form-submit-btn" type="submit" value="AJOUTER">
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('commentaire_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

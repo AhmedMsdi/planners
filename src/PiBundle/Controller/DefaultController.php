@@ -14,7 +14,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $numbers = range(10, 100);
+        $numbers = range(1, 100);
 
         shuffle($numbers);
         $random_keys=array_rand($numbers,4);

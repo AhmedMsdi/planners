@@ -6,7 +6,7 @@ publicite_index:
 publicite_show:
     path:     /{idPub}/show
     defaults: { _controller: "PubliciteBundle:Publicite:show" }
-    methods:  GET
+    methods:  [GET, POST]
 
 publicite_new:
     path:     /new

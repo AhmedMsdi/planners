@@ -1,3 +1,7 @@
+review_commentaire:
+    resource: "@ReviewBundle/Resources/config/routing/commentaire.yml"
+    prefix:   /commentaire
+
 commentaire_ajout:
     path:     /ajoutcom
-    defaults: { _controller: "" }
+    defaults: { _controller: "ReviewBundle:Commentaireomar:ajoutercom" }

@@ -2,6 +2,7 @@
 
 namespace PubliciteBundle\Controller;
 
+use blackknight467\StarRatingBundle\Form\RatingType;
 use Knp\Snappy\Pdf;
 use PubliciteBundle\Entity\Publicite;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -9,7 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-
+use PubliciteBundle\Entity\Rating;
 /**
  * Publicite controller.
  *
@@ -24,7 +25,7 @@ class PubliciteController extends Controller
     {
 
         $em = $this->getDoctrine()->getManager();
-
+        $rating = $em->getRepository('PubliciteBundle:Rating')->findAll();
         $publicites = $em->getRepository('PubliciteBundle:Publicite')->findAll();
         $publicites2 = $em->getRepository('PubliciteBundle:Publicite')->findBy(array('user' =>$this->getUser()));
 
@@ -38,12 +39,12 @@ class PubliciteController extends Controller
             $request->query->getInt('limit', 3)
 
         );
-
+        $rating = $em->getRepository('PubliciteBundle:Rating')->AVGRating();
 
         return $this->render('@Publicite/publicite/index.html.twig', array(
             'publicites2' => $result,
             'publicites' => $publicites2,
-
+            'rating' => $rating
         ));
 
     }
@@ -133,19 +134,71 @@ class PubliciteController extends Controller
      * Finds and displays a publicite entity.
      *
      */
-    public function showAction(Publicite $publicite)
+    public function showAction(Publicite $publicite, Request $request)
     {
+        $m = $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine()->getManager();
+        $commentaires = $em->getRepository('ReviewBundle:Commentaire')->findAll();
+
+        $user=$this->getUser();
         $deleteForm = $this->createDeleteForm($publicite);
-        if($publicite->getUser() != $this->getUser()){
-            $publicite->setNbClick($publicite->getNbClick()+1);
-        }elseif ($this->getUser()==null){
-            $publicite->setNbClick($publicite->getNbClick()+1);
+        $id=$request->get('idPub');
+        $publicite = $em->getRepository('PubliciteBundle:Publicite')->findAll();
+        $publicite=$em->getRepository("PubliciteBundle:Publicite")->find($id);
+
+
+
+
+        $mark = $em->getRepository('PubliciteBundle:Publicite')->find($id);
+        $rating = $m->getRepository('PubliciteBundle:Rating')->AVGRating();
+        $rating=new Rating();
+
+
+        $form=$this->createFormBuilder($rating)
+            ->add('rating', RatingType::class, [
+                'label' => 'Rating'
+            ])
+            ->add('valider',SubmitType::class, array(
+                'attr' => array(
+
+                    'class'=>'btn btn-xs btn-primary'
+                )))
+            ->getForm();
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $rating->setPublicite($mark->getIdPub());
+            $em->persist($rating);
+            $em->flush();
+
+            if($publicite->getUser() != $this->getUser()){
+                $publicite->setNbClick($publicite->getNbClick()+1);
+            }elseif ($this->getUser()==null){
+                $publicite->setNbClick($publicite->getNbClick()+1);
+            }
+            $this->getDoctrine()->getManager()->flush();
         }
-        $this->getDoctrine()->getManager()->flush();
-        return $this->render('@Publicite/publicite/show.html.twig', array(
-            'publicite' => $publicite,
-            'delete_form' => $deleteForm->createView(),
+
+
+            return $this->render('@Publicite/publicite/show.html.twig', array(
+                'commentaires' => $commentaires,
+                'publicite' => $publicite,
+                'delete_form' => $deleteForm->createView(),
+
+            'mark' => $mark,'form'=> $form->createView(),'rating'=>$rating,
+
+
+
+
         ));
+
+
+
+
+
+
+
+
+
     }
 
     /**
