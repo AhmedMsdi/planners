@@ -1,143 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="lina front">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-BoldItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-ExtraBold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-Italic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-Light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-LightItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-Regular.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-SemiBold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-SemiBoldItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Black.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-BlackItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Bold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-BoldItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-ExtraBold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-ExtraBoldItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-ExtraLight.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-ExtraLightItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Italic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Light.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-LightItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Medium.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-MediumItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-SemiBold.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-SemiBoldItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Thin.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-ThinItalic.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/images/icons/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Form/EvennementEditType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/afficher.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/Meteo.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/menuevent.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/resultatsearch.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap-datepicker.fr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/general_main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/general_main_front.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/css/util.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/css/font-awesome.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/animated.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/bordered-pulled.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/core.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/fixed-width.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/font-awesome.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/icons.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/larger.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/list.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/mixins.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/path.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/rotated-flipped.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/screen-reader.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/stacked.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/variables.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_animated.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_core.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_icons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_larger.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_list.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_path.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_stacked.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/animate/animate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-grid.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-grid.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-grid.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-grid.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-reboot.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-reboot.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-reboot.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-reboot.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap.min.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/js/popper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/js/popper.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/js/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/jquery/jquery-3.2.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/perfect-scrollbar/perfect-scrollbar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/perfect-scrollbar/perfect-scrollbar.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/select2/select2.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/select2/select2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/select2/select2.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/select2/select2.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/edit.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/new.html.twig" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/show.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/show.html.twig" />
+    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pidev.iml" afterPath="$PROJECT_DIR$/.idea/pidev.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/symfony_requirements" afterPath="$PROJECT_DIR$/bin/symfony_requirements" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Form/EvennementType.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Form/EvennementType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/public/css/css_event.css" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/public/css/css_event.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -167,34 +35,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="general_main_front.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/general_main_front.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="19" lean-forward="false" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="42" column="59" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="59" />
-              <folding>
-                <element signature="e#12#31#0#Twig" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="EvennementRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="29" column="58" lean-forward="false" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-              <folding />
+            <state relative-caret-position="204">
+              <caret line="46" column="1" lean-forward="false" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+              <folding>
+                <marker date="1523033609158" expanded="true" signature="1432:1434" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,66 +60,28 @@
       <file leaf-file-name="Evennement.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="91" column="18" lean-forward="false" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="1887">
+              <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
+              <folding>
+                <marker date="1523033609111" expanded="true" signature="6920:6929" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EvennementController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EvennementController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="93" column="38" lean-forward="false" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="38" />
+            <state relative-caret-position="737">
+              <caret line="104" column="38" lean-forward="false" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
               <folding>
+                <element signature="e#730#759#1#PHP" expanded="true" />
+                <element signature="e#803#854#0#PHP" expanded="true" />
+                <element signature="e#1976#2025#0#PHP" expanded="true" />
                 <element signature="e#2427#2477#0#PHP" expanded="true" />
                 <element signature="e#2876#2905#1#PHP" expanded="true" />
                 <element signature="e#2977#3023#1#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrontEvennementController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="53" />
-              <folding>
-                <element signature="e#47#86#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="infoevent.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="299" column="38" lean-forward="false" selection-start-line="299" selection-start-column="38" selection-end-line="299" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="resultatsearch.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/resultatsearch.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="57" column="56" lean-forward="false" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
-              <folding>
-                <element signature="e#13#32#0#Twig" expanded="false" />
+                <element signature="e#4606#4656#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -327,9 +137,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="composer.json" />
-      <command text="c dump-autoload" />
-      <command text="s generate:bundle" />
       <command text="s doctrine:generate:entity UserBundle:User" />
       <command text="s doctrine:generate:entity " />
       <command text="c dump-autoload" />
@@ -352,10 +159,18 @@
       <command text="update composer.pharm" />
       <command text="update composer.phar" />
       <command text="s doctrine:schema:update --force" />
+      <command text="c dump-autoload" />
+      <command text="c require knplabs/knp-paginator-bundle" />
+      <command text="s doctrine:schema:update -f " />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
@@ -412,8 +227,8 @@
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/show.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" />
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" />
       </list>
     </option>
   </component>
@@ -471,6 +286,12 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/pianosolo/weather-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/nomaya/social-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
@@ -495,7 +316,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -655,44 +475,6 @@
               <option name="myItemId" value="evennement" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="front" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="planners" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="planners" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="EvennementBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="evennement" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -842,16 +624,84 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackOfficeBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackOfficeBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackOfficeBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../FirstSymfony" />
     <property name="SearchEverywhereHistoryKey" value="wrapped&#9;null&#9;null&#10;validator.&#9;FILE&#9;file://C:/wamp64/www/pidev/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.ar.yml&#10;/login&#9;FILE&#9;file://C:/wamp64/www/pidev/app/Resources/views/FOSUser/views/Security/login_content.html.twig" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -993,6 +843,7 @@
       <workItem from="1522918125226" duration="746000" />
       <workItem from="1522919346678" duration="4935000" />
       <workItem from="1523018282740" duration="3205000" />
+      <workItem from="1523031718481" duration="1924000" />
     </task>
     <task id="LOCAL-00001" summary="lina">
       <created>1521680998570</created>
@@ -1001,13 +852,20 @@
       <option name="project" value="LOCAL" />
       <updated>1521680998570</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="lina chayma ahmed mahdi omar1/2">
+      <created>1523033280854</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1523033280854</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237974000" />
+    <option name="totallyTimeSpent" value="239898000" />
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -1019,19 +877,19 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="TODO" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.50832075" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30441898" sideWeight="0.49167928" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12274959" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31240544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31694403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1052,7 +910,8 @@
     <MESSAGE value="lina" />
     <MESSAGE value="lina EVENTBundle changement au niveau du baseUser" />
     <MESSAGE value="lina front" />
-    <option name="LAST_COMMIT_MESSAGE" value="lina front" />
+    <MESSAGE value="lina chayma ahmed mahdi omar1/2" />
+    <option name="LAST_COMMIT_MESSAGE" value="lina chayma ahmed mahdi omar1/2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1091,7 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1296,7 +1154,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1304,7 +1161,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1360">
           <caret line="80" column="20" lean-forward="false" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1312,7 +1168,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,9 +1175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="57" column="44" lean-forward="false" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
-          <folding>
-            <element signature="e#41#63#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1330,7 +1182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1338,7 +1189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1346,7 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2584">
           <caret line="152" column="63" lean-forward="false" selection-start-line="152" selection-start-column="63" selection-end-line="152" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1362,9 +1211,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="21" column="53" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="53" />
-          <folding>
-            <element signature="e#47#86#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1378,19 +1225,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="29" column="58" lean-forward="false" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding />
+        <state relative-caret-position="204">
+          <caret line="46" column="1" lean-forward="false" selection-start-line="46" selection-start-column="1" selection-end-line="46" selection-end-column="1" />
+          <folding>
+            <marker date="1523033609158" expanded="true" signature="1432:1434" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/show.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
+        <state relative-caret-position="969">
           <caret line="57" column="56" lean-forward="false" selection-start-line="57" selection-start-column="56" selection-end-line="57" selection-end-column="56" />
-          <folding>
-            <element signature="e#13#32#0#Twig" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1404,39 +1251,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="91" column="18" lean-forward="false" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="93" column="38" lean-forward="false" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="38" />
+        <state relative-caret-position="1887">
+          <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
           <folding>
-            <element signature="e#2427#2477#0#PHP" expanded="true" />
-            <element signature="e#2876#2905#1#PHP" expanded="true" />
-            <element signature="e#2977#3023#1#PHP" expanded="true" />
+            <marker date="1523033609111" expanded="true" signature="6920:6929" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="714">
           <caret line="42" column="59" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="59" />
-          <folding>
-            <element signature="e#12#31#0#Twig" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="299" column="38" lean-forward="false" selection-start-line="299" selection-start-column="38" selection-end-line="299" selection-end-column="38" />
+        <state relative-caret-position="407">
+          <caret line="304" column="14" lean-forward="true" selection-start-line="304" selection-start-column="14" selection-end-line="304" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="104" column="38" lean-forward="false" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
+          <folding>
+            <element signature="e#730#759#1#PHP" expanded="true" />
+            <element signature="e#803#854#0#PHP" expanded="true" />
+            <element signature="e#1976#2025#0#PHP" expanded="true" />
+            <element signature="e#2427#2477#0#PHP" expanded="true" />
+            <element signature="e#2876#2905#1#PHP" expanded="true" />
+            <element signature="e#2977#3023#1#PHP" expanded="true" />
+            <element signature="e#4606#4656#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
