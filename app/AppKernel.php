@@ -22,11 +22,11 @@ class AppKernel extends Kernel
             new EvennementBundle\EvennementBundle(),
             new HebergementBundle\HebergementBundle(),
             new PlanBundle\PlanBundle(),
+            new PubliciteBundle\PubliciteBundle(),
+            new ReviewBundle\ReviewBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Nomaya\SocialBundle\NomayaSocialBundle(),
-            new PubliciteBundle\PubliciteBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
-            new ReviewBundle\ReviewBundle(),
 
         ];
 
