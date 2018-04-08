@@ -1,0 +1,62 @@
+{% extends 'baseadmin.html.twig' %}
+
+{% block body %}
+
+    <link rel="stylesheet" href="{{ asset('bundles/evennement/css/css_event.css') }}">
+    <h1>Evennements list</h1>
+
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Adresse</th>
+                <th>Ville</th>
+                <th>Date_event</th>
+                <th>Time_event</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Prix</th>
+                <th>Contact</th>
+
+                <th class="td_action">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for evennement in evennements %}
+            <tr>
+                <td><a href="{{ path('evennement_show', { 'id': evennement.id }) }}">{{ evennement.id }}</a></td>
+                <td>{{ evennement.titre }}</td>
+                <td>{{ evennement.adresse }}</td>
+                <td>{{ evennement.ville }}</td>
+                <td>{% if evennement.dateevent %}{{ evennement.dateevent|date('d-m-Y') }}{% endif %}</td>
+                <td>{% if evennement.timeevent %}{{ evennement.timeevent|date('d-m-Y') }}{% endif %}</td>
+                <td>{{ evennement.description }}</td>
+                <td>{{ evennement.image }}</td>
+                <td>{{ evennement.prix|number_format(3,'.','') }}</td>
+                <td>{{ evennement.contact }}</td>
+                <td>
+
+                    <ul class="list_btn_action">
+                        <li>
+                            <a href="{{ path('valider_event', { 'id': evennement.id }) }}" class="btn btn-info btn-xs">Détail</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('evennement_edit', { 'id': evennement.id }) }}" class="btn btn-warning btn-xs">Modifier</a>
+                        </li>
+                    </ul>
+
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('evennement_new') }}" class="btn btn-info">Créer Evennement</a>
+
+        </li>
+    </ul>
+{% endblock %}

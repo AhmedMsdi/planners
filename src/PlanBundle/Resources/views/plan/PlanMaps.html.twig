@@ -1,0 +1,70 @@
+{% extends ('baseuser.html.twig') %}
+{% block body %}
+    <html>
+    <head>
+        <style>
+            #map {
+                height: 500px;
+                width: 300%;
+                margin-left: 200px;
+
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container"   >
+        <div class="row" style="background-color: #0f6774;">
+            <div class="col-md-3"   >
+
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var locations = [
+                    ['{{ plan.libelle }}', {{ plan.latitude }}, {{ plan.longitude }}],
+                ],mapOptions = {
+                    center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+                    zoom: 18
+                },map = new google.maps.Map(document.getElementById("map"),
+                mapOptions),
+                infowindow = new google.maps.InfoWindow({maxWidth: 200}), marker, i, latLongList = [];
+
+            for (i = 0; i < locations.length; i++) {
+                latLong = new google.maps.LatLng(locations[i][1], locations[i][2]);
+                marker = new google.maps.Marker({
+                    position: latLong,
+                    map: map
+                });
+
+                google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                    return function() {
+                        infowindow.setContent(locations[i][0]);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+
+                latLongList.push(latLong);
+            }
+
+            var bounds = new google.maps.LatLngBounds ();
+
+            for (i = 0, LtLgLen = latLongList.length; i < LtLgLen; i++) {
+                bounds.extend (latLongList[i]);
+            }
+
+            map.fitBounds(bounds);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfp1K5cF9bUzYNBQaNqo94Erww5jNHMc8&callback=initMap">
+    </script>
+            </div>
+        </div>
+
+    </div>
+    </body>
+
+
+
+{% endblock %}

@@ -1,16 +1,22 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseadmin.html.twig' %}
 
 {% block body %}
     <h1>Categorieevent creation</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+
+
     {{ form_end(form) }}
 
-    <ul>
+    <ul >
         <li>
-            <a href="{{ path('categorieevent_index') }}">Back to the list</a>
+            <input type="submit" value="Créer"  class="btn btn-success"/>
         </li>
+        <li>
+            <a href="{{ path('categorieevent_index') }}">afficher liste</a>
+
+        </li>
+
     </ul>
 {% endblock %}

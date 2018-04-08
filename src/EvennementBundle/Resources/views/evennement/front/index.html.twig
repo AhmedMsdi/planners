@@ -1,0 +1,131 @@
+{% extends 'baseuser.html.twig' %}
+
+
+{% block body %}
+    <style>
+        table.paleBlueRows {
+            font-family: "Garamond", Times, serif;
+            border: 1px solid #FFFFFF;
+            width: 350px;
+            height: 200px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        table.paleBlueRows td, table.paleBlueRows th {
+            border: 0px solid #FFFFFF;
+            padding: 5px 13px;
+        }
+
+        table.paleBlueRows tbody td {
+            font-size: 16px;
+        }
+
+        table.paleBlueRows tr:nth-child(even) {
+            background: #D0E4F5;
+        }
+
+        table.paleBlueRows thead {
+            background: #0B6FA4;
+            border-bottom: 5px solid #FFFFFF;
+        }
+
+        table.paleBlueRows thead th {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FFFFFF;
+            text-align: center;
+            border-left: 2px solid #FFFFFF;
+        }
+
+        table.paleBlueRows thead th:first-child {
+            border-left: none;
+        }
+
+        table.paleBlueRows tfoot {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333333;
+            background: #D0E4F5;
+            border-top: 3px solid #444444;
+        }
+
+        table.paleBlueRows tfoot td {
+            font-size: 14px;
+        }
+
+        #desc {
+            padding: 10px 65px;
+
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="{{ asset('bundles/evennement/css/css_event.css') }}">
+    <h1 style="padding-left:500px ; color: #0a7369">Mes Evennements</h1><br>
+      <link rel="stylesheet" href="{{ asset('css/chaimaDesign.css') }}"/>
+      <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+
+      <div class="container margin_container">
+          <div class="row col-md-12">
+
+              <div class="row">
+                  <div class="col-md-12">
+                      <ul class="list_btn_action pull-right">
+                          <li>
+                              <a href="{{ path('evennement_ajouter') }}" class="btn btn-info"> Ajouter</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+              <table class="paleBlueRows">
+
+                  <thead>
+                  <tr>
+
+                      <th>Id</th>
+                      <th>Titre</th>
+                      <th>Adresse</th>
+                      <th>Ville</th>
+                      <th>Date_event</th>
+                      <th>Time_event</th>
+                      <th>Description</th>
+                      <th>Image</th>
+                      <th>Prix</th>
+                      <th>Contact</th>
+                      <th class="td_action">Actions</th>
+
+                  </tr>
+                  </thead>
+                  {% for evennement in evennements %}
+                      <tr>
+                          <td><a href="{{ path('evennement_show', { 'id': evennement.id }) }}">{{ evennement.id }}</a></td>
+                          <td>{{ evennement.titre }}</td>
+                          <td>{{ evennement.adresse }}</td>
+                          <td>{{ evennement.ville }}</td>
+                          <td>{% if evennement.dateevent %}{{ evennement.dateevent|date('d-m-Y') }}{% endif %}</td>
+                          <td>{% if evennement.timeevent %}{{ evennement.timeevent|date('H:i') }}{% endif %}</td>
+                          <td>{{ evennement.description }}</td>
+                          <td>{{ evennement.image }}</td>
+                          <td>{{ evennement.prix|number_format(3,'.','') }}</td>
+                          <td>{{ evennement.contact }}</td>
+                          <td>
+
+                              <ul class="list_btn_action">
+                                  <li>
+                                      <a href="{{ path('evennement_info', { 'id': evennement.id }) }}" class="btn btn-info btn-xs">Détail</a>
+                                  </li>
+                                  <li>
+                                      <a href="{{ path('evennement_modifier', { 'id': evennement.id }) }}" class="btn btn-warning btn-xs">Modifier</a>
+                                  </li>
+                              </ul>
+
+                          </td>
+                      </tr>
+                  {% endfor %}
+                  </tbody>
+              </table>
+          </div>
+      </div>
+{% endblock %}

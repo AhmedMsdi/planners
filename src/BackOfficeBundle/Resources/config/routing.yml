@@ -25,3 +25,16 @@ panel:
 icon:
     path:     /icon
     defaults: { _controller: BackOfficeBundle:Default:icon }
+plan_indextableau:
+    path:     /AffP
+    defaults: { _controller: BackOfficeBundle:PlanBackOff:AllPlansBack  }
+    methods:  [GET, POST]
+plan_valider:
+    path:     /{idP}/val
+    defaults: { _controller: BackOfficeBundle:PlanBackOff:ValiderPlan  }
+plan_Nonvalide:
+    path:     /{idP}/NonVal
+    defaults: { _controller: BackOfficeBundle:PlanBackOff:NonValidePlan  }
+New_PlanBack:
+    path:     /new
+    defaults: { _controller: BackOfficeBundle:PlanBackOff:AjouterPlanBack  }

@@ -1,80 +1,57 @@
-{% extends 'base.html.twig' %}
+{% extends ('baseuser.html.twig') %}
+ {% block stylesheets %}
+     <link rel="stylesheet" href="{{ asset('css\css\chaima.css') }}" />
 
+
+ {% endblock %}
 {% block body %}
     <h1>Plan</h1>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>Idp</th>
-                <td>{{ plan.idP }}</td>
-            </tr>
-            <tr>
-                <th>Libelle</th>
-                <td>{{ plan.libelle }}</td>
-            </tr>
-            <tr>
-                <th>Adresse</th>
-                <td>{{ plan.adresse }}</td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>{{ plan.description }}</td>
-            </tr>
-            <tr>
-                <th>Ville</th>
-                <td>{{ plan.ville }}</td>
-            </tr>
-            <tr>
-                <th>Image</th>
-                <td>{{ plan.image }}</td>
-            </tr>
-            <tr>
-                <th>Avis</th>
-                <td>{{ plan.avis }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ plan.email }}</td>
-            </tr>
-            <tr>
-                <th>Prix</th>
-                <td>{{ plan.prix }}</td>
-            </tr>
-            <tr>
-                <th>Longitude</th>
-                <td>{{ plan.longitude }}</td>
-            </tr>
-            <tr>
-                <th>Latitude</th>
-                <td>{{ plan.latitude }}</td>
-            </tr>
-            <tr>
-                <th>Etat</th>
-                <td>{{ plan.etat }}</td>
-            </tr>
-            <tr>
-                <th>Etatnotif</th>
-                <td>{{ plan.etatnotif }}</td>
-            </tr>
-            <tr>
-                <th>Note</th>
-                <td>{{ plan.note }}</td>
-            </tr>
-        </tbody>
-    </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('plan_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('plan_edit', { 'idP': plan.idP }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <table class="table table-striped custab" border="2">
+
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>libelle</th>
+                    <th>Adresse</th>
+                    <th>Ville</th>
+                    <th>Prix</th>
+                    <th>description</th>
+                    <th>image</th>
+                    <th>longitude</th>
+                    <th>latitude</th>
+                    <th> #</th>
+
+                </tr>
+                </thead>
+                <tr>
+                    <td>{{ plan.idP }}</td>{
+                    <td><img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}" ></td>
+                    <td>{{ plan.libelle }}</td>
+                    <td>{{ plan.adresse }}</td>
+                    <td>{{ plan.ville }}</td>
+                    <td>{{ plan.prix }}</td>
+
+                    <td>{{ plan.description }}</td>
+                    <td>{{ plan.image }}</td>
+                    <td>{{ plan.longitude }}</td>
+                    <td>{{ plan.latitude }}</td>
+
+                    <td class="text-center">
+                        <a class='btn btn-info btn-xs' href="#">
+                            <span class="glyphicon glyphicon-edit"></span> Edit</a>
+                        {{ form_start(delete_form) }}
+                        <div class="btn"> <i class="fa fa-trash-o"></i> <input type="submit" value="Delete"></div>
+                        {{ form_end(delete_form) }}
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
 {% endblock %}

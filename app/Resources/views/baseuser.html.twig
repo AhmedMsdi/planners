@@ -115,18 +115,8 @@
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="product-shop-sidebar.html">Evenements </a>
-                            <ul>
-
-                                <li><a href="#">Art et théatre</a>
-
-                                </li>
-                                <li><a href="product-coupon-default.html">Camping&Randonnés</a>
-
-                                </li>
-                                <li><a href="product-coupon-default.html">Sports et Activités</a>
-                                </li>
-
+                        <li><a href="{{ path('evennement_listall') }}">Evenements </a>
+                            <ul id="list_menu_event">
                             </ul>
                         </li>
                         <li><a href="{{ path('pi_homepage') }}">Hebergements</a>
@@ -223,15 +213,18 @@
                         <div class="shopping-cart-box">
                             <ul class="shopping-cart-items">
                                 <li>
-                                    <a href="product-shop-sidebar.html">
-                                        <img src="{{ asset('img/amaze_70x70.jpg') }}" alt="Image Alternative text" title="AMaze" />
-                                        <h5>New Glass Collection</h5><span class="shopping-cart-item-price">$150</span>
+                                    <a href="{{ path('evennement_list') }}">
+                                        <h5>Mes evennement</h5>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="product-shop-sidebar.html">
-                                        <img src="{{ asset('img/gamer_chick_70x70.jpg') }}" alt="Image Alternative text" title="Gamer Chick" />
-                                        <h5>Playstation Accessories</h5><span class="shopping-cart-item-price">$170</span>
+                                    <a href="#">
+                                        <h5>Mes Plans</h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h5>Mes Publicités</h5>
                                     </a>
                                 </li>
                             </ul>
@@ -280,8 +273,10 @@
                 </div>
             </div>
             <div class="col-md-1">
-                <button class="btn btn-block btn-white search-btn" type="submit">Chercher</button>
+               <button class="btn btn-block btn-white search-btn" type="submit"
+                        action="{{ path('Find_Filter') }}"   >Chercher</button>
             </div>
+
         </div>
     </div>
 </form>
@@ -317,6 +312,11 @@
 <!-- Custom scripts -->
 <script src="{{ asset('js/custom.js') }}"></script>
 <script src="{{ asset('js/switcher.js') }}"></script>
+
+    <script src="{{ asset('js/general_main_front.js') }}"></script>
+    <script>
+        load_menu_event('{{ path('menu_event') }}')
+    </script>
 
 
 

@@ -1,0 +1,79 @@
+
+{% extends 'baseadmin.html.twig' %}
+
+{% block body %}
+
+<style>
+    .thumbnail {
+        display: block;
+        padding: 4px;
+        margin-bottom: 20px;
+        line-height: 1.42857143;
+        background-color: #A9D0F5;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: border .2s ease-in-out;
+        -o-transition: border .2s ease-in-out;
+        transition: border .2s ease-in-out;
+    }
+    .thumbnail > img,
+    .thumbnail a > img {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    a.thumbnail:hover,
+    a.thumbnail:focus,
+    a.thumbnail.active {
+        border-color: #337ab7;
+    }
+    .thumbnail .caption {
+        padding: 9px;
+        color: #333;
+    }
+</style>
+    <link rel="stylesheet" href="{{ asset('bundles/evennement/css/css_event.css') }}">
+    <h1> Detail D' Evennement </h1>
+
+
+    <div class="row">
+        <div class="col-sm- col-md-10">
+            <div class="thumbnail">
+                <img src="{{ asset('imageEvent/'~evennement.image )}}" alt="Image Alternative text">
+                <div class="caption">
+                    <h3 color="#FE2E64">{{ evennement.titre }}</h3>
+                    <ul>
+                        <li>
+                            <i class="fa fa-map-marker"></i>    {{ evennement.ville }}
+                        </li>
+                        <li>
+                          <i class="fa fa-money"></i>  {{ evennement.prix |number_format(3,'.','') }} TND
+                        </li>
+                        <li>
+                            <i class="fa fa-calendar"> </i>        {% if evennement.dateevent %}{{ evennement.dateevent|date('Y-m-d') }}{% endif %}
+                        </li>
+                        <li>
+                            <i class="fa fa-mobile"></i>     {{ evennement.contact }}
+                        </li>
+                        <li>
+                            <i class="fa fa-pencil"></i>    {{ evennement.description }}
+                        </li>
+                    </ul>
+                    <ul class="list_btn_action pull-right">
+                        <li>
+
+                        </li>
+                        <li>
+                            <a href="{{ path('evennement_edit', { 'id': evennement.id }) }}" class="btn btn-warning ">Modifier</a>
+                        </li>
+                        <li >
+                            {{ form_start(delete_form) }}
+                            <button type="submit" value="Supprimer" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer</button>
+                            {{ form_end(delete_form) }}
+                        </li>
+                    </ul>
+                    <a href="{{ path('evennement_index') }}" class="btn btn-info"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Liste</a> <a href="#" class="btn btn-default" role="button">Détail</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

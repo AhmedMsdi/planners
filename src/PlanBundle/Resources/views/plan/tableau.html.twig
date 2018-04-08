@@ -1,0 +1,96 @@
+{% extends ('baseuser.html.twig') %}
+
+{% block body %}
+
+
+
+
+
+                    <title>Table V02</title>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1">
+                    <!--===============================================================================================-->
+                    <link rel="icon" type="image/png" href="{{ asset('template2/images/icons/favicon.ico') }}"/>
+                    <!--===============================================================================================-->
+                    <!--===============================================================================================-->
+                    <link rel="stylesheet" type="text/css" href="{{ asset('template2/fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}">
+                    <!--===============================================================================================-->
+                    <!--===============================================================================================-->
+                    <!--===============================================================================================-->
+                    <!--===============================================================================================-->
+                    <link rel="stylesheet" type="text/css" href="{{ asset('template2/css/util.css') }}">
+                    <link rel="stylesheet" type="text/css" href="{{ asset('template2/css/main.css') }}">
+                    <!--===============================================================================================-->
+
+    <div class="container">
+
+                <div class="limiter">
+                    <div class="container-table100">
+                        <div class="wrap-table100">
+                            <div class="table">
+
+
+                                div class="container">
+                                <div class="row col-md-6 col-md-offset-2 custyle">
+                                    <table class="table table-striped custab" border="1">
+
+                                        <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>libelle</th>
+                                            <th>Adresse</th>
+                                            <th>Ville</th>
+                                            <th>Prix</th>
+                                            <th>description</th>
+
+                                            <th>longitude</th>
+                                            <th>latitude</th>
+                                            <th> #</th>
+
+                                        </tr>
+                                        </thead>
+                                        {% for plan in plans %}
+                                        <tr>
+                                            <td>{{ plan.idP }}</td>
+                                            <td>{{ plan.libelle }}</td>
+                                            <td>{{ plan.adresse }}</td>
+                                            <td>{{ plan.ville }}</td>
+                                            <td>{{ plan.prix }}</td>
+                                            <td>{{ plan.description }}</td>
+                                            <td>{{ plan.longitude }}</td>
+                                            <td>{{ plan.latitude }}</td>
+
+                                </div>
+
+
+{% endfor %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <!--===============================================================================================-->
+                <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+                <!--===============================================================================================-->
+                <script src="vendor/bootstrap/js/popper.js"></script>
+                <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+                <!--===============================================================================================-->
+                <script src="vendor/select2/select2.min.js"></script>
+                <!--===============================================================================================-->
+                <script src="js/main.js"></script>
+
+                </body>
+                </html>
+
+
+            </table>
+        </div>
+    </div>
+{% endblock %}
+
+
+

@@ -6,8 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
+    public function AhmedAction()
     {
-        return $this->render('PlanBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $plan = $em->getRepository('PlanBundle:Plan')->findBy(array('user' =>$this->getUser()));
+
+        return $this->render('PlanBundle:plan:indexProfil.html.twig', array(
+            'plans' => $plan
+        ));
     }
 }

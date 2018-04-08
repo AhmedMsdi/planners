@@ -5,7 +5,9 @@ namespace EvennementBundle\Controller;
 use EvennementBundle\Entity\Evennement;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * Evennement controller.
@@ -26,7 +28,7 @@ class EvennementController extends Controller
 
         $evennements = $em->getRepository('EvennementBundle:Evennement')->findAll();
 
-        return $this->render('EvennementBundle:evennement:index.html.twig', array(
+        return $this->render('EvennementBundle:evennement:admin/index.html.twig', array(
             'evennements' => $evennements,
         ));
     }
@@ -43,15 +45,25 @@ class EvennementController extends Controller
         $form = $this->createForm('EvennementBundle\Form\EvennementType', $evennement);
         $form->handleRequest($request);
 
+        $em = $this->getDoctrine()->getManager();
+
         if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
+
             $em->persist($evennement);
             $em->flush();
 
+            $file = $evennement->getImage();
+            $fileName = $evennement->getId() . '_' . $this->generateUniqueFileName() . '.' . $file->guessExtension();
+            $file->move(
+                $this->getParameter('imageEvent'), $fileName
+            );
+            $evennement->setImage($fileName);
+            $em->persist($evennement);
+            $em->flush();
             return $this->redirectToRoute('evennement_show', array('id' => $evennement->getId()));
         }
 
-        return $this->render('EvennementBundle:evennement:new.html.twig', array(
+        return $this->render('EvennementBundle:evennement:admin/new.html.twig', array(
             'evennement' => $evennement,
             'form' => $form->createView(),
         ));
@@ -67,10 +79,26 @@ class EvennementController extends Controller
     {
         $deleteForm = $this->createDeleteForm($evennement);
 
-        return $this->render('EvennementBundle:evennement:show.html.twig', array(
+        return $this->render('EvennementBundle:evennement:admin/show.html.twig', array(
             'evennement' => $evennement,
             'delete_form' => $deleteForm->createView(),
         ));
+    }
+
+    /**
+     * Finds and displays a evennement entity.
+     *
+     * @Route("/{id}", name="valider_event")
+     * @Method("GET")
+     */
+    public function ValiderEventAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $events = $em->getRepository('EvennementBundle:Evennement')->find($id);
+        $events->setEtat(1);
+        return
+$this->render('@Evennement/evennement/admin/index.html.twig') ;
+
     }
 
     /**
@@ -82,16 +110,36 @@ class EvennementController extends Controller
     public function editAction(Request $request, Evennement $evennement)
     {
         $deleteForm = $this->createDeleteForm($evennement);
-        $editForm = $this->createForm('EvennementBundle\Form\EvennementType', $evennement);
+        $editForm = $this->createForm('EvennementBundle\Form\EvennementEditType', $evennement);
         $editForm->handleRequest($request);
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
 
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            /* echo "<pre>".print_r($request->request->all(),1)."</pre>";
+                         echo "<pre>".print_r($request->files->all(),1)."</pre>";
+                         exit();*/
+            $em = $this->getDoctrine()->getManager();
+            $file = $evennement->getEditImage();
+            if (!empty($file)) {
+                $ds = DIRECTORY_SEPARATOR;
+
+
+                $fileName = $evennement->getId() . '_' . $this->generateUniqueFileName() . '.' . $file->guessExtension();
+                $file->move(
+                    $this->getParameter('imageEvent'), $fileName
+                );
+
+                $photoName = $this->getParameter('imageEvent') . $ds . $evennement->getImage();
+                if (file_exists($photoName))
+                    unlink($photoName);
+                $evennement->setImage($fileName);
+            }
+            $em->persist($evennement);
+            $em->flush();
             return $this->redirectToRoute('evennement_edit', array('id' => $evennement->getId()));
         }
 
-        return $this->render('EvennementBundle:evennement:edit.html.twig', array(
+        return $this->render('EvennementBundle:evennement:admin/edit.html.twig', array(
             'evennement' => $evennement,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
@@ -111,6 +159,10 @@ class EvennementController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $ds = DIRECTORY_SEPARATOR;
+            $photoName = $this->getParameter('imageEvent') . $ds . $evennement->getImage();
+            if (file_exists($photoName))
+                unlink($photoName);
             $em->remove($evennement);
             $em->flush();
         }
@@ -130,7 +182,13 @@ class EvennementController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('evennement_delete', array('id' => $evennement->getId())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
+    }
+
+    private function generateUniqueFileName()
+    {
+        // md5() reduces the similarity of the file names generated by
+        // uniqid(), which is based on timestamps
+        return md5(uniqid());
     }
 }

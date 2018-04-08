@@ -3,8 +3,14 @@
 namespace PlanBundle\Controller;
 
 use PlanBundle\Entity\Plan;
+use PlanBundle\Form\ModifierAjoutType;
+use PlanBundle\Form\PlanType;
+
+use Proxies\__CG__\PlanBundle\Entity\SousCategorie;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * Plan controller.
@@ -16,18 +22,101 @@ class PlanController extends Controller
      * Lists all plan entities.
      *
      */
+
+
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->findAll();
 
-        return $this->render('@Plan/plan/index.html.twig', array(
+        return $this->render('@Plan/plan/single-news.html.twig', array(
             'plans' => $plans,
         ));
     }
 
-    /**_(
+    public function FilterDivertissementAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->DivertisementsAction();
+
+        return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+
+
+    public function FilterGastronomieAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->GastronomieAction();
+        //$plans = $em->getRepository('PlanBundle:Plan')->findAll();
+
+        //$plansgas=array() ;
+        //foreach ($plans as $plan){
+        //    if($plan->ge)
+        //}
+
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+
+    public function FilterBEAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->BienEAction();
+
+        return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+
+    /**
+     * tableau all plan entities .
+     *
+     */
+
+    public function indexAllAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->findAll();
+
+        return $this->render('@Plan/plan/indexAllPlans.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+
+    public function indexAllMethode2Action(Request $request)
+    {
+        $plan = new Plan();
+        $form = $this->createForm('PlanBundle\Form\PlanType', $plan);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $plan->SetEtat(0);
+            $plan->setEtatnotif(0);
+
+            $em = $this->getDoctrine()->getManager();
+
+            $em->persist($plan);
+            $em->flush();
+
+            return $this->redirectToRoute('plan_show', array('idP' => $plan->getIdp()));
+        }
+
+        return $this->render('@Plan/plan/indexAllPlansMethode2.html.twig', array(
+            'plan' => $plan,
+            'form' => $form->createView(),
+        ));
+    }
+
+
+    /**
      * Creates a new plan entity.
      *
      */
@@ -36,19 +125,69 @@ class PlanController extends Controller
         $plan = new Plan();
         $form = $this->createForm('PlanBundle\Form\PlanType', $plan);
         $form->handleRequest($request);
-
+        $user = $this->getUser();
+        $em = $this->getDoctrine()->getManager();
         if ($form->isSubmitted() && $form->isValid()) {
+            /** @var UploadedFile $image */
+            $image = $plan->getImage();
+            $imageName = $this->generateUniqueFileName() . '.' . $image->guessExtension();
+            $image->move($this->getParameter('brochures_directory'), $imageName);
+            $plan->setImage($imageName);
+
+            $plan->SetEtat(0);
+            $plan->setEtatnotif(0);
             $em = $this->getDoctrine()->getManager();
+
             $em->persist($plan);
             $em->flush();
 
             return $this->redirectToRoute('plan_show', array('idP' => $plan->getIdp()));
         }
+        $categories = $em->getRepository('PlanBundle:Categorie')->findAll();
+        return $this->render('@BackOffice/template/new_plan_Back.html.twig', array(
+            'plan' => $plan,
+            'categories' => $categories,
+            'form' => $form->createView(),
+        ));
+    }
 
-        return $this->render('@Plan/plan/new.html.twig', array(
+    public function newPlanDesignAction(Request $request)
+    {
+        $plan = new Plan();
+        $user = $this->getUser();
+
+        $form = $this->createForm('PlanBundle\Form\PlanType', $plan);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            /** @var UploadedFile $image */
+            $image = $plan->getImage();
+            $imageName = $this->generateUniqueFileName() . '.' . $image->guessExtension();
+            $image->move($this->getParameter('brochures_directory'), $imageName);
+            $plan->setImage($imageName);
+
+            $plan->SetEtat(0);
+            $plan->setEtatnotif(0);
+            $em = $this->getDoctrine()->getManager();
+            $plan->setUser($user);
+
+            $em->persist($plan);
+            $em->flush();
+
+        }
+        return $this->render('@Plan/plan/NewPlanDesign.html.twig', array(
             'plan' => $plan,
             'form' => $form->createView(),
         ));
+    }
+
+
+    public function showFrontComAction(Request $request, $id)
+    {
+        $em = $this->get('doctrine')->getManager();
+        $plan = $em->getRepository('PlanBundle:Plan')->find($id);
+        return $this->render('@Plan/plan/PlanMaps.html.twig', array("plan" => $plan));
+
+
     }
 
     /**
@@ -72,13 +211,14 @@ class PlanController extends Controller
     public function editAction(Request $request, Plan $plan)
     {
         $deleteForm = $this->createDeleteForm($plan);
-        $editForm = $this->createForm('PlanBundle\Form\PlanType', $plan);
+        $editForm = $this->createForm('PlanBundle\Form\ModifierAjoutType', $plan);
         $editForm->handleRequest($request);
+        $plan->setEtat(0);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('plan_edit', array('idP' => $plan->getIdp()));
+            $this->getDoctrine()->getManager()->flush();
+            //return $this->redirectToRoute('plan_indextableau', array('idP' => $plan->getIdp()));
         }
 
         return $this->render('@Plan/plan/edit.html.twig', array(
@@ -87,6 +227,30 @@ class PlanController extends Controller
             'delete_form' => $deleteForm->createView(),
         ));
     }
+
+    public function ModifPhotoAction(Request $request, $idP)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $etablissement = $em->getRepository("PlanBundle:Plan")->find($idP);
+        $etablissement->setImage
+        (new File($this->getParameter('brochures_directory') . '/' . $etablissement->getImage()));
+        $form = $this->createForm(ModifierAjoutType ::class, $etablissement);
+        $form->handleRequest($request);
+        if ($form->isValid() && $form->isSubmitted()) {
+            /** @var UploadedFile $image */
+            $image = $etablissement->getImage();
+            $imageName = $this->generateUniqueFileName() . '.' . $image->guessExtension();
+            $image->move($this->getParameter('brochures_directory'), $imageName);
+            $etablissement->setImage($imageName);
+            $em->persist($etablissement);
+            $em->flush();
+            return $this->redirectToRoute('plan_indextableau', array('idP' => $etablissement->getIdp()));
+
+        }
+        return $this->render('@Plan/plan/edit.html.twig',
+            array('edit_form' => $form->createView(), 'nom' => $etablissement->getLibelle()));
+    }
+
 
     /**
      * Deletes a plan entity.
@@ -103,23 +267,26 @@ class PlanController extends Controller
             $em->flush();
         }
 
-        return $this->redirectToRoute('plan_index');
+        return $this->redirectToRoute('plan_indextableau');
     }
 
-    /**
-     * Creates a form to delete a plan entity.
-     *
-     * @param Plan $plan The plan entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
+
+    public function delete2Action($idP)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $modele = $em->getRepository("PlanBundle:Plan")->find($idP);
+        $em->remove($modele);
+        $em->flush();
+        return $this->redirectToRoute('plan_indextableau');
+    }
+
+
     private function createDeleteForm(Plan $plan)
     {
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('plan_delete', array('idP' => $plan->getIdp())))
             ->setMethod('DELETE')
-            ->getForm()
-        ;
+            ->getForm();
     }
 
 
@@ -141,17 +308,106 @@ class PlanController extends Controller
 
     public function DivertissementFilterHorizontalePageAction()
     {
-        return $this->render('PlanBundle:Default:Divertissement-horizontal.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->DivertisementsAction();
+
+        return $this->render('PlanBundle:Default:Divertissement-horizontal.html.twig', array(
+            'plans' => $plans,
+        ));
+
     }
 
     public function GastronomieFilterHorizontalePageAction()
     {
-        return $this->render('PlanBundle:Default:Gastronomie-horizontal.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->GastronomieAction();
+        return $this->render('PlanBundle:Default:Gastronomie-horizontal.html.twig', array(
+            'plans' => $plans,
+        ));
     }
 
     public function BEFilterHorizontalePageAction()
     {
-        return $this->render('PlanBundle:Default:BienEtre-horizontal.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->BienEAction();
+        return $this->render('PlanBundle:Default:BienEtre-horizontal.html.twig', array(
+            'plans' => $plans,
+        ));
     }
+
+    /**
+     * @return string
+     */
+    private function generateUniqueFileName()
+    {
+        // md5() reduces the similarity of the file names generated by
+        // uniqid(), which is based on timestamps
+        return md5(uniqid());
+    }
+
+    public function DetailsAction(Request $request, $idP)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $plan = $em->getRepository('PlanBundle:Plan')->find($idP);
+        $idsc = $plan->getIdSc();
+        $sc = new SousCategorie();
+        $sc = $idsc;
+        $idscss = $sc->getIdSc();
+        $message = $idscss;
+
+        $plan->setAvis("http://www.localhost/planners/web/app_dev.php/plan/detailG/$idP");
+        if ($idscss >= 5 && $idscss <= 12)
+            $message = '  La gastronomie est l\'art d\'utiliser la nourriture pour créer le bonheur';
+
+        else if ($idscss >= 1 && $idscss <= 4)
+            $message = ' Être bien dans sa peau, c\'est s\'accepter, s\'aimer, offrir son visage au souffle du vent.';
+
+        else if ($idscss >= 12 && $idscss <= 17)
+            $message = ' Le divertissement est le meilleur régime contre le poids de l\'existence....';
+
+        return $this->render('PlanBundle:plan:details2.html.twig', array(
+            'plan' => $plan, 'msg' => $message
+        ));
+
+    }
+
+    public function GelaterieFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(12);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+
+    public function RechercheFilterAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        //  if ($request->isMethod('POST'))
+        //  {
+        $nom = $request->get('abc');
+        $Reg = $request->get('Reg');
+        $plans = $em->getRepository('PlanBundle:Plan')->FindAction($nom,$Reg);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+
+
+    }
+
+    public function StatAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->findAll();
+        return $this->render('@Plan/plan/stat.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+
 
 }
