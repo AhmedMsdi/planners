@@ -118,7 +118,7 @@
         var marker;
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 36, lng: 10},
+                center: {lat: {{ hebergement.x }}, lng: {{ hebergement.y }}},
                 zoom: 10
             });
             var input = /** @type {!HTMLInputElement} */(

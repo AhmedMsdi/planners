@@ -4,13 +4,8 @@
 {% block body %}
 
 
-    <div class="gap" style=" margin-left: 120px;">
-        <a href="{{ path('publicite_new') }}" class="btn btn-success"><div class="fa  fa-plus-square"></div>    Ajouter une publicité</a>
-        <a href="{{ path('chart_publicite') }}" class="btn btn-warning"><div class="fa  fa-bar-chart-o"></div> Mes statistiques</a>
+    <div class="gap gap"></div>
 
-        <a href="{{ path('pdf') }}" class="btn btn-inverse"><div class="fa fa-file-pdf-o"></div> Extrait PDF</a>
-
-    </div>
 
     <div class="container">
         <div class="row">
@@ -31,11 +26,17 @@
 
                         </li>
                         <div class="gap gap-small"></div>
+                        <li>  </li>
 
                     </ul>
+                    <div class="btn btn-group-vertical">
+                            <div class="gap gap-small"></div>
+                        <a  href="{{ path('publicite_new') }}" class="btn btn-success"><div class="fa  fa-plus-square"></div>    Ajouter une publicité</a>
+                        <a href="{{ path('chart_publicite') }}" class="btn btn-warning"><div class="fa  fa-bar-chart-o"></div> Mes statistiques</a>
+                        <a href="{{ path('pdf') }}" class="btn btn-inverse"><div class="fa fa-file-pdf-o"></div> Extrait PDF</a>
+                    </div>
                 </aside>
             </div>
-
 
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>

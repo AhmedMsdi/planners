@@ -22,6 +22,10 @@ evennement_evennement:
     resource: "@EvennementBundle/Controller/EvennementController.php"
     type:     annotation
 
+evennement_evennement_front:
+    resource: "@EvennementBundle/Controller/FrontEvennementController.php"
+    type:     annotation
+
 back_office:
     resource: "@BackOfficeBundle/Resources/config/routing.yml"
     prefix:   /
@@ -37,3 +41,5 @@ app:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+pianosolo_weather:
+    resource: "@PianoSoloWeatherBundle/Resources/config/routing.yml"

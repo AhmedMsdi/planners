@@ -1,0 +1,4 @@
+
+{%  for m_categ in list_categ %}
+<li class="list_menu_event" ><a href="{{ path('evennement_listall',{'categ':m_categ.id}) }}">{{ m_categ.libelle }}</a></li>
+{% endfor %}

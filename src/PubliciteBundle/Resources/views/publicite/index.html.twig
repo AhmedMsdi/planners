@@ -4,14 +4,8 @@
 {% block body %}
 
 
-    <div class="gap" style=" margin-left: 120px;">
-        <a href="{{ path('publicite_new') }}" class="btn btn-success"><div class="fa  fa-plus-square"></div>    Ajouter une publicité</a>
-        <a href="{{ path('chart_publicite') }}" class="btn btn-warning"><div class="fa  fa-bar-chart-o"></div> Mes statistiques</a>
-        <a href="{{ path('pdf') }}" class="btn btn-inverse"><div class="fa fa-file-pdf-o"></div> Extrait PDF</a>
-        <div class="navigation text-center">
-            {{ knp_pagination_render(publicites2) }}
-        </div>
-    </div>
+    <div class="gap gap"></div>
+
 
     <div class="container">
         <div class="row">
@@ -31,23 +25,31 @@
                         <li class="active"><a href="{{ path('publicite_index') }}">Mes publicites</a>
 
                         </li>
+                        <li><a href="{{ path('article_indexPerso') }}">Mes articles</a>
+                        </li>
                         <div class="gap gap-small"></div>
-                        <li>  <form>
+                        <li>  </li>
 
-                                <input id="text" type="text"  name="titre" placeholder="Rechercher">
-
-                            </form></li>
                     </ul>
+                    <div class="btn btn-group-vertical">
+                       <form> <input id="text" type="text"  name="titre" placeholder="Rechercher"></form>
+                        <div class="gap gap-small"></div>
+                    <a  href="{{ path('publicite_new') }}" class="btn btn-success"><div class="fa  fa-plus-square"></div>    Ajouter une publicité</a>
+                    <a href="{{ path('chart_publicite') }}" class="btn btn-warning"><div class="fa  fa-bar-chart-o"></div> Mes statistiques</a>
+                    <a href="{{ path('pdf') }}" class="btn btn-inverse"><div class="fa fa-file-pdf-o"></div> Extrait PDF</a>
+                    </div>
                 </aside>
             </div>
             <div class="col-md-9">
 
-                <div class="row row-wrap">
+                <div class="row row-wrap" >
 
                 <div  id="res">
                     {% for publicite in publicites2 %}
                         {% if app.user.id == publicite.user.id %}
-                        <div class="col-md-4">
+
+
+                        <div class="col-md-4" >
                             <div class="product-thumb">
                                 <header class="product-header">
                                     <a href="{{ path('publicite_show', { 'idPub': publicite.idPub }) }}">
@@ -55,23 +57,21 @@
                                     </a>
                                 </header>
                                 <div class="product-inner">
-                                    <ul class="icon-group icon-list-rating" title="4/5 rating">
-                                        <li><i class="fa fa-star"></i>
-                                        </li>
-                                        <li><i class="fa fa-star"></i>
-                                        </li>
-                                        <li><i class="fa fa-star"></i>
-                                        </li>
-                                        <li><i class="fa fa-star"></i>
-                                        </li>
-                                        <li><i class="fa fa-star-o"></i>
-                                        </li>
-                                    </ul>
+
                                     <h5 class="product-title">{{ publicite.text }}</h5>
                                     <p class="product-desciption">{{ publicite.description | raw }}</p>
                                     <div class="product-meta">
                                         <ul class="product-price-list">
-                                            <li><span class="product-price">{{ publicite.nbClick }} clicks</span>
+
+                                                   {% if publicite.etat == 1 %}
+                                            <li><div class="alert alert-success">Confirmé</div></li>
+                                            {% elseif publicite.etat == -1 %}
+                                                <li><div class="alert alert-danger">Refusé</div></li>
+                                             {% elseif publicite.etat == 0 %}
+                                                       <li><div class="alert alert-warning">En attente</div></li>
+                                                    {% endif %}
+
+                                            <li><div class="alert alert-info">{{ publicite.nbClick }} clicks</div>
                                             </li>
                                         </ul>
                                         <ul class="product-actions-list">
@@ -87,14 +87,19 @@
                             </div>
                             <div class="product-wishlist-remove">
 
-                         <!--       <a class="btn btn-ghost btn-sm" href=""><i class="fa fa-times"></i> Supprimer</a> -->
+                          <a class="btn btn-ghost btn-sm" href="{{ path('publicite_delete', {'idPub': publicite.idPub }) }}"><i class="fa fa-times"></i> Supprimer</a>
                             </div>
                         </div>
+
+
                     {% endif %}
                     {% endfor %}
                    </div>
                 </div>
+                <div class="navigation text-center">
+                    {{ knp_pagination_render(publicites2) }}
 
+                </div>
 
             </div>
         </div>

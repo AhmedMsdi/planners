@@ -66,6 +66,29 @@ class Messagerie
     /**
      * @return int
      */
+    public function getNbrPerson()
+    {
+        return $this->nbrPerson;
+    }
+
+    /**
+     * @param int $nbrPerson
+     */
+    public function setNbrPerson($nbrPerson)
+    {
+        $this->nbrPerson = $nbrPerson;
+    }
+
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nbr_person", type="integer")
+     */
+    private $nbrPerson;
+    /**
+     * @return int
+     */
     public function getEtat()
     {
         return $this->etat;

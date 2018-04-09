@@ -1,0 +1,124 @@
+<html>
+
+
+<!-- Mirrored from remtsoy.com/tf_templates/couponia/demo_v3_3/index-header-layout-1.html by HTTrack Website Copier/3.x [XR&CO"2014], Fri, 16 Mar 2018 20:53:05 GMT -->
+    <title>TN Planners</title>
+    <!-- meta info -->
+
+
+    <link rel="shortcut icon" href="{{ asset("images/logopanel.png") }}">
+    <!-- Google fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100,300" rel="stylesheet" type="text/css">
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="{{ asset("css/boostrap.css") }}">
+    <!-- Font Awesome styles (icons) -->
+    <link rel="stylesheet" href="{{ asset("css/font_awesome.css") }}">
+    <!-- Main Template styles -->
+    <link rel="stylesheet" href="{{ asset("css/styles.css") }}">
+    <!-- IE 8 Fallback -->
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/ie.css" />
+    <![endif]-->
+
+    <!-- Your custom styles (blank file) -->
+    <link rel="stylesheet" href="{{ asset("css/mystyles.css") }}">
+    <link rel="stylesheet" href="{{ asset("css/switcher.css") }}">
+<body>
+<style>
+            #map {
+                height: 300px;
+                width: 100%;
+            }
+            /* Optional: Makes the sample page fill the window. */
+
+
+        </style>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12 block">
+                    <div class="panel panel-default" >
+                        <div class="panel-body">
+
+                            <h3 class="color-1">{{ hebergement.categorie|capitalize }}</h3>
+                            <p align="justify" style="word-wrap: break-word">{{ hebergement.description }}</p>
+                        </div>
+
+
+
+                    </div></div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="sidebar-right hidden-phone">
+                            <div class="sidebar-box">
+                                <div class="panel-heading">
+                                    <h2 style="color: #000000"><u> Votre demande d"hebergement a été confirmer</u></h2>
+
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="media-list">
+                                        <li class="media">
+                                            <div class="media-left iconContent bg-color-2">
+                                            </div>
+                                            <div class="media-body iconContent">
+                                                <h4 class="media-heading color-2"><i class="fa fa-map-marker" style="color: #2a8fbd" aria-hidden="true"></i>
+                                                    Lieu</h4>
+                                                <p>{{ hebergement.lieu }}</p>
+                                            </div>
+                                        </li>
+
+
+
+                                        <li class="media iconContet">
+                                            <div class="media-left iconContent bg-color-4">
+
+                                            </div>
+                                            <div class="media-body iconContent">
+                                                <h4 class="media-heading color-4"><i class="fa fa-usd" style="color: #2a8fbd" aria-hidden="true"></i> Prix/nuit</h4>
+                                                <p>{{ hebergement.prix * mes.nbrPerson * mes.datefin|date("d")- mes.datedebut|date("d") }} <strong>TND</strong> = {{ hebergement.prix }} <strong>TND</strong> x {{ mes.nbrPerson }} Personne * {{ mes.datefin|date("d")- mes.datedebut|date("d") }} Jours </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="media iconContet">
+                                            <div class="media-left iconContent bg-color-4">
+
+                                            </div>
+                                            <div class="media-body iconContent">
+                                                <h4 class="media-heading color-4"><i class="fa fa-phone" style="color: #2a8fbd" ></i>
+                                                    Telephone </h4>
+                                                <p><a href="tel:{{ hebergement.tel }}"> {{ hebergement.tel }}</a></p>
+                                            </div>
+                                        </li>
+                                        <li class="media iconContet">
+                                            <div class="media-left iconContent bg-color-4">
+                                            </div>
+                                            <div class="media-body iconContent">
+                                                <h4 class="media-heading color-4"><i class="fa fa-globe" style="color: #2a8fbd"></i>
+
+                                                    Site Web </h4>
+                                                <p><a href="{{ hebergement.Siteweb }}">{{ hebergement.Siteweb }}</a></p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    <hr>
+                    <div id="map">
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+
+</body>
+</html>

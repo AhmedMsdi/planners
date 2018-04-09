@@ -1,0 +1,184 @@
+{% extends 'baseuser.html.twig' %}
+
+{% block body %}
+    <div class="gap"></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <aside class="sidebar-left hidden-phone">
+                        <div class="sidebar-box">
+                            <h5>Blog Categories</h5>
+                            <ul class="icon-list blog-category-list">
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Design</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Digital</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Lifestyle</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Typography</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Travel</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Web</a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <div class="sidebar-box">
+
+                            <h5>Newsletter singup</h5>
+                            <form class="sign-up">
+                                <input type="text" class="form-control" placeholder="E-mail">
+                                <small class="help-block">*We never send spam</small>
+                                <input type="submit" class="btn btn-primary" value="Subscribe">
+                            </form>
+                        </div>
+
+
+                        <div class="sidebar-box">
+                            <h5>Recent Posts</h5>
+                            <ul class="thumb-list">
+                                <li>
+                                    <a href="#">
+                                        <img src="img/urbex_esch_lux_with_laney_and_laaaaag_70x70.jpg" alt="Image Alternative text" />
+                                    </a>
+                                    <div class="thumb-list-item-caption">
+                                        <p class="thumb-list-item-meta">Jul 18, 2014</p>
+                                        <h5 class="thumb-list-item-title"><a href="#">Gravida cum</a></h5>
+                                        <p class="thumb-list-item-desciption">Duis sagittis lacinia elit non</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/amaze_70x70.jpg" alt="Image Alternative text" title="AMaze" />
+                                    </a>
+                                    <div class="thumb-list-item-caption">
+                                        <p class="thumb-list-item-meta">Jul 18, 2014</p>
+                                        <h5 class="thumb-list-item-title"><a href="#">Ultrices nulla</a></h5>
+                                        <p class="thumb-list-item-desciption">Ante etiam magna cras interdum</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/the_hidden_power_of_the_heart_70x70.jpg" alt="Image Alternative text" title="The Hidden Power of the Heart" />
+                                    </a>
+                                    <div class="thumb-list-item-caption">
+                                        <p class="thumb-list-item-meta">Jul 18, 2014</p>
+                                        <h5 class="thumb-list-item-title"><a href="#">Dis commodo</a></h5>
+                                        <p class="thumb-list-item-desciption">Porta penatibus sociis sociis metus</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-box">
+                            <h5>Twitter Feed</h5>
+                            <!-- START TWITTER -->
+                            <div class="twitter" id="twitter"></div>
+                            <!-- END TWITTER -->
+                        </div>
+
+                        <div class="sidebar-box">
+                            <h5>Popular Tags</h5>
+                            <ul class="tags-list">
+                                <li><a href="#">Lifestyle</a>
+                                </li>
+                                <li><a href="#">Design</a>
+                                </li>
+                                <li><a href="#">Business</a>
+                                </li>
+                                <li><a href="#">Travel</a>
+                                </li>
+                                <li><a href="#">Discounts</a>
+                                </li>
+                                <li><a href="#">Shopping</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-box">
+                            <h5>Recent Comments</h5>
+                            <ul class="thumb-list thumb-list-right">
+                                <li>
+                                    <a href="#">
+                                        <img src="img/gamer_chick_50x50.jpg" alt="Image Alternative text" title="Gamer Chick" class="rounded" />
+                                    </a>
+                                    <div class="thumb-list-item-caption">
+                                        <p class="thumb-list-item-meta">9 minutes ago</p>
+                                        <h5 class="thumb-list-item-title"><a href="#">John Mathis</a></h5>
+                                        <p class="thumb-list-item-desciption">Praesent montes aptent eget...</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/ana_29_50x50.jpg" alt="Image Alternative text" title="Ana 29" class="rounded" />
+                                    </a>
+                                    <div class="thumb-list-item-caption">
+                                        <p class="thumb-list-item-meta">9 minutes ago</p>
+                                        <h5 class="thumb-list-item-title"><a href="#">Minnie Aviles</a></h5>
+                                        <p class="thumb-list-item-desciption">Ipsum erat senectus consectetur hendrerit...</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/afro_50x50.jpg" alt="Image Alternative text" title="Afro" class="rounded" />
+                                    </a>
+                                    <div class="thumb-list-item-caption">
+                                        <p class="thumb-list-item-meta">6 minutes ago</p>
+                                        <h5 class="thumb-list-item-title"><a href="#">Cyndy Naquin</a></h5>
+                                        <p class="thumb-list-item-desciption">Sodales torquent varius convallis nibh...</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+
+                </div>
+                <div class="col-md-9">
+                    <article class="post">
+                        <header class="post-header">
+                            <div class="fotorama__active">
+                                <img src="{{ asset(article.image) }}" alt="Image Alternative text" title="4 Strokes of Fun" />
+                            </div>
+                        </header>
+                        <div class="post-inner">
+                            <h3 class="post-title">{{ article.titre }}</h3>
+                            <ul class="post-meta">
+                                <li><i class="fa fa-calendar"></i><a href="#">{{ article.datecreation |date('d-m-Y') }}</a>
+                                </li>
+                                <li><i class="fa fa-user"></i>by <a href="#">{{ article.user.nom }}  {{ article.user.prenom }}</a>
+                                </li>
+                                <li><i class="fa fa-tags"></i><a href="#">{{ article.tags }}</a>
+                                </li>
+
+                            </ul>
+                            <div class="gap gap-mini"></div>
+                            <p>{{ article.contenu | raw }}</p>
+
+                            {% if app.user == null %}
+                            {% elseif app.user.id != article.user.id %}
+                            {% elseif app.user.id == article.user.id %}
+                                <a class="btn " href="{{ path('article_edit', {'id': article.id}) }}">
+                                        <i class="fa fa-pencil-square-o"></i> Modifier</a>
+
+                            <a class="btn " href="{{ path('article_delete', {'id': article.id}) }}">
+                                <i class="fa fa-trash-o"></i> Supprimer</a>
+
+
+                            {% endif %}
+                            <a class="btn btn-primary" href="{{ path('article_index') }}">
+                                <i class="fa fa-toggle-left (alias)"></i> Retour</a>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                    <div class="gap"></div>
+
+            </div>
+
+        </div>
+{% endblock %}

@@ -1,0 +1,130 @@
+
+{% extends 'baseuser.html.twig' %}
+
+{% block body %}
+
+
+    <div class="gap gap"></div>
+
+
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-md-3">
+                <aside class="sidebar-left">
+                    <ul class="nav nav-pills nav-stacked nav-arrow">
+                        <li ><a href="{{ path('profil') }}">Settings</a>
+                        </li>
+                        <li><a href="page-my-account-addresses.html">Mes plans</a>
+                        </li>
+                        <li><a href="page-my-account-orders.html">Mes evenements</a>
+                        </li>
+                        <li><a href="page-my-account-wishlist.html">Mes hebergements</a>
+                        </li>
+                        <li><a href="{{ path('publicite_index') }}">Mes publicites</a>
+
+                        </li>
+                        <li class="active"><a href="{{ path('article_indexPerso') }}">Mes articles</a>
+                        </li>
+                        <div class="gap gap-small"></div>
+                        <li>  </li>
+
+                    </ul>
+                    <div class="btn btn-group-vertical">
+                        <form> <input id="text" type="text"  name="titre" placeholder="Rechercher"></form>
+                        <div class="gap gap-small"></div>
+                        <a  href="{{ path('article_new') }}" class="btn btn-success"><div class="fa  fa-plus-square"></div>    Ajouter un article</a>
+
+                    </div>
+                </aside>
+            </div>
+            <div class="col-md-9">
+
+                <div class="row row-wrap" >
+
+                    <div  id="res">
+                        {% for article in articles %}
+                            <article class="post">
+                                <header class="post-header">
+                                    <!-- HOVER IMAGE -->
+                                    <a class="hover-img" href="{{ path('article_show', { 'id': article.id }) }}">
+                                        <img src="{{ asset(article.image) }}" alt="Image Alternative text" title="4 Strokes of Fun" /><i class="fa fa-link hover-icon"></i>
+                                    </a>
+                                </header>
+                                <div class="post-inner">
+                                    <h4 class="post-title"><a href="{{ path('article_show', { 'id': article.id }) }}">{{ article.titre }}</a></h4>
+                                    <ul class="post-meta">
+                                        <li><i class="fa fa-calendar"></i><a href="#">{{ article.datecreation |date('d-m-Y') }}</a>
+                                        </li>
+                                        <li><i class="fa fa-user"></i><a href="#">{{ article.user.nom }}  {{ article.user.prenom }}</a>
+                                        </li>
+                                        <li><i class="fa fa-tags"></i><a href="#">{{ article.tags }}</a>
+                                        </li>
+
+                                    </ul>
+                                    <div class="gap gap-mini"></div>
+                                    <p>{{ article.contenu | raw }}</p>
+                                    {% if app.user == null %}
+                                    {% elseif app.user.id != article.user.id %}
+                                    {% elseif app.user.id == article.user.id %}
+
+                                        {% if article.etat == 1 %}
+                                            <div class="alert alert-success">Confirmé</div>
+                                        {% elseif article.etat == -1 %}
+                                            <div class="alert alert-danger">Refusé</div>
+                                        {% elseif article.etat == 0 %}
+                                            <div class="alert alert-warning">En attente</div>
+                                        {% endif %}
+                                        <a class="btn " href="{{ path('article_edit', {'id': article.id}) }}">
+                                            <i class="fa fa-pencil-square-o"></i> Modifier</a>
+
+                                        <a class="btn " href="{{ path('article_delete', {'id': article.id}) }}">
+                                            <i class="fa fa-trash-o"></i> Supprimer</a>
+
+
+                                    {% endif %}
+                                    <a class="btn btn-small btn-primary" href="{{ path('article_show', { 'id': article.id }) }}">Voir plus</a>
+                                </div>
+                            </article>
+
+                        {% endfor %}
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="gap gap-small"></div>
+
+
+
+
+
+
+    <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script>
+
+        $('#text').keyup(function(){
+            var input= $("#text").val();
+            $.ajax({
+                type: "POST",
+                url: "{{ path('recherche_article') }}",
+                data: {'text': input},
+                success: function (data) {
+
+                    console.log(data);
+
+                    $("#res").html(data);
+
+
+                }
+            });
+
+        });
+
+    </script>
+{% endblock %}
