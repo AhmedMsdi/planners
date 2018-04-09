@@ -38,15 +38,25 @@
                             <p class="product-info-price">{{ publicite.nbClick }} clicks</p>
                             <p class="text-smaller text-muted"><a href="http://{{ publicite.siteWeb }}" >{{ publicite.siteWeb }}</a></p>
                             <ul class="icon-list list-space product-info-list">
-                                <li><i class="fa fa-check"></i>Etat du publicite: {{ publicite.etat }}</li>
+
+                                {% if app.user == null %}
+                                {% elseif app.user.id != publicite.user.id %}
+                                {% elseif app.user.id == publicite.user.id %}
+                                <li><i class="fa fa-check"></i>Etat du publicite:
+                                    {% if publicite.etat == 1 %}
+                                <li><div class="alert alert-success">Confirmé</div></li>
+                                {% elseif publicite.etat == -1 %}
+                                    <li><div class="alert alert-danger">Refusé</div></li>
+                                {% elseif publicite.etat == 0 %}
+                                    <li><div class="alert alert-warning">En attente</div></li>
+                                {% endif %}
+
+                                </li>
 
                             </ul>
-                            {{ twitterButton() }}
-                            <div class="gap-small"></div>
-                            {% if app.user == null %}
 
-                            {% elseif app.user.id != publicite.user.id %}
-                            {% elseif app.user.id == publicite.user.id %}
+                            <div class="gap-small"></div>
+
                             <ul class="list-inline">
                                 <li><a href="{{ path('publicite_edit', { 'idPub': publicite.idPub }) }}" class="btn">
 
@@ -55,9 +65,10 @@
 
 
                                 <li>
-                                    {{ form_start(delete_form) }}
-                                   <div class="btn"> <i class="fa fa-trash-o"></i> <input type="submit" value="Delete"></div>
-                                    {{ form_end(delete_form) }}
+                                    <a href="{{ path('publicite_delete', { 'idPub': publicite.idPub }) }}" class="btn">
+
+                                        <i class="fa fa-trash-o"></i> Supprimer</a>
+
                                 </li>
 
 
@@ -67,6 +78,7 @@
                                 </li>
                             </ul>
                             {% endif %}
+                            {{ twitterButton() }}
                         </div>
                     </div>
                 </div>

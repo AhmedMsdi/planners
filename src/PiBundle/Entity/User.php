@@ -23,17 +23,24 @@ class User extends BaseUser
 
     /**
      *
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $nom;
 
     /**
      *
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $prenom;
+
+    /**
+     *
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $point_fidelite = '0';
 
 
     /**
@@ -88,5 +95,29 @@ class User extends BaseUser
     {
         parent::__construct();
         // your own logic
+    }
+
+    /**
+     * Set pointFidelite
+     *
+     * @param integer $pointFidelite
+     *
+     * @return User
+     */
+    public function setPointFidelite($pointFidelite)
+    {
+        $this->point_fidelite = $pointFidelite;
+
+        return $this;
+    }
+
+    /**
+     * Get pointFidelite
+     *
+     * @return integer
+     */
+    public function getPointFidelite()
+    {
+        return $this->point_fidelite;
     }
 }

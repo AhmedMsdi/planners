@@ -2,42 +2,49 @@
 
 namespace BackOfficeBundle\Controller;
 
+use PubliciteBundle\Entity\Publicite;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+class PubBackController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@BackOffice/template/index.html.twig');
-    }
-    public function layoutAction()
-    {
-        return $this->render('@BackOffice/template/layout.html.twig');
-    }
-    public function widgetAction()
-    {
-        return $this->render('@BackOffice/template/widget.html.twig');
+        $em = $this->getDoctrine()->getManager();
+
+        $publicites = $em->getRepository('PubliciteBundle:Publicite')->findBy(array('etat' =>0));
+       // $publicites2 = $em->getRepository('PubliciteBundle:Publicite')->findBy(array('user' =>$this->getUser()));
+
+        return $this->render('@BackOffice/publicite/demandePub.html.twig', array(
+            'publicites' => $publicites,
+
+        ));
     }
 
-    public function chartAction()
+    public function validerAction(Request $request, Publicite $publicite)
     {
-        return $this->render('@BackOffice/template/chart.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $publicite->setEtat(1);
+        $this->getDoctrine()->getManager()->flush();
+        $publicites = $em->getRepository('PubliciteBundle:Publicite')->findBy(array('etat' =>0));
+        return $this->redirectToRoute('demandePub', array(
+            'publicites' => $publicites,
+
+        ));
     }
-    public function tableAction()
+
+    public function refuserAction(Request $request, Publicite $publicite)
     {
-        return $this->render('@BackOffice/template/table.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $publicite->setEtat(-1);
+        $this->getDoctrine()->getManager()->flush();
+        $publicites = $em->getRepository('PubliciteBundle:Publicite')->findBy(array('etat' =>0));
+        return $this->redirectToRoute('demandePub', array(
+            'publicites' => $publicites,
+
+        ));
     }
-    public function formAction()
-    {
-        return $this->render('@BackOffice/template/form.html.twig');
-    }
-    public function panelAction()
-    {
-        return $this->render('@BackOffice/template/panel.html.twig');
-    }
-    public function iconAction()
-    {
-        return $this->render('@BackOffice/template/icon.html.twig');
-    }
+
+
 
 }
