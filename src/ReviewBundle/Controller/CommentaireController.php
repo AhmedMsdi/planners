@@ -2,6 +2,8 @@
 
 namespace ReviewBundle\Controller;
 
+use PlanBundle\Entity\Plan;
+use PubliciteBundle\Entity\Publicite;
 use ReviewBundle\Entity\Commentaire;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -29,13 +31,14 @@ class CommentaireController extends Controller
         ));
     }
 
-    public function ajoutAction(Request $request)
+    public function ajoutAction(Request $request,Plan $plan)
     {
         $user = $this->getUser();
+        $plan = $this->getPlan();
         if($request->isXmlHttpRequest() && $request->isMethod('post')) {
             $commentaire =new Commentaire();
             $em=$this->getDoctrine()->getManager();
-            $plan=$em->getRepository('PlanBundle:Plan')->find(80);
+            $plan=$em->getRepository('PlanBundle:Plan')->find($plan);
 
             $contenu=$request->get('contenu');
 
@@ -69,7 +72,7 @@ class CommentaireController extends Controller
      * Creates a new commentaire entity.
      *
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, Publicite $publicite)
     {
         $commentaire = new Commentaire();
 
@@ -82,11 +85,11 @@ class CommentaireController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-
-            $plan=$em->getRepository('PlanBundle:Plan')->find(80);
+            $id=$request->get('id_plan');
+           // $plan=$em->getRepository('PlanBundle:Plan')->find(80);
             $commentaire->setIdUser($user);
-            $commentaire->setIdPlan($plan);
-
+            //$commentaire->setIdPlan($plan);
+            $commentaire->setIdPlan($id);
             $em = $this->getDoctrine()->getManager();
             $em->persist($commentaire);
             $em->flush();
@@ -151,7 +154,7 @@ class CommentaireController extends Controller
         $em->remove($commentaire);
         $em->flush();
 
-        return $this->redirectToRoute('commentaire_index');
+        return $this->redirectToRoute('publicite_show',array('idPub' => 2)  );
 
 
 

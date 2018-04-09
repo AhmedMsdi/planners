@@ -1,6 +1,6 @@
 <?php
 
-namespace PubliciteBundle\Form;
+namespace PlanBundle\Form;
 
 use blackknight467\StarRatingBundle\Form\RatingType;
 use Symfony\Component\Form\AbstractType;
@@ -31,7 +31,7 @@ class RateType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'ReviewBundle\Entity\Rate'
+            'data_class' => 'PlanBundle\Entity\Rate'
         ));
     }
 
@@ -40,7 +40,7 @@ class RateType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'publiciteBundle_rate';
+        return 'planBundle_rate';
     }
 
 

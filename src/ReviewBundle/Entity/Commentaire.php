@@ -1,6 +1,7 @@
 <?php
 
 namespace ReviewBundle\Entity;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -32,6 +33,7 @@ class Commentaire
 
     /**
      * @var string
+     * @Assert\NotBlank()
      * @ORM\Column(name="contenu", type="string", length=255, nullable=true)
      */
     private $contenu;

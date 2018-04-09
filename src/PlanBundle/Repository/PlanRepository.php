@@ -35,7 +35,7 @@ class PlanRepository extends \Doctrine\ORM\EntityRepository
             ->createQuery("SELECT p FROM PlanBundle:Plan p
                               JOIN  PlanBundle:SousCategorie s
                               WITH p.idSc=s.idSc JOIN  PlanBundle:Categorie a WITH s.idC = a.idC 
-                              WHERE a.libelle='Bien Etre' AND p.etat='1'");
+                              WHERE a.libelle='Bienetre' AND p.etat='1'");
 
         return $query->getResult();
 

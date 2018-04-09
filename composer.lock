@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "982373c165692ee26b7baf2c80dd97b5",
+    "content-hash": "342bba7c4d805e40ddea28a846b11531",
     "packages": [
         {
             "name": "blackknight467/star-rating-bundle",

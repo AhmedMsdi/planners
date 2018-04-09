@@ -1,6 +1,6 @@
 <?php
 
-namespace PubliciteBundle\Repository;
+namespace PlanBundle\Repository;
 
 /**
  * RatingRepository
@@ -14,8 +14,8 @@ class RatingRepository extends \Doctrine\ORM\EntityRepository
     public function AVGRating()
     {
         $query = $this->getEntityManager()
-            ->createQuery("select c.publicite, AVG (c.rating) from 
-         PubliciteBundle:rating c GROUP BY c.publicite"
+            ->createQuery("select c.plan, AVG (c.rating) from 
+         PlanBundle:Rating c GROUP BY c.plan"
             );
         return $query->getResult();
     }

@@ -1,6 +1,17 @@
 {% extends 'baseuser.html.twig' %}
 
 {% block body %}
+
+
+
+    <head> <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
+
+    </head>
+
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <style>
         #map {
@@ -58,6 +69,11 @@
                             <li><i class="glyphicon glyphicon-map-marker"></i> Ville : {{ plan.ville }}
                             </li>
                             <li><a href="#"><i class="glyphicon glyphicon-euro"></i> Prix : {{ plan.prix }}</a>
+                                {{ form_start(form) }}
+                                <div class="controls">
+                                    <h5>Donnez une note</h5>
+                                    {{ form_widget(form.rating) }}   </div>
+                                {{ form_end(form) }}
                             </li>
                             <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> €mail : {{ plan.email }}</a>
                             </li>

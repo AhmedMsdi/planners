@@ -10,7 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="ratingplan")
  * @ORM\Entity(repositoryClass="PlanBundle\Repository\RatingRepository")
  */
-class Ratingplan
+class Rating
 {
     /**
      * @var int
@@ -24,9 +24,9 @@ class Ratingplan
     /**
      * @var int
      *
-     * @ORM\Column(name="ratingplan", type="integer")
+     * @ORM\Column(name="rating", type="integer")
      */
-    private $ratingplan;
+    private $rating;
 
     /**
      * @var int
@@ -34,8 +34,6 @@ class Ratingplan
      * @ORM\Column(name="plan", type="integer")
      */
     private $plan;
-
-
 
 
 
@@ -51,27 +49,27 @@ class Ratingplan
     }
 
     /**
-     * Set ratingplan
+     * Set rating
      *
-     * @param integer $ratingplan
+     * @param integer $rating
      *
-     * @return Ratingplan
+     * @return Rating
      */
-    public function setRatingplan($ratingplan)
+    public function setRating($rating)
     {
-        $this->ratingplan = $ratingplan;
+        $this->rating = $rating;
 
         return $this;
     }
 
     /**
-     * Get ratingplan
+     * Get rating
      *
      * @return integer
      */
-    public function getRatingplan()
+    public function getRating()
     {
-        return $this->ratingplan;
+        return $this->rating;
     }
 
     /**
@@ -79,7 +77,7 @@ class Ratingplan
      *
      * @param integer $plan
      *
-     * @return Ratingplan
+     * @return Rating
      */
     public function setPlan($plan)
     {

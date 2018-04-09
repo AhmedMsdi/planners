@@ -3,6 +3,16 @@
 {% block body %}
 
 
+    <!-- JS -->
+    <!script src="/js/jquery-2.1.4.min.js"><!/script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css"  media="screen" />
+
+
+
+
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
@@ -18,7 +28,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-                                <h4 class="modal-title custom_align" id="Heading">Ajouter un medicament</h4>
+                                <h4 class="modal-title custom_align" id="Heading">Ajouter un commentaire</h4>
                             </div>
                             <div class="modal-body">
 
@@ -75,11 +85,13 @@
                         {% if app.user == null %}
 
                         {% elseif app.user.id != commentaire.idUser.id %}
+
                         {% elseif app.user.id == commentaire.idUser.id %}
                         <li><a href="{{ path('commentaire_edit', { 'id': commentaire.id }) }}" class="btn btn-primary">
 
                                 <i class="fa fa-pencil-square-o"></i> Modifier</a>
-                        <a href="{{ path('commentaire_delete', { 'id': commentaire.id }) }}" class="btn">
+
+                        <a  href="{{ path('commentaire_delete', { 'id': commentaire.id }) }}" class="btn">
 
                                 <i class="fa fa-trash-o"></i> Supprimer</a>
                         </li>
@@ -99,6 +111,64 @@
 
 
 
+
+
+    <div class="modal hide fade" id="confirmModal">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3>Confirmation de la suppression</h3>
+        </div>
+        <div class="modal-body">
+            <p>Etes-vous sûr de vouloir supprimer ce commentaire ?</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" id="confirmModalNo">Non</a>
+            <a href="#" class="btn btn-primary" id="confirmModalYes">Oui</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script language="javascript">
+
+
+
+
+        $(document).ready(function () {
+            var theHREF;
+
+            $(".btn").click(function(e) {
+                e.preventDefault();
+                theHREF = $(this).attr("href");
+                $("#confirmModal").modal("show");
+            });
+
+            $("#confirmModalNo").click(function(e) {
+                $("#confirmModal").modal("hide");
+            });
+
+            $("#confirmModalYes").click(function(e) {
+                window.location.href = theHREF;
+            });
+        });
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
     <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
     <script>
         function saveData() {
@@ -108,7 +178,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "{{ path('commentaire_new') }}",
+                url: "{{ path('commentaire_new', { 'idPub': publicite.idPub }) }}",
                 data: {'contenu': contenu},
                 success: function (data ) {
                     console.log(data);
@@ -121,4 +191,7 @@
         }
 
     </script>
+
+
+
 {% endblock %}

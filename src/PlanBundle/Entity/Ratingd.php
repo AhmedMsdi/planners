@@ -5,12 +5,12 @@ namespace PlanBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * ratingplan
+ * ratingd
  *
- * @ORM\Table(name="ratingplan")
- * @ORM\Entity(repositoryClass="PlanBundle\Repository\RatingRepository")
+ * @ORM\Table(name="ratingd")
+ * @ORM\Entity(repositoryClass="PlanBundle\Repository\RatingdRepository")
  */
-class Rating
+class Ratingd
 {
     /**
      * @var int

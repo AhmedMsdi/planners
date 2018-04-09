@@ -22,16 +22,14 @@ class Favoris
     private $id;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id_user", type="integer")
+     * @ORM\ManyToOne(targetEntity="PiBundle\Entity\User")
+     * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
      */
     private $idUser;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id_plan", type="integer")
+     * @ORM\ManyToOne(targetEntity="PlanBundle\Entity\Plan")
+     * @ORM\JoinColumn(name="id_plan",referencedColumnName="id_p")
      */
     private $idPlan;
 

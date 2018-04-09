@@ -9,7 +9,7 @@ commentaire_show:
     methods:  GET
 
 commentaire_new:
-    path:     /new
+    path:     /{idPub}/new
     defaults: { _controller: "ReviewBundle:Commentaire:ajout" }
     methods:  [GET, POST]
 

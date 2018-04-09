@@ -1,6 +1,13 @@
 {% extends ('baseuser.html.twig') %}
 
 {% block body %}
+    <head> <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
+
+    </head>
     <div class="global-wrap">
         <div class="gap"></div>
 
@@ -209,18 +216,11 @@
                                         <img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}" >
                                     </header>
                                     <div class="product-inner">
-                                        <ul class="icon-group icon-list-rating" title="5/5 rating">
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                            <li><i class="fa fa-star"></i>
-                                            </li>
-                                        </ul>
+                                        {% for rate in rating %}
+                                            {% if plan.idP == rate.plan %}
+                                                {{ rate.1|rating(5, "fa-1x")  }}
+                                            {% endif %}
+                                        {% endfor %}
                                         <h5 class="product-title">{{ plan.libelle }}</h5>
                                         <p class="product-desciption">{{ plan.description }}</p>
                                         <div class="product-meta">

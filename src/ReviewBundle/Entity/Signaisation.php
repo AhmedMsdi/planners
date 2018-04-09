@@ -1,7 +1,7 @@
 <?php
 
 namespace ReviewBundle\Entity;
-
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,22 +22,20 @@ class Signaisation
     private $id;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id_user", type="integer")
+     * @ORM\ManyToOne(targetEntity="PiBundle\Entity\User")
+     * @ORM\JoinColumn(name="id_user",referencedColumnName="id")
      */
     private $idUser;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="id_plan", type="integer")
+     * @ORM\ManyToOne(targetEntity="PlanBundle\Entity\Plan")
+     * @ORM\JoinColumn(name="id_plan",referencedColumnName="id_p")
      */
     private $idPlan;
 
     /**
      * @var string
-     *
+     * @Assert\NotBlank()
      * @ORM\Column(name="raison", type="string", length=255)
      */
     private $raison;

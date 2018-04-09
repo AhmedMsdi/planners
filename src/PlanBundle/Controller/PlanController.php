@@ -3,11 +3,13 @@
 namespace PlanBundle\Controller;
 
 use PlanBundle\Entity\Plan;
+use PlanBundle\Entity\Rating;
 use PlanBundle\Form\ModifierAjoutType;
 use PlanBundle\Form\PlanType;
-
+use blackknight467\StarRatingBundle\Form\RatingType;
 use Proxies\__CG__\PlanBundle\Entity\SousCategorie;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -30,8 +32,10 @@ class PlanController extends Controller
 
         $plans = $em->getRepository('PlanBundle:Plan')->findAll();
 
+        $rating = $em->getRepository('PlanBundle:Rating')->AVGRating();
         return $this->render('@Plan/plan/single-news.html.twig', array(
             'plans' => $plans,
+            'rating' => $rating
         ));
     }
 
@@ -40,9 +44,11 @@ class PlanController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->DivertisementsAction();
+        $rating = $em->getRepository('PlanBundle:Rating')->AVGRating();
 
         return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
             'plans' => $plans,
+            'rating' => $rating
         ));
     }
 
@@ -50,7 +56,8 @@ class PlanController extends Controller
     public function FilterGastronomieAction()
     {
         $em = $this->getDoctrine()->getManager();
-
+        $rating = $em->getRepository('PlanBundle:Rating')->findAll();
+        $rating = $em->getRepository('PlanBundle:Rating')->AVGRating();
         $plans = $em->getRepository('PlanBundle:Plan')->GastronomieAction();
         //$plans = $em->getRepository('PlanBundle:Plan')->findAll();
 
@@ -61,6 +68,7 @@ class PlanController extends Controller
 
         return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
             'plans' => $plans,
+            'rating' => $rating
         ));
     }
 
@@ -69,9 +77,11 @@ class PlanController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->BienEAction();
+        $rating = $em->getRepository('PlanBundle:Rating')->AVGRating();
 
         return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
             'plans' => $plans,
+            'rating' => $rating
         ));
     }
 
@@ -351,6 +361,7 @@ class PlanController extends Controller
     public function DetailsAction(Request $request, $idP)
     {
         $em = $this->getDoctrine()->getManager();
+        $m = $this->getDoctrine()->getManager();
         $plan = $em->getRepository('PlanBundle:Plan')->find($idP);
         $idsc = $plan->getIdSc();
         $sc = new SousCategorie();
@@ -368,8 +379,39 @@ class PlanController extends Controller
         else if ($idscss >= 12 && $idscss <= 17)
             $message = ' Le divertissement est le meilleur régime contre le poids de l\'existence....';
 
-        return $this->render('PlanBundle:plan:details2.html.twig', array(
-            'plan' => $plan, 'msg' => $message
+
+        $mark = $em->getRepository('PlanBundle:Plan')->find($idP);
+        $rating = $m->getRepository('PlanBundle:Rating')->AVGRating();
+        $rating=new Rating();
+
+
+        $form=$this->createFormBuilder($rating)
+            ->add('rating', RatingType::class, [
+                'label' => 'Rating'
+            ])
+            ->add('valider',SubmitType::class, array(
+                'attr' => array(
+
+                    'class'=>'btn btn-xs btn-primary'
+                )))
+            ->getForm();
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $rating->setPlan($mark->getIdP());
+            $em->persist($rating);
+            $em->flush();
+        }
+
+
+
+
+
+
+
+
+        return $this->render('@Plan/plan/details2.html.twig', array(
+            'plan' => $plan, 'msg' => $message,
+            'mark' => $mark,'form'=> $form->createView(),'rating'=>$rating
         ));
 
     }
@@ -381,6 +423,7 @@ class PlanController extends Controller
         $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(12);
         return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
             'plans' => $plans,
+
         ));
     }
 
