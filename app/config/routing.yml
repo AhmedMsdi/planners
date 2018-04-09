@@ -14,16 +14,16 @@ hebergement:
     resource: "@HebergementBundle/Resources/config/routing.yml"
     prefix:   /
 
-hebergement:
-    resource: "@HebergementBundle/Resources/config/routing.yml"
-    prefix:   /
-
 evennement_categorie_event:
     resource: "@EvennementBundle/Controller/CategorieEventController.php"
     type:     annotation
 
 evennement_evennement:
     resource: "@EvennementBundle/Controller/EvennementController.php"
+    type:     annotation
+
+evennement_evennement_front:
+    resource: "@EvennementBundle/Controller/FrontEvennementController.php"
     type:     annotation
 
 back_office:
@@ -41,3 +41,5 @@ app:
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+pianosolo_weather:
+    resource: "@PianoSoloWeatherBundle/Resources/config/routing.yml"

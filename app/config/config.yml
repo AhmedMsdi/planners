@@ -15,6 +15,9 @@ imports:
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
     locale: fr
+    imageEvent: '%kernel.root_dir%/../web/imageEvent'
+    images_directory: '%kernel.root_dir%/../web/uploads'
+
 
 framework:
     #esi: ~
@@ -144,4 +147,16 @@ fos_user:
                   address: "noreply@yourcompany.com"
                   sender_name: "No Reply"
 
+piano_solo_weather:
+    api_key: "bcb24d94475fb84cb6fe8babb6451c76" # Required (OpenWeatherMap Api Key)
+    options:
+        download_csv: false # Default True
+        cache: true # Default False (To use cache the system needs Php-Apc cache)
 
+
+
+services:
+    twig.extension.text:
+       class: Twig_Extensions_Extension_Text
+       tags:
+           - { name: twig.extension }

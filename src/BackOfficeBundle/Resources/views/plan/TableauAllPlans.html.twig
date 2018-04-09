@@ -1,0 +1,264 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Backend</title>
+
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/datepicker3.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/stylesADMIN.css') }}" rel="stylesheet">
+
+    <!--Icons-->
+    <script src="{{ asset('js/lumino.glyphs.js') }}"></script>
+
+    <!--[if lt IE 9]>
+    <script src="{{ asset('js/html5shiv.min.js') }}"></script>
+    <script src="{{ asset('js/respondadmin.min.js') }}"></script>
+    <![endif]-->
+
+</head>
+
+
+{% block disable_confirm %}
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body2">
+                    <div class="te"></div>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+{% endblock %}
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span>Gestion utilisateurs</span>Admin</a>
+            <ul class="user-menu">
+                <li class="dropdown pull-right">
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">
+                                <svg class="glyph stroked male-user">
+                                    <use xlink:href="#stroked-male-user"></use>
+                                </svg>
+                                Profile</a></li>
+                        <li><a href="#">
+                                <svg class="glyph stroked gear">
+                                    <use xlink:href="#stroked-gear"></use>
+                                </svg>
+                                Settings</a></li>
+                        <li><a href="{{ path('fos_user_security_logout') }}">
+                                <svg class="glyph stroked cancel">
+                                    <use xlink:href="#stroked-cancel"></use>
+                                </svg>
+                                Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+    <form role="search">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+        </div>
+    </form>
+    <ul class="nav menu">
+        <li class="active"><a href="{{ path('back_office_homepage') }}">
+                <svg class="glyph stroked dashboard-dial">
+                    <use xlink:href="#stroked-dashboard-dial"></use>
+                </svg>
+                Dashboard</a></li>
+        <li><a href="{{ path('chart') }}">
+                <svg class="glyph stroked line-graph">
+                    <use xlink:href="#stroked-line-graph"></use>
+                </svg>
+                Statistiques</a></li>
+        <li><a href="{{ path('form') }}">
+                <svg class="glyph stroked pencil">
+                    <use xlink:href="#stroked-pencil"></use>
+                </svg>
+                Forms</a></li>
+        <li><a href="{{ path('panel') }}">
+                <svg class="glyph stroked app-window">
+                    <use xlink:href="#stroked-app-window"></use>
+                </svg>
+                Alerts &amp; Panels</a></li>
+        <li><a href="{{ path('icon') }}">
+                <svg class="glyph stroked star">
+                    <use xlink:href="#stroked-star"></use>
+                </svg>
+                Icons</a></li>
+        <li class="parent ">
+            <a href="#">
+                <span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use
+                                xlink:href="#stroked-chevron-down"></use></svg></span> Dropdown
+            </a>
+            <ul class="children collapse" id="sub-item-1">
+                <li>
+                    <a class="" href="#">
+                        <svg class="glyph stroked chevron-right">
+                            <use xlink:href="#stroked-chevron-right"></use>
+                        </svg>
+                        Sub Item 1
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="#">
+                        <svg class="glyph stroked chevron-right">
+                            <use xlink:href="#stroked-chevron-right"></use>
+                        </svg>
+                        Sub Item 2
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="#">
+                        <svg class="glyph stroked chevron-right">
+                            <use xlink:href="#stroked-chevron-right"></use>
+                        </svg>
+                        Sub Item 3
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li role="presentation" class="divider"></li>
+        <li><a href="{{ path('fos_user_security_login') }}">
+                <svg class="glyph stroked male-user">
+                    <use xlink:href="#stroked-male-user"></use>
+                </svg>
+                Login Page</a></li>
+    </ul>
+</div><!--/.sidebar-->
+
+{% block body %}  <h1 style="padding-left: 750px ; color: #0a7369">Tous les Plans</h1><br>
+    <link rel="stylesheet" href="{{ asset('css/chaimaDesign.css') }}"/>
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <style>
+
+        table.paleBlueRows {
+            font-family: "Garamond", Times, serif;
+            border: 1px solid #FFFFFF;
+            width: 350px;
+            height: 200px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        table.paleBlueRows td, table.paleBlueRows th {
+            border: 1px solid #FFFFFF;
+            padding: 5px 13px;
+        }
+
+        table.paleBlueRows tbody td {
+            font-size: 16px;
+        }
+
+        table.paleBlueRows tr:nth-child(even) {
+            background: #D0E4F5;
+        }
+
+        table.paleBlueRows thead {
+            background: #0B6FA4;
+            border-bottom: 5px solid #FFFFFF;
+        }
+
+        table.paleBlueRows thead th {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FFFFFF;
+            text-align: center;
+            border-left: 2px solid #FFFFFF;
+        }
+
+        table.paleBlueRows thead th:first-child {
+            border-left: none;
+        }
+
+        table.paleBlueRows tfoot {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333333;
+            background: #D0E4F5;
+            border-top: 3px solid #444444;
+        }
+
+        table.paleBlueRows tfoot td {
+            font-size: 14px;
+        }
+
+        #desc {
+            padding: 10px 65px;
+
+        }
+
+
+
+    </style>
+
+    <div class="container">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+            <table class="paleBlueRows">
+
+                <thead>
+                <tr>
+
+                    <th id="lib">libelle</th>
+                    <th>Adresse</th>
+                    <th>Ville</th>
+                    <th>Prix</th>
+                    <th id="desc">description</th>
+                    <th>longitude</th>
+                    <th>latitude</th>
+                    <th>Etat</th>
+                    <th> Valider</th>
+                    <th> Supprimer</th>
+
+                </tr>
+                </thead>
+                {% for plan in plans %}
+                    <tr>
+
+                        <td>{{ plan.libelle }}</td>
+                        <td>{{ plan.adresse }}</td>
+                        <td>{{ plan.ville }}</td>
+                        <td>{{ plan.prix }}</td>
+                        <td>{{ plan.description }}</td>
+                        <td>{{ plan.longitude }}</td>
+                        <td>{{ plan.latitude }}</td>
+                        <td>{{ plan.etat }}</td>
+
+                        <td class="text-center"><a class='btn btn-success'
+                                                   href="{{ path('plan_valider', {'idP': plan.idP  }) }}">
+                                <span class="glyphicon glyphicon-ok"></span> Valider </a>
+
+                        </td>
+                        <td class="text-center"><a class='btn btn-danger'
+                                                   href="{{ path('plan_Nonvalide', { 'idP': plan.idP  }) }}">
+                                <span class="glyphicon glyphicon-remove"></span> delete </a>
+
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+    </div>
+{% endblock %}

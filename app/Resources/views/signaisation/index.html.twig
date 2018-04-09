@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Signaisations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Raison</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for signaisation in signaisations %}
+            <tr>
+                <td><a href="{{ path('signaisation_show', { 'id': signaisation.id }) }}">{{ signaisation.id }}</a></td>
+                <td>{{ signaisation.raison }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('signaisation_show', { 'id': signaisation.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('signaisation_edit', { 'id': signaisation.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('signaisation_new') }}">Create a new signaisation</a>
+        </li>
+    </ul>
+{% endblock %}

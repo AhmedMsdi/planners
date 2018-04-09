@@ -4,13 +4,13 @@ plan_plan:
 
 plan_Filter_Gaspage:
     path:     /filterGas
-    defaults: { _controller: PlanBundle:Plan:GastronomieFilter }
+    defaults: { _controller: PlanBundle:Plan:FilterGastronomie }
 plan_Filter_Divpage:
     path:     /FilterDiv
-    defaults: { _controller: PlanBundle:Plan:DivertissementFilterPage}
+    defaults: { _controller: PlanBundle:Plan:FilterDivertissement}
 plan_FilterBE:
     path:     /filterBe
-    defaults: { _controller: PlanBundle:Plan:BienEtretFilterPage}
+    defaults: { _controller: PlanBundle:Plan:FilterBE}
 
 plan_FilterDIVHorizontale:
     path:     /FilterDivHorizontal

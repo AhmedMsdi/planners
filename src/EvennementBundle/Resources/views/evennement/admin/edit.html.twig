@@ -1,0 +1,66 @@
+{% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
+{% extends 'baseadmin.html.twig' %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('bundles/evennement/css/css_event.css') }}">
+    <h1>Modifier Evennement</h1>
+
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="list_btn_action pull-right">
+                <li>
+                    <a href="{{ path('evennement_index') }}" class="btn btn-info"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Liste</a>
+                </li>
+                <li>
+                    {{ form_start(delete_form) }}
+                    <button type="submit" value="Supprimer" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Supprimer</button>
+                    {{ form_end(delete_form) }}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    {{ form_start(edit_form) }}
+    <div class="row">
+        <div class="col-sm-4 col-md-4">
+            {{ form_row(edit_form.CatEvent) }}
+        </div>
+        <div class="col-sm-4 col-md-4">
+            {{ form_row(edit_form.titre) }}
+        </div>
+        <div class="col-sm-2 col-md-2">
+            {{ form_row(edit_form.date_event) }}
+        </div>
+        <div class="col-sm-2 col-md-2">
+            {{ form_row(edit_form.time_event) }}
+        </div>
+        <div class="col-sm-8 col-md-8">
+            {{ form_row(edit_form.adresse) }}
+        </div>
+        <div class="col-sm-4 col-md-4">
+            {{ form_row(edit_form.ville) }}
+        </div>
+        <div class="col-sm-6 col-md-6">
+            {{ form_row(edit_form.prix) }}
+        </div>
+        <div class="col-sm-6 col-md-6">
+            {{ form_row(edit_form.contact) }}
+        </div>
+        <div class="col-sm-8 col-md-8">
+            {{ form_row(edit_form.description) }}
+        </div>
+        <div class="col-sm-4 col-md-4">
+            {{ form_row(edit_form.editImage) }}
+            {%  if evennement.image is not empty %}
+            <img src="{{ asset('imageEvent/'~evennement.image)  }}" style="width: 50%">
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <input type="submit" value="Enregistrer" class="btn btn-success" />
+        </div>
+    </div>
+    {{ form_end(edit_form) }}
+
+{% endblock %}
