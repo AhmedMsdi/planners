@@ -1,6 +1,6 @@
 
 {% trans_default_domain 'FOSUserBundle' %}
-{% extends ('baseuser.html.twig') %}
+{% extends ('baseadmin.html.twig') %}
 {%  block body %}
     <style>
 
@@ -27,80 +27,80 @@
     </style>
 
     <div class="top-content">
-        <br>
-        <div class="inner-bg">
-            <div class="container">
-                <div class="col-md-2">
-                </div>
-                <div class="col-md-5">
+<br>
+    <div class="inner-bg">
+        <div class="container">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-5">
 
-                    <div class="form-box">
-                        <div class="form-top" style="">
-                            <div class="form-top-left">
-                                <h3>Ajouter un plan                                 <i class="fa fa-pencil"></i>
-                                </h3>
-                            </div>
-
-                        </div>
-
-                        <div class="form-bottom">
-
-                            {{ form_start(form) }}
-
-                            <div class="form-group">
-                                <label for="">Nom</label>
-                                {{ form_widget(form.titre,{'attr':{'class':'form-control','placeholder':'Nom'}}) }}
-                            </div>
-                            <div class="form-group">
-                                <label for="">Choisir type d'hébergement</label>
-                                {{ form_widget(form.categorie,{'attr':{'class':'form-control','placeholder':'Catégorie'}}) }}
-                            </div>
-                            <div class="form-group">
-                                <label for="">Lieu :</label>
-                                {{ form_widget(form.lieu,{'attr':{'class':'form-control','placeholder':'Lieu'}}) }}
-                            </div>
-                            <div class="form-group">
-                                <label for="">Description :</label>
-                                {{ form_widget(form.description,{'attr':{'class':'form-control','placeholder':'Description'}}) }}
-                            </div>
-                            <div class="form-group">
-                                <label for="">Photo :</label>
-                                {{ form_widget(form.photo,{'attr':{'class':'form-control','placeholder':'Photo'}}) }}
-                            </div>
-                            <div class="form-group">
-                                <label for="">Prix par nuit :</label>
-                                {{ form_widget(form.prix,{'attr':{'class':'form-control','placeholder':'Prix/nuit'}}) }}
-                            </div>
-                            <div class="form-group">
-                                <label for="">Numéro de téléphone :</label>
-                                {{ form_widget(form.tel,{'attr':{'class':'form-control','placeholder':'Téléphone'}}) }}
-                            </div>
-                            <div class="form-group">
-                                <label for="">Ton site s'il existe :</label>
-                                {{ form_widget(form.siteWeb,{'attr':{'class':'form-control','placeholder':'http:\\\\domain.com'}}) }}
-                            </div>
-
-                            <input type="submit" value="{{ 'Ajouter' }}" class="btn btn-success" style="width: 100%"/>
-
-
+                <div class="form-box">
+                    <div class="form-top" style="">
+                        <div class="form-top-left">
+                            <h3>Ajouter un plan                                 <i class="fa fa-pencil"></i>
+                            </h3>
                         </div>
 
                     </div>
+
+                    <div class="form-bottom">
+
+                        {{ form_start(form, {'method': 'post', 'action': path('hebergement_new')}) }}
+
+                        <div class="form-group">
+                            <label for="">Nom</label>
+                            {{ form_widget(form.titre,{'attr':{'class':'form-control','placeholder':'Nom'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Choisir type d'hébergement</label>
+                            {{ form_widget(form.categorie,{'attr':{'class':'form-control','placeholder':'Catégorie'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Lieu :</label>
+                            {{ form_widget(form.lieu,{'attr':{'class':'form-control','placeholder':'Lieu'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Description :</label>
+                            {{ form_widget(form.description,{'attr':{'class':'form-control','placeholder':'Description'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Photo :</label>
+                            {{ form_widget(form.photo,{'attr':{'class':'form-control','placeholder':'Photo'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Prix par nuit :</label>
+                            {{ form_widget(form.prix,{'attr':{'class':'form-control','placeholder':'Prix/nuit'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Numéro de téléphone :</label>
+                            {{ form_widget(form.tel,{'attr':{'class':'form-control','placeholder':'Téléphone'}}) }}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Ton site s'il existe :</label>
+                            {{ form_widget(form.siteWeb,{'attr':{'class':'form-control','placeholder':'http:\\\\domain.com'}}) }}
+                        </div>
+
+                        <input type="submit" value="{{ 'Ajouter' }}" class="btn btn-success" style="width: 100%"/>
+
+
+                    </div>
+
                 </div>
+            </div>
                 <div class="col-md-2" >
                     <div id="map"></div>
                     <hr>
                     Coordonnées:
 
                     <div class="col-md-12">
-                        {{ form_widget(form.x,{'attr':{'class':'form-control','placeholder':'x'}}) }}
+                            {{ form_widget(form.x,{'attr':{'class':'form-control','placeholder':'x'}}) }}
 
-                        {{ form_widget(form.y,{'attr':{'class':'form-control','placeholder':'y'}}) }}
+                            {{ form_widget(form.y,{'attr':{'class':'form-control','placeholder':'y'}}) }}
                     </div>
                 </div>
 
-            </div>  {{ form_end(form) }}
-        </div>
+        </div>  {{ form_end(form) }}
+    </div>
     </div>
     <br><br>
 
@@ -112,13 +112,14 @@
 
 
 
+
         // This example requires the Places library. Include the libraries=places
         // parameter when you first load the API. For example:
         // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
         var marker;
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: {{ hebergement.x }}, lng: {{ hebergement.y }}},
+                center: {lat: 36, lng: 10},
                 zoom: 10
             });
             var input = /** @type {!HTMLInputElement} */(
@@ -192,7 +193,7 @@
                 infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
                 document.getElementById('hebergementbundle_hebergement_lieu').value=address;
 
-            infowindow.open(map, marker);
+                infowindow.open(map, marker);
             });
 
             // Sets a listener on a radio button to change the filter type on Places

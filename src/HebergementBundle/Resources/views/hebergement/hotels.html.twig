@@ -200,12 +200,6 @@
 
                         </div>
                     </div>
-                    <div class="col-md-2 col-md-offset-7">
-                        <div class="product-view pull-right">
-                            <a class="fa fa-th-large active" href="#"></a>
-                            <a class="fa fa-list" href="#"></a>
-                        </div>
-                    </div>
                 </div>
                 <div class="row row-wrap" style="height: 500px">
                     {% for heb in hebergements %}
@@ -235,24 +229,9 @@
 
         <div class="col-md-12">
             <center>
-                <ul class="pagination">
-                    <li class="prev disabled">
-                        <a href="#"></a>
-                    </li>
-                    <li class="active"><a href="#">1</a>
-                    </li>
-                    <li><a href="#">2</a>
-                    </li>
-                    <li><a href="#">3</a>
-                    </li>
-                    <li><a href="#">4</a>
-                    </li>
-                    <li><a href="#">5</a>
-                    </li>
-                    <li class="next">
-                        <a href="#"></a>
-                    </li>
-                </ul>
+                <div class="navigation">
+                    {{ knp_pagination_render(hebergements) }}
+                </div>
                 <br>
                 <br>
             </center>

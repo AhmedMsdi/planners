@@ -29,7 +29,7 @@ class HebergementType extends AbstractType
         )
         ))
             ->add('photo',FileType::class, array(
-                'required' => false,
+                'required' => true,
                 'data_class'=>null,
             ))
             ->add('titre',TextType::class)

@@ -19,7 +19,7 @@ class HebergementController extends Controller
      * Lists all hebergement entities.
      *
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $h = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Hôtel",'enable'=>true));
@@ -33,15 +33,36 @@ class HebergementController extends Controller
             ->getQuery()
             ->execute();
 
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $hebergements, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            6/*limit per page*/
+        );
+        if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())){
+
+            $hebergements = $em->getRepository('HebergementBundle:Hebergement')->createQueryBuilder('e')
+                ->where('e.enable like :val')
+                ->setParameter('val',false)
+                ->addORderBy('e.datecreation', 'DESC')
+                ->getQuery()
+                ->execute();
+            return $this->render('@Hebergement/hebergementadmin/index.html.twig', array(
+                'hebergements' => $pagination,
+                'm'=>$m,
+                'h'=>$h,
+                'p'=>$p,
+            ));
+        }
         return $this->render('@Hebergement/hebergement/index.html.twig', array(
-            'hebergements' => $hebergements,
+            'hebergements' => $pagination,
             'm'=>$m,
             'h'=>$h,
             'p'=>$p,
         ));
     }
 
-    public function indexhotelsAction()
+    public function indexhotelsAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $m = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Maison_d'hôte",'enable'=>true));
@@ -55,16 +76,30 @@ class HebergementController extends Controller
             ->addORderBy('e.datecreation', 'DESC')
             ->getQuery()
             ->execute();
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $hebergements, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            6/*limit per page*/
+        );
+        if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+            $a = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('enable'=>false));
 
+            return $this->render('@Hebergement/hebergementadmin/hotels.html.twig',array(
+                'hebergements' => $pagination,
+                'm'=>$m,
+                'p'=>$p,
+                'a'=>$a,));
+        }
         return $this->render('@Hebergement/hebergement/hotels.html.twig',array(
-        'hebergements' => $hebergements,
+            'hebergements' => $pagination,
             'm'=>$m,
             'p'=>$p,
             'a'=>$a,
     ));
     }
 
-    public function indexmaisonsAction()
+    public function indexmaisonsAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -80,16 +115,32 @@ class HebergementController extends Controller
             ->addORderBy('e.datecreation', 'DESC')
             ->getQuery()
             ->execute();
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $hebergements, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            6/*limit per page*/
+        );
 
+        if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())){
+            $a = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('enable'=>false));
+
+            return $this->render('@Hebergement/hebergementadmin/maisons.html.twig',array(
+                'hebergements' => $pagination,
+                'a'=>$a,
+                'h'=>$h,
+                'p'=>$p,
+            ));
+        }
         return $this->render('@Hebergement/hebergement/maisons.html.twig',array(
-            'hebergements' => $hebergements,
+            'hebergements' => $pagination,
             'a'=>$a,
 
             'h'=>$h,
             'p'=>$p,
         ));    }
 
-    public function indexpensionsAction()
+    public function indexpensionsAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $h = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Hôtel",'enable'=>true));
@@ -104,9 +155,25 @@ class HebergementController extends Controller
             ->addORderBy('e.datecreation', 'DESC')
             ->getQuery()
             ->execute();
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $hebergements, /* query NOT result */
+            $request->query->getInt('page', 1)/*page number*/,
+            4/*limit per page*/
+        );
+        if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+            $a = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('enable'=>false));
 
+            return $this->render('@Hebergement/hebergementadmin/pensions.html.twig',array(
+                'hebergements' => $pagination,
+                'h'=>$h,
+                'm'=>$m,
+                'a'=>$a,
+
+            ));
+        }
         return $this->render('@Hebergement/hebergement/pensions.html.twig',array(
-            'hebergements' => $hebergements,
+            'hebergements' => $pagination,
             'h'=>$h,
             'm'=>$m,
             'a'=>$a,
@@ -125,7 +192,7 @@ class HebergementController extends Controller
         if ($user === 'anon.' ) {
             $this->addFlash('danger','veuiller Connecter!!!');
              return $this->redirectToRoute('pi_homepage');
-        }else{
+        }elseif (in_array('ROLE_CLIENT', $this->getUser()->getRoles())){
             $hebergement = new Hebergement();
         $form = $this->createForm('HebergementBundle\Form\HebergementType', $hebergement);
         $form->handleRequest($request);
@@ -149,7 +216,13 @@ class HebergementController extends Controller
             return $this->redirectToRoute('hebergement_show', array('id' => $hebergement->getId()));
         }
 
-        return $this->render('@Hebergement/hebergement/new.html.twig', array(
+            if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+                return $this->render('@Hebergement/hebergementadmin/new.html.twig', array(
+                    'hebergement' => $hebergement,
+                    'form' => $form->createView(),
+                ));
+        }
+                return $this->render('@Hebergement/hebergement/new.html.twig', array(
             'hebergement' => $hebergement,
             'form' => $form->createView(),
         ));
@@ -161,9 +234,6 @@ class HebergementController extends Controller
      */
     public function showAction(Request $request,Hebergement $hebergement)
     {
-        global $kernel;
-        $user = $kernel->getContainer()->get('security.token_storage')->getToken()->getUser();
-
         $em = $this->getDoctrine()->getManager();
 
         $deleteForm = $this->createDeleteForm($hebergement);
@@ -175,7 +245,16 @@ class HebergementController extends Controller
         if ($mes!==null)
         $etat=$mes->getEtat();
         else $etat=0;
-        return $this->render('@Hebergement/hebergement/show.html.twig', array(
+        if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+            return $this->render('@Hebergement/hebergementadmin/show.html.twig', array(
+                'hebergement' => $hebergement,
+                'etat' => $etat,
+                'formres'=>$form->createView(),
+                'delete_form' => $deleteForm->createView(),
+
+            ));
+        }
+            return $this->render('@Hebergement/hebergement/show.html.twig', array(
             'hebergement' => $hebergement,
             'etat' => $etat,
             'formres'=>$form->createView(),
@@ -192,16 +271,20 @@ class HebergementController extends Controller
     {
         global $kernel;
         $user = $kernel->getContainer()->get('security.token_storage')->getToken()->getUser();
-        if ($user === 'anon.' or $user!==$hebergement->getIdUser()) {
+        if ($user === 'anon.' or $user!==$hebergement->getIdUser() xor in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
             $this->addFlash('danger','veuiller Connecter!!!');
             return $this->redirectToRoute('hebergement_show', array('id' => $hebergement->getId()));
-        }else {
+        }elseif(in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles()) or $user===$hebergement->getIdUser()) {
 
             $deleteForm = $this->createDeleteForm($hebergement);
             $editForm = $this->createForm('HebergementBundle\Form\HebergementType', $hebergement);
             $editForm->handleRequest($request);
-
+                $x=$hebergement->getPhoto();
             if ($editForm->isSubmitted() && $editForm->isValid()) {
+                if ($hebergement->getPhoto()=="")
+                {
+                    $hebergement->setPhoto($x);
+                }
                 /**
                  * @var UploadedFile $file
                  */
@@ -213,11 +296,18 @@ class HebergementController extends Controller
 
                 $hebergement->setIdUser($user);
                 $hebergement->setDatecreation(new \DateTime());
+                $hebergement->setEnable(0);
 
                 $this->getDoctrine()->getManager()->flush();
                 return $this->redirectToRoute('hebergement_show', array('id' => $hebergement->getId()));
             }
-
+            if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+                return $this->render('@Hebergement/hebergementadmin/edit.html.twig', array(
+                    'hebergement' => $hebergement,
+                    'form' => $editForm->createView(),
+                    'delete_form' => $deleteForm->createView(),
+                ));
+            }
             return $this->render('@Hebergement/hebergement/edit.html.twig', array(
                 'hebergement' => $hebergement,
                 'form' => $editForm->createView(),
@@ -239,6 +329,7 @@ class HebergementController extends Controller
             $em->remove($hebergement);
             $em->flush();
         }
+
 
         return $this->redirectToRoute('hebergement_index');
     }
@@ -273,7 +364,14 @@ class HebergementController extends Controller
             ->setParameter('val','%'.$name.'%')
             ->getQuery()
             ->execute();
-
+        if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+            return $this->render('@Hebergement/hebergementadmin/rech.html.twig', array(
+                'hebergements' => $hebergements,
+                'm'=>$m,
+                'h'=>$h,
+                'p'=>$p,
+            ));
+        }
         return $this->render('@Hebergement/hebergement/rech.html.twig', array(
             'hebergements' => $hebergements,
             'm'=>$m,
@@ -296,7 +394,14 @@ class HebergementController extends Controller
             ->setParameter('val',$_GET['maxprix'])
             ->getQuery()
             ->execute();
-
+        if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+            return $this->render('@Hebergement/hebergementadmin/rech.html.twig', array(
+                'hebergements' => $hebergements,
+                'm'=>$m,
+                'h'=>$h,
+                'p'=>$p,
+            ));
+        }
         return $this->render('@Hebergement/hebergement/rech.html.twig', array(
             'hebergements' => $hebergements,
             'm'=>$m,
@@ -307,7 +412,10 @@ class HebergementController extends Controller
 
     public function espAction()
     {
+        if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+            return $this->render('@Hebergement/hebergementadmin/esp.html.twig');
 
+        }
 
         return $this->render('@Hebergement/hebergement/esp.html.twig');
     }
@@ -330,7 +438,15 @@ class HebergementController extends Controller
             ->addORderBy('e.datecreation', 'DESC')
             ->getQuery()
             ->execute();
+            if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+                return $this->render('@Hebergement/hebergementadmin/mesbonplan.html.twig', array(
+                    'hebergements' => $hebergements,
+                    'm'=>$m,
+                    'h'=>$h,
+                    'p'=>$p,
+                ));
 
+            }
         return $this->render('@Hebergement/hebergement/mesbonplan.html.twig', array(
             'hebergements' => $hebergements,
             'm'=>$m,
@@ -339,6 +455,83 @@ class HebergementController extends Controller
         ));
         }
     }
+    public function pdfAction(Request $request,Hebergement $hebergement)
+    {
+        global $kernel;
+        $user = $kernel->getContainer()->get('security.token_storage')->getToken()->getUser();
+        $em = $this->getDoctrine()->getManager();
+
+        $deleteForm = $this->createDeleteForm($hebergement);
+        $messagerie=new Messagerie();
+        $form = $this->createForm('HebergementBundle\Form\MessagerieType', $messagerie);
+        $form->handleRequest($request);
+
+        $mes = $em->getRepository('HebergementBundle:Messagerie')->findOneBy(array('idheb'=>$hebergement->getId()));
+        if ($mes!==null)
+            $etat=$mes->getEtat();
+        else $etat=0;
+
+
+        $html= $this->render('@Hebergement/hebergement/pdf.html.twig', array(
+            'hebergement' => $hebergement,
+            'etat' => $etat,
+            'mes'=>$mes,
+            'formres'=>$form->createView(),
+            'delete_form' => $deleteForm->createView(),
+
+        ));
+
+
+        $html2pdf = new \Spipu\Html2Pdf\Html2Pdf('P','A4','en');
+        $html2pdf->writeHTML('<p>Bonjour</p>');
+        $html2pdf->Output('.pdf');
+
+
+    }
+
+    public function confAction(Request $request, Hebergement $hebergement)
+    {
+
+            if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+               $hebergement->setEnable(1);
+                $this->getDoctrine()->getManager()->flush();
+
+                return $this->redirectToRoute('hebergement_index');
+            }
+            else{
+                return $this->redirectToRoute('hebergement_index');
+
+            }
+    }
+
+    public function rechadminAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $hebergements = $em->getRepository('HebergementBundle:Hebergement')->createQueryBuilder('e')
+            ->where('e.lieu like :val')
+            ->orWhere('e.categorie like :val')
+            ->orWhere('e.description like :val')
+            ->orWhere('e.siteWeb like :val')
+            ->orWhere('e.titre like :val')
+            ->addORderBy('e.datecreation', 'DESC')
+            ->setParameter('val','%'.$_POST['recha'].'%')
+            ->getQuery()
+            ->execute();
+        $h = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Hôtel",'enable'=>true));
+        $m = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Maison_d'hôte",'enable'=>true));
+        $p = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Pensions",'enable'=>true));
+
+
+            return $this->render('@Hebergement/hebergementadmin/rechadmin.html.twig', array(
+                'hebergements' => $hebergements,
+                'm'=>$m,
+                'h'=>$h,
+                'p'=>$p,
+            ));
+
+    }
+
 
 
 }

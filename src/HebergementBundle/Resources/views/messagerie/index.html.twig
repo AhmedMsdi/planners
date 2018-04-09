@@ -17,8 +17,8 @@
                             <th>Hebergement</th>
                             <th>Date Debut</th>
                             <th>Date Fin</th>
-                            <th>Action</th>
                             <th>Nombre de personnes</th>
+                            <th>Action</th>
 
                         </thead>
                         <tbody>
@@ -41,6 +41,7 @@
                                 <td class="mailbox-subject"><b>Hebergement</b><a href="{{ path('hebergement_show',{'id':messagerie.idheb}) }}"> {{ messagerie.idheb }}</a>.</td>
                                 <td class="mailbox-attachment">{{ messagerie.datedebut|date('d-m-Y') }}</td>
                                 <td class="mailbox-attachment">{{ messagerie.datefin|date('d-m-Y') }}</td>
+                                <td class="mailbox-attachment">{{ messagerie.nbrperson }}</td>
                                 <td class="mailbox-date" width="20px"><a  disabled="disabled" class="btn btn-success" href="{{ path('messagerie_edit', { 'id': messagerie.id }) }}">Reservation Confirmée</a>
                                 </td>
                             </tr>
