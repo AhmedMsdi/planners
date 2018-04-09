@@ -8,7 +8,7 @@
         <a href="{{ path('plan_NewPlanDesign') }}" class="btn btn-success" >
             <div class="fa  fa-plus-square"></div>
             Ajouter un Plan</a>
-        <a href="" class="btn btn-warning"><div class="fa  fa-bar-chart-o"></div> Mes statistiques</a>
+        <a href="{{ path('stat_stat') }}" class="btn btn-warning"><div class="fa  fa-bar-chart-o"></div> Mes statistiques</a>
 
     </div>
 
@@ -70,6 +70,9 @@
                                                 </li>
                                                 <li><a class="btn btn-sm" href="{{ path('Details_plans',{ 'idP': plan.idP  })}}">
                                                 <i class="fa fa-bars"></i> Details</a>
+                                                </li>
+                                                <li><a class="btn btn-sm" href="{{ path('delete_Profil',{ 'idP': plan.idP  })}}">
+                                                <i class="fa fa-bars"></i> Supprimer</a>
                                                 </li>
                                             </ul>
                                         </div>

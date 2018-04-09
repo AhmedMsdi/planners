@@ -3,28 +3,17 @@
 {% block body %}
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <style>
-        #map {
-            height: 500px;
-            width: 300%;
-        }
+
     </style>
     <div class="container">
         <div class="row">
-            <div class="col-md-9">
-                <!-- BLOG POST -->
-                <article class="post">
-                    <header class="post-header">
-                        <!-- HOVER IMAGE -->
-                        <a class="hover-img" href="post-sidebar-right.html">
-                            <i
-                                    class="fa fa-link hover-icon"></i>
-                        </a>
-                    </header>
-                    <div class="post-inner">
-                        <h4 class="post-title">
-                            <img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}" ></h4>
-                       <h3> {{ plan.libelle }}</h3>
-                        <p class="post-desciption">{{ plan.description }}</p>
+            <div class="col-md-9" style="width: 800px " >
+                <article class="post " >
+                    <div class="post-inner" style="width: 200px ;height: 500px">
+                        <h4 class="post-title"  >
+                            <img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}" style="width: 350px ;height: 350px ; margin-left: 200px" ></h4>
+                       <h3 style="color: #0f6774 ; margin-left: 350px "> {{ plan.libelle }}</h3>
+                        <p class="post-desciption" style="color: black ;width: 600px ;height: 350px ;margin-left: 80px">{{ plan.description }}</p>
                     </div>
 
                 </article>
@@ -48,18 +37,18 @@
                 {#{{ socialButtons() }}#}
                 <div class="gap"></div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3" >
                 <aside class="sidebar-right hidden-phone">
-                    <div class="sidebar-box">
+                    <div class="sidebar-box" style="height: 400px">
                         <h3>Informations Utils</h3>
-                        <ul class="icon-list blog-category-list">
-                            <li><i class="glyphicon glyphicon-home"></i> Adresse : {{ plan.adresse }}
+                        <ul class="icon-list blog-category-list" style="padding-top: 30px;padding-bottom: 30px">
+                            <li><i class="glyphicon glyphicon-home" style="padding-top: 10px;padding-bottom: 10px"></i> Adresse : {{ plan.adresse }}
                             </li>
-                            <li><i class="glyphicon glyphicon-map-marker"></i> Ville : {{ plan.ville }}
+                            <li><i class="glyphicon glyphicon-map-marker" style="padding-top: 10px;padding-bottom: 10px"></i> Ville : {{ plan.ville }}
                             </li>
-                            <li><a href="#"><i class="glyphicon glyphicon-euro"></i> Prix : {{ plan.prix }}</a>
+                            <li><a href="#"><i class="glyphicon glyphicon-euro" style="padding-top: 10px;padding-bottom: 10px"></i> Prix : {{ plan.prix }}</a>
                             </li>
-                            <li><a href="#"><i class="glyphicon glyphicon-envelope"></i> €mail : {{ plan.email }}</a>
+                            <li><a href="#"><i class="glyphicon glyphicon-envelope" style="padding-top: 10px;padding-bottom: 10px"></i> €mail : {{ plan.email }}</a>
                             </li>
 
                         </ul>

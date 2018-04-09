@@ -23,3 +23,6 @@ plan_FilterGasHorizontale:
 plan_FilterBEHorizontale:
     path:     /FilterBEHorizontal
     defaults: { _controller: PlanBundle:Plan:BEFilterHorizontalePage}
+delete_Profil:
+    path:     /delete/{idP}
+    defaults: { _controller: PlanBundle:Default:delete3}
