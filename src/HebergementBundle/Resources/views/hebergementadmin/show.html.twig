@@ -1,4 +1,4 @@
-{% extends "::baseuser.html.twig" %}
+{% extends "::baseadmin.html.twig" %}
 {% block body %}
     <style>
         #map {
@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-md-8 col-sm-8 col-xs-12 block">
             <div class="panel panel-default">
-                <img src="{{ asset('uploads/'~hebergement.photo) }}" alt="image" class="img-responsive">
+                <img src="{{ asset('uploads/'~hebergement.photo) }}" alt="image" class="img-responsive" width="1000px">
                 <div class="panel-body">
                     <h3 class="color-1">{{ hebergement.categorie|capitalize }}</h3>
                     <p align="justify" style="word-wrap: break-word">{{ hebergement.description }}</p>
@@ -132,7 +132,8 @@
 
 
 </div>
-    {% if app.user==hebergement.iduser %}
+
+
         <div class="col-md-8">
             <div class="col-md-4">
 
@@ -146,21 +147,16 @@
                 </div>
             </div>
 
-                <div class="col-md-4">
-                    <div class="btnArea">
-                        {{ form_start(delete_form) }}
-                        <input class="btn btn-primary" type="submit" value="Supprimer l'offre">
-                        {{ form_end(delete_form) }}
-                    </div>
+            <div class="col-md-4">
+                <div class="btnArea">
+                    {{ form_start(delete_form) }}
+                    <input class="btn btn-primary" type="submit" value="Supprimer l'offre">
+                    {{ form_end(delete_form) }}
                 </div>
-                   </div>
-    {% else %}
-        <div class="col-md-8">
-            <div class="btnArea">
-                <a href="{{ path('hebergement_index') }}"  class="btn btn-primary">Retourner à la liste des offres</a>
             </div>
         </div>
-    {% endif %}
+
+
 </div>
    <br>
    <br>
