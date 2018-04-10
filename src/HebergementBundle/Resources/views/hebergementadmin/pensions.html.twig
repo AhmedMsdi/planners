@@ -1,0 +1,99 @@
+{% extends ('baseadmin.html.twig') %}
+
+
+{%  block body %}
+
+
+
+
+    <!-- //////////////////////////////////
+//////////////PAGE CONTENT/////////////
+////////////////////////////////////-->
+
+    <div class="gap"></div>
+
+    <div class="container">
+        <div class="row">
+            <br><br>
+            <div class="col-md-12">
+                <table width="100%" style="color: black">
+                    <tr class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left">
+                        <td class="active"><a style="color: black" href="{{ path('hebergement_index') }}"><i class="fa fa-globe"></i> En attente <span> {{ a|length }}</span></a>
+                        </td>
+                        <td ><a style="color: black" href="{{ path('hotels_index') }}"><i class="fa fa-calendar"></i> Hôtel<span>{{ h|length }}</span></a>
+                        </td>
+                        <td><a style="color: black" href="{{ path('maisons_index') }}"><i class="fa fa-home"></i> Maisons d'hôtes<span>{{ m|length }}</span></a>
+                        </td>
+                        <td><a style="color: black" href="{{ path('pensions_index') }}"><i class="fa fa-cutlery"></i> Pensions<span>{{ hebergements|length }}</span></a>
+                        </td>
+
+
+
+                    </tr>
+
+                </table>
+
+
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="product-sort">
+                            <span class="product-sort-selected"><b>liste des Pensions</b></span>
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-md-offset-7">
+                        <div class="product-view pull-right">
+                            <a class="fa fa-th-large active" href="#"></a>
+                            <a class="fa fa-list" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-wrap" style="height: 500px">
+                    {% for heb in hebergements %}
+                        <a class="col-md-4" href="{{ path('hebergement_show',{'id':heb.id}) }}">
+                            <div class="product-thumb">
+                                <header class="product-header">
+                                    <img src="{{ asset('uploads/'~heb.photo) }}" alt="Image Alternative text" height="200px" title="{{ heb.lieu }}" />
+                                </header>
+                                <div class="product-inner">
+                                    <h5 class="product-title">{{ heb.titre|truncate(10, false, '') }}</h5>
+                                    <p class="product-desciption">{{ heb.description|truncate(20, false, '') }}</p>
+                                    <div class="product-meta"><span class="product-time"></span>
+                                        <ul class="product-price-list">
+                                            <li><span class="product-price">{{ heb.prix }} TND</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <p class="product-location"><i class="fa fa-map-marker"></i>{{ heb.lieu|capitalize }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-12">
+            <center>
+                <div class="navigation">
+                    {{ knp_pagination_render(hebergements) }}
+                </div>
+                <br>
+                <br>
+            </center>
+        </div>
+    </div>
+
+
+    <!-- //////////////////////////////////
+//////////////END PAGE CONTENT/////////
+////////////////////////////////////-->
+
+
+
+
+{%  endblock %}

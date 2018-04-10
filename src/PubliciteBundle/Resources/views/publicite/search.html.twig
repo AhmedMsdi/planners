@@ -1,30 +1,29 @@
 {% for item in all %}
     {% if app.user.id == item.user.id %}
-        <div class="col-md-4">
+
+        <div class="col-md-4" >
             <div class="product-thumb">
                 <header class="product-header">
                     <a href="{{ path('publicite_show', { 'idPub': item.idPub }) }}">
-                        <img src="{{ asset(item.image) }}" alt="Image Alternative text" title="" />
+                        <img  src="{{ asset(item.image) }}" alt="Image Alternative text" title="" />
                     </a>
                 </header>
                 <div class="product-inner">
-                    <ul class="icon-group icon-list-rating" title="4/5 rating">
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star"></i>
-                        </li>
-                        <li><i class="fa fa-star-o"></i>
-                        </li>
-                    </ul>
+
                     <h5 class="product-title">{{ item.text }}</h5>
                     <p class="product-desciption">{{ item.description | raw }}</p>
                     <div class="product-meta">
                         <ul class="product-price-list">
-                            <li><span class="product-price">{{ item.nbClick }} clicks</span>
+
+                            {% if item.etat == 1 %}
+                                <li><div class="alert alert-success">Confirmé</div></li>
+                            {% elseif item.etat == -1 %}
+                                <li><div class="alert alert-danger">Refusé</div></li>
+                            {% elseif item.etat == 0 %}
+                                <li><div class="alert alert-warning">En attente</div></li>
+                            {% endif %}
+
+                            <li><div class="alert alert-info">{{ item.nbClick }} clicks</div>
                             </li>
                         </ul>
                         <ul class="product-actions-list">

@@ -5,3 +5,7 @@ publicite_publicite:
 publicite_homepage:
     path:     /pub
     defaults: { _controller: PubliciteBundle:Default:index }
+
+article:
+    resource: "@PubliciteBundle/Resources/config/routing/article.yml"
+    prefix:   /article

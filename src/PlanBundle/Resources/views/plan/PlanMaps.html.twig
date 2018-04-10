@@ -22,7 +22,8 @@
             var locations = [
                     ['{{ plan.libelle }}', {{ plan.latitude }}, {{ plan.longitude }}],
                 ],mapOptions = {
-                    center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+                   center: new google.maps.LatLng(locations[0][1], locations[0][2]),
+
                     zoom: 18
                 },map = new google.maps.Map(document.getElementById("map"),
                 mapOptions),

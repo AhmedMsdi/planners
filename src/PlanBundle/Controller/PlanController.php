@@ -2,6 +2,7 @@
 
 namespace PlanBundle\Controller;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\PieChart;
 use PlanBundle\Entity\Plan;
 use PlanBundle\Form\ModifierAjoutType;
 use PlanBundle\Form\PlanType;
@@ -34,6 +35,7 @@ class PlanController extends Controller
             'plans' => $plans,
         ));
     }
+
 
     public function FilterDivertissementAction()
     {
@@ -174,7 +176,12 @@ class PlanController extends Controller
             $em->flush();
 
         }
-        return $this->render('@Plan/plan/NewPlanDesign.html.twig', array(
+//        return $this->render('@Plan/plan/NewPlanDesign.html.twig', array(
+//            'plan' => $plan,
+//            'form' => $form->createView(),
+//        ));
+
+        return $this->render('@Plan/plan/single-news.html.twig', array(
             'plan' => $plan,
             'form' => $form->createView(),
         ));
@@ -281,6 +288,7 @@ class PlanController extends Controller
     }
 
 
+
     private function createDeleteForm(Plan $plan)
     {
         return $this->createFormBuilder()
@@ -290,21 +298,6 @@ class PlanController extends Controller
     }
 
 
-    public function GastronomieFilterAction()
-    {
-        return $this->render('PlanBundle:Default:GastronomieFilter.html.twig');
-    }
-
-
-    public function DivertissementFilterPageAction()
-    {
-        return $this->render('PlanBundle:Default:DivertissementSousCatAffichage.html.twig');
-    }
-
-    public function BienEtretFilterPageAction()
-    {
-        return $this->render('PlanBundle:Default:BienEtreSousCatAffichage.html.twig');
-    }
 
     public function DivertissementFilterHorizontalePageAction()
     {
@@ -383,6 +376,138 @@ class PlanController extends Controller
             'plans' => $plans,
         ));
     }
+    public function Fast_FoodFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(11);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function LoungeFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(7);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function PA_BAFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(10);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function CaffeFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(6);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function RestoFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(8);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function centreCommFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(1);
+        return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function ParcFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(2);
+        return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function MuseFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(3);
+        return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function EquitationnFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(4);
+        return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function GolfFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(5);
+        return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function Salon_CoiffFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(13);
+        return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function Salle_SportFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(14);
+        return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));}
+        public function SpatFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(15);
+        return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));}
+        public function Make_upFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(16);
+        return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));}
+        public function piercing_tatoosFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(17);
+        return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));}
+
 
     public function RechercheFilterAction(Request $request)
     {
@@ -399,7 +524,7 @@ class PlanController extends Controller
 
     }
 
-    public function StatAction(Request $request)
+   /* public function StatAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -407,7 +532,55 @@ class PlanController extends Controller
         return $this->render('@Plan/plan/stat.html.twig', array(
             'plans' => $plans,
         ));
+    }*/
+
+
+   public function Stat2Action()
+    {        $em = $this->getDoctrine()->getManager();
+        $plans = $em->getRepository('PlanBundle:Plan')->StatArrayAction();
+
+        $pieChart = new PieChart();
+
+        $data= array();
+        $stat=['classe', 'Plan'];
+        array_push($data,$stat);
+
+        foreach($plans as $plan) {
+            $stat=array();
+            $nb=$plan['nbrplan'];
+            $lib=$plan['libsrc'];
+            $stat = [$lib,(int)$nb];
+            array_push($data, $stat);
+        }
+
+
+        /*
+        $stat=['classe', 'nbEtudiant'];
+        $nb=0;
+        array_push($data,$stat);
+        foreach($plans as $plan) {
+            $stat=array();
+            array_push($stat,$plan->getLibelle(),(($plan->getNote()) *100)/$totalPlan);
+            $nb=($plan->getNote() *100)/$totalPlan;
+            $stat=[$plan->getLibelle(),$nb];
+            array_push($data,$stat);
+        }
+*/
+        $pieChart->getData()->setArrayToDataTable(
+            $data);
+
+        $pieChart->getOptions()->setTitle('Les satistiques par categorie');
+        $pieChart->getOptions()->setHeight(500);
+        $pieChart->getOptions()->setWidth(900);
+        $pieChart->getOptions()->getTitleTextStyle()->setBold(true);
+        $pieChart->getOptions()->getTitleTextStyle()->setColor('#009900');
+        $pieChart->getOptions()->getTitleTextStyle()->setItalic(true);
+        $pieChart->getOptions()->getTitleTextStyle()->setFontName('Arial');
+        $pieChart->getOptions()->getTitleTextStyle()->setFontSize(20);
+
+        return $this->render('@Plan/plan/stat.html.twig', array('piechart' => $pieChart));
     }
+
 
 
 }

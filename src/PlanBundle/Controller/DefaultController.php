@@ -15,4 +15,14 @@ class DefaultController extends Controller
             'plans' => $plan
         ));
     }
+
+
+    public function delete3Action($idP)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $modele = $em->getRepository("PlanBundle:Plan")->find($idP);
+        $em->remove($modele);
+        $em->flush();
+        return $this->redirectToRoute('Profil_index');
+    }
 }

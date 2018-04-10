@@ -60,3 +60,19 @@ mesbonplan:
     path:     /mesbonplan
     defaults: { _controller: "HebergementBundle:Hebergement:mesbonplan" }
     methods:  GET
+hebergement_pdf:
+    path:     /{id}/pdf
+    defaults: { _controller: "HebergementBundle:Hebergement:pdf" }
+    methods:  GET
+
+hebergement_conf:
+    path:     /{id}/conf
+    defaults: { _controller: "HebergementBundle:Hebergement:conf" }
+    methods:  GET
+
+
+rechadmin:
+    path:     /rechadmin
+    defaults: { _controller: "HebergementBundle:Hebergement:rechadmin" }
+    methods:  POST
+
