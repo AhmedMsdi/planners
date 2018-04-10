@@ -70,9 +70,16 @@
 
                         <li><a href="#tab-3" data-toggle="tab"><i class="fa fa-money"></i>Payement</a>
                         </li>
-                        <li><a href="#tab-4" data-toggle="tab"><i class="fa fa-comments"></i>Reviews</a>
+                        <li><a href="#tab-4" data-toggle="tab"><i class="fa fa-star-half-o"></i> Etat </a>
                         </li>
+                        <li><a href="#tab-5" data-toggle="tab"><i class="fa fa-comments"></i> Nombre participant </a></li>
+
+
+
+
+
                     </ul>
+                </div>
 
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="tab-1">
@@ -97,10 +104,17 @@
 
                                 <li><span class="product-price">{{ evennement.prix |number_format(3,'.','') }} TND</span>
 
-
-
                         </div>
                         <div class="tab-pane fade" id="tab-4">
+
+                            <li><span class="product-price">{% if evennement.etat==1 %}  cet Evennement est validé {% else %} cet Evennement n'est pas valdé {% endif %}</span>
+
+                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="tab-5">
+                                <p> {{ participant }}</p>
+                            </div>
+                        <div class="tab-pane fade" id="tab-5">
                             <ul class="comments-list">
                                 <li>
                                     <!-- REVIEW -->
@@ -291,6 +305,19 @@
                     </div>
                 </div>
                 <div class="gap"></div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="list_btn_action pull-right">
+                                <li>
+                                    <a href="{{ path('participant_new', {'id': evennement.id}) }}" class="btn btn-info">Je Participe</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        {{ socialButtons( {'facebook':false} ) }}
+                    </div>
+
 
             </div>
 
@@ -302,6 +329,7 @@
             {% elseif evennement.ville is sameas("Beja") %}
                 {{ pianosolo_get_forecast('Beja', 5) }}
             {% endif %}
+
         </div>
 
     </div>

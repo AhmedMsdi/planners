@@ -1,3 +1,11 @@
+evennement_participant:
+    resource: "@EvennementBundle/Controller/ParticipantController.php"
+    type:     annotation
+
+evennement_participant:
+    resource: "@EvennementBundle/Controller/ParticipantController.php"
+    type:     annotation
+
 review:
     resource: "@ReviewBundle/Resources/config/routing.yml"
     prefix:   /

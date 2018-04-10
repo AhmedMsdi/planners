@@ -412,4 +412,10 @@ class Evennement
     {
         return $this->editImage;
     }
+
+    function __toString()
+    {
+           return(string) $this->titre;
+    }
+
 }
