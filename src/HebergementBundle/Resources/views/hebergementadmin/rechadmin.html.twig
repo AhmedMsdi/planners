@@ -15,29 +15,18 @@
     <div class="container">
         <div class="row">
             <br>
-            <center><form role="search" method="post" action="{{ path('rechadmin') }}">
-                    <div class="form-group">
-                        <input class="form-control" placeholder="Recherche" type="text" name="recha">
-                    </div>
-                </form></center>
+            <center><form role="search"  method="post" action="{{ path('rechadmin') }}">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Recherche" type="text" name="recha">
+                </div>
+            </form></center>
             <br><br>
-            <div style="margin-bottom: 10px">
-                <a href="{{ path('mesbonplan') }}" class="btn btn-danger">
-                    <div class="fa  fa-globe"></div>
-                    Mes plan</a>
-                <a href="{{ path('hebergement_new') }}" class="btn btn-success">
-                    <div class="fa  fa-plus-square"></div>
-                    Ajouter un hébergement</a>
-                <a href="{{ path('messagerie_indexAdmin') }}" class="btn btn-primary btn-md">
-                    <div class="fa  fa-sticky-note"></div>
-                    Messagerie</a>
-            </div>
-
-            <br>
             <div class="col-md-12">
                 <table width="100%" style="color: black">
                     <tr class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left">
-                        <td class="active"><a style="color: black" href="{{ path('hebergement_index') }}"><i class="fa fa-globe"></i> En attente <span> {{ hebergements|length }}</span></a>
+                        <td class="active"><a style="color: black" href="{{ path('hebergement_index') }}"><i class="fa fa-globe"></i> Résultat de recherche<span> {{ hebergements|length }}</span></a>
+                        </td>
+                        <td class="active"><a style="color: black" href="{{ path('hebergement_index') }}"><i class="fa fa-globe"></i> En attente </a>
                         </td>
                         <td ><a style="color: black" href="{{ path('hotels_index') }}"><i class="fa fa-calendar"></i> Hôtel<span>{{ h|length }}</span></a>
                         </td>
@@ -64,7 +53,7 @@
                 <div class="row row-wrap" style="height: 500px">
                     <table class="table" >
 
-                    {% for heb in hebergements %}
+                    {% for heb in hebergements%}
 
 
                         <tr width="60px">
@@ -88,9 +77,7 @@
 
                             </td>
 
-                            <td>
-                                <a class="btn btn-info" href="{{ path('hebergement_conf',{'id':heb.id}) }}"> <i class="fa fa-clock-o"></i> Confirmé</a>
-                            </td>
+
                             <td>
                             <a class="btn btn-info" style="background-color: yellow; color: black"  href="{{ path('hebergement_show',{'id':heb.id}) }}"> Voir hebergement
                             </a>
@@ -102,16 +89,6 @@
 
             </div>
 
-        </div>
-
-        <div class="col-md-12">
-            <center>
-                <div class="navigation">
-                    {{ knp_pagination_render(hebergements) }}
-                </div>
-                <br>
-                <br>
-            </center>
         </div>
     </div>
 

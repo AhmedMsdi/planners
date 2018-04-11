@@ -22,6 +22,12 @@ class DefaultController extends Controller
 
             $publicites = $em->getRepository('PubliciteBundle:Publicite')->findBy(array('idPub' =>$numbers,'etat' =>1)
                 ,null,4);
+        $hebergements = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('id' =>$numbers,'enable' =>1)
+            ,null,6);
+        $plans = $em->getRepository('PlanBundle:Plan')->findBy(array('idP' =>$numbers,'etat' =>1)
+            ,null,6);
+        $events = $em->getRepository('EvennementBundle:Evennement')->findBy(array('id' =>$numbers,'etat' =>1)
+            ,null,6);
 
         $csrfToken = $this->tokenManager
             ? $this->tokenManager->getToken('authenticate')->getValue()
@@ -31,6 +37,9 @@ class DefaultController extends Controller
             array(
                 'csrf_token' => $csrfToken,
              'publicites' => $publicites,
+                'hebergements' =>$hebergements,
+                'plans' => $plans,
+                'events' => $events
 
             ) );
     }

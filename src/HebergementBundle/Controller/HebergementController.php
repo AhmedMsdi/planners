@@ -47,6 +47,12 @@ class HebergementController extends Controller
                 ->addORderBy('e.datecreation', 'DESC')
                 ->getQuery()
                 ->execute();
+            $paginator  = $this->get('knp_paginator');
+            $pagination = $paginator->paginate(
+                $hebergements, /* query NOT result */
+                $request->query->getInt('page', 1)/*page number*/,
+                6/*limit per page*/
+            );
             return $this->render('@Hebergement/hebergementadmin/index.html.twig', array(
                 'hebergements' => $pagination,
                 'm'=>$m,
@@ -192,41 +198,58 @@ class HebergementController extends Controller
         if ($user === 'anon.' ) {
             $this->addFlash('danger','veuiller Connecter!!!');
              return $this->redirectToRoute('pi_homepage');
-        }elseif (in_array('ROLE_CLIENT', $this->getUser()->getRoles())){
+        }elseif (in_array('ROLE_CLIENT', $this->getUser()->getRoles())) {
             $hebergement = new Hebergement();
-        $form = $this->createForm('HebergementBundle\Form\HebergementType', $hebergement);
-        $form->handleRequest($request);
+            $form = $this->createForm('HebergementBundle\Form\HebergementType', $hebergement);
+            $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            /**
-             * @var UploadedFile $file
-             */
-            $file = $hebergement->getPhoto();
+            if ($form->isSubmitted() && $form->isValid()) {
+                /**
+                 * @var UploadedFile $file
+                 */
+                $file = $hebergement->getPhoto();
 
-            $file->move(
-                $this->getParameter('images_directory'), $file->getClientOriginalName());
-            $hebergement->setPhoto($file->getClientOriginalName());
-            $hebergement->setDatecreation(new \DateTime());
-            $em = $this->getDoctrine()->getManager();
-            $hebergement->setIdUser($user);
-            $hebergement->setEnable(0);
-            $em->persist($hebergement);
-            $em->flush();
+                $file->move(
+                    $this->getParameter('images_directory'), $file->getClientOriginalName());
+                $hebergement->setPhoto($file->getClientOriginalName());
+                $hebergement->setDatecreation(new \DateTime());
+                $em = $this->getDoctrine()->getManager();
+                $hebergement->setIdUser($user);
+                $hebergement->setEnable(0);
+                $em->persist($hebergement);
+                $em->flush();
 
-            return $this->redirectToRoute('hebergement_show', array('id' => $hebergement->getId()));
+                return $this->redirectToRoute('hebergement_show', array('id' => $hebergement->getId()));
+            }
         }
-
             if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
-                return $this->render('@Hebergement/hebergementadmin/new.html.twig', array(
-                    'hebergement' => $hebergement,
-                    'form' => $form->createView(),
-                ));
+                $hebergement = new Hebergement();
+                $form = $this->createForm('HebergementBundle\Form\HebergementType', $hebergement);
+                $form->handleRequest($request);
+                if ($form->isSubmitted() && $form->isValid()) {
+                    /**
+                     * @var UploadedFile $file
+                     */
+                    $file = $hebergement->getPhoto();
+
+                    $file->move(
+                        $this->getParameter('images_directory'), $file->getClientOriginalName());
+                    $hebergement->setPhoto($file->getClientOriginalName());
+                    $hebergement->setDatecreation(new \DateTime());
+                    $em = $this->getDoctrine()->getManager();
+                    $hebergement->setIdUser($user);
+                    $hebergement->setEnable(1);
+                    $em->persist($hebergement);
+                    $em->flush();
+
+                    return $this->redirectToRoute('hebergement_show', array('id' => $hebergement->getId()));
+                }
         }
                 return $this->render('@Hebergement/hebergement/new.html.twig', array(
             'hebergement' => $hebergement,
             'form' => $form->createView(),
         ));
-    }}
+    }
 
     /**
      * Finds and displays a hebergement entity.
@@ -234,6 +257,11 @@ class HebergementController extends Controller
      */
     public function showAction(Request $request,Hebergement $hebergement)
     {
+        global $kernel;
+        $user = $kernel->getContainer()->get('security.token_storage')->getToken()->getUser();
+        if ($user === 'anon.' ) {
+            return $this->redirectToRoute('fos_user_security_login');
+        }else
         $em = $this->getDoctrine()->getManager();
 
         $deleteForm = $this->createDeleteForm($hebergement);
@@ -483,7 +511,7 @@ class HebergementController extends Controller
 
 
         $html2pdf = new \Spipu\Html2Pdf\Html2Pdf('P','A4','en');
-        $html2pdf->writeHTML('<p>Bonjour</p>');
+        $html2pdf->writeHTML($html);
         $html2pdf->Output('.pdf');
 
 
