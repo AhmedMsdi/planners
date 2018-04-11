@@ -1,0 +1,20 @@
+
+{% extends 'baseadmin.html.twig' %}
+
+{% block body %}
+
+
+
+            <div id="div_chart" style="margin-left:150px ; height: 600px ; width: 700px;margin-top: 140px"></div>
+            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+            <script type="text/javascript">
+                {{ gc_draw(piechart, 'div_chart') }}
+            </script>
+
+
+    <div class="gap gap-small"></div>
+
+
+
+
+{% endblock %}

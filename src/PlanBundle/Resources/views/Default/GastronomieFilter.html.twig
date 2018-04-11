@@ -29,12 +29,14 @@
                             </li>
                             <li><a href="{{ path('FastFood_Filter') }}"><i class="fa fa-cutlery"></i>Fast Food</a>
                             </li>
-                            <li><a href="{{ path('Gelaterie_Filter') }}"><i class="fa fa-"></i>Gelaterie</a>
+                            <li><a href="{{ path('Gelaterie_Filter') }}"><i class="fa fa-glass"></i>Gelaterie</a>
                             </li>
-                            <li><a href="{{ path('Resto_Filter') }}"><i class="fa fa-image"></i>Restaurants</a>
+                            <li><a href="{{ path('Resto_Filter') }}"><i class="fa fa-cutlery"></i>Restaurants</a>
                             </li>
 
+
                         </ul>
+
 
 
                     </aside>
@@ -48,12 +50,7 @@
                                 <ul>
                                     <li><a href="#">sort by Name</a>
                                     </li>
-                                    <li><a href="#">sort by Date</a>
-                                    </li>
-                                    <li><a href="#">sort by Popularity</a>
-                                    </li>
-                                    <li><a href="#">sort by Rating</a>
-                                    </li>
+
                                 </ul>
                             </div>
                         </div>
@@ -86,7 +83,7 @@
                                         </li>
                                     </ul>
                                     <h5 class="product-title">{{ plan.libelle }}</h5>
-                                    <p class="product-desciption">{{ plan.description }}</p>
+                                    <p class="product-desciption" style="height: 80px">{{ plan.description }}</p>
                                     <div class="product-meta">
                                         <ul class="product-price-list">
                                             <li><span class="product-old-price"></span>
@@ -96,7 +93,7 @@
                                             <li><span class="product-save"></span>
                                             </li>
                                         </ul>
-                                        <ul class="product-actions-list">
+                                        <ul class="product-actions-list" >
                                             <li><a class="btn btn-sm" href="{{ path('plan_MAP2',{ 'id': plan.idP  })}}">
                                                     <i class="fa fa-shopping-cart"></i> To
                                                     maps
@@ -111,24 +108,12 @@
                         </div>
                         {% endfor %}
                     </div>
-                    <ul class="pagination">
-                        <li class="prev disabled">
-                            <a href="#"></a>
-                        </li>
-                        <li class="active"><a href="#">1</a>
-                        </li>
-                        <li><a href="#">2</a>
-                        </li>
-                        <li><a href="#">3</a>
-                        </li>
-                        <li><a href="#">4</a>
-                        </li>
-                        <li><a href="#">5</a>
-                        </li>
-                        <li class="next">
-                            <a href="#"></a>
-                        </li>
-                    </ul>
+
+                       <div class="navigation text-center">
+                            {{ knp_pagination_render(result) }}
+
+                        </div>
+
                     <div class="gap"></div>
                 </div>
             </div>
@@ -193,5 +178,27 @@
     <!-- Custom scrip}ts -->
     <script src="{{ asset('js/custom.js') }}"></script>
 {% endblock %}
+    <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script>
 
+        $('#text').keyup(function(){
+            var input= $("#text").val();
+            $.ajax({
+                type: "POST",
+                url: "{{ path('recherche_Gastro') }}",
+                data: {'text': input},
+                success: function (data) {
+
+                    console.log(data);
+
+                    $("#res").html(data);
+
+
+                }
+            });
+
+        });
+
+    </script>
 {% endblock %}
