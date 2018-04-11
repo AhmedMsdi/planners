@@ -71,6 +71,8 @@ doctrine:
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
 
+
+
 # Swiftmailer Configuration
 swiftmailer:
     transport: '%mailer_transport%'
@@ -152,6 +154,7 @@ piano_solo_weather:
     options:
         download_csv: false # Default True
         cache: true # Default False (To use cache the system needs Php-Apc cache)
+
 
 
 

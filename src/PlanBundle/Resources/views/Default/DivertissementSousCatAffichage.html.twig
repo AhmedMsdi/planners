@@ -12,17 +12,17 @@
                 <div class="col-md-3">
                     <aside class="sidebar-left">
                         <ul class="nav nav-tabs nav-stacked nav-coupon-category">
-                            <li class="active"><a href="#"><i class="fa fa-ticket"></i>All</a>
+                            <li class="active"><a href="{{ path('plan_Filter_Divpage') }}"><i class="fa fa-ticket"></i>All</a>
                             </li>
-                            <li><a href="#"><i class="fa fa-cutlery"></i>Centres Commerciaux</a>
+                            <li><a href="{{ path('Centre_Filter') }}"><i class="fa fa-cutlery"></i>Centres Commerciaux</a>
                             </li>
-                            <li><a href="#"><i class="fa fa-calendar"></i>Parc D'attraction </a>
+                            <li><a href="{{ path('Parc_Filter') }}"><i class="fa fa-calendar"></i>Parc D'attraction </a>
                             </li>
-                            <li><a href="#"><i class="fa fa-female"></i>Musées</a>
+                            <li><a href="{{ path('Muse_Filter') }}"><i class="fa fa-female"></i>Musées</a>
                             </li>
-                            <li><a href="#"><i class="fa fa-bolt"></i>Clubs d'Equitation</a>
+                            <li><a href="{{ path('Equitation_Filter') }}"><i class="fa fa-bolt"></i>Clubs d'Equitation</a>
                             </li>
-                            <li><a href="#"><i class="fa fa-headphones"></i>Golf</a>
+                            <li><a href="{{ path('Golf_Filter') }}"><i class="fa fa-headphones"></i>Golf</a>
                             </li>
 
 
@@ -205,9 +205,9 @@
                             <div class="col-md-4">
                                 <div class="product-thumb">
                                     <header class="product-header">
-                                        <img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}" >
+                                        <img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}" style="width: 262.5px;height:233px " >
                                     </header>
-                                    <div class="product-inner">
+                                    <div class="product-inner" style="height: 270px">
                                         <ul class="icon-group icon-list-rating" title="5/5 rating">
                                             <li><i class="fa fa-star"></i>
                                             </li>

@@ -10,3 +10,4 @@ $.fn.datepicker.dates['en'] = {
     titleFormat: "MM yyyy", /* Leverages same syntax as 'format' */
     weekStart: 0
 };
+$('.input-group.date').datepicker({format: "dd.mm.yyyy"}); 

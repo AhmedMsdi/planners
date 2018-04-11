@@ -1,0 +1,289 @@
+{% extends 'baseuser.html.twig' %}
+
+
+{% block body %}
+
+
+    <style>
+
+        #map {
+            height: 350px;
+            width: 350px;
+            margin-left: 150px;
+            margin-top: 160px;
+        }
+        .west{
+            height: 700px;
+            width: 400px;
+        }
+        .pac-container {
+            font-family: Roboto;
+        }
+
+        #type-selector {
+            color: #fff;
+            background-color: #4d90fe;
+            padding: 5px 11px 0px 11px;
+        }
+
+        #type-selector label {
+            font-family: Roboto;
+            font-size: 13px;
+            font-weight: 300;
+        }
+    </style>
+
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+
+    <div class="top-content">
+        <br>
+        <div class="inner-bg">
+            <div class="container">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-5">
+
+                    <div class="form-box" style="width: 1300px ;margin-left:-300px">
+                        <div class="form-top" style="">
+                            <div class="form-top-left">
+                                <h3>Ajouter un plan
+                                    <i class="fa fa-pencil"></i>
+                                </h3>
+                            </div>
+
+                        </div>
+
+                                    <!-- Form Name -->
+                        {{ form_start(form,{'attr':{'class': "well form-horizontal",'id': "contact_form"}})}}
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" >Categorie :*</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-plus"></i></span>
+                                    {{form_widget(form.idSc,{'attr': {'class': "form-control",'placeholder': "categorie"}})}}
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- Text input-->
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" >Libelle :*</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    {{form_widget(form.libelle, {'attr': {'class': "form-control",'placeholder': "Libelle"}})}}
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Address :*</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                    {{form_widget(form.adresse, {'attr': {'class': "form-control",'placeholder': "Address"}})}}
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Ville :*</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                    {{form_widget(form.ville, {'attr': {'class': "form-control",'placeholder': "Ville"}})}}
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Image :*</label>
+                            <div class="col-md-4 selectContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-euro"></i></span>
+                                    {{form_widget(form.image, { 'attr': {'class': "form-control",'placeholder': "Prix"}})}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Prix :*</label>
+                            <div class="col-md-4 selectContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-euro"></i></span>
+                                    {{form_widget(form.prix, { 'attr': {'class': "form-control",'placeholder': "Prix"}})}}
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">longitude :*</label>
+                            <div class="col-md-4 selectContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                    {{form_widget(form.longitude, { 'attr': {'class': "form-control",'placeholder': "longitude"}})}}
+
+                                </div>
+                            </div>
+                        </div>
+                        {#addresse#}
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">latitude :*</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                    {{form_widget(form.latitude, { 'attr': {'class': "form-control",'placeholder': "latitude"}})}}
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label">Description :*</label>
+                            <div class="col-md-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-text-height"></i></span>
+                                    {{form_widget(form.description, { 'attr': {'class': "form-control",'placeholder': "Description"}})}}
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <input type="submit" value="{{ 'Ajouter' }}" class="btn btn-success" style="width:400px ;margin-left: 445px"/>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-2" >
+                    <div id="map"></div>
+
+                </div>
+
+            </div>  {{ form_end(form) }}
+        </div>
+    </div>
+    <br><br>
+
+    <script>
+
+
+    //This example requires the Places library. Include the libraries=places
+    //parameter when you first load the API. For example:
+    //<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfp1K5cF9bUzYNBQaNqo94Erww5jNHMc8&callback=initMap">
+
+    var marker;
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 36, lng: 10},
+            zoom: 10
+        });
+        var input = /** @type {!HTMLInputElement} */(
+            document.getElementById('planbundle_plan_ville'));
+
+
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        autocomplete.bindTo('bounds', map);
+
+        var infowindow = new google.maps.InfoWindow();
+
+        var marker = new google.maps.Marker({
+            map: map,
+            anchorPoint: new google.maps.Point(0, -29)
+
+        });
+        marker = new google.maps.Marker({
+            map: map,
+            draggable: true,
+            animation: google.maps.Animation.DROP,
+            position: map.center
+
+
+        });
+        marker.setMap(map);
+        marker.addListener('click', toggleBounce);
+
+        google.maps.event.addListener(marker, 'drag', function(event) {
+                document.getElementById('planbundle_plan_latitude').value =event.latLng.lat();
+            document.getElementById('planbundle_plan_longitude').value= event.latLng.lng();
+
+        });
+
+
+
+        autocomplete.addListener('place_changed', function() {
+            infowindow.close();
+            marker.setVisible(false);
+
+            var place = autocomplete.getPlace();
+
+            // If the place has a geometry, then present it on a map.
+            if (place.geometry.viewport) {
+                map.fitBounds(place.geometry.viewport);
+
+            } else {
+
+                map.setCenter(place.geometry.location);
+                map.setZoom(10);  // Why 17? Because it looks good.
+
+            }
+
+
+
+            marker.setPosition(place.geometry.location);
+            marker.setVisible(true);
+
+
+            var address = '';
+            if (place.address_components) {
+                address = [
+                    (place.address_components[0] && place.address_components[0].short_name || ', '),
+                    (place.address_components[1] && place.address_components[1].short_name || ', '),
+                    (place.address_components[2] && place.address_components[2].short_name || ', ')
+                ].join(' ');
+            }
+
+            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + address);
+            document.getElementById('planbundle_plan_ville').value=address;
+
+            infowindow.open(map, marker);
+        });
+
+        // Sets a listener on a radio button to change the filter type on Places
+        // Autocomplete.
+        function setupClickListener(id, types) {
+            var radioButton = document.getElementById(id);
+            radioButton.addEventListener('click', function() {
+                autocomplete.setTypes(types);
+            });
+        }
+
+
+    }
+    function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+            marker.setAnimation(null);
+        } else {
+            marker.setAnimation(google.maps.Animation.BOUNCE);
+        }
+    }
+</script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfp1K5cF9bUzYNBQaNqo94Erww5jNHMc8&callback=initMap">
+    </script>
+
+
+{% endblock %}

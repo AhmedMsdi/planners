@@ -88,7 +88,7 @@ class EvennementController extends Controller
     /**
      * Finds and displays a evennement entity.
      *
-     * @Route("/{id}", name="valider_event")
+     * @Route("/{id}/validerEvent", name="valider_event")
      * @Method("GET")
      */
     public function ValiderEventAction($id)
@@ -96,11 +96,29 @@ class EvennementController extends Controller
         $em = $this->getDoctrine()->getManager();
         $events = $em->getRepository('EvennementBundle:Evennement')->find($id);
         $events->setEtat(1);
-        return
-$this->render('@Evennement/evennement/admin/index.html.twig') ;
+        $em->persist($events);
+        $em->flush();
 
+        return $this->redirectToRoute('evennement_index',array('evennement'=>$events));
     }
 
+
+    /**
+     * Finds and displays a evennement entity.
+     *
+     * @Route("/{id}/NotValiderEvent", name="Notvalider_event")
+     * @Method("GET")
+     */
+    public function NotValiderEventAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $events = $em->getRepository('EvennementBundle:Evennement')->find($id);
+        $events->setEtat(0);
+        $em->persist($events);
+        $em->flush();
+
+        return $this->redirectToRoute('evennement_index',array('evennement'=>$events)) ;
+    }
     /**
      * Displays a form to edit an existing evennement entity.
      *
