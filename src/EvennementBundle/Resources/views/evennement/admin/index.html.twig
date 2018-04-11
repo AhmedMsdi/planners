@@ -62,8 +62,6 @@
 
     <link rel="stylesheet" href="{{ asset('bundles/evennement/css/css_event.css') }}">
     <h1 style="padding-left:500px ; color: #0a7369">Liste des Evennements</h1><br>
-    <link rel="stylesheet" href="{{ asset('css/chaimaDesign.css') }}"/>
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <div class="row col-md-6">
     <table class="paleBlueRows">
@@ -96,7 +94,7 @@
                 <td>{% if evennement.dateevent %}{{ evennement.dateevent|date('d-m-Y') }}{% endif %}</td>
                 <td>{% if evennement.timeevent %}{{ evennement.timeevent|date('d-m-Y') }}{% endif %}</td>
                 <td>{{ evennement.description }}</td>
-                <td>{{ evennement.image }}</td>
+                <td> <img src="{{ asset('imageEvent/'~evennement.image)  }}" style="width: 100%"></td>
                 <td>{{ evennement.prix|number_format(3,'.','') }}</td>
                 <td>{{ evennement.contact }}</td>
                 <td>{% if evennement.etat==1 %} {{ evennement.etat }} {% else %} 0 {% endif %} </td>
@@ -130,9 +128,9 @@
     </table>
 
 
-    <ul>
+    <ul class="list_btn_action">
         <li>
-            <a href="{{ path('evennement_new') }}" class="btn btn-info">Créer Evennement</a>
+            <a href="{{ path('evennement_new') }}" class="btn btn-info" ><i class="fa  fa-plus-square"></i>Ajouter Evennement</a>
 
         </li>
     </ul>
