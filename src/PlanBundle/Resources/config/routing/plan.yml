@@ -3,7 +3,7 @@ plan_index:
     defaults: { _controller: "PlanBundle:Plan:index" }
 
 Profil_index:
-    path:     /pa
+    path:     /Profil_Plan
     defaults: { _controller: "PlanBundle:Default:Ahmed" }
     methods:  GET
 plan_MAP2:
@@ -38,10 +38,7 @@ plan_new:
     path:     /AjouterPlan
     defaults: { _controller: "PlanBundle:Plan:new" }
     methods:  [GET, POST]
-plan_edit:
-    path:     /edit/{idP}
-    defaults: { _controller: "PlanBundle:Plan:edit" }
-    methods:  [GET, POST]
+
 plan_delete:
     path:     /{idP}/delete
     defaults: { _controller: "PlanBundle:Plan:delete" }
@@ -50,22 +47,71 @@ plan_NewPlanDesign:
     path:     /NPD
     defaults: { _controller: "PlanBundle:Plan:newPlanDesign" }
     methods:  [GET, POST]
-plan_N:
-    path:     /{idP}/ph
-    defaults: { _controller: "PlanBundle:Plan:ModifPhoto" }
-    methods:  [GET, POST]
+
 delete_modele:
     path:     /delete/{idP}
     defaults: { _controller: PlanBundle:Plan:delete2}
+Edit_Plan:
+    path:     /{idP}/edit
+    defaults: { _controller: PlanBundle:Plan:edit}
 Details_plans:
     path:     /detailG/{idP}
     defaults: { _controller: "PlanBundle:Plan:Details" }
 Gelaterie_Filter:
     path:     /GF
     defaults: { _controller: "PlanBundle:Plan:GelaterieFilter" }
-Find_Filter:
-    path:     /Find
-    defaults: { _controller: "PlanBundle:Plan:RechercheFilter" }
+FastFood_Filter:
+    path:     /FF
+    defaults: { _controller: "PlanBundle:Plan:Fast_FoodFilter" }
+Lounges_Filter:
+    path:     /LF
+    defaults: { _controller: "PlanBundle:Plan:LoungeFilter" }
+BA_PA_Filter:
+    path:     /BP
+    defaults: { _controller: "PlanBundle:Plan:PA_BAFilter" }
+Cafe_Filter:
+    path:     /Cf
+    defaults: { _controller: "PlanBundle:Plan:CaffeFilter" }
+Resto_Filter:
+    path:     /Rf
+    defaults: { _controller: "PlanBundle:Plan:RestoFilter" }
+Centre_Filter:
+    path:     /C_Cf
+    defaults: { _controller: "PlanBundle:Plan:centreCommFilter" }
+Parc_Filter:
+    path:     /Pf
+    defaults: { _controller: "PlanBundle:Plan:ParcFilter" }
+Muse_Filter:
+    path:     /Mf
+    defaults: { _controller: "PlanBundle:Plan:MuseFilter" }
+Equitation_Filter:
+    path:     /Ef
+    defaults: { _controller: "PlanBundle:Plan:EquitationnFilter" }
+Golf_Filter:
+    path:     /Gf
+    defaults: { _controller: "PlanBundle:Plan:GolfFilter" }
+Salon_Coiff_Filter:
+    path:     /S_Cf
+    defaults: { _controller: "PlanBundle:Plan:Salon_CoiffFilter" }
+Salle_sport_Filter:
+    path:     /S_Sf
+    defaults: { _controller: "PlanBundle:Plan:Salle_SportFilter" }
+
+Spa_Filter:
+    path:     /SpaF
+    defaults: { _controller: "PlanBundle:Plan:SpatFilter" }
+Make_Up_Filter:
+    path:     /Make_upF
+    defaults: { _controller: "PlanBundle:Plan:Make_upFilter" }
+Tatoo_Filter:
+    path:     /TattoF
+    defaults: { _controller: "PlanBundle:Plan:piercing_tatoosFilter" }
 stat_stat:
     path:     /stat
-    defaults: { _controller: "PlanBundle:Plan:Stat" }
+    defaults: { _controller: "PlanBundle:Plan:Stat2" }
+delete_notifs:
+    path:     /delnotif
+    defaults: { _controller: "PlanBundle:Plan:delete_notif" }
+recherche_Gastro:
+    path:     /chercher
+    defaults: { _controller: "PlanBundle:Plan:chercherGastro"}

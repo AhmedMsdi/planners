@@ -2,10 +2,11 @@
 
 namespace PlanBundle\Controller;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\PieChart;
 use PlanBundle\Entity\Plan;
 use PlanBundle\Form\ModifierAjoutType;
 use PlanBundle\Form\PlanType;
-
+use Symfony\Component\HttpFoundation\Response;
 use Proxies\__CG__\PlanBundle\Entity\SousCategorie;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -35,43 +36,68 @@ class PlanController extends Controller
         ));
     }
 
-    public function FilterDivertissementAction()
+
+    public function FilterDivertissementAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->DivertisementsAction();
+        /**
+         * @var $paginator \knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $plans,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 6)
 
+        );
         return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
-            'plans' => $plans,
+            'plans'=>$plans,'result'=>$result
         ));
     }
 
 
-    public function FilterGastronomieAction()
+    public function FilterGastronomieAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->GastronomieAction();
-        //$plans = $em->getRepository('PlanBundle:Plan')->findAll();
 
-        //$plansgas=array() ;
-        //foreach ($plans as $plan){
-        //    if($plan->ge)
-        //}
+        /**
+         * @var $paginator \knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $plans,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 6)
+
+        );
 
         return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
-            'plans' => $plans,
+            'plans'=>$plans,'result'=>$result
         ));
     }
 
-    public function FilterBEAction()
+    public function FilterBEAction(Request $request)
     {
+
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->BienEAction();
+        /**
+         * @var $paginator \knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $plans,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 6)
 
+        );
         return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
-            'plans' => $plans,
+            'plans' => $plans,'result'=>$result
         ));
     }
 
@@ -174,12 +200,47 @@ class PlanController extends Controller
             $em->flush();
 
         }
-        return $this->render('@Plan/plan/NewPlanDesign.html.twig', array(
+//        return $this->render('@Plan/plan/NewPlanDesign.html.twig', array(
+//            'plan' => $plan,
+//            'form' => $form->createView(),
+//        ));
+        /*
+        global $kernel;
+        $user = $kernel->getContainer()->get('security.token_storage')->getToken()->getUser();
+        $emm = $this->getDoctrine()->getManager();
+        */
+/*
+        $ems = $this->getDoctrine()->getManager();
+        $plans = $ems->getRepository('PlanBundle:Plan')->NotifAction($user);
+
+        foreach($plans as $plan) {
+            $oldlong=  $plan->getlibelle();
+            $oldlat = $plan->getidP();
+            $oldMarker = $oldlat . '-' . $oldlong;
+            $this->get('session')->getFlashBag()->add(
+                'notice',
+                $oldMarker
+            );
+        }
+*/
+
+        return $this->render('@Plan/plan/single-news.html.twig', array(
             'plan' => $plan,
             'form' => $form->createView(),
         ));
     }
+    public function delete_notifAction(Request $request )
+    {
 
+        $em = $this->getDoctrine()->getManager();
+
+         $idP = $request->get('idP');
+        $plans = $em->getRepository('PlanBundle:Plan')->find($idP);
+        $plans->setEtatnotif(1);
+        $em->flush();
+
+         return $this->redirectToRoute('Profil_index', array( 'plans' => $plans ));
+    }
 
     public function showFrontComAction(Request $request, $id)
     {
@@ -208,48 +269,37 @@ class PlanController extends Controller
      * Displays a form to edit an existing plan entity.
      *
      */
+
     public function editAction(Request $request, Plan $plan)
-    {
-        $deleteForm = $this->createDeleteForm($plan);
-        $editForm = $this->createForm('PlanBundle\Form\ModifierAjoutType', $plan);
-        $editForm->handleRequest($request);
-        $plan->setEtat(0);
+        {
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
+                $editForm = $this->createForm('PlanBundle\Form\ModifierAjoutType', $plan);
+                $editForm->handleRequest($request);
+                $x=$plan->getImage();
+                if ($editForm->isSubmitted() && $editForm->isValid()) {
+                    if ($plan->getImage()=="")
+                    {
+                        $plan->setImage($x);
+                    }
+                    /**
+                     * @var UploadedFile $file
+                     */
+                    $file = $plan->getImage();
 
-            $this->getDoctrine()->getManager()->flush();
-            //return $this->redirectToRoute('plan_indextableau', array('idP' => $plan->getIdp()));
-        }
+                    $file->move(
+                        $this->getParameter('brochures_directory'), $file->getClientOriginalName());
+                    $plan->setImage($file->getClientOriginalName());
 
-        return $this->render('@Plan/plan/edit.html.twig', array(
-            'plan' => $plan,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
 
-    public function ModifPhotoAction(Request $request, $idP)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $etablissement = $em->getRepository("PlanBundle:Plan")->find($idP);
-        $etablissement->setImage
-        (new File($this->getParameter('brochures_directory') . '/' . $etablissement->getImage()));
-        $form = $this->createForm(ModifierAjoutType ::class, $etablissement);
-        $form->handleRequest($request);
-        if ($form->isValid() && $form->isSubmitted()) {
-            /** @var UploadedFile $image */
-            $image = $etablissement->getImage();
-            $imageName = $this->generateUniqueFileName() . '.' . $image->guessExtension();
-            $image->move($this->getParameter('brochures_directory'), $imageName);
-            $etablissement->setImage($imageName);
-            $em->persist($etablissement);
-            $em->flush();
-            return $this->redirectToRoute('plan_indextableau', array('idP' => $etablissement->getIdp()));
+                    $this->getDoctrine()->getManager()->flush();
+                    return $this->redirectToRoute('Profil_index');
+                }
 
-        }
-        return $this->render('@Plan/plan/edit.html.twig',
-            array('edit_form' => $form->createView(), 'nom' => $etablissement->getLibelle()));
-    }
+                return $this->render('@Plan/plan/edit.html.twig', array(
+                    'plans' => $plan,
+                    'edit_form' => $editForm->createView(),
+                ));
+            }
 
 
     /**
@@ -281,6 +331,7 @@ class PlanController extends Controller
     }
 
 
+
     private function createDeleteForm(Plan $plan)
     {
         return $this->createFormBuilder()
@@ -290,39 +341,30 @@ class PlanController extends Controller
     }
 
 
-    public function GastronomieFilterAction()
-    {
-        return $this->render('PlanBundle:Default:GastronomieFilter.html.twig');
-    }
 
-
-    public function DivertissementFilterPageAction()
-    {
-        return $this->render('PlanBundle:Default:DivertissementSousCatAffichage.html.twig');
-    }
-
-    public function BienEtretFilterPageAction()
-    {
-        return $this->render('PlanBundle:Default:BienEtreSousCatAffichage.html.twig');
-    }
-
-    public function DivertissementFilterHorizontalePageAction()
+    public function DivertissementFilterHorizontalePageAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->DivertisementsAction();
 
+
+
         return $this->render('PlanBundle:Default:Divertissement-horizontal.html.twig', array(
             'plans' => $plans,
+
+
         ));
 
     }
 
-    public function GastronomieFilterHorizontalePageAction()
+    public function GastronomieFilterHorizontalePageAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->GastronomieAction();
+
+
         return $this->render('PlanBundle:Default:Gastronomie-horizontal.html.twig', array(
             'plans' => $plans,
         ));
@@ -383,14 +425,147 @@ class PlanController extends Controller
             'plans' => $plans,
         ));
     }
+    public function Fast_FoodFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
 
-    public function RechercheFilterAction(Request $request)
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(11);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function LoungeFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(7);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function PA_BAFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(10);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function CaffeFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(6);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function RestoFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(8);
+        return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function centreCommFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(1);
+        return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function ParcFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(2);
+        return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function MuseFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(3);
+        return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function EquitationnFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(4);
+        return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function GolfFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(5);
+        return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function Salon_CoiffFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(13);
+        return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+    public function Salle_SportFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(14);
+        return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));}
+        public function SpatFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(15);
+        return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));}
+        public function Make_upFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(16);
+        return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));}
+        public function piercing_tatoosFilterAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $plans = $em->getRepository('PlanBundle:Plan')->FilterAction(17);
+        return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
+            'plans' => $plans,
+        ));}
+
+
+    public function RechercheFilterAction(Request $request )
     {
         $em = $this->getDoctrine()->getManager();
         //  if ($request->isMethod('POST'))
         //  {
-        $nom = $request->get('abc');
-        $Reg = $request->get('Reg');
+            $nom = $request->get('titre');
+            $Reg = $request->get('Region');
+
         $plans = $em->getRepository('PlanBundle:Plan')->FindAction($nom,$Reg);
         return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
             'plans' => $plans,
@@ -399,7 +574,7 @@ class PlanController extends Controller
 
     }
 
-    public function StatAction(Request $request)
+   /* public function StatAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -407,7 +582,95 @@ class PlanController extends Controller
         return $this->render('@Plan/plan/stat.html.twig', array(
             'plans' => $plans,
         ));
+    }*/
+
+
+   public function Stat2Action()
+    {        $em = $this->getDoctrine()->getManager();
+        $user = $this->getUser();
+        $plans = $em->getRepository('PlanBundle:Plan')->StatArrayAction($user);
+
+        $pieChart = new PieChart();
+
+        $data= array();
+        $stat=['classe', 'Plan'];
+        array_push($data,$stat);
+
+        foreach($plans as $plan) {
+            $stat=array();
+            $nb=$plan['nbrplan'];
+            $lib=$plan['libsrc'];
+            $stat = [$lib,(int)$nb];
+            array_push($data, $stat);
+        }
+
+
+        /*
+        $stat=['classe', 'nbEtudiant'];
+        $nb=0;
+        array_push($data,$stat);
+        foreach($plans as $plan) {
+            $stat=array();
+            array_push($stat,$plan->getLibelle(),(($plan->getNote()) *100)/$totalPlan);
+            $nb=($plan->getNote() *100)/$totalPlan;
+            $stat=[$plan->getLibelle(),$nb];
+            array_push($data,$stat);
+        }
+*/
+        $pieChart->getData()->setArrayToDataTable(
+            $data);
+
+        $pieChart->getOptions()->setTitle('Les satistiques par categorie');
+        $pieChart->getOptions()->setHeight(500);
+        $pieChart->getOptions()->setWidth(900);
+        $pieChart->getOptions()->getTitleTextStyle()->setBold(true);
+        $pieChart->getOptions()->getTitleTextStyle()->setColor('#009900');
+        $pieChart->getOptions()->getTitleTextStyle()->setItalic(true);
+        $pieChart->getOptions()->getTitleTextStyle()->setFontName('Arial');
+        $pieChart->getOptions()->getTitleTextStyle()->setFontSize(20);
+
+        return $this->render('@Plan/plan/stat.html.twig', array('piechart' => $pieChart));
     }
 
 
+    public function chercherGastroAction(Request $request)
+    {
+
+        if($request->isXmlHttpRequest() && $request->isMethod('post') && $request->get('text')!=null){
+
+            $text =$request->get('text');
+            $em = $this->getDoctrine()->getManager();
+            $plans = $em->getRepository('PlanBundle:Plan')->FindAction($text,'TU');
+
+
+            $response = $this->renderView('@Publicite/publicite/search.html.twig',array('all'=>$plans));
+
+            return  new JsonResponse($response) ;
+        }elseif ( $request->get('text')==null){
+
+            $em = $this->getDoctrine()->getManager();
+            $plans = $em->getRepository('PlanBundle:Plan')->FindAction('','');
+            $response = $this->renderView('@Publicite/publicite/search.html.twig',array('all'=>$plans));
+
+            return  new JsonResponse($response) ;
+        }
+
+        return new JsonResponse(array("status"=>true));
+
+    }
+
+    public function FindAction($recher,$Reg)
+    {
+        $query = $this->getEntityManager()->createQuery("SELECT p FROM PlanBundle:Plan p
+                              JOIN  PlanBundle:SousCategorie s
+                              WITH p.idSc=s.idSc JOIN  PlanBundle:Categorie a WITH s.idC = a.idC 
+                              WHERE p.etat=1 and   p.libelle like '%$recher%' 
+                              and   p.ville like '%$Reg%' 
+                              order by p.idP ASC");
+        //  ->setParameter('n2', '%'.$recher.'%');
+
+        return $query->getResult();
+
+
+    }
 }

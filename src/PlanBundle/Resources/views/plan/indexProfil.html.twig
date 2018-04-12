@@ -3,18 +3,95 @@
 
 {% block body %}
 
+ <style>
 
-    <div class="gap" style=" margin-left: 120px; padding-left: 80px">
-        <a href="{{ path('plan_NewPlanDesign') }}" class="btn btn-success" >
-            <div class="fa  fa-plus-square"></div>
-            Ajouter un Plan</a>
-        <a href="" class="btn btn-warning"><div class="fa  fa-bar-chart-o"></div> Mes statistiques</a>
 
-    </div>
+
+     .containerrr {
+         margin-top: -90px;
+         margin-bottom: -10px;
+         display: block;
+         max-width: 900px;
+         padding: 100px;
+         height: 100%;
+         outline: none;
+     }
+
+     .search-containerrr {
+         overflow: hidden;
+         float: right;
+         height: 4em;
+         width: 4em;
+         border-radius: 2em;
+         box-shadow: 0 0 5px #6A5D4F;
+         -moz-transition: all 0.35s;
+         -webkit-transition: all 0.35s;
+     }
+     .search-containerrr:hover, .search-containerrrr:focus {
+         width: 25em;
+         border-radius: 5px 2em 2em 5px;
+         outline: none;
+     }
+     .search-containerrr:hover input, .search-containerrr:focus input {
+         display: inline-block;
+         width: 19em;
+         padding: 10px;
+     }
+
+     .inputx {
+         -moz-appearance: none;
+         -webkit-appearance: none;
+         appearance: none;
+         float: left;
+         width: 0em;
+         height: 2em;
+         margin: 1em;
+         margin-right: -4.5em;
+         background: #fff;
+         color: #6A5D4F;
+         font-size: 1em;
+         font-weight: 600;
+         padding: 0px;
+         border: 0;
+         border-radius: 5px;
+         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2) inset;
+         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+         -moz-transition: all 0.25s;
+         -webkit-transition: all 0.25s;
+     }
+     input:focus {
+         outline: none;
+         box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.25), 0 1px 5px rgba(0, 0, 0, 0.15);
+     }
+
+     .buttonx {
+         float: right;
+         width: 1.75em;
+         height: 1.75em;
+         margin: 0.125em;
+         background: #6A5D4F;
+         text-align: center;
+         font-size: 2em;
+         color: #FDF6E3;
+         border-radius: 50%;
+         box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.25), 0 1px 1px rgba(0, 0, 0, 0.25);
+         text-shadow: 0 -2px 1px rgba(0, 0, 0, 0.3);
+     }
+     .buttonx i {
+         margin-top: 0.3em;
+     }
+     .buttonx:active {
+         border: 0 !important;
+         text-shadow: 0 0 0;
+     }
+ </style>
+
 
     <div class="container">
         <div class="row">
 
+            <div class='containerrr' tabindex='1'> </div>
+            </div>
 
             <div class="col-md-3">
                 <aside class="sidebar-left">
@@ -23,13 +100,23 @@
                         </li>
                         <li class="active"><a href="{{ path('Profil_index') }}">Mes plans</a>
                         </li>
+
                         <li><a href="page-my-account-orders.html">Mes evenements</a>
                         </li>
                         <li><a href="page-my-account-wishlist.html">Mes hebergements</a>
                         </li>
                         <li><a href="{{ path('publicite_index') }}">Mes publicites</a>
                         </li>
-                    </ul>
+                        <li><a href="{{ path('article_indexPerso') }}">Mes articles</a>
+                        </li>
+                        <div class="gap gap-small"></div>
+                        <li>  </li>
+                        </ul>
+                        <div class="btn btn-group-vertical" style="background-color: white ;width: 232.5px ;height:130px">
+                            <div class="gap gap-small"></div>
+                            <a  href="{{ path('plan_NewPlanDesign') }}" class="btn btn-success"><div class="fa  fa-plus-square"></div> Ajouter Un Plan</a>
+                            <a href="{{ path('stat_stat') }}" class="btn btn-warning"><div class="fa  fa-bar-chart-o"></div> Mes statistiques</a>
+                        </div>
                 </aside>
             </div>
             <div class="col-md-9">
@@ -40,11 +127,12 @@
                             <div class="col-md-4">
                                 <div class="product-thumb">
                                     <header class="product-header"><img
-                                                src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}">
+                                                src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }} "
+                                                style=" width :262.5px;height:233px ">
 
                                     </header>
 
-                                    <div class="product-inner">
+                                    <div class="product-inner" style="height: 270px">
                                         <ul class="icon-group icon-list-rating" title="4/5 rating">
                                             <li><i class="fa fa-star"></i>
                                             </li>
@@ -65,12 +153,17 @@
                                                 </li>
                                             </ul>
                                             <ul class="product-actions-list">
-                                                <li><a class="btn btn-sm" href="{{ path('plan_edit', { 'idP': plan.idP  }) }}}">
+                                                <li><a class="btn btn-sm" href="{{ path('Edit_Plan', { 'idP':plan.idP })|replace({'%7B':'{', '%7D':'}'})
+                                                    }}">
                                                 <i class="fa fa-pencil-square-o"></i> Modifier</a>
                                                 </li>
                                                 <li><a class="btn btn-sm" href="{{ path('Details_plans',{ 'idP': plan.idP  })}}">
                                                 <i class="fa fa-bars"></i> Details</a>
                                                 </li>
+                                                <li><a class="btn btn-sm" href="{{ path('delete_Profil',{ 'idP': plan.idP  })}}">
+                                                <i class="fa fa-bars"></i> Supprimer</a>
+                                                </li>
+
                                             </ul>
                                         </div>
                                     </div>

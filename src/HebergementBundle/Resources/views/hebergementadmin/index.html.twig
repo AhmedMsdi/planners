@@ -16,11 +16,24 @@
         <div class="row">
             <br>
             <center><form role="search" method="post" action="{{ path('rechadmin') }}">
-                <div class="form-group">
-                    <input class="form-control" placeholder="Recherche" type="text" name="recha">
-                </div>
-            </form></center>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Recherche" type="text" name="recha">
+                    </div>
+                </form></center>
             <br><br>
+            <div style="margin-bottom: 10px">
+                <a href="{{ path('mesbonplan') }}" class="btn btn-danger">
+                    <div class="fa  fa-globe"></div>
+                    Mes plan</a>
+                <a href="{{ path('hebergement_new') }}" class="btn btn-success">
+                    <div class="fa  fa-plus-square"></div>
+                    Ajouter un hébergement</a>
+                <a href="{{ path('messagerie_indexAdmin') }}" class="btn btn-primary btn-md">
+                    <div class="fa  fa-sticky-note"></div>
+                    Messagerie</a>
+            </div>
+
+            <br>
             <div class="col-md-12">
                 <table width="100%" style="color: black">
                     <tr class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left">
@@ -46,18 +59,12 @@
                       <br>
                       <br>
                     </div>
-                    <div class="col-md-2 col-md-offset-7">
-                        <div class="product-view pull-right">
-                            <a class="fa fa-th-large active" href="#"></a>
-                            <a class="fa fa-list" href="#"></a>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="row row-wrap" style="height: 500px">
                     <table class="table" >
 
-                    {% for heb in hebergements if heb.enable==0%}
+                    {% for heb in hebergements %}
 
 
                         <tr width="60px">
@@ -82,7 +89,7 @@
                             </td>
 
                             <td>
-                                <a class="btn btn-info" href="{{ path('hebergement_conf',{'id':heb.id}) }}"> <i class="fa fa-clock-o"></i> En attente</a>
+                                <a class="btn btn-info" href="{{ path('hebergement_conf',{'id':heb.id}) }}"> <i class="fa fa-clock-o"></i> Confirmé</a>
                             </td>
                             <td>
                             <a class="btn btn-info" style="background-color: yellow; color: black"  href="{{ path('hebergement_show',{'id':heb.id}) }}"> Voir hebergement

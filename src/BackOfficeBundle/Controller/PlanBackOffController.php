@@ -2,6 +2,11 @@
 
 namespace BackOfficeBundle\Controller;
 
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ColumnChart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\ComboChart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\GaugeChart;
+use CMEN\GoogleChartsBundle\GoogleCharts\Charts\PieChart;
+use PiBundle\Entity\User;
 use PlanBundle\Entity\Plan;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,6 +16,10 @@ class PlanBackOffController extends Controller
     public function indexAction()
     {
         return $this->render('@BackOffice/template/index.html.twig');
+    }
+    public function gestionAction()
+    {
+        return $this->render('@BackOffice/plan/gestionplans.html.twig');
     }
     public function layoutAction()
     {
@@ -47,9 +56,9 @@ class PlanBackOffController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $plans = $em->getRepository('PlanBundle:Plan')->findAll();
+        $plans = $em->getRepository('PlanBundle:Plan')->findBy(['etat'=>0]);
 
-        return $this->render('@BackOffice/plan/TableauAllPlans.html.twig', array(
+        return $this->render('@BackOffice/plan/TableauAllPlans2.html.twig', array(
             'plans' => $plans,
         ));
     }
@@ -59,9 +68,21 @@ class PlanBackOffController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $plans = $em->getRepository('PlanBundle:Plan')->find($idP);
+        $idu=$plans->getUser();
+        $users = $em->getRepository('PiBundle:User')->find($idu);
         $plans->setEtat(1);
-        $em->flush();
+        $ptfid=$users->getPointFidelite();
+        $ptfidf=$ptfid+5;
+        $users->setPointFidelite($ptfidf);
 
+       // $em ->persist($users);
+        $em->flush();
+/*
+        $emm = $this->getDoctrine()->getManager();
+        $user = $emm->getRepository('PiBundle:User')->find(17);
+        $user->setPointFidelite(5);
+        $emm->flush();
+*/
         return $this->redirectToRoute('plan_indextableau', array(
             'plans' => $plans
         ));
@@ -120,5 +141,59 @@ class PlanBackOffController extends Controller
     }
 
 
+    public  function AllPlansAction(){
+        $em = $this->getDoctrine()->getManager();
 
+        $plans = $em->getRepository('PlanBundle:Plan')->findAll();
+
+        return $this->render('@BackOffice/plan/ListePlans.html.twig', array(
+            'plans' => $plans,
+        ));
+    }
+
+    public function StatiqtiquesAllPlansAction() {
+        $em = $this->getDoctrine()->getManager();
+        $plans = $em->getRepository('PlanBundle:Plan')->StatGlobaleArrayAction();
+
+        $pieChart = new ComboChart();
+
+        $data= array();
+        $stat=['classe', 'Plan'];
+        array_push($data,$stat);
+
+        foreach($plans as $plan) {
+            $stat=array();
+            $nb=$plan['nbrplan'];
+            $lib=$plan['libsrc'];
+            $stat = [$lib,(int)$nb];
+            array_push($data, $stat);
+        }
+
+
+        /*
+        $stat=['classe', 'nbEtudiant'];
+        $nb=0;
+        array_push($data,$stat);
+        foreach($plans as $plan) {
+            $stat=array();
+            array_push($stat,$plan->getLibelle(),(($plan->getNote()) *100)/$totalPlan);
+            $nb=($plan->getNote() *100)/$totalPlan;
+            $stat=[$plan->getLibelle(),$nb];
+            array_push($data,$stat);
+        }
+*/
+        $pieChart->getData()->setArrayToDataTable(
+            $data);
+
+        $pieChart->getOptions()->setHeight(550);
+        $pieChart->getOptions()->setWidth(1000);
+
+        $pieChart->getOptions()->getTitleTextStyle()->setBold(true);
+        $pieChart->getOptions()->getTitleTextStyle()->setColor('#009900');
+        $pieChart->getOptions()->getTitleTextStyle()->setItalic(true);
+        $pieChart->getOptions()->getTitleTextStyle()->setFontName('Arial');
+        $pieChart->getOptions()->getTitleTextStyle()->setFontSize(18);
+
+        return $this->render('@BackOffice/plan/StatistiqueGlobale.html.twig', array('piechart' => $pieChart));
+    }
 }

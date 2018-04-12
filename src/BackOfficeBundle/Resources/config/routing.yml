@@ -68,3 +68,15 @@ refusArticle:
     path:     /{id}/refusArticle
     defaults: { _controller: BackOfficeBundle:ArticleBack:refuser }
     methods:  [GET, POST]
+gestionplan:
+    path:     /gestion
+    defaults: { _controller: BackOfficeBundle:PlanBackOff:gestion}
+    methods:  [GET, POST]
+listeplan:
+    path:     /liste
+    defaults: { _controller: BackOfficeBundle:PlanBackOff:AllPlans}
+    methods:  [GET, POST]
+StatistiqueGlobale:
+    path:     /statisqtiqueG
+    defaults: { _controller: BackOfficeBundle:PlanBackOff:StatiqtiquesAllPlans}
+    methods:  [GET, POST]

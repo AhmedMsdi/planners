@@ -31,7 +31,17 @@
     <!-- Your custom styles (blank file) -->
     <link rel="stylesheet" href="{{ asset('css/mystyles.css') }}">
     <link rel="stylesheet" href="{{ asset('css/switcher.css') }}">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"  href="{{ asset('/templatePoupup/css/hunterPopup.css') }}">
 </head>
+
+{#<script>
+    $(document).ready(function(){
+        setTimeout(function() {
+            $('#successMessage').fadeOut('fast');
+        }, 2000); // <-- time in milliseconds
+    });
+</script>#}
 
 <body>
 
@@ -55,7 +65,7 @@
                         <li class="active"><a href="{{ path('pi_homepage') }}">Acceuil</a>
 
                         </li>
-                        <li><a href="#">Plans</a>
+                        <li><a href="{{ path('Find_Filter') }}">Plans</a>
                             <ul>
                                 <li><a href="{{ path('plan_Filter_Gaspage') }}">Gastronomie</a>
                                 </li>
@@ -64,8 +74,7 @@
 
                                 <li><a href="{{ path('plan_FilterBE') }}">Bien-Etre</a>
                                 </li>
-                                <li><a href="{{ path('plan_new') }}">Ajouter Plan</a>
-                                </li>
+
                             </ul>
                         </li>
                         <li><a href="{{ path('evennement_listall') }}">Evenements </a>
@@ -154,19 +163,19 @@
                 <label><i class="fa fa-search"></i><span>Je cherche</span>
                 </label>
                 <div class="search-area-division search-area-division-input">
-                    <input class="form-control" type="text" placeholder="un bon plan" />
+                    <input id="id_lib"  name="titre"  class="form-control" type="text" placeholder="un bon plan" />
                 </div>
             </div>
             <div class="col-md-3 clearfix">
                 <label><i class="fa fa-map-marker"></i><span>à</span>
                 </label>
                 <div class="search-area-division search-area-division-location">
-                    <input class="form-control" type="text" placeholder="Region" />
+                    <input id="reg"  name="region" class="form-control" type="text" placeholder="Region" />
                 </div>
             </div>
             <div class="col-md-1">
                <button class="btn btn-block btn-white search-btn" type="submit"
-                        action="{{ path('Find_Filter') }}"   >Chercher</button>
+                          >Chercher</button>
             </div>
 
         </div>
@@ -174,38 +183,87 @@
 </form>
 <!-- END SEARCH AREA -->
 
+    <div class="container">
+        <!-- script 4 seconde notif close -->
+        <script type="text/javascript">
 
+
+                window.setTimeout(function() {
+                    $(".alert").fadeTo(1500, 0).slideUp(500, function(){
+                        $(this).remove();
+                    });
+                }, 4000);
+
+        </script>
+
+        <!-- alert notification -->
+    {# bootstrap ready for your convenience ;] #}
+    {% if app.session.flashbag.has('notice') %}
+        {% for flashMessage in app.session.flashbag.get('notice') %}
+            <div class="alert alert-success alert-dismissible"  id="myAlert{{flashMessage }}">
+                <a href="{{ path('delete_notifs', {'idP':flashMessage}) }}"
+                   class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Plan!</strong>   {{ flashMessage }}
+            </div>
+
+        {% endfor %}
+    {% endif %}
+    </div>
 
 
 <!-- //////////////////////////////////
 //////////////END MAIN HEADER//////////
 ////////////////////////////////////-->
 
-
-
-<!-- Scripts queries -->
-<script src="{{ asset('js/jquery.js') }}"></script>
-<script src="{{ asset('js/boostrap.min.js') }}"></script>
-<script src="{{ asset('js/countdown.min.js') }}"></script>
-<script src="{{ asset('js/flexnav.min.js') }}"></script>
-<script src="{{ asset('js/magnific.js') }}"></script>
-<script src="{{ asset('js/tweet.min.js') }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-<script src="{{ asset('js/fitvids.min.js') }}"></script>
-<script src="{{ asset('js/mail.min.js') }}"></script>
-<script src="{{ asset('js/ionrangeslider.js') }}"></script>
-<script src="{{ asset('js/icheck.js') }}"></script>
-<script src="{{ asset('js/fotorama.js') }}"></script>
-<script src="{{ asset('js/card-payment.js') }}"></script>
-<script src="{{ asset('js/owl-carousel.js') }}"></script>
-<script src="{{ asset('js/masonry.js') }}"></script>
-<script src="{{ asset('js/nicescroll.js') }}"></script>
+    <!-- Scripts queries -->
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <script src="{{ asset('js/boostrap.min.js') }}"></script>
+    <script src="{{ asset('js/countdown.min.js') }}"></script>
+    <script src="{{ asset('js/flexnav.min.js') }}"></script>
+    <script src="{{ asset('js/magnific.js') }}"></script>
+    <script src="{{ asset('js/tweet.min.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="{{ asset('js/fitvids.min.js') }}"></script>
+    <script src="{{ asset('js/mail.min.js') }}"></script>
+    <script src="{{ asset('js/ionrangeslider.js') }}"></script>
+    <script src="{{ asset('js/icheck.js') }}"></script>
+    <script src="{{ asset('js/fotorama.js') }}"></script>
+    <script src="{{ asset('js/card-payment.js') }}"></script>
+    <script src="{{ asset('js/owl-carousel.js') }}"></script>
+    <script src="{{ asset('js/masonry.js') }}"></script>
+    <script src="{{ asset('js/nicescroll.js') }}"></script>
 
 <!-- Custom scripts -->
+    <script src="{{ asset('js/general_main.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-datepicker.fr.js') }}"></script>
+    <script>
+        $('#calendar').datepicker({
+        });
+
+        !function ($) {
+            $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+                $(this).find('em:first').toggleClass("glyphicon-minus");
+            });
+            $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+        }(window.jQuery);
+
+        $(window).on('resize', function () {
+            if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+        })
+        $(window).on('resize', function () {
+            if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+        })
+    </script>
 <script src="{{ asset('js/custom.js') }}"></script>
 <script src="{{ asset('js/switcher.js') }}"></script>
+    <!-- Custom scripts -->
+    <script src="{{ asset('js/custom.js') }}"></script>
+    <script src="{{ asset('js/switcher.js') }}"></script>
+
 
     <script src="{{ asset('js/general_main_front.js') }}"></script>
+
     <script>
         load_menu_event('{{ path('menu_event') }}')
     </script>
@@ -214,6 +272,31 @@
 
 {% block body %}
 {% endblock %}
+
+    <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script>
+
+        $('#text').keyup(function(){
+            var input= $("#id_lib").val();
+            var input2= $("#reg").val();
+            $.ajax({
+                type: "POST",
+                url: "{{ path('Find_Filter') }}",
+                data: {'text': input,'text': input2},
+                success: function (data) {
+
+                    console.log(data);
+
+                    $("#res").html(data);
+
+
+                }
+            });
+
+        });
+
+    </script>
 
 <!-- //////////////////////////////////
 //////////////MAIN FOOTER//////////////
@@ -225,8 +308,15 @@
             <div class="row row-wrap">
                 <div class="col-md-3">
                     <a href="{{ path('pi_homepage') }}">
-                        <img src="{{ asset('img/logo.png') }}" alt="logo" title="logo" class="logo">
+                        <img src="{{ asset('images/logo-pidev2.png') }}" alt="logo" title="logo" class="logo">
                     </a>
+                    </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
                     <ul class="list list-social">
                         <li>
                             <a class="fa fa-facebook box-icon" href="#" data-toggle="tooltip" title="Facebook"></a>
@@ -244,61 +334,8 @@
                             <a class="fa fa-tumblr box-icon" href="#" data-toggle="tooltip" title="Tumblr"></a>
                         </li>
                     </ul>
-                    <p>Tortor quisque varius consequat platea purus iaculis quam dis suspendisse augue consequat in porta quis nec purus habitasse orci velit</p>
-                </div>
-                <div class="col-md-3">
-                    <h4>Sign Up to the Newsletter</h4>
-                    <div class="box">
-                        <form>
-                            <div class="form-group mb10">
-                                <label>E-mail</label>
-                                <input type="text" class="form-control" />
-                            </div>
-                            <p class="mb10">Morbi porta libero fermentum mi pretium diam</p>
-                            <input type="submit" class="btn btn-primary" value="Sign Up" />
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <h4>Couponia on Twitter</h4>
-                    <!-- START TWITTER -->
-                    <div class="twitter-ticker" id="twitter-ticker"></div>
-                    <!-- END TWITTER -->
-                </div>
-                <div class="col-md-3">
-                    <h4>Recent News</h4>
-                    <ul class="thumb-list">
-                        <li>
-                            <a href="#">
-                                <img src="{{ asset('img/urbex_esch_lux_with_laney_and_laaaaag_70x70.jpg') }}" alt="Image Alternative text" title="Urbex Esch/Lux with Laney and Laaaaag" />
-                            </a>
-                            <div class="thumb-list-item-caption">
-                                <p class="thumb-list-item-meta">Jul 18, 2014</p>
-                                <h5 class="thumb-list-item-title"><a href="#">Dictumst dapibus</a></h5>
-                                <p class="thumb-list-item-desciption">Varius eleifend montes torquent sollicitudin</p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="{{ asset('img/amaze_70x70.jpg') }}" alt="Image Alternative text" title="AMaze" />
-                            </a>
-                            <div class="thumb-list-item-caption">
-                                <p class="thumb-list-item-meta">Jul 18, 2014</p>
-                                <h5 class="thumb-list-item-title"><a href="#">Imperdiet phasellus</a></h5>
-                                <p class="thumb-list-item-desciption">Mus netus netus natoque quis</p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="{{ asset('img/the_hidden_power_of_the_heart_70x70.jpg') }}" alt="Image Alternative text" title="The Hidden Power of the Heart" />
-                            </a>
-                            <div class="thumb-list-item-caption">
-                                <p class="thumb-list-item-meta">Jul 18, 2014</p>
-                                <h5 class="thumb-list-item-title"><a href="#">Taciti dictumst</a></h5>
-                                <p class="thumb-list-item-desciption">Pharetra netus turpis aenean venenatis</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <p>Le site de référence pour profiter des meilleurs bons plans du net, d'échantillons gratuits, produits remboursés et deals en tous en genre.</p>
+
                 </div>
             </div>
         </div>
@@ -307,7 +344,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <p>Copyright © 2014, Your Store, All Rights Reserved</p>
+                    <p>Copyright © 2018, Your Store, All Rights Reserved</p>
                 </div>
                 <div class="col-md-6 col-md-offset-2">
                     <div class="pull-right">

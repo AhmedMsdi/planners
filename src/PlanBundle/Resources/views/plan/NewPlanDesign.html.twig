@@ -2,13 +2,17 @@
 
 
 {% block body %}
-    <link href="{{ asset('css/chaimaDesign.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/chaima.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
-{{ form_start(form,{'attr':{'class': "well form-horizontal",'id': "contact_form"}})}}
-<div class="container" style="background-image:
- url('http://www.litury.com/wp-content/uploads/2017/12/fond-d-ecran-tunisie-pour-pc.jpg')" >
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+<style>
+
+
+
+    
+</style>
+<div class="container1" style="" >
+    {{ form_start(form,{'attr':{'class': "well form-horizontal",'id': "contact_form"}})}}
+
     <form class="well form-horizontal" >
         <fieldset>
 
@@ -41,45 +45,7 @@
             </div>
 
 
-            <!-- Text input-->
 
-            {#<div class="form-group">#}
-            {#<label class="col-md-4 control-label">Username</label>#}
-            {#<div class="col-md-4 inputGroupContainer">#}
-            {#<div class="input-group">#}
-            {#<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>#}
-            {#{{form_widget(form.username, {'attr': {'class': "form-control",'placeholder': "Username"}})}}#}
-
-            {#</div>#}
-            {#</div>#}
-            {#</div>#}
-
-            {#<!-- Text input-->#}
-
-            {#<div class="form-group">#}
-            {#<label class="col-md-4 control-label" >Password</label>#}
-            {#<div class="col-md-4 inputGroupContainer">#}
-            {#<div class="input-group">#}
-            {#<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>#}
-            {#{{form_widget(form.password, {'attr': {'class': 'form-control','placeholder': "Password"}})}}#}
-            {#<input name="password" placeholder="Password" class="form-control"  type="password">#}
-            {#</div>#}
-            {#</div>#}
-            {#</div>#}
-
-            {#<!-- Text input-->#}
-
-            {#<div class="form-group">#}
-            {#<label class="col-md-4 control-label" >Confirm Password</label>#}
-            {#<div class="col-md-4 inputGroupContainer">#}
-            {#<div class="input-group">#}
-            {#<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>#}
-            {#<input name="confirm_password" placeholder="Confirm Password" class="form-control"  type="password">#}
-            {#</div>#}
-            {#</div>#}
-            {#</div>#}
-
-            <!-- Text input-->
             <div class="form-group">
                 <label class="col-md-4 control-label">Address :*</label>
                 <div class="col-md-4 inputGroupContainer">
@@ -91,8 +57,6 @@
                 </div>
             </div>
 
-
-            <!-- Text input-->
 
             <div class="form-group">
                 <label class="col-md-4 control-label">Ville :*</label>

@@ -32,6 +32,20 @@ class MessagerieController extends Controller
         ));
     }
 
+    public function indexAdminAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $messageries = $em->getRepository('HebergementBundle:Messagerie')->createQueryBuilder('e')
+            ->addORderBy('e.datedebut', 'ASC')
+            ->getQuery()
+            ->execute();
+
+        return $this->render('HebergementBundle:messagerie:indexAdmin.html', array(
+            'messageries' => $messageries,
+        ));
+    }
+
     /**
      * Creates a new messagerie entity.
      *

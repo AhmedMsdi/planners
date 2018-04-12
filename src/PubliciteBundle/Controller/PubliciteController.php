@@ -29,8 +29,8 @@ class PubliciteController extends Controller
         $publicites2 = $em->getRepository('PubliciteBundle:Publicite')->findBy(array('user' =>$this->getUser()));
 
         /**
-         * @var $paginator \knp\Component\Pager\Paginator
-         */
+     * @var $paginator \knp\Component\Pager\Paginator
+     */
         $paginator = $this->get('knp_paginator');
         $result=$paginator->paginate(
             $publicites2,

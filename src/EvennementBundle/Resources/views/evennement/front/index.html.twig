@@ -66,7 +66,6 @@
       <link rel="stylesheet" href="{{ asset('css/chaimaDesign.css') }}"/>
       <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
-
       <div class="container margin_container">
           <div class="row col-md-12">
 
@@ -94,6 +93,8 @@
                       <th>Image</th>
                       <th>Prix</th>
                       <th>Contact</th>
+                      <th>Etat</th>
+
                       <th class="td_action">Actions</th>
 
                   </tr>
@@ -107,9 +108,11 @@
                           <td>{% if evennement.dateevent %}{{ evennement.dateevent|date('d-m-Y') }}{% endif %}</td>
                           <td>{% if evennement.timeevent %}{{ evennement.timeevent|date('H:i') }}{% endif %}</td>
                           <td>{{ evennement.description }}</td>
-                          <td>{{ evennement.image }}</td>
+                          <td> <img src="{{ asset('imageEvent/'~evennement.image)  }}" style="width: 150%"></td>
                           <td>{{ evennement.prix|number_format(3,'.','') }}</td>
                           <td>{{ evennement.contact }}</td>
+                          <td>{% if evennement.etat==1 %} Validé {% else %} En Attente {% endif %} </td>
+
                           <td>
 
                               <ul class="list_btn_action">
@@ -124,7 +127,7 @@
                           </td>
                       </tr>
                   {% endfor %}
-                  </tbody>
+
               </table>
           </div>
       </div>
