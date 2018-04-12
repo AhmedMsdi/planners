@@ -66,7 +66,7 @@ class Hebergement
      * @var string
      * @Assert\Image()
      * @Assert\NotBlank(message="Ajouter une image")
-     * @ORM\Column(name="photo", type="string", nullable=false)
+     * @ORM\Column(name="photo", type="string", nullable=true)
      */
     private $photo;
 

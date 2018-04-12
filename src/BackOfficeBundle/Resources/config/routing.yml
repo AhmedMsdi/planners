@@ -38,3 +38,33 @@ plan_Nonvalide:
 New_PlanBack:
     path:     /new
     defaults: { _controller: BackOfficeBundle:PlanBackOff:AjouterPlanBack  }
+
+demandePub:
+    path:     /demandePub
+    defaults: { _controller: BackOfficeBundle:PubBack:index  }
+    methods:  [GET, POST]
+
+validPub:
+    path:     /{idPub}/validePub
+    defaults: { _controller: BackOfficeBundle:PubBack:valider }
+    methods:  [GET, POST]
+
+refusPub:
+    path:     /{idPub}/refusPub
+    defaults: { _controller: BackOfficeBundle:PubBack:refuser }
+    methods:  [GET, POST]
+
+demandeArticle:
+    path:     /demandeArticle
+    defaults: { _controller: BackOfficeBundle:ArticleBack:index  }
+    methods:  [GET, POST]
+
+validArticle:
+    path:     /{id}/valideArticle
+    defaults: { _controller: BackOfficeBundle:ArticleBack:valider }
+    methods:  [GET, POST]
+
+refusArticle:
+    path:     /{id}/refusArticle
+    defaults: { _controller: BackOfficeBundle:ArticleBack:refuser }
+    methods:  [GET, POST]

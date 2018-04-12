@@ -21,7 +21,7 @@ publicite_edit:
 publicite_delete:
     path:     /{idPub}/delete
     defaults: { _controller: "PubliciteBundle:Publicite:delete" }
-    methods:  DELETE
+    methods:  [GET, POST]
 
 recherche_publicite:
     path:     /chercher

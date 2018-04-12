@@ -19,17 +19,19 @@
                 <div class="col-md-3">
                     <aside class="sidebar-left">
                         <ul class="nav nav-tabs nav-stacked nav-coupon-category">
-                            <li class="active"><a href="#"><i class="fa fa-ticket"></i>All</a>
+                            <li class="active"><a href="{{ path('plan_FilterBE') }}"><i class="fa fa-ticket"></i>All</a>
                             </li>
-                            <li><a href="#"><i class="fa fa-cutlery"></i>Sallons de Coiffures</a>
+                            <li><a href="{{ path('Salon_Coiff_Filter') }}"><i class="fa fa-female"></i>Sallons de Coiffures</a>
                             </li>
-                            <li><a href="#"><i class="fa fa-calendar"></i>Salles de Sport </a>
+                            <li><a href="{{ path('Salle_sport_Filter') }}"><i class="fa fa-futbol-o
+"></i>Salles de Sport </a>
                             </li>
-                            <li><a href="#"><i class="fa fa-female"></i>Spas et centres Esthetiques</a>
+                            <li><a href="{{ path('Spa_Filter') }}"><i class="fa fa-female"></i>Spas et centres Esthetiques</a>
                             </li>
-                            <li><a href="#"><i class="fa fa-bolt"></i>Make-up Artiste</a>
+                            <li><a href="{{ path('Make_Up_Filter') }}"><i class="fa fa-female"></i>Make-up Artiste</a>
                             </li>
-                            <li><a href="#"><i class="fa fa-headphones"></i>Piercing et Tatoos</a>
+                            <li><a href="{{ path('Tatoo_Filter') }}#"><i class="fa fa-certificate
+"></i>Piercing et Tatoos</a>
                             </li>
 
 
@@ -213,7 +215,7 @@
                             <div class="col-md-4">
                                 <div class="product-thumb">
                                     <header class="product-header">
-                                        <img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}" >
+                                        <img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}"style="width: 262.5px;height:233px " >
                                     </header>
                                     <div class="product-inner">
                                         {% for rate in rating %}

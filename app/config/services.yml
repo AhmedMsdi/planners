@@ -5,6 +5,10 @@ parameters:
 
 services:
 
+  redirect.after.login:
+    class: PiBundle\Redirection\AfterLoginRedirection
+    arguments: ["@router"]
+
     # default configuration for services in *this* file
     _defaults:
         # automatically injects dependencies in your services

@@ -53,7 +53,21 @@ class PubliciteController extends Controller
 
 
     public function chercherAction(Request $request)
-    {
+    {    $em = $this->getDoctrine()->getManager();
+
+        $publicites = $em->getRepository('PubliciteBundle:Publicite')->findBy(array('user' =>$this->getUser()));
+
+        /**
+         * @var $paginator \knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result=$paginator->paginate(
+            $publicites,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 3)
+
+        );
+
 
         if($request->isXmlHttpRequest() && $request->isMethod('post') && $request->get('text')!=null){
 
@@ -71,7 +85,7 @@ class PubliciteController extends Controller
             $query =$em->getRepository('PubliciteBundle:Publicite')->createQueryBuilder('u');
             $annonce= $query
               ->getQuery()->getResult();
-            $response = $this->renderView('@Publicite/publicite/indexsmall.html.twig',array('publicites2'=>$annonce));
+            $response = $this->renderView('@Publicite/publicite/search.html.twig',array('all'=>$result));
             return  new JsonResponse($response) ;
     }
 
@@ -272,18 +286,15 @@ class PubliciteController extends Controller
      * Deletes a publicite entity.
      *
      */
-    public function deleteAction(Request $request, Publicite $publicite)
+    public function deleteAction(Publicite $publicite)
     {
-        $form = $this->createDeleteForm($publicite);
-        $form->handleRequest($request);
+        $em=$this->getDoctrine()->getManager();
+        //   $commentaire=$em->getRepository(Article::class)->find($id);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($publicite);
-            $em->flush();
-        }
+        $em->remove($publicite);
+        $em->flush();
 
-        return $this->redirectToRoute('publicite_index');
+        return $this->redirectToRoute('publicite_index' );
     }
 
     /**

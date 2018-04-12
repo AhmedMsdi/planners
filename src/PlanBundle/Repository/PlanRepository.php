@@ -3,6 +3,8 @@
 namespace PlanBundle\Repository;
 
 
+use PlanBundle\Entity\Plan;
+
 class PlanRepository extends \Doctrine\ORM\EntityRepository
 {
     public function DivertisementsAction()
@@ -29,6 +31,16 @@ class PlanRepository extends \Doctrine\ORM\EntityRepository
 
 
     }
+    public function StatArrayAction()
+    {
+
+             $query = $this->getEntityManager()
+                 ->createQuery("SELECT  IDENTITY(p.idSc),COUNT(p.idP) as nbrplan,sc.libelle as libsrc
+ FROM  PlanBundle:Plan  p  join  PlanBundle:SousCategorie sc WITH p.idSc=sc.idSc GROUP BY p.idSc");
+
+       return $query->getResult();
+        //  return  $query->getArrayResult();
+    }
     public function BienEAction()
     {
         $query = $this->getEntityManager()
@@ -41,7 +53,7 @@ class PlanRepository extends \Doctrine\ORM\EntityRepository
 
 
     }
-    public function FilterAction($typesc  )
+    public function FilterAction($typesc )
     {
             $query = $this->getEntityManager()->createQuery("SELECT p FROM PlanBundle:Plan p
                               JOIN  PlanBundle:SousCategorie s
