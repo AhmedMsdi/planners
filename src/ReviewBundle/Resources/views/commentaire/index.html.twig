@@ -33,7 +33,7 @@
                             <div class="modal-body">
 
                                 <div class="form-group">
-                                    <input class="form-control " type="text" placeholder="contenu" id="contenu" name="contenu">
+                                    <input class="form-control " required type="text" placeholder="contenu" id="contenu" name="contenu">
                                     {#{{form_widget(edit_form.prenom ,{ 'attr': {'class': "form-control",'placeholder': "Prenom"}})}}#}
                                 </div>
 
@@ -60,26 +60,20 @@
             <div class="container" id="result">
 
                     <ul class="comments-list">
-        {% for commentaire in commentaires %}
 
+
+
+        {% for commentaire in commentaires %}
+                        {% if app.request.get('idP') == commentaire.idP.idP %}
             <li>
                 <!-- REVIEW -->
                 <article class="comment">
                     <div class="comment-author">
-                        <img src="{{ asset("img/50x50.png") }}" alt="Image Alternative text" title="Gamer Chick" />
+                        <img src="{{ asset("mummy.png") }}" alt="Image Alternative text" title="Gamer Chick" />
                     </div>
                     <div class="comment-inner">
                         <ul class="icon-group icon-list-rating comment-review-rate" title="5/5 rating">
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
-                            <li><i class="fa fa-star"></i>
-                            </li>
+
                         </ul><span class="comment-author-name">{{ commentaire.idUser.nom }} {{ commentaire.idUser.prenom }}</span>
                         <p class="comment-content">{{ commentaire.contenu }}</p>
                         {% if app.user == null %}
@@ -100,9 +94,10 @@
                 </article>
             </li>
 
-
+                        {% endif %}
 
         {% endfor %}
+
                     </ul>
                 <button class="popup-text btn btn-primary" data-title="Edit" data-toggle="modal" data-target="#edit " data-effect="mfp-zoom-out"><i class="fa fa-pencil"></i> Ajouter commentaire</button>
 
@@ -133,7 +128,7 @@
 
 
 
-    <script language="javascript">
+    <script >
 
 
 
@@ -178,7 +173,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "{{ path('commentaire_new', { 'idPub': publicite.idPub }) }}",
+                url: "{{ path('commentaire_new', { 'idP': plan.idP }) }}",
                 data: {'contenu': contenu},
                 success: function (data ) {
                     console.log(data);

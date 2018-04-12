@@ -5,3 +5,18 @@ review_commentaire:
 commentaire_ajout:
     path:     /ajoutcom
     defaults: { _controller: "ReviewBundle:Commentaireomar:ajoutercom" }
+
+signalisation:
+    path:     /{id}/signal
+    defaults: { _controller: "ReviewBundle:Signaisation:signaler" }
+    methods:  [GET, POST]
+
+favoris:
+    path:     /{id}/favoris
+    defaults: { _controller: "ReviewBundle:Favoris:favoris" }
+    methods:  [GET, POST]
+
+favorisindex:
+    path:     /favoris
+    defaults: { _controller: "ReviewBundle:Favoris:index" }
+    methods:  [GET, POST]

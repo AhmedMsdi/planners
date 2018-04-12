@@ -68,3 +68,43 @@ refusArticle:
     path:     /{id}/refusArticle
     defaults: { _controller: BackOfficeBundle:ArticleBack:refuser }
     methods:  [GET, POST]
+
+tousutilisat:
+    path:     /tousutilisat
+    defaults: { _controller: BackOfficeBundle:Signal:index  }
+    methods:  [GET, POST]
+
+signalutilisat:
+    path:     /signalutilisat
+    defaults: { _controller: BackOfficeBundle:Signal:index2  }
+    methods:  [GET, POST]
+
+validuser:
+    path:     /{id}/valideuser
+    defaults: { _controller: BackOfficeBundle:Signal:valider }
+    methods:  [GET, POST]
+
+refususer:
+    path:     /{id}/refususer
+    defaults: { _controller: BackOfficeBundle:Signal:refuser }
+    methods:  [GET, POST]
+
+bloquerutilisat:
+    path:     /bloquerutilisat
+    defaults: { _controller: BackOfficeBundle:Signal:index3  }
+    methods:  [GET, POST]
+
+valid2user:
+    path:     /{id}/valide2user
+    defaults: { _controller: BackOfficeBundle:Signal:valider2 }
+    methods:  [GET, POST]
+
+validusertous:
+    path:     /{id}/validetoususer
+    defaults: { _controller: BackOfficeBundle:Signal:validertous }
+    methods:  [GET, POST]
+
+refususertous:
+    path:     /{id}/refustoususer
+    defaults: { _controller: BackOfficeBundle:Signal:refusertous }
+    methods:  [GET, POST]

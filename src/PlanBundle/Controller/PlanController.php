@@ -355,6 +355,8 @@ class PlanController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $m = $this->getDoctrine()->getManager();
+        $commentaires = $em->getRepository('ReviewBundle:Commentaire')->findAll();
+
         $plan = $em->getRepository('PlanBundle:Plan')->find($idP);
         $idsc = $plan->getIdSc();
         $sc = new SousCategorie();
@@ -403,6 +405,7 @@ class PlanController extends Controller
 
 
         return $this->render('@Plan/plan/details2.html.twig', array(
+            'commentaires' => $commentaires,
             'plan' => $plan, 'msg' => $message,
             'mark' => $mark,'form'=> $form->createView(),'rating'=>$rating
         ));

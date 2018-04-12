@@ -11,7 +11,7 @@
 
             <div class="widget-header">
                 <i class="icon-th-list"></i>
-                <h3>Les utilisateurs signalés !</h3>
+                <h3>Les utilisateurs bloqués !</h3>
             </div> <!-- /widget-header -->
 
             <div class="widget-content">
@@ -31,8 +31,7 @@
 
                     {% for utilisateur in utilisateurs %}
                         {% if utilisateur.nom != null %}
-                            {% if utilisateur.nbreSignal >10 %}
-                                {% if utilisateur.enabled ==1 %}
+                                {% if utilisateur.enabled ==0 %}
                             <tr>
                                 <td>{{ utilisateur.nom }}</td>
                                 <td>{{ utilisateur.prenom }}</td>
@@ -40,16 +39,12 @@
 
 
                                 <td class="td-actions">
-                                    <a href="{{ path('validuser', {'id': utilisateur.id}) }}" class="btn btn-small btn-primary">
-                                        <i class="btn-icon-only icon-ok"></i> Bloquer
+                                    <a href="{{ path('valid2user', {'id': utilisateur.id}) }}" class="btn btn-small btn-primary">
+                                        <i class="btn-icon-only icon-ok"></i> Débloquer
                                     </a>
 
-                                    <a href="{{ path('refususer', {'id': utilisateur.id}) }}" class="btn btn-small">
-                                        <i class="btn-icon-only icon-remove"></i> Ignorer
-                                    </a>
                                 </td>
                             </tr>
-                                    {% endif %}
                                 {% endif %}
                         {% endif %}
                     {% endfor %}

@@ -36,7 +36,7 @@ class Signaisation
     /**
      * @var string
      * @Assert\NotBlank()
-     * @ORM\Column(name="raison", type="string", length=255)
+     * @ORM\Column(name="raison", type="string", length=255, nullable=true)
      */
     private $raison;
 

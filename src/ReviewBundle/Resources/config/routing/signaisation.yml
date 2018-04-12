@@ -22,3 +22,4 @@ signaisation_delete:
     path:     /{id}/delete
     defaults: { _controller: "ReviewBundle:Signaisation:delete" }
     methods:  DELETE
+

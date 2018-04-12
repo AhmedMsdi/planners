@@ -5,6 +5,7 @@ namespace ReviewBundle\Controller;
 use PlanBundle\Entity\Plan;
 use PubliciteBundle\Entity\Publicite;
 use ReviewBundle\Entity\Commentaire;
+use ReviewBundle\Entity\Signaisation;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -19,22 +20,24 @@ class CommentaireController extends Controller
      * Lists all commentaire entities.
      *
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-
+        $request->attributes->get('idP');
         $commentaires = $em->getRepository('ReviewBundle:Commentaire')->findAll();
 
         return $this->render('@Review/commentaire/index.html.twig', array(
             'commentaires' => $commentaires,
+            'idP'=>$request,
 
         ));
     }
 
     public function ajoutAction(Request $request,Plan $plan)
     {
+
         $user = $this->getUser();
-        $plan = $this->getPlan();
+
         if($request->isXmlHttpRequest() && $request->isMethod('post')) {
             $commentaire =new Commentaire();
             $em=$this->getDoctrine()->getManager();
@@ -49,7 +52,7 @@ class CommentaireController extends Controller
 
             $commentaire->setContenu($contenu);
             $commentaire->setIdUser($user);
-            $commentaire->setIdPlan($plan);
+            $commentaire->setIdP($plan);
             $em->persist($commentaire);
             $em->flush();
 
@@ -130,7 +133,7 @@ class CommentaireController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->getDoctrine()->getManager()->flush();
 
-            return $this->redirectToRoute('commentaire_edit', array('id' => $commentaire->getId()));
+            return $this->redirectToRoute('Details_plans',array('idP' => $commentaire->getIdP()->getIdP())  );
         }
 
         return $this->render('@Review/commentaire/edit.html.twig', array(
@@ -154,11 +157,16 @@ class CommentaireController extends Controller
         $em->remove($commentaire);
         $em->flush();
 
-        return $this->redirectToRoute('publicite_show',array('idPub' => 2)  );
+        return $this->redirectToRoute('Details_plans',array('idP' => $commentaire->getIdP()->getIdP())  );
 
 
 
     }
+
+
+
+
+
 
     /**
      * Creates a form to delete a commentaire entity.

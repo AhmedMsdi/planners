@@ -4,13 +4,7 @@
 {% block body %}
 
 
-    <div class="gap" style=" margin-left: 120px; padding-left: 80px">
-        <a href="{{ path('plan_NewPlanDesign') }}" class="btn btn-success" >
-            <div class="fa  fa-plus-square"></div>
-            Ajouter un Plan</a>
-        <a href="{{ path('stat_stat') }}" class="btn btn-warning"><div class="fa  fa-bar-chart-o"></div> Mes statistiques</a>
-
-    </div>
+    <div class="gap gap"></div>
 
     <div class="container">
         <div class="row">
@@ -21,7 +15,7 @@
                     <ul class="nav nav-pills nav-stacked nav-arrow">
                         <li><a href="{{ path('profil') }}">Settings</a>
                         </li>
-                        <li class="active"><a href="{{ path('Profil_index') }}">Mes plans</a>
+                        <li ><a href="{{ path('Profil_index') }}">Mes plans</a>
                         </li>
                         <li><a href="page-my-account-orders.html">Mes evenements</a>
                         </li>
@@ -29,18 +23,22 @@
                         </li>
                         <li><a href="{{ path('publicite_index') }}">Mes publicites</a>
                         </li>
+                        <li><a href="{{ path('article_indexPerso') }}">Mes articles</a>
+                        </li>
+                        <li class="active"><a href="{{ path('favorisindex') }}">Mes favoris</a>
+                        </li>
                     </ul>
                 </aside>
             </div>
             <div class="col-md-9">
                 <div class="row row-wrap">
 
-                    {% for plan in plans %}
-                        {% if plan.user.id==app.user.id %}
+                    {% for plan in favoris %}
+                        {% if plan.idUser.id==app.user.id %}
                             <div class="col-md-4">
                                 <div class="product-thumb">
                                     <header class="product-header"><img
-                                                src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}">
+                                                src="{{ asset('uploads/ImagesPlans/' ~ plan.idPlan.image) }}">
 
                                     </header>
 
@@ -57,23 +55,19 @@
                                             <li><i class="fa fa-star-o"></i>
                                             </li>
                                         </ul>
-                                        <h5 class="product-title">{{ plan.libelle }}</h5>
-                                        <p class="product-desciption">{{ plan.description }}</p>
+                                        <h5 class="product-title">{{ plan.idPlan.libelle }}</h5>
+                                        <p class="product-desciption">{{ plan.idPlan.description }}</p>
                                         <div class="product-meta">
                                             <ul class="product-price-list">
-                                                <li><span class="product-price">{{ plan.prix }}</span>
+                                                <li><span class="product-price">{{ plan.idPlan.prix }}</span>
                                                 </li>
                                             </ul>
                                             <ul class="product-actions-list">
-                                                <li><a class="btn btn-sm" href="{{ path('plan_edit', { 'idP': plan.idP  }) }}}">
-                                                <i class="fa fa-pencil-square-o"></i> Modifier</a>
-                                                </li>
-                                                <li><a class="btn btn-sm" href="{{ path('Details_plans',{ 'idP': plan.idP  })}}">
+
+                                                <li><a class="btn btn-sm" href="{{ path('Details_plans',{ 'idP': plan.idPlan.idP  })}}">
                                                 <i class="fa fa-bars"></i> Details</a>
                                                 </li>
-                                                <li><a class="btn btn-sm" href="{{ path('delete_Profil',{ 'idP': plan.idP  })}}">
-                                                <i class="fa fa-bars"></i> Supprimer</a>
-                                                </li>
+
                                             </ul>
                                         </div>
                                     </div>

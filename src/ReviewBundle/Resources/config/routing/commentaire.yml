@@ -9,7 +9,7 @@ commentaire_show:
     methods:  GET
 
 commentaire_new:
-    path:     /{idPub}/new
+    path:     /{idP}/new
     defaults: { _controller: "ReviewBundle:Commentaire:ajout" }
     methods:  [GET, POST]
 
@@ -22,3 +22,5 @@ commentaire_delete:
     path:     /{id}/delete
     defaults: { _controller: "ReviewBundle:Commentaire:delete" }
     methods:  [GET, POST]
+
+

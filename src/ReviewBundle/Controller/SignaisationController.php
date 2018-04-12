@@ -2,6 +2,10 @@
 
 namespace ReviewBundle\Controller;
 
+use PiBundle\Entity\User;
+use PlanBundle\Entity\Plan;
+use PubliciteBundle\Entity\Publicite;
+use ReviewBundle\Entity\Favoris;
 use ReviewBundle\Entity\Signaisation;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -105,6 +109,29 @@ class SignaisationController extends Controller
 
         return $this->redirectToRoute('signaisation_index');
     }
+
+    public function signalerAction(Plan $plan){
+        $signalisation = new Signaisation();
+        $utilisateur = new User();
+        $em = $this->getDoctrine()->getManager();
+        $signal = $em->getRepository('ReviewBundle:Signaisation')->findBy(array('idUser' =>$this->getUser(),'idPlan' =>$plan));
+        if($signal==null ){
+        $user = $this->getUser();
+
+        $user->setNbreSignal($user->getNbreSignal()+1);
+        $signalisation->setIdUser($user);
+        $signalisation->setIdPlan($plan);
+
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($signalisation);
+            $em->persist($user);
+        $em->flush();
+        }
+        return $this->redirectToRoute('pi_homepage');
+    }
+
+
+
 
     /**
      * Creates a form to delete a signaisation entity.

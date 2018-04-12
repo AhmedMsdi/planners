@@ -14,7 +14,7 @@
             <div class="col-md-3">
                 <aside class="sidebar-left">
                     <ul class="nav nav-pills nav-stacked nav-arrow">
-                        <li class="active"><a href="{{ path('profil') }}">Settings</a>
+                        <li class="active"><a href="{{ path('profil') }}">Mes infos</a>
                         </li>
                         <li><a href="{{ path('Profil_index') }}">Mes plans</a>
                         </li>
@@ -26,6 +26,8 @@
                         </li>
                         <li><a href="{{ path('article_indexPerso') }}">Mes articles</a>
                         </li>
+                        <li><a href="{{ path('favorisindex') }}">Mes favoris</a>
+                        </li>
                     </ul>
                 </aside>
             </div>
@@ -34,22 +36,22 @@
                     <div class="col-md-6">
                         <form action="#">
                             <div class="form-group">
-                                <label for="">First Name</label>
-                                <input type="text" value="John" class="form-control">
+                                <label for="">Nom</label>
+                                <input type="text" value={{ app.user.nom }} class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Last Name</label>
-                                <input type="text" value="Doe" class="form-control">
+                                <label for="">Prenom</label>
+                                <input type="text" value={{ app.user.prenom }} class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="">E-mail</label>
-                                <input type="text" value="johndoe@gmail.com" class="form-control">
+                                <input type="text" value={{ app.user.email }} class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="">Phone Number</label>
-                                <input type="text" value="+1 202 555 0113" class="form-control">
+                                <label for="">Username</label>
+                                <input type="text" value={{ app.user.username }} class="form-control">
                             </div>
-                            <input type="submit" value="Save Changes" class="btn btn-primary">
+
                         </form>
                     </div>
                 </div>

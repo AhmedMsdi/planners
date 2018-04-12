@@ -1,7 +1,7 @@
 {% extends '::baseuser.html.twig' %}
 
 {% block body %}
-    <h1>Commentaire edit</h1>
+    <h1>Modifier votre commentaire</h1>
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
@@ -12,10 +12,6 @@
         <li>
             <a href="{{ path('commentaire_index') }}">Back to the list</a>
         </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
+
     </ul>
 {% endblock %}

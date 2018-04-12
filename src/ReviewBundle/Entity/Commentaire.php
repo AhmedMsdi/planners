@@ -27,9 +27,9 @@ class Commentaire
 
     /**
      * @ORM\ManyToOne(targetEntity="PlanBundle\Entity\Plan")
-     * @ORM\JoinColumn(name="id_plan",referencedColumnName="id_p")
+     * @ORM\JoinColumn(name="id_p",referencedColumnName="id_p")
      */
-    private $idPlan;
+    private $idP;
 
     /**
      * @var string
@@ -73,29 +73,7 @@ class Commentaire
         return $this->idUser;
     }
 
-    /**
-     * Set idPlan
-     *
-     * @param integer $idPlan
-     *
-     * @return Commentaire
-     */
-    public function setIdPlan($idPlan)
-    {
-        $this->idPlan = $idPlan;
 
-        return $this;
-    }
-
-    /**
-     * Get idPlan
-     *
-     * @return int
-     */
-    public function getIdPlan()
-    {
-        return $this->idPlan;
-    }
 
     /**
      * Set contenu
@@ -120,5 +98,30 @@ class Commentaire
     {
         return $this->contenu;
     }
-}
 
+
+
+    /**
+     * Set idP
+     *
+     * @param integer $idP
+     *
+     * @return Commentaire
+     */
+    public function setIdP($idP)
+    {
+        $this->idP = $idP;
+
+        return $this;
+    }
+
+    /**
+     * Get idP
+     *
+     * @return int
+     */
+    public function getIdP()
+    {
+        return $this->idP;
+    }
+}
