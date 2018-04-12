@@ -2,7 +2,13 @@
 {% extends 'baseuser.html.twig' %}
 
 {% block body %}
+    <head> <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
+
+    </head>
 
     <div class="gap gap"></div>
 
@@ -55,10 +61,12 @@
                                     <a href="{{ path('publicite_show', { 'idPub': publicite.idPub }) }}">
                                     <img  src="{{ asset(publicite.image) }}" alt="Image Alternative text" title="" />
                                     </a>
+
                                 </header>
                                 <div class="product-inner">
 
                                     <h5 class="product-title">{{ publicite.text }}</h5>
+
                                     <p class="product-desciption">{{ publicite.description | raw }}</p>
                                     <div class="product-meta">
                                         <ul class="product-price-list">
@@ -77,11 +85,17 @@
                                         <ul class="product-actions-list">
                                             <li><a class="btn btn-sm" href="{{ path('publicite_edit', { 'idPub': publicite.idPub }) }}">
                                                     <i class="fa fa-pencil-square-o"></i> Modifier</a>
+
                                             </li>
                                             <li><a class="btn btn-sm" href="{{ path('publicite_show', { 'idPub': publicite.idPub }) }}">
                                                     <i class="fa fa-bars"></i> Afficher</a>
                                             </li>
                                         </ul>
+                                        {% for rate in rating %}
+                                            {% if publicite.idPub == rate.publicite %}
+                                                {{ rate.1|rating(5, "fa-1x")  }}
+                                            {% endif %}
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>

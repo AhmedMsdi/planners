@@ -95,34 +95,39 @@
                 </div>
 
 
-                <div class="col-md-4">
-                    <ul class="login-register">
-                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                            <li class="shopping-cart"><a  href="{{ path('profil') }}"><i class="fa fa-user"></i> Mon Profil</a>
-                                <div class="shopping-cart-box">
-                                    <ul class="shopping-cart-items">
-                                        <li>
-                                            <a href="{{ path('evennement_list') }}">
-                                                <h5>Mes evennement</h5>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <h5>Mes Plans</h5>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href='{{ path('publicite_index') }}'>
-                                                <h5>Mes Publicités</h5>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href='{{ path('article_indexPerso') }}'>
-                                                <h5>Mes Articles</h5>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                    <ul class="list-inline text-center">
+            <div class="col-md-4">
+                <ul class="login-register">
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <li class="shopping-cart"><a  href="{{ path('profil') }}"><i class="fa fa-user"></i> {{ app.user.nom }} {{ app.user.prenom }}</a>
+                        <div class="shopping-cart-box">
+                            <ul class="shopping-cart-items">
+                                <li>
+                                    <a href="{{ path('evennement_list') }}">
+                                        <h5>Mes evennement</h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <h5>Mes Plans</h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='{{ path('publicite_index') }}'>
+                                        <h5>Mes Publicités</h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='{{ path('article_indexPerso') }}'>
+                                        <h5>Mes Articles</h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='{{ path('favorisindex') }}'>
+                                        <h5>Mes Favoris</h5>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-inline text-center">
 
                                         <li><a href="{{ path('fos_user_security_logout')}}"><i class="fa fa-sign-out"> </i>  Déconnexion</a>
                                         </li>

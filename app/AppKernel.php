@@ -26,6 +26,7 @@ class AppKernel extends Kernel
             new PubliciteBundle\PubliciteBundle(),
             new PianoSolo\WeatherBundle\PianoSoloWeatherBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
+            new blackknight467\StarRatingBundle\StarRatingBundle(),
             new ReviewBundle\ReviewBundle(),
             new PlanBundle\PlanBundle(),
             new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle()
