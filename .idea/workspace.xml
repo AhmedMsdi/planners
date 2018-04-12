@@ -1,96 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="redirection admin + back publicite">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/edit.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/index.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/new.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/show.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/ListePlans.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/StatistiqueGlobale.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/TableauAllPlans2.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/gestionplans.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/ParticipantController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/Participant.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Form/ParticipantType.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/ParticipantRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/valider.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/MesEvent.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Tests/Controller/ParticipantControllerTest.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/rechadmin.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/indexAdmin.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/searchPlan.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/stat2.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatePoupup/css/hunterPopup.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatePoupup/js/jquery-popup.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_06_04_18_19_11_c.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_06_04_18_20_50_s.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/pidev.iml" afterPath="$PROJECT_DIR$/.idea/pidev.iml" />
+    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/FOSUser/views/Security/login_content.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/FOSUser/views/Security/login_content.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/bin/console" afterPath="$PROJECT_DIR$/bin/console" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/src/BackOfficeBundle/Controller/PlanBackOffController.php" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Controller/PlanBackOffController.php" />
-      <change beforePath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/TableauAllPlans.html.twig" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/TableauAllPlans.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/new_plan_Back.html.twig" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/new_plan_Back.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/edit.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/edit.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/new.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/new.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/messagerie.yml" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/messagerie.yml" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/edit.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/edit.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/new.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/new.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/pdf.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/pdf.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/hotels.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/hotels.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/index.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/maisons.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/maisons.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pdf.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pdf.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pensions.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pensions.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php" />
-      <change beforePath="$PROJECT_DIR$/src/PiBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/PiBundle/Entity/User.php" />
-      <change beforePath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" afterPath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Controller/DefaultController.php" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Form/ModifierAjoutType.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Form/ModifierAjoutType.php" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Repository/PlanRepository.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Repository/PlanRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/BienEtreSousCatAffichage.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/BienEtreSousCatAffichage.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/DivertissementSousCatAffichage.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/DivertissementSousCatAffichage.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/NewPlanDesign.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/NewPlanDesign.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/PlanMaps.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/PlanMaps.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/details2.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/details2.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/edit.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/edit.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/indexProfil.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/indexProfil.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/single-news.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/single-news.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/stat.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/stat.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/tableau.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Controller/PubliciteController.php" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Controller/PubliciteController.php" />
-      <change beforePath="$PROJECT_DIR$/web/js/bootstrap-datepicker.fr.js" afterPath="$PROJECT_DIR$/web/js/bootstrap-datepicker.fr.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -175,12 +88,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseuser.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="baseuser.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/baseuser.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="352" column="7" lean-forward="false" selection-start-line="352" selection-start-column="7" selection-end-line="352" selection-end-column="7" />
+            <state relative-caret-position="241">
+              <caret line="204" column="10" lean-forward="false" selection-start-line="204" selection-start-column="10" selection-end-line="204" selection-end-column="10" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="profil.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="36" column="54" lean-forward="false" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
+              <folding>
+                <element signature="e#13#31#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -226,7 +151,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>new g</find>
       <find>150</find>
       <find>price</find>
       <find>.js</find>
@@ -256,6 +180,7 @@
       <find>evenne</find>
       <find>index</find>
       <find>search are</find>
+      <find>evenneme</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wamp64\www\pidev</dir>
@@ -306,7 +231,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/public/css/css_event.css" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/edit.html.twig" />
         <option value="$PROJECT_DIR$/../template/features-lightbox.html" />
@@ -357,6 +281,7 @@
         <option value="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" />
         <option value="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" />
+        <option value="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" />
       </list>
     </option>
   </component>
@@ -848,11 +773,25 @@
       <option name="project" value="LOCAL" />
       <updated>1523058812366</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ahmed  final">
+      <created>1523497964957</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1523497964957</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ahmed final">
+      <created>1523498139329</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1523498139329</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277423000" />
+    <option name="totallyTimeSpent" value="278626000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -865,6 +804,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -874,7 +814,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18683812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18683812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -939,20 +879,15 @@
     <MESSAGE value="redirection admin + back publicite" />
     <MESSAGE value="lina presque fini" />
     <MESSAGE value="mahdi final" />
-    <option name="LAST_COMMIT_MESSAGE" value="mahdi final" />
+    <MESSAGE value="ahmed  final" />
+    <MESSAGE value="ahmed final" />
+    <option name="LAST_COMMIT_MESSAGE" value="ahmed final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="82" lean-forward="false" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
@@ -1042,6 +977,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="false" />
+            <element signature="e#116#158#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1162,6 +1101,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="e#39#96#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1184,6 +1126,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-969">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1316,17 +1259,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/baseuser2.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="352" selection-end-column="7" />
+        <state relative-caret-position="139">
+          <caret line="208" column="40" lean-forward="false" selection-start-line="208" selection-start-column="40" selection-end-line="208" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/baseuser.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="352" column="7" lean-forward="false" selection-start-line="352" selection-start-column="7" selection-end-line="352" selection-end-column="7" />
+        <state relative-caret-position="241">
+          <caret line="204" column="10" lean-forward="false" selection-start-line="204" selection-start-column="10" selection-end-line="204" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="36" column="54" lean-forward="false" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
+          <folding>
+            <element signature="e#13#31#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
