@@ -54,14 +54,14 @@ class PlanController extends Controller
         $result = $paginator->paginate(
             $plans,
             $request->query->getInt('page', 1),
-            $request->query->getInt('limit', 6)
-        $rating = $em->getRepository('PlanBundle:Rating')->AVGRating();
+            $request->query->getInt('limit', 6),
+        $rating = $em->getRepository('PlanBundle:Rating')->AVGRating()
 
         );
         return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
             'plans' => $plans,
-            'rating' => $rating
-            'plans'=>$plans,'result'=>$result
+            'rating' => $rating,
+           'result'=>$result
         ));
     }
 
@@ -86,8 +86,8 @@ class PlanController extends Controller
 
         return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
             'plans' => $plans,
-            'rating' => $rating
-            'plans'=>$plans,'result'=>$result
+            'rating' => $rating,
+            'result'=>$result
         ));
     }
 
@@ -104,14 +104,14 @@ class PlanController extends Controller
         $result = $paginator->paginate(
             $plans,
             $request->query->getInt('page', 1),
-            $request->query->getInt('limit', 6)
-        $rating = $em->getRepository('PlanBundle:Rating')->AVGRating();
+            $request->query->getInt('limit', 6),
+        $rating = $em->getRepository('PlanBundle:Rating')->AVGRating()
 
         );
         return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
             'plans' => $plans,
-            'rating' => $rating
-            'plans' => $plans,'result'=>$result
+            'rating' => $rating,
+            'result'=>$result
         ));
     }
 

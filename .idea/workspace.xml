@@ -2,92 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="omar fin">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/ListePlans.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/StatistiqueGlobale.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/TableauAllPlans2.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/gestionplans.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/ParticipantController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/Participant.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Form/ParticipantType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/ParticipantRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/valider.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/MesEvent.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Tests/Controller/ParticipantControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/pdf.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/rechadmin.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/indexAdmin.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/searchPlan.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/stat2.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/searchAll.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatePoupup/css/hunterPopup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/templatePoupup/js/jquery-popup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pidev.iml" afterPath="$PROJECT_DIR$/.idea/pidev.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/FOSUser/views/Security/login_content.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/FOSUser/views/Security/login_content.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/console" afterPath="$PROJECT_DIR$/bin/console" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BackOfficeBundle/Controller/PlanBackOffController.php" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Controller/PlanBackOffController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/new_plan_Back.html.twig" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/new_plan_Back.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/edit.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/messagerie.yml" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/messagerie.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/edit.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/hotels.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/hotels.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/index.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/maisons.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/maisons.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pdf.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pdf.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pensions.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pensions.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PiBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/PiBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" afterPath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Form/ModifierAjoutType.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Form/ModifierAjoutType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Repository/PlanRepository.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Repository/PlanRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/BienEtreSousCatAffichage.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/BienEtreSousCatAffichage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/DivertissementSousCatAffichage.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/DivertissementSousCatAffichage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/NewPlanDesign.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/NewPlanDesign.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/edit.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/indexProfil.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/indexProfil.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/single-news.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/single-news.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/stat.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/stat.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Controller/ArticleController.php" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Controller/ArticleController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Controller/PubliciteController.php" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Controller/PubliciteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/index.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/indexPerso.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/indexPerso.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/search.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/search.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/show.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/bootstrap-datepicker.fr.js" afterPath="$PROJECT_DIR$/web/js/bootstrap-datepicker.fr.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -779,7 +696,7 @@
       <workItem from="1523053821959" duration="8024000" />
       <workItem from="1523097680736" duration="403000" />
       <workItem from="1523152322162" duration="96000" />
-      <workItem from="1523512577295" duration="723000" />
+      <workItem from="1523512577295" duration="799000" />
     </task>
     <task id="LOCAL-00001" summary="lina">
       <created>1521680998570</created>
@@ -802,11 +719,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523058812366</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="omar final">
+      <created>1523513365528</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1523513365528</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278146000" />
+    <option name="totallyTimeSpent" value="278222000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -883,7 +807,8 @@
     <MESSAGE value="redirection admin + back publicite" />
     <MESSAGE value="lina presque fini" />
     <MESSAGE value="mahdi final" />
-    <option name="LAST_COMMIT_MESSAGE" value="mahdi final" />
+    <MESSAGE value="omar final" />
+    <option name="LAST_COMMIT_MESSAGE" value="omar final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -922,6 +847,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,6 +1127,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="607">
           <caret line="37" column="12" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
