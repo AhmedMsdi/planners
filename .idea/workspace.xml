@@ -1,128 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="omar test">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/,.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/1 (2).jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/593876_large.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/8b3b0300101f6eb9ee28a166f20040be.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/97219004.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Desert.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Hydrangeas.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Jellyfish.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Lighthouse.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/chambre-5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/masonhotes-100117-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Controller/ArticleBackController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Controller/PubBackController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Controller/SignalController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/article/demandeArticle.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/publicite/demandePub.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/signalisation/bloquerutili.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/signalisation/signalutili.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/signalisation/tousutili.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/esp.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/hotels.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/maisons.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/mesbonplan.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pdf.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pensions.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/rech.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PiBundle/Redirection/AfterLoginRedirection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Controller/ArticleController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Entity/Article.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Form/ArticleType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Repository/ArticleRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing/article.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/edit.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/index.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/indexPerso.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/new.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/search.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/show.html.twig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Tests/Controller/ArticleControllerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ReviewBundle/Controller/FavorisController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ReviewBundle/Resources/views/favoris/indexfavoris.html.twig" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PlanBundle/Repository/RatingdRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/tableau.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/35089-NZT4QN.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/Capturelo.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/Sans-titre-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/esprit-pidev.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/message de jour.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/uploads/tageza.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pidev.iml" afterPath="$PROJECT_DIR$/.idea/pidev.iml" />
+    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/TableauAllPlans.html.twig" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/TableauAllPlans.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Entity/Hebergement.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Entity/Hebergement.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Entity/Messagerie.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Entity/Messagerie.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Form/HebergementType.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Form/HebergementType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Form/MessagerieType.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Form/MessagerieType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/hebergement.yml" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/hebergement.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/edit.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/esp.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/esp.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/hotels.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/hotels.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/index.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/maisons.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/maisons.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/new.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/pensions.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/pensions.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/rech.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/rech.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/show.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PiBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/PiBundle/Entity/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" afterPath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Controller/DefaultController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Repository/PlanRepository.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Repository/PlanRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/BienEtreSousCatAffichage.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/BienEtreSousCatAffichage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/DivertissementSousCatAffichage.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/DivertissementSousCatAffichage.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/NewPlanDesign.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/NewPlanDesign.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/PlanMaps.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/PlanMaps.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/details2.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/details2.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/indexProfil.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/indexProfil.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/single-news.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/single-news.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/stat.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/stat.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Controller/PubliciteController.php" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Controller/PubliciteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Form/PubliciteType.php" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Form/PubliciteType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing/publicite.yml" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing/publicite.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/chart.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/chart.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/edit.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/index.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/new.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/new.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/search.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/search.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/show.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/show.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php" afterPath="$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Controller/SignaisationController.php" afterPath="$PROJECT_DIR$/src/ReviewBundle/Controller/SignaisationController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Entity/Commentaire.php" afterPath="$PROJECT_DIR$/src/ReviewBundle/Entity/Commentaire.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Entity/Signaisation.php" afterPath="$PROJECT_DIR$/src/ReviewBundle/Entity/Signaisation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing/commentaire.yml" afterPath="$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing/commentaire.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing/signaisation.yml" afterPath="$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing/signaisation.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/edit.html.twig" afterPath="$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/edit.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/index.html.twig" afterPath="$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/indexcomm.html.twig" afterPath="$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/indexcomm.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -154,24 +34,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-              <folding>
-                <element signature="e#3610#3626#0#Twig" expanded="true" />
-                <element signature="e#3812#3830#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="33" column="30" lean-forward="false" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+            <state relative-caret-position="319">
+              <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -180,23 +47,9 @@
       <file leaf-file-name="details2.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/details2.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="1411">
               <caret line="83" column="31" lean-forward="false" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#h4#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h3#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#2021#2056#0#Twig" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#li#0;n#ul#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#li#1;n#ul#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#i#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#3752#3765#0#Twig" expanded="true" />
-                <element signature="e#3849#3856#0#Twig" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -204,7 +57,7 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-510">
+            <state relative-caret-position="357">
               <caret line="21" column="68" lean-forward="false" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
               <folding />
             </state>
@@ -216,10 +69,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
               <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding>
-                <element signature="e#12#32#0#Twig" expanded="true" />
-                <element signature="e#293#310#0#Twig" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -249,21 +99,10 @@
       <file leaf-file-name="CommentaireController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="561">
               <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding>
                 <element signature="e#43#70#0#PHP" expanded="true" />
-                <element signature="e#684#710#1#PHP" expanded="true" />
-                <element signature="e#754#791#0#PHP" expanded="true" />
-                <element signature="e#1204#1221#1#PHP" expanded="true" />
-                <element signature="e#1536#1569#1#PHP" expanded="true" />
-                <element signature="e#1625#1666#0#PHP" expanded="true" />
-                <element signature="e#2685#2703#0#PHP" expanded="true" />
-                <element signature="e#2784#2819#0#PHP" expanded="true" />
-                <element signature="e#3158#3194#0#PHP" expanded="true" />
-                <element signature="e#3848#3863#0#PHP" expanded="true" />
-                <element signature="e#3957#3993#0#PHP" expanded="true" />
-                <element signature="e#4495#4510#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -272,25 +111,29 @@
       <file leaf-file-name="profil.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
+            <state relative-caret-position="901">
               <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-              <folding>
-                <element signature="e#13#31#0#Twig" expanded="true" />
-                <element signature="e#1163#1175#0#Twig" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseuser.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="baseuser.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/baseuser.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="1666">
               <caret line="98" column="124" lean-forward="false" selection-start-line="98" selection-start-column="124" selection-end-line="98" selection-end-column="124" />
-              <folding>
-                <element signature="e#5531#5549#0#Twig" expanded="true" />
-                <element signature="e#5789#5801#0#Twig" expanded="true" />
-              </folding>
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -370,9 +213,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -424,9 +264,9 @@
         <option value="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/details2.html.twig" />
         <option value="$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php" />
         <option value="$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/index.html.twig" />
         <option value="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" />
+        <option value="$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/index.html.twig" />
       </list>
     </option>
   </component>
@@ -518,6 +358,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1160,16 +1002,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PIDEV WEB/AmineProjetDev" />
-    <property name="SearchEverywhereHistoryKey" value="evennement&#9;null&#9;null&#10;workspace&#9;FILE&#9;file://C:/wamp64/www/planners/.idea/workspace.xml&#10;wrapped&#9;null&#9;null&#10;validator.&#9;FILE&#9;file://C:/wamp64/www/pidev/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.ar.yml&#10;/login&#9;FILE&#9;file://C:/wamp64/www/pidev/app/Resources/views/FOSUser/views/Security/login_content.html.twig" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="works&#9;FILE&#9;file://C:/wamp64/www/planners/.idea/workspace.xml&#10;evennement&#9;null&#9;null&#10;workspace&#9;FILE&#9;file://C:/wamp64/www/planners/.idea/workspace.xml&#10;wrapped&#9;null&#9;null&#10;validator.&#9;FILE&#9;file://C:/wamp64/www/pidev/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.ar.yml&#10;/login&#9;FILE&#9;file://C:/wamp64/www/pidev/app/Resources/views/FOSUser/views/Security/login_content.html.twig" />
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
@@ -1298,7 +1138,8 @@
       <workItem from="1523221278582" duration="26047000" />
       <workItem from="1523310970723" duration="12149000" />
       <workItem from="1523380494185" duration="17727000" />
-      <workItem from="1523445192888" duration="35932000" />
+      <workItem from="1523445192888" duration="36332000" />
+      <workItem from="1523512226689" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="lina">
       <created>1521680998570</created>
@@ -1321,11 +1162,32 @@
       <option name="project" value="LOCAL" />
       <updated>1522698096256</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="omar final">
+      <created>1523511839064</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1523511839064</updated>
+    </task>
+    <task id="LOCAL-00005" summary="omar final">
+      <created>1523511904550</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1523511904550</updated>
+    </task>
+    <task id="LOCAL-00006" summary="omar final">
+      <created>1523512048441</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1523512048441</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="350159000" />
+    <option name="totallyTimeSpent" value="350561000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1337,15 +1199,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2246596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22768533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.50832075" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32" sideWeight="0.49167928" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
@@ -1355,6 +1216,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32" sideWeight="0.49167928" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1417,21 +1279,14 @@
     <MESSAGE value="Ahmed Front" />
     <MESSAGE value="Omar Bundle" />
     <MESSAGE value="omar test" />
-    <option name="LAST_COMMIT_MESSAGE" value="omar test" />
+    <MESSAGE value="omar final" />
+    <option name="LAST_COMMIT_MESSAGE" value="omar final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PiBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2227">
-          <caret line="137" column="33" lean-forward="false" selection-start-line="137" selection-start-column="20" selection-end-line="137" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Repository/RatingRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1454,7 +1309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
           <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="90" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1482,7 +1336,6 @@
           <caret line="13" column="47" lean-forward="false" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
           <folding>
             <element signature="e#13#32#0#Twig" expanded="false" />
-            <marker date="1523457846240" expanded="true" signature="39:2528" ph="{% block body ...%}" />
             <marker date="1523457846240" expanded="true" signature="1124:2370" ph="{% for utilisateur in utilisateurs ...%}" />
             <marker date="1523457846240" expanded="true" signature="1186:2337" ph="{% if utilisateur.nom != null ...%}" />
             <marker date="1523457846240" expanded="true" signature="1247:2301" ph="{% if utilisateur.nbreSignal &gt;10 ...%}" />
@@ -1516,7 +1369,6 @@
           <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
             <element signature="e#13#32#0#Twig" expanded="false" />
-            <marker date="1523458222859" expanded="true" signature="39:2170" ph="{% block body ...%}" />
           </folding>
         </state>
       </provider>
@@ -1561,9 +1413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="48" column="36" lean-forward="false" selection-start-line="48" selection-start-column="36" selection-end-line="48" selection-end-column="36" />
-          <folding>
-            <element signature="e#14#32#0#Twig" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1579,7 +1428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1626,7 +1474,6 @@
         <state relative-caret-position="102">
           <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
             <element signature="e#154#172#0#Twig" expanded="false" />
             <element signature="e#314#323#0#Twig" expanded="false" />
             <element signature="e#678#684#0#Twig" expanded="false" />
@@ -1643,7 +1490,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1691,7 +1537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1717,10 +1562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
           <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding>
-            <element signature="e#424#441#0#Twig" expanded="true" />
-            <element signature="e#526#542#0#Twig" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1728,7 +1569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1173">
           <caret line="61" column="32" lean-forward="false" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1823,7 +1663,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1855,9 +1694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding>
-            <element signature="e#7#236#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1873,23 +1709,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/details2.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="1411">
           <caret line="83" column="31" lean-forward="false" selection-start-line="83" selection-start-column="31" selection-end-line="83" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#h4#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h3#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#article#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2021#2056#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#li#0;n#ul#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#li#1;n#ul#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#aside#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#3752#3765#0#Twig" expanded="true" />
-            <element signature="e#3849#3856#0#Twig" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1897,10 +1719,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="e#12#32#0#Twig" expanded="true" />
-            <element signature="e#293#310#0#Twig" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1912,41 +1731,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-          <folding>
-            <element signature="e#3610#3626#0#Twig" expanded="true" />
-            <element signature="e#3812#3830#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="561">
           <caret line="33" column="5" lean-forward="false" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding>
             <element signature="e#43#70#0#PHP" expanded="true" />
-            <element signature="e#684#710#1#PHP" expanded="true" />
-            <element signature="e#754#791#0#PHP" expanded="true" />
-            <element signature="e#1204#1221#1#PHP" expanded="true" />
-            <element signature="e#1536#1569#1#PHP" expanded="true" />
-            <element signature="e#1625#1666#0#PHP" expanded="true" />
-            <element signature="e#2685#2703#0#PHP" expanded="true" />
-            <element signature="e#2784#2819#0#PHP" expanded="true" />
-            <element signature="e#3158#3194#0#PHP" expanded="true" />
-            <element signature="e#3848#3863#0#PHP" expanded="true" />
-            <element signature="e#3957#3993#0#PHP" expanded="true" />
-            <element signature="e#4495#4510#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
+        <state relative-caret-position="357">
           <caret line="21" column="68" lean-forward="false" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
           <folding />
         </state>
@@ -1954,23 +1751,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
+        <state relative-caret-position="901">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#13#31#0#Twig" expanded="true" />
-            <element signature="e#1163#1175#0#Twig" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/baseuser.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="1666">
           <caret line="98" column="124" lean-forward="false" selection-start-line="98" selection-start-column="124" selection-end-line="98" selection-end-column="124" />
-          <folding>
-            <element signature="e#5531#5549#0#Twig" expanded="true" />
-            <element signature="e#5789#5801#0#Twig" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Resources/views/commentaire/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
