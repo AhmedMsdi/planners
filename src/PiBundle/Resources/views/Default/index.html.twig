@@ -48,8 +48,8 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="text-center">
-                <h1>Explore Best Deals in Your City</h1>
-                <p class="text-bigger">Platea luctus aliquet per torquent nam varius hendrerit non odio risus aenean mus amet ad quisque velit nullam nunc curae metus proin blandit felis maecenas donec habitant semper morbi imperdiet</p>
+                <h1>Planners</h1>
+                <p class="text-bigger">Le site de référence pour profiter des meilleurs bons plans du net, d'échantillons gratuits, produits remboursés et deals en tous en genre.</p>
             </div>
         </div>
     </div>
@@ -83,38 +83,79 @@
                 </a>
 
             {% endfor %}
-            </div>	<a href="#" class="btn btn-white btn-lg btn-ghost">Find More</a>
+            </div>	<a href="{{ path('publicite_index') }}" class="btn btn-white btn-lg btn-ghost">Find More</a>
         </div>
     </div>
 </div>
 <div class="gap"></div>
 <div class="container">
     <div class="text-center">
-        <h2 class="mb30">New Deals in Your City</h2>
+        <h2 class="mb30">Les dernières publications</h2>
         <div class="row row-wrap" id="masonry">
-
-
-            <a class="col-md-2 col-masonry" href="#">
+            {% for heb in hebergements %}
+            <a class="col-md-2 col-masonry" href="{{ path('hebergement_show',{'id':heb.id}) }}">
                 <div class="product-thumb">
                     <header class="product-header">
+                        <img src="{{ asset('uploads/'~heb.photo) }}" alt="Image Alternative text" title="cascada" />
                     </header>
                     <div class="product-inner">
-                        <h5 class="product-title"></h5>
-                        <div class="product-desciption"></div>
-                        <div class="product-meta"><span class="product-time"><i class="fa fa-clock-o"></i> 3 days 22 h</span>
+                        <h5 class="product-title">{{ heb.titre|truncate(10, false, '') }}</h5>
+                        <div class="product-desciption">{{ heb.description|truncate(20, false, '') }}</div>
+                        <div class="product-meta"><span class="product-time"></span>
                             <ul class="product-price-list">
-                                <li><span class="product-price">$151</span>
-                                </li>
-                                <li><span class="product-old-price">$260</span>
+                                <li><span class="product-price">{{ heb.prix }} TND</span>
                                 </li>
                             </ul>
                         </div>
-                        <p class="product-location"><i class="fa fa-map-marker"></i> Boston</p>
+                        <p class="product-location"><i class="fa fa-map-marker"></i>{{ heb.lieu|capitalize }}</p>
                     </div>
                 </div>
             </a>
+            {% endfor %}
 
-        </div>	<a href="#" class="btn btn-primary btn-ghost">Explore All New Deals</a>
+            {% for plan in plans %}
+                <a class="col-md-2 col-masonry" href="#">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}" alt="Image Alternative text" title="cascada" />
+                        </header>
+                        <div class="product-inner">
+                            <h5 class="product-title">{{ plan.libelle }}</h5>
+                            <div class="product-desciption">{{ plan.description }}</div>
+                            <div class="product-meta"><span class="product-time"></span>
+                                <ul class="product-price-list">
+                                    <li><span class="product-price">{{ plan.prix }} TND</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="product-location"><i class="fa fa-map-marker"></i>{{ plan.adresse }}</p>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+
+            {% for event in events %}
+                <a class="col-md-2 col-masonry" href="#">
+                    <div class="product-thumb">
+                        <header class="product-header">
+                            <img src="{{ asset('imageEvent/' ~ event.image) }}" alt="Image Alternative text" title="cascada" />
+                        </header>
+                        <div class="product-inner">
+                            <h5 class="product-title">{{ event.titre }}</h5>
+                            <div class="product-desciption">{{ event.description }}</div>
+                            <div class="product-meta"><span class="product-time"></span>
+                                <ul class="product-price-list">
+                                    <li><span class="product-price">{{ event.prix }} TND</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="product-location"><i class="fa fa-map-marker"></i>{{ event.adresse }}</p>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+
+        </div>	<a href="{{ path('plan_FilterGasHorizontale') }}" class="btn btn-primary btn-ghost">Voir plus des plans</a>
     </div>
     <div class="gap"></div>
 </div>

@@ -31,6 +31,8 @@
     <!-- Your custom styles (blank file) -->
     <link rel="stylesheet" href="{{ asset('css/mystyles.css') }}">
     <link rel="stylesheet" href="{{ asset('css/switcher.css') }}">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet"  href="{{ asset('/templatePoupup/css/hunterPopup.css') }}">
 </head>
 
 {#<script>
@@ -231,9 +233,34 @@
     <script src="{{ asset('js/masonry.js') }}"></script>
     <script src="{{ asset('js/nicescroll.js') }}"></script>
 
+<!-- Custom scripts -->
+    <script src="{{ asset('js/general_main.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-datepicker.fr.js') }}"></script>
+    <script>
+        $('#calendar').datepicker({
+        });
+
+        !function ($) {
+            $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+                $(this).find('em:first').toggleClass("glyphicon-minus");
+            });
+            $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+        }(window.jQuery);
+
+        $(window).on('resize', function () {
+            if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+        })
+        $(window).on('resize', function () {
+            if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+        })
+    </script>
+<script src="{{ asset('js/custom.js') }}"></script>
+<script src="{{ asset('js/switcher.js') }}"></script>
     <!-- Custom scripts -->
     <script src="{{ asset('js/custom.js') }}"></script>
     <script src="{{ asset('js/switcher.js') }}"></script>
+
 
     <script src="{{ asset('js/general_main_front.js') }}"></script>
 
@@ -281,8 +308,15 @@
             <div class="row row-wrap">
                 <div class="col-md-3">
                     <a href="{{ path('pi_homepage') }}">
-                        <img src="{{ asset('img/logo.png') }}" alt="logo" title="logo" class="logo">
+                        <img src="{{ asset('images/logo-pidev2.png') }}" alt="logo" title="logo" class="logo">
                     </a>
+                    </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-3">
                     <ul class="list list-social">
                         <li>
                             <a class="fa fa-facebook box-icon" href="#" data-toggle="tooltip" title="Facebook"></a>
@@ -300,61 +334,8 @@
                             <a class="fa fa-tumblr box-icon" href="#" data-toggle="tooltip" title="Tumblr"></a>
                         </li>
                     </ul>
-                    <p>Tortor quisque varius consequat platea purus iaculis quam dis suspendisse augue consequat in porta quis nec purus habitasse orci velit</p>
-                </div>
-                <div class="col-md-3">
-                    <h4>Sign Up to the Newsletter</h4>
-                    <div class="box">
-                        <form>
-                            <div class="form-group mb10">
-                                <label>E-mail</label>
-                                <input type="text" class="form-control" />
-                            </div>
-                            <p class="mb10">Morbi porta libero fermentum mi pretium diam</p>
-                            <input type="submit" class="btn btn-primary" value="Sign Up" />
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <h4>Couponia on Twitter</h4>
-                    <!-- START TWITTER -->
-                    <div class="twitter-ticker" id="twitter-ticker"></div>
-                    <!-- END TWITTER -->
-                </div>
-                <div class="col-md-3">
-                    <h4>Recent News</h4>
-                    <ul class="thumb-list">
-                        <li>
-                            <a href="#">
-                                <img src="{{ asset('img/urbex_esch_lux_with_laney_and_laaaaag_70x70.jpg') }}" alt="Image Alternative text" title="Urbex Esch/Lux with Laney and Laaaaag" />
-                            </a>
-                            <div class="thumb-list-item-caption">
-                                <p class="thumb-list-item-meta">Jul 18, 2014</p>
-                                <h5 class="thumb-list-item-title"><a href="#">Dictumst dapibus</a></h5>
-                                <p class="thumb-list-item-desciption">Varius eleifend montes torquent sollicitudin</p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="{{ asset('img/amaze_70x70.jpg') }}" alt="Image Alternative text" title="AMaze" />
-                            </a>
-                            <div class="thumb-list-item-caption">
-                                <p class="thumb-list-item-meta">Jul 18, 2014</p>
-                                <h5 class="thumb-list-item-title"><a href="#">Imperdiet phasellus</a></h5>
-                                <p class="thumb-list-item-desciption">Mus netus netus natoque quis</p>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="{{ asset('img/the_hidden_power_of_the_heart_70x70.jpg') }}" alt="Image Alternative text" title="The Hidden Power of the Heart" />
-                            </a>
-                            <div class="thumb-list-item-caption">
-                                <p class="thumb-list-item-meta">Jul 18, 2014</p>
-                                <h5 class="thumb-list-item-title"><a href="#">Taciti dictumst</a></h5>
-                                <p class="thumb-list-item-desciption">Pharetra netus turpis aenean venenatis</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <p>Le site de référence pour profiter des meilleurs bons plans du net, d'échantillons gratuits, produits remboursés et deals en tous en genre.</p>
+
                 </div>
             </div>
         </div>
@@ -363,7 +344,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <p>Copyright © 2014, Your Store, All Rights Reserved</p>
+                    <p>Copyright © 2018, Your Store, All Rights Reserved</p>
                 </div>
                 <div class="col-md-6 col-md-offset-2">
                     <div class="pull-right">

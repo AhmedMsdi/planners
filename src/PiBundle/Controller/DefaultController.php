@@ -23,11 +23,14 @@ class DefaultController extends Controller
         $random_keys = array_rand($numbers, 4);
 
 
-        $plans =$em->getRepository('PlanBundle:Plan')->findBy(array('etat'=>1)) ;
-
-        $publicites = $em->getRepository('PubliciteBundle:Publicite')->findBy(array('idPub' => $numbers,
-                'etat' => 1)
-            , null, 4);
+            $publicites = $em->getRepository('PubliciteBundle:Publicite')->findBy(array('idPub' =>$numbers,'etat' =>1)
+                ,null,4);
+        $hebergements = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('id' =>$numbers,'enable' =>1)
+            ,null,6);
+        $plans = $em->getRepository('PlanBundle:Plan')->findBy(array('idP' =>$numbers,'etat' =>1)
+            ,null,6);
+        $events = $em->getRepository('EvennementBundle:Evennement')->findBy(array('id' =>$numbers,'etat' =>1)
+            ,null,6);
 
 
         $csrfToken = $this->tokenManager
@@ -39,9 +42,10 @@ class DefaultController extends Controller
         return $this->render('PiBundle:Default:index.html.twig',
             array(
                 'csrf_token' => $csrfToken,
-                'plans'=>$plans,
-
-                'publicites' => $publicites,
+             'publicites' => $publicites,
+                'hebergements' =>$hebergements,
+                'plans' => $plans,
+                'events' => $events
 
 
             ));

@@ -22,3 +22,8 @@ messagerie_delete:
     path:     /{id}/delete
     defaults: { _controller: "HebergementBundle:Messagerie:delete" }
     methods:  GET
+
+messagerie_indexAdmin:
+    path:     /
+    defaults: { _controller: "HebergementBundle:Messagerie:indexAdmin" }
+    methods:  GET

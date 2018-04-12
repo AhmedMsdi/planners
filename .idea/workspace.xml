@@ -1,219 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="redirection admin + back publicite">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Controller/ArticleBackController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Controller/PubBackController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/article/demandeArticle.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/publicite/demandePub.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Form/EvennementEditType.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/afficher.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/edit.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/new.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/show.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/Meteo.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/edit.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/menuevent.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/resultatsearch.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/edit.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/esp.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/hotels.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/index.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/maisons.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/mesbonplan.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/new.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pdf.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pensions.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/rech.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/show.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PiBundle/Redirection/AfterLoginRedirection.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Controller/ArticleController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Entity/Article.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Form/ArticleType.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Repository/ArticleRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing/article.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/edit.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/index.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/indexPerso.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/new.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/search.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/article/show.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Tests/Controller/ArticleControllerTest.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap-datepicker.fr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/general_main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/js/general_main_front.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/css/main.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/css/util.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-Bold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-BoldItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-ExtraBold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-Italic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-Light.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-LightItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-Regular.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-Regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-SemiBold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/OpenSans/OpenSans-SemiBoldItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/css/font-awesome.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/css/font-awesome.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/animated.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/bordered-pulled.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/core.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/fixed-width.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/font-awesome.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/icons.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/larger.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/list.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/mixins.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/path.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/rotated-flipped.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/screen-reader.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/stacked.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/less/variables.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_animated.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_core.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_icons.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_larger.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_list.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_mixins.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_path.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_stacked.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/_variables.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/scss/font-awesome.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Black.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-BlackItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Bold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-BoldItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-ExtraBold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-ExtraBoldItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-ExtraLight.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-ExtraLightItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Italic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Light.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-LightItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Medium.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-MediumItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-SemiBold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-SemiBoldItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-Thin.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/fonts/poppins/Poppins-ThinItalic.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/images/icons/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/js/main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/animate/animate.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-grid.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-grid.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-grid.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-grid.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-reboot.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-reboot.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-reboot.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-reboot.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/js/popper.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/js/popper.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/bootstrap/js/tooltip.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/jquery/jquery-3.2.1.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/perfect-scrollbar/perfect-scrollbar.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/perfect-scrollbar/perfect-scrollbar.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/select2/select2.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/select2/select2.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/select2/select2.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatelist/vendor/select2/select2.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/,.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/1 (2).jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/593876_large.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/8b3b0300101f6eb9ee28a166f20040be.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/97219004.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Desert.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Hydrangeas.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Jellyfish.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Lighthouse.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/chambre-5.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/uploads/masonhotes-100117-1.jpg" />
+    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="mahdi final">
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/edit.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/index.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/new.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/show.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/ParticipantController.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/Participant.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Form/ParticipantType.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/ParticipantRepository.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/valider.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/MesEvent.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Tests/Controller/ParticipantControllerTest.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/pdf.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/rechadmin.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/indexAdmin.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatePoupup/css/hunterPopup.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/templatePoupup/js/jquery-popup.js" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/pidev.iml" afterPath="$PROJECT_DIR$/.idea/pidev.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/FOSUser/views/Security/login_content.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/FOSUser/views/Security/login_content.html.twig" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" />
       <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
       <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/services.yml" afterPath="$PROJECT_DIR$/app/config/services.yml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change beforePath="$PROJECT_DIR$/bin/console" afterPath="$PROJECT_DIR$/bin/console" />
       <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/config/routing.yml" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" />
       <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" />
       <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Form/EvennementType.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Form/EvennementType.php" />
       <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/public/css/css_event.css" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/public/css/css_event.css" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/edit.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/edit.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/new.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/edit.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/new.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/show.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/show.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/new.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" />
       <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Entity/Hebergement.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Entity/Hebergement.php" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Entity/Messagerie.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Entity/Messagerie.php" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Form/HebergementType.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Form/HebergementType.php" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Form/MessagerieType.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Form/MessagerieType.php" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/hebergement.yml" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/hebergement.yml" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/edit.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/edit.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/esp.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/esp.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/hotels.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/hotels.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/index.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/maisons.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/maisons.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/pensions.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/pensions.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/rech.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/rech.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/show.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/show.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/messagerie.yml" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/messagerie.yml" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/hotels.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/hotels.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/index.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/maisons.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/maisons.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pdf.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pdf.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pensions.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergementadmin/pensions.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php" />
-      <change beforePath="$PROJECT_DIR$/src/PiBundle/Entity/User.php" afterPath="$PROJECT_DIR$/src/PiBundle/Entity/User.php" />
       <change beforePath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" afterPath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Controller/PubliciteController.php" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Controller/PubliciteController.php" />
-      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Form/PubliciteType.php" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Form/PubliciteType.php" />
-      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing/publicite.yml" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing/publicite.yml" />
-      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/chart.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/chart.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/edit.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/edit.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/index.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/new.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/new.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/search.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/search.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/show.html.twig" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/show.html.twig" />
-      <change beforePath="$PROJECT_DIR$/web/uploads/35089-NZT4QN.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/uploads/Capturelo.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/uploads/Sans-titre-1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/uploads/esprit-pidev.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/uploads/message de jour.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/uploads/tageza.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" />
+      <change beforePath="$PROJECT_DIR$/web/js/bootstrap-datepicker.fr.js" afterPath="$PROJECT_DIR$/web/js/bootstrap-datepicker.fr.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -222,7 +65,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true" synchronizationState="DONT_SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="DatabaseView">
@@ -240,7 +83,82 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="PlanController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-150">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#638#913#0#PHP" expanded="false" />
+                <element signature="e#2863#2916#0#PHP" expanded="false" />
+                <element signature="e#2922#3202#0#PHP" expanded="false" />
+                <element signature="e#3208#3920#0#PHP" expanded="false" />
+                <element signature="e#3927#3979#0#PHP" expanded="false" />
+                <element signature="e#3984#5183#0#PHP" expanded="false" />
+                <element signature="e#7335#7611#0#PHP" expanded="false" />
+                <element signature="e#7617#7676#0#PHP" expanded="false" />
+                <element signature="e#7681#7948#0#PHP" expanded="false" />
+                <element signature="e#7954#8028#0#PHP" expanded="false" />
+                <element signature="e#9201#9249#0#PHP" expanded="false" />
+                <element signature="e#9254#9652#0#PHP" expanded="false" />
+                <element signature="e#9659#9937#0#PHP" expanded="false" />
+                <element signature="e#9945#10195#0#PHP" expanded="false" />
+                <element signature="e#10203#10564#0#PHP" expanded="false" />
+                <element signature="e#10570#10918#0#PHP" expanded="false" />
+                <element signature="e#10924#11236#0#PHP" expanded="false" />
+                <element signature="e#11242#11275#0#PHP" expanded="false" />
+                <element signature="e#11280#11484#0#PHP" expanded="false" />
+                <element signature="e#12523#12823#0#PHP" expanded="false" />
+                <element signature="e#13073#13120#0#PHP" expanded="false" />
+                <element signature="e#13133#13429#0#PHP" expanded="false" />
+                <element signature="e#13735#14030#0#PHP" expanded="false" />
+                <element signature="e#14035#14330#0#PHP" expanded="false" />
+                <element signature="e#14335#14648#0#PHP" expanded="false" />
+                <element signature="e#14653#14960#0#PHP" expanded="false" />
+                <element signature="e#14965#15272#0#PHP" expanded="false" />
+                <element signature="e#19885#20800#0#PHP" expanded="false" />
+                <marker date="1523488454330" expanded="true" signature="20910:21289" ph="SELECT p FRO... PlanBundle" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GastronomieFilter.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="111" column="24" lean-forward="false" selection-start-line="111" selection-start-column="22" selection-end-line="114" selection-end-column="32" />
+              <folding>
+                <element signature="e#13#31#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="218">
+              <caret line="116" column="48" lean-forward="false" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="baseuser.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/baseuser.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="176" column="28" lean-forward="false" selection-start-line="176" selection-start-column="28" selection-end-line="176" selection-end-column="28" />
+              <folding>
+                <element signature="e#9267#9274#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -251,9 +169,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Explore b</find>
-      <find>eve</find>
-      <find>$list_categ</find>
       <find>new g</find>
       <find>150</find>
       <find>price</find>
@@ -281,6 +196,9 @@
       <find>reser</find>
       <find>les dema</find>
       <find>Mes publ</find>
+      <find>evenne</find>
+      <find>index</find>
+      <find>search are</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wamp64\www\pidev</dir>
@@ -290,11 +208,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="s doctrine:schema:update --force" />
-      <command text="c dump-autoload" />
-      <command text="c require knplabs/knp-paginator-bundle" />
-      <command text="s doctrine:schema:update -f " />
-      <command text="c require knplabs/knp-paginator-bundle" />
       <command text="s doctrine:schema:update -f " />
       <command text="s doctrine:schema:update --force" />
       <command text="c update " />
@@ -315,6 +228,11 @@
       <command text="c require spipu/html2pdf" />
       <command text="s doctrine:schema:update -f " />
       <command text="s fos:user:create admin admin@gmail.com admin --super-admin" />
+      <command text="c require spipu/html2pdf" />
+      <command text="s doctrine:schema:update -f " />
+      <command text="s fos:user:create admin admin@gmail.com admin --super-admin" />
+      <command text="c require spipu/html2pdf" />
+      <command text="s doctrine:schema:update -f " />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -325,21 +243,15 @@
       </map>
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/public/css/css_event.css" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/edit.html.twig" />
         <option value="$PROJECT_DIR$/../template/features-lightbox.html" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/detailevent.html.twig" />
-        <option value="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/resultatsearch.html.twig" />
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/menuevent.twig" />
@@ -348,7 +260,6 @@
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" />
         <option value="$PROJECT_DIR$/web/js/general_main_front.js" />
-        <option value="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/afficher.html.twig" />
         <option value="$PROJECT_DIR$/web/templatelist/css/main.css" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -364,8 +275,6 @@
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/show.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" />
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" />
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" />
         <option value="$PROJECT_DIR$/src/HebergementBundle/Entity/Messagerie.php" />
         <option value="$PROJECT_DIR$/src/HebergementBundle/Form/MessagerieType.php" />
@@ -374,7 +283,6 @@
         <option value="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/index.html.twig" />
         <option value="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" />
         <option value="$PROJECT_DIR$/src/PiBundle/Entity/User.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
         <option value="$PROJECT_DIR$/src/PubliciteBundle/Form/PubliciteType.php" />
         <option value="$PROJECT_DIR$/src/BackOfficeBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/publicite/demandePub.html.twig" />
@@ -382,6 +290,13 @@
         <option value="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/index.html.twig" />
         <option value="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/show.html.twig" />
         <option value="$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" />
+        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
+        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" />
+        <option value="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" />
       </list>
     </option>
   </component>
@@ -451,13 +366,20 @@
       <path value="$PROJECT_DIR$/vendor/mgilet/notification-bundle" />
       <path value="$PROJECT_DIR$/vendor/spipu/html2pdf" />
       <path value="$PROJECT_DIR$/vendor/tecnickcom/tcpdf" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/easy-extends-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/doctrine-extensions" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/notification-bundle" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/datagrid-bundle" />
+      <path value="$PROJECT_DIR$/vendor/zendframework/zenddiagnostics" />
+      <path value="$PROJECT_DIR$/vendor/sonata-project/core-bundle" />
+      <path value="$PROJECT_DIR$/vendor/cocur/slugify" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-126" />
-    <option name="y" value="48" />
-    <option name="width" value="1002" />
-    <option name="height" value="616" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -474,6 +396,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="planners" type="cbb8eebc:String" user="planners" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="planners" type="cbb8eebc:String" user="planners" />
+              <item name=".idea" type="cbb8eebc:String" user=".idea" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -490,7 +428,124 @@
             <path>
               <item name="planners" type="b2602c69:ProjectViewProjectNode" />
               <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="bin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="article" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Default" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BackOfficeBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="plan" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PiBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PiBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PiBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PiBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Default" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="planners" type="b2602c69:ProjectViewProjectNode" />
@@ -504,6 +559,20 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="PlanBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PlanBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PlanBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Form" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="planners" type="b2602c69:ProjectViewProjectNode" />
@@ -551,6 +620,15 @@
               <item name="PlanBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Default" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PlanBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="plan" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -564,7 +642,31 @@
               <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="PubliciteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PubliciteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PubliciteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PubliciteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routing" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="planners" type="b2602c69:ProjectViewProjectNode" />
@@ -582,27 +684,6 @@
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="publicite" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="planners" type="cbb8eebc:String" user="planners" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="planners" type="cbb8eebc:String" user="planners" />
-              <item name=".idea" type="cbb8eebc:String" user=".idea" />
             </path>
           </expand>
           <select />
@@ -791,7 +872,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268681000" />
+    <option name="totallyTimeSpent" value="274551000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -804,19 +885,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837528" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837528" sideWeight="0.5021482" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30320367" sideWeight="0.48865354" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837528" sideWeight="0.49785176" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5021482" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.49785176" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24599542" sideWeight="0.48979592" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12274959" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33780882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22126746" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837528" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -827,9 +908,10 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034258" sideWeight="0.51134646" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2903752" sideWeight="0.48865354" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12274959" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -839,8 +921,8 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -866,9 +948,6 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -879,97 +958,15 @@
     <MESSAGE value="lina chayma ahmed mahdi omar1/2" />
     <MESSAGE value="quelques modification Mahdi" />
     <MESSAGE value="redirection admin + back publicite" />
-    <option name="LAST_COMMIT_MESSAGE" value="redirection admin + back publicite" />
+    <MESSAGE value="lina presque fini" />
+    <MESSAGE value="mahdi final" />
+    <option name="LAST_COMMIT_MESSAGE" value="mahdi final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Repository/CategorieEventRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="111" column="18" lean-forward="false" selection-start-line="111" selection-start-column="18" selection-end-line="111" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="42" column="59" lean-forward="false" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="304" column="14" lean-forward="true" selection-start-line="304" selection-start-column="14" selection-end-line="304" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1683">
-          <caret line="104" column="38" lean-forward="false" selection-start-line="104" selection-start-column="38" selection-end-line="104" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/pdf.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/search.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1051">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/esp.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Entity/Messagerie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="82" column="7" lean-forward="false" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Form/HebergementType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-42">
@@ -1021,8 +1018,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="191" column="5" lean-forward="false" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
+        <state relative-caret-position="233">
+          <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1059,7 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="50" selection-end-column="130" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,14 +1073,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Entity/Publicite.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="17" column="64" lean-forward="false" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PiBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1093,14 +1081,6 @@
             <element signature="e#6#88#0#PHP" expanded="false" />
             <element signature="e#116#158#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/baseuser.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1120,13 +1100,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/bundles/ckeditor/lang/af.js" />
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="81" column="45" lean-forward="false" selection-start-line="81" selection-start-column="21" selection-end-line="81" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/edit.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1166,10 +1139,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#47#74#0#PHP" expanded="true" />
-            <element signature="e#1595#1612#1#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1224,21 +1193,169 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        <state relative-caret-position="442">
+          <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+          <folding>
+            <element signature="e#39#96#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Controller/ParticipantController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="46" column="70" lean-forward="false" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Entity/Publicite.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="110" column="45" lean-forward="false" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="68" column="19" lean-forward="false" selection-start-line="68" selection-start-column="19" selection-end-line="68" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="315" column="26" lean-forward="false" selection-start-line="116" selection-start-column="23" selection-end-line="315" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="185" column="9" lean-forward="false" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="78" column="46" lean-forward="false" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="63" column="82" lean-forward="false" selection-start-line="63" selection-start-column="82" selection-end-line="63" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#638#913#0#PHP" expanded="false" />
+            <element signature="e#2863#2916#0#PHP" expanded="false" />
+            <element signature="e#2922#3202#0#PHP" expanded="false" />
+            <element signature="e#3208#3920#0#PHP" expanded="false" />
+            <element signature="e#3927#3979#0#PHP" expanded="false" />
+            <element signature="e#3984#5183#0#PHP" expanded="false" />
+            <element signature="e#7335#7611#0#PHP" expanded="false" />
+            <element signature="e#7617#7676#0#PHP" expanded="false" />
+            <element signature="e#7681#7948#0#PHP" expanded="false" />
+            <element signature="e#7954#8028#0#PHP" expanded="false" />
+            <element signature="e#9201#9249#0#PHP" expanded="false" />
+            <element signature="e#9254#9652#0#PHP" expanded="false" />
+            <element signature="e#9659#9937#0#PHP" expanded="false" />
+            <element signature="e#9945#10195#0#PHP" expanded="false" />
+            <element signature="e#10203#10564#0#PHP" expanded="false" />
+            <element signature="e#10570#10918#0#PHP" expanded="false" />
+            <element signature="e#10924#11236#0#PHP" expanded="false" />
+            <element signature="e#11242#11275#0#PHP" expanded="false" />
+            <element signature="e#11280#11484#0#PHP" expanded="false" />
+            <element signature="e#12523#12823#0#PHP" expanded="false" />
+            <element signature="e#13073#13120#0#PHP" expanded="false" />
+            <element signature="e#13133#13429#0#PHP" expanded="false" />
+            <element signature="e#13735#14030#0#PHP" expanded="false" />
+            <element signature="e#14035#14330#0#PHP" expanded="false" />
+            <element signature="e#14335#14648#0#PHP" expanded="false" />
+            <element signature="e#14653#14960#0#PHP" expanded="false" />
+            <element signature="e#14965#15272#0#PHP" expanded="false" />
+            <element signature="e#19885#20800#0#PHP" expanded="false" />
+            <marker date="1523488454330" expanded="true" signature="20910:21289" ph="SELECT p FRO... PlanBundle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="111" column="24" lean-forward="false" selection-start-line="111" selection-start-column="22" selection-end-line="114" selection-end-column="32" />
+          <folding>
+            <element signature="e#13#31#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/baseuser.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="176" column="28" lean-forward="false" selection-start-line="176" selection-start-column="28" selection-end-line="176" selection-end-column="28" />
+          <folding>
+            <element signature="e#9267#9274#1#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="36" />
+        <state relative-caret-position="218">
+          <caret line="116" column="48" lean-forward="false" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>

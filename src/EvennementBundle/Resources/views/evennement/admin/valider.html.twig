@@ -1,0 +1,11 @@
+<ul class="list_btn_action">
+    <li>
+        <a href="{{ path('evennement_show', { 'id': evennement.id }) }}" class="btn btn-info btn-xs">Détail</a>
+    </li>
+    <li>
+        <a href="{{ path('evennement_edit', { 'id': evennement.id }) }}" class="btn btn-warning btn-xs">Modifier</a>
+    </li>
+    <li>
+        <a href="{{ path('valider_event', { 'id': evennement.id }) }}" class="btn btn-warning btn-xs">valider</a>
+    </li>
+</ul>

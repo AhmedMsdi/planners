@@ -1,0 +1,76 @@
+{% extends 'baseuser.html.twig' %}
+
+{% block body %}
+<div class="gap" style=" margin-left: 120px; padding-left: 80px">
+    <a href="{{ path('MesEvennement_list') }}" class="btn btn-info"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Liste</a>
+    <a href="{{ path('evennement_ajouter') }}" class="btn btn-success" >
+        <div class="fa  fa-plus-square"></div>
+        Ajouter Evennements</a>
+    <a href="{{ path('evennement_list') }}" class="btn btn-warning"><div class="fa  fa-bar-chart-o"></div> Mes Evennements</a>
+
+</div>
+
+<div class="container">
+    <div class="row">
+
+
+        <div class="col-md-3">
+            <aside class="sidebar-left">
+                <ul class="nav nav-pills nav-stacked nav-arrow">
+                    <li><a href="{{ path('profil') }}">Settings</a>
+                    </li>
+                    <li class="active"><a href="{{ path('Profil_index') }}">Mes plans</a>
+                    </li>
+                    <li><a href="{{ path('Profil_index') }}">Mes evenements</a>
+                    </li>
+                    <li><a href="{{ path('MesEvennement_list') }}">Mes hebergements</a>
+                    </li>
+                    <li><a href="{{ path('publicite_index') }}">Mes publicites</a>
+                    </li>
+                </ul>
+            </aside>
+        </div>
+
+
+
+    <link rel="stylesheet" href="{{ asset('bundles/evennement/css/css_event.css') }}">
+    <div class="container margin_container" >
+
+        <div class="row">
+
+                <div class="row row-wrap"  id="div_all_event">
+                    {% for event in evennements %}
+                    <a class="col-md-4 section_event" href="{{ path('evennement_info',{'id': event.id }) }}">
+                        <div class="product-thumb">
+                            <header class="product-header">
+                                <img src="{{ asset('imageEvent/'~event.image )}}" alt="Image Alternative text" title="Ana 29" />
+                            </header>
+                            <div class="product-inner">
+                                <h5 class="product-title">{{ event.titre }}</h5>
+                                <p class="product-desciption">{{ event.description }}</p>
+                                <div class="product-meta">
+                                    <span class="product-time"><i class="fa fa-calendar"></i> {{ event.dateEvent |date('d-m-Y') }} <i class="fa fa-clock-o"></i> {{ event.timeEvent |date('h:i')}}
+                                        <br><i class="fa fa-mobile"></i> {{ event.contact }}
+                                    </span>
+
+                                    <ul class="product-price-list">
+                                        <li><span class="product-price">{{ event.prix |number_format(3,'.','') }} TND</span>
+                                        </li>
+                                        <li> {% if event.etat==1 %} <span class="product-price"><i class="fa fa-check"></i> Validé {% endif %}</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <p class="product-location"><i class="fa fa-map-marker"></i> {{ event.ville}}</p>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    </div>
+{% endblock %}
