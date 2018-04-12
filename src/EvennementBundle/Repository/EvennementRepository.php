@@ -11,12 +11,12 @@ use Doctrine\ORM\QueryBuilder;
 class EvennementRepository extends \Doctrine\ORM\EntityRepository
 {
     public function MyFindAll($data) {
-        $queryBuilder = $this->createQueryBuilder('a');
+        $currentdate = new \DateTime('now');
+        $queryBuilder = $this->createQueryBuilder('a')->where('a.date_event >= :date')
+            ->orderBy('a.date_event','DESC')
+            ->setParameter('date', $currentdate->format('Y-m-d'));
 
         $this->searchEvent($queryBuilder,$data);
-
-        $this->ordreEvent($queryBuilder,$data);
-
         $result = $queryBuilder->getQuery()->execute();
         return $result;
 

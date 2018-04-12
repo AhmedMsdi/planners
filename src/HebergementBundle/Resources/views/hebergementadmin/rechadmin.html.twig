@@ -1,0 +1,103 @@
+{% extends ('baseadmin.html.twig') %}
+
+
+{%  block body %}
+
+
+
+
+    <!-- //////////////////////////////////
+//////////////PAGE CONTENT/////////////
+////////////////////////////////////-->
+
+    <div class="gap"></div>
+
+    <div class="container">
+        <div class="row">
+            <br>
+            <center><form role="search"  method="post" action="{{ path('rechadmin') }}">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Recherche" type="text" name="recha">
+                </div>
+            </form></center>
+            <br><br>
+            <div class="col-md-12">
+                <table width="100%" style="color: black">
+                    <tr class="nav nav-tabs nav-stacked nav-coupon-category nav-coupon-category-left">
+                        <td class="active"><a style="color: black" href="{{ path('hebergement_index') }}"><i class="fa fa-globe"></i> Résultat de recherche<span> {{ hebergements|length }}</span></a>
+                        </td>
+                        <td class="active"><a style="color: black" href="{{ path('hebergement_index') }}"><i class="fa fa-globe"></i> En attente </a>
+                        </td>
+                        <td ><a style="color: black" href="{{ path('hotels_index') }}"><i class="fa fa-calendar"></i> Hôtel<span>{{ h|length }}</span></a>
+                        </td>
+                        <td><a style="color: black" href="{{ path('maisons_index') }}"><i class="fa fa-home"></i> Maisons d'hôtes<span>{{ m|length }}</span></a>
+                        </td>
+                        <td><a style="color: black" href="{{ path('pensions_index') }}"><i class="fa fa-cutlery"></i> Pensions<span>{{ p|length }}</span></a>
+                        </td>
+
+                    </tr>
+
+                </table>
+
+
+            </div>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-3">
+                      <br>
+                      <br>
+                      <br>
+                    </div>
+                </div>
+
+                <div class="row row-wrap" style="height: 500px">
+                    <table class="table" >
+
+                    {% for heb in hebergements%}
+
+
+                        <tr width="60px">
+                            <td>
+                                <img src="{{ asset('uploads/'~heb.photo) }}" alt="Image Alternative text" height="45px" title="{{ heb.lieu }}" />
+                            </td>
+                            <td>
+                                <h5 class="product-title">{{ heb.titre|truncate(10, false, '') }}</h5>
+
+                            </td>
+                            <td>
+                                <p class="product-desciption">{{ heb.description|truncate(20, false, '') }}</p>
+
+                            </td>
+                            <td>
+                                <span class="product-price">{{ heb.prix }} TND</span>
+
+                            </td>
+                            <td>
+                                <p class="product-location"><i class="fa fa-map-marker"></i>{{ heb.lieu|capitalize }}</p>
+
+                            </td>
+
+
+                            <td>
+                            <a class="btn btn-info" style="background-color: yellow; color: black"  href="{{ path('hebergement_show',{'id':heb.id}) }}"> Voir hebergement
+                            </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- //////////////////////////////////
+//////////////END PAGE CONTENT/////////
+////////////////////////////////////-->
+
+
+
+
+{%  endblock %}

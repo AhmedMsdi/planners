@@ -23,7 +23,10 @@ class ModifierAjoutType extends AbstractType
             ->add('libelle', TextType::class, array('attr' => array('class' => 'form-control', 'placeholder' => 'Titre')))
             ->add('adresse', TextType::class, array('attr' => array('class' => 'form-control', 'placeholder' => 'adresse')))
             ->add('ville', TextType::class, array('attr' => array('class' => 'form-control', 'placeholder' => 'ville')))
-            // ->add('image', FileType::class, array('attr' => array('class' => 'form-control', 'placeholder' => '')))
+             ->add('image',FileType::class, array(
+                 'required' => true,
+                 'data_class'=>null,
+             ))
             //   ->add('email',TextType::class,array('attr'=>array('class'=>'form-control','placeholder'=>'email')))
             ->add('prix', TextType::class, array('attr' => array('class' => 'form-control', 'placeholder' => 'Titre')))
             ->add('longitude', TextType::class, array('attr' => array('class' => 'form-control', 'placeholder' => 'Titre')))

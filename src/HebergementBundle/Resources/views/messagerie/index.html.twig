@@ -22,7 +22,7 @@
 
                         </thead>
                         <tbody>
-                        {% for messagerie in messageries if messagerie.etat==1  and app.user.id==messagerie.idUser%}
+                        {% for messagerie in messageries if messagerie.etat==1 and (messagerie.datedebut|date('d-m-Y')> 'now'|date('d-m-Y')) and app.user.id==messagerie.idUser%}
                         <tr>
                             <td class="mailbox-name">{{ messagerie.idClient }}</a></td>
                             <td class="mailbox-subject"><b>Hebergement</b><a href="{{ path('hebergement_show',{'id':messagerie.idheb}) }}"> {{ messagerie.idheb }}</a>.</td>
@@ -35,7 +35,7 @@
                             </td>
                         </tr>
                         {% endfor %}
-                        {% for messagerie in messageries if messagerie.etat==2  and app.user==messagerie.idClient%}
+                        {% for messagerie in messageries if messagerie.etat==2 and (messagerie.datedebut|date('d-m-Y')> 'now'|date('d-m-Y')) and app.user==messagerie.idClient%}
                             <tr>
                                 <td class="mailbox-name">{{ messagerie.idClient }}</a></td>
                                 <td class="mailbox-subject"><b>Hebergement</b><a href="{{ path('hebergement_show',{'id':messagerie.idheb}) }}"> {{ messagerie.idheb }}</a>.</td>

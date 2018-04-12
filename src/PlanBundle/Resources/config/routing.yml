@@ -1,7 +1,9 @@
 plan_plan:
     resource: "@PlanBundle/Resources/config/routing/plan.yml"
     prefix:   /plan
-
+Find_Filter:
+    path:     /Find
+    defaults: { _controller: "PlanBundle:Plan:RechercheFilter" }
 plan_Filter_Gaspage:
     path:     /filterGas
     defaults: { _controller: PlanBundle:Plan:FilterGastronomie }

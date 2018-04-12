@@ -48,7 +48,7 @@ class CategorieEventController extends Controller
             $em->persist($categorieEvent);
             $em->flush();
 
-            return $this->redirectToRoute('categorieevent_show', array('id' => $categorieEvent->getId()));
+            return $this->redirectToRoute('categorieevent_new', array('id' => $categorieEvent->getId()));
         }
 
         return $this->render('EvennementBundle:categorieevent:new.html.twig', array(

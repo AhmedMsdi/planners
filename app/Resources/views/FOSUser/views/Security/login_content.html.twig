@@ -7,50 +7,29 @@
     <div class="top-content">
 
         <div class="inner-bg">
-            <div class="container" style="position: relative;margin-left: 400px;">
+    <div class="container" style="position: relative;margin-left: 400px;">
 
-                <div class="col-sm-5">
+        <div class="col-sm-5">
 
-                    <div id="login-dialog"  >
-                        <i class="fa fa-sign-in dialog-icon"></i>
-                        <h3>Member Login</h3>
-                        <h5>Welcome back, friend. Login to get started</h5>
-                        <form class="dialog-form" action="{{ path("fos_user_security_check") }}" method="post"  >
-                            {% if csrf_token %}
-                                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-                            {% endif %}
-                            <div class="form-group">
-                                <label>Username</label>
-                                <input type="text" name="_username" placeholder="Username..." class="form-username form-control" id="username" required="required">
-                            </div>
-                            <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" name="_password" placeholder="Password..." class="form-password form-control" id="password" required="required">
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type="checkbox">Remember me
-                                </label>
-                            </div>
-                            <input type="submit" data-toggle="modal" class="btn btn-primary" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" >
-                        </form>
-                        <ul class="dialog-alt-links">
-                            <li><a class="popup-text" href="#register-dialog" data-effect="mfp-zoom-out">Not member yet</a>
-                            </li>
-                            <li><a class="popup-text" href="#password-recover-dialog" data-effect="mfp-zoom-out">Forgot password</a>
-                            </li>
-                        </ul>
-                        <div id="password-recover-dialog" class="mfp-with-anim mfp-hide mfp-dialog clearfix">
-                            <i class="icon-retweet dialog-icon"></i>
-                            <h3>Password Recovery</h3>
-                            <h5>Fortgot your password? Don't worry we can deal with it</h5>
-                            <form class="dialog-form">
-                                <label>E-mail</label>
-                                <input type="text" placeholder="email@domain.com" class="span12">
-                                <input type="submit" value="Request new password" class="btn btn-primary">
-                            </form>
-                        </div>
+            <div id="login-dialog"  >
+                <i class="fa fa-sign-in dialog-icon"></i>
+                <h3>Member Login</h3>
+                <h5>Welcome back, friend. Login to get started</h5>
+                <form class="dialog-form" action="{{ path("fos_user_security_check") }}" method="post"  >
+                    {% if csrf_token %}
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                    {% endif %}
+                    <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" name="_username" placeholder="Username..." class="form-username form-control" id="username" required="required">
                     </div>
-                </div></div></div></div>
-    <div class="gap"></div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="_password" placeholder="Password..." class="form-password form-control" id="password" required="required">
+                    </div>
+                    <input type="submit" data-toggle="modal" class="btn btn-primary" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" >
+                </form>
+            </div>
+        </div></div></div></div>
+<div class="gap"></div>
 {% endblock %}

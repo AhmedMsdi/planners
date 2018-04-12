@@ -1,0 +1,27 @@
+{% extends 'baseuser.html.twig' %}
+
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('bundles/evennement/css/css_event.css') }}">
+    <div class="container margin_container ">
+    <h1 style="padding-left:200px ; color: #0a7369">Voulez vous Participer à cet Evennement ? ?</h1>
+
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+        <div class="col-md-12">
+        <ul class="list_btn_action ">
+            <li>
+                <input style="margin-left: 400px"  type="submit" value="Participer" class="btn btn-info"/><span class="glyphicon glyphicon" aria-hidden="true"></span>
+            </li>
+            <li>
+                <button type="reset" value="Annuler" class="btn btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Annuler</button>
+            </li>
+        </ul>
+    </div>
+
+
+    {{ form_end(form) }}
+    </div>
+
+{% endblock %}

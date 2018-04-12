@@ -7,6 +7,7 @@ use PlanBundle\Entity\Plan;
 use PlanBundle\Entity\Rating;
 use PlanBundle\Form\ModifierAjoutType;
 use PlanBundle\Form\PlanType;
+use Symfony\Component\HttpFoundation\Response;
 use blackknight467\StarRatingBundle\Form\RatingType;
 use Proxies\__CG__\PlanBundle\Entity\SousCategorie;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -41,49 +42,76 @@ class PlanController extends Controller
     }
 
 
-    public function FilterDivertissementAction()
+    public function FilterDivertissementAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->DivertisementsAction();
+        /**
+         * @var $paginator \knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $plans,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 6)
         $rating = $em->getRepository('PlanBundle:Rating')->AVGRating();
 
+        );
         return $this->render('@Plan/Default/DivertissementSousCatAffichage.html.twig', array(
             'plans' => $plans,
             'rating' => $rating
+            'plans'=>$plans,'result'=>$result
         ));
     }
 
 
-    public function FilterGastronomieAction()
+    public function FilterGastronomieAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $rating = $em->getRepository('PlanBundle:Rating')->findAll();
         $rating = $em->getRepository('PlanBundle:Rating')->AVGRating();
         $plans = $em->getRepository('PlanBundle:Plan')->GastronomieAction();
-        //$plans = $em->getRepository('PlanBundle:Plan')->findAll();
 
-        //$plansgas=array() ;
-        //foreach ($plans as $plan){
-        //    if($plan->ge)
-        //}
+        /**
+         * @var $paginator \knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $plans,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 6)
+
+        );
 
         return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
             'plans' => $plans,
             'rating' => $rating
+            'plans'=>$plans,'result'=>$result
         ));
     }
 
-    public function FilterBEAction()
+    public function FilterBEAction(Request $request)
     {
+
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->BienEAction();
+        /**
+         * @var $paginator \knp\Component\Pager\Paginator
+         */
+        $paginator = $this->get('knp_paginator');
+        $result = $paginator->paginate(
+            $plans,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 6)
         $rating = $em->getRepository('PlanBundle:Rating')->AVGRating();
 
+        );
         return $this->render('@Plan/Default/BienEtreSousCatAffichage.html.twig', array(
             'plans' => $plans,
             'rating' => $rating
+            'plans' => $plans,'result'=>$result
         ));
     }
 
@@ -190,13 +218,43 @@ class PlanController extends Controller
 //            'plan' => $plan,
 //            'form' => $form->createView(),
 //        ));
+        /*
+        global $kernel;
+        $user = $kernel->getContainer()->get('security.token_storage')->getToken()->getUser();
+        $emm = $this->getDoctrine()->getManager();
+        */
+/*
+        $ems = $this->getDoctrine()->getManager();
+        $plans = $ems->getRepository('PlanBundle:Plan')->NotifAction($user);
+
+        foreach($plans as $plan) {
+            $oldlong=  $plan->getlibelle();
+            $oldlat = $plan->getidP();
+            $oldMarker = $oldlat . '-' . $oldlong;
+            $this->get('session')->getFlashBag()->add(
+                'notice',
+                $oldMarker
+            );
+        }
+*/
 
         return $this->render('@Plan/plan/single-news.html.twig', array(
             'plan' => $plan,
             'form' => $form->createView(),
         ));
     }
+    public function delete_notifAction(Request $request )
+    {
 
+        $em = $this->getDoctrine()->getManager();
+
+         $idP = $request->get('idP');
+        $plans = $em->getRepository('PlanBundle:Plan')->find($idP);
+        $plans->setEtatnotif(1);
+        $em->flush();
+
+         return $this->redirectToRoute('Profil_index', array( 'plans' => $plans ));
+    }
 
     public function showFrontComAction(Request $request, $id)
     {
@@ -225,48 +283,37 @@ class PlanController extends Controller
      * Displays a form to edit an existing plan entity.
      *
      */
+
     public function editAction(Request $request, Plan $plan)
-    {
-        $deleteForm = $this->createDeleteForm($plan);
-        $editForm = $this->createForm('PlanBundle\Form\ModifierAjoutType', $plan);
-        $editForm->handleRequest($request);
-        $plan->setEtat(0);
+        {
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
+                $editForm = $this->createForm('PlanBundle\Form\ModifierAjoutType', $plan);
+                $editForm->handleRequest($request);
+                $x=$plan->getImage();
+                if ($editForm->isSubmitted() && $editForm->isValid()) {
+                    if ($plan->getImage()=="")
+                    {
+                        $plan->setImage($x);
+                    }
+                    /**
+                     * @var UploadedFile $file
+                     */
+                    $file = $plan->getImage();
 
-            $this->getDoctrine()->getManager()->flush();
-            //return $this->redirectToRoute('plan_indextableau', array('idP' => $plan->getIdp()));
-        }
+                    $file->move(
+                        $this->getParameter('brochures_directory'), $file->getClientOriginalName());
+                    $plan->setImage($file->getClientOriginalName());
 
-        return $this->render('@Plan/plan/edit.html.twig', array(
-            'plan' => $plan,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
 
-    public function ModifPhotoAction(Request $request, $idP)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $etablissement = $em->getRepository("PlanBundle:Plan")->find($idP);
-        $etablissement->setImage
-        (new File($this->getParameter('brochures_directory') . '/' . $etablissement->getImage()));
-        $form = $this->createForm(ModifierAjoutType ::class, $etablissement);
-        $form->handleRequest($request);
-        if ($form->isValid() && $form->isSubmitted()) {
-            /** @var UploadedFile $image */
-            $image = $etablissement->getImage();
-            $imageName = $this->generateUniqueFileName() . '.' . $image->guessExtension();
-            $image->move($this->getParameter('brochures_directory'), $imageName);
-            $etablissement->setImage($imageName);
-            $em->persist($etablissement);
-            $em->flush();
-            return $this->redirectToRoute('plan_indextableau', array('idP' => $etablissement->getIdp()));
+                    $this->getDoctrine()->getManager()->flush();
+                    return $this->redirectToRoute('Profil_index');
+                }
 
-        }
-        return $this->render('@Plan/plan/edit.html.twig',
-            array('edit_form' => $form->createView(), 'nom' => $etablissement->getLibelle()));
-    }
+                return $this->render('@Plan/plan/edit.html.twig', array(
+                    'plans' => $plan,
+                    'edit_form' => $editForm->createView(),
+                ));
+            }
 
 
     /**
@@ -309,23 +356,29 @@ class PlanController extends Controller
 
 
 
-    public function DivertissementFilterHorizontalePageAction()
+    public function DivertissementFilterHorizontalePageAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->DivertisementsAction();
 
+
+
         return $this->render('PlanBundle:Default:Divertissement-horizontal.html.twig', array(
             'plans' => $plans,
+
+
         ));
 
     }
 
-    public function GastronomieFilterHorizontalePageAction()
+    public function GastronomieFilterHorizontalePageAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
         $plans = $em->getRepository('PlanBundle:Plan')->GastronomieAction();
+
+
         return $this->render('PlanBundle:Default:Gastronomie-horizontal.html.twig', array(
             'plans' => $plans,
         ));
@@ -555,13 +608,14 @@ class PlanController extends Controller
         ));}
 
 
-    public function RechercheFilterAction(Request $request)
+    public function RechercheFilterAction(Request $request )
     {
         $em = $this->getDoctrine()->getManager();
         //  if ($request->isMethod('POST'))
         //  {
-        $nom = $request->get('abc');
-        $Reg = $request->get('Reg');
+            $nom = $request->get('titre');
+            $Reg = $request->get('Region');
+
         $plans = $em->getRepository('PlanBundle:Plan')->FindAction($nom,$Reg);
         return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
             'plans' => $plans,
@@ -583,7 +637,8 @@ class PlanController extends Controller
 
    public function Stat2Action()
     {        $em = $this->getDoctrine()->getManager();
-        $plans = $em->getRepository('PlanBundle:Plan')->StatArrayAction();
+        $user = $this->getUser();
+        $plans = $em->getRepository('PlanBundle:Plan')->StatArrayAction($user);
 
         $pieChart = new PieChart();
 
@@ -628,5 +683,44 @@ class PlanController extends Controller
     }
 
 
+    public function chercherGastroAction(Request $request)
+    {
 
+        if($request->isXmlHttpRequest() && $request->isMethod('post') && $request->get('text')!=null){
+
+            $text =$request->get('text');
+            $em = $this->getDoctrine()->getManager();
+            $plans = $em->getRepository('PlanBundle:Plan')->FindAction($text,'TU');
+
+
+            $response = $this->renderView('@Publicite/publicite/search.html.twig',array('all'=>$plans));
+
+            return  new JsonResponse($response) ;
+        }elseif ( $request->get('text')==null){
+
+            $em = $this->getDoctrine()->getManager();
+            $plans = $em->getRepository('PlanBundle:Plan')->FindAction('','');
+            $response = $this->renderView('@Publicite/publicite/search.html.twig',array('all'=>$plans));
+
+            return  new JsonResponse($response) ;
+        }
+
+        return new JsonResponse(array("status"=>true));
+
+    }
+
+    public function FindAction($recher,$Reg)
+    {
+        $query = $this->getEntityManager()->createQuery("SELECT p FROM PlanBundle:Plan p
+                              JOIN  PlanBundle:SousCategorie s
+                              WITH p.idSc=s.idSc JOIN  PlanBundle:Categorie a WITH s.idC = a.idC 
+                              WHERE p.etat=1 and   p.libelle like '%$recher%' 
+                              and   p.ville like '%$Reg%' 
+                              order by p.idP ASC");
+        //  ->setParameter('n2', '%'.$recher.'%');
+
+        return $query->getResult();
+
+
+    }
 }
