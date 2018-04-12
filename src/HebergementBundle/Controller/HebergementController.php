@@ -483,7 +483,7 @@ class HebergementController extends Controller
 
 
         $html2pdf = new \Spipu\Html2Pdf\Html2Pdf('P','A4','en');
-        $html2pdf->writeHTML('<p>Bonjour</p>');
+        $html2pdf->writeHTML($html);
         $html2pdf->Output('.pdf');
 
 
