@@ -35,185 +35,180 @@
     <link rel="stylesheet"  href="{{ asset('/templatePoupup/css/hunterPopup.css') }}">
 </head>
 
-{#<script>
-    $(document).ready(function(){
-        setTimeout(function() {
-            $('#successMessage').fadeOut('fast');
-        }, 2000); // <-- time in milliseconds
-    });
-</script>#}
-
 <body>
 
 <div class="global-wrap">
 
-<!-- //////////////////////////////////
-//////////////MAIN HEADER/////////////
-////////////////////////////////////-->
-<header class="main">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-2">
-                <a href="{{ path('pi_homepage') }}" class="logo">
-                    <img src="{{ asset('images/logo-top.png') }}" alt="Image Alternative text" title="Image Title" />
-                </a>
-            </div>
-            <div class="col-md-6">
-                <div class="flexnav-menu-button" id="flexnav-menu-button">Menu</div>
-                <nav>
-                    <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
-                        <li class="active"><a href="{{ path('pi_homepage') }}">Acceuil</a>
+    <!-- //////////////////////////////////
+    //////////////MAIN HEADER/////////////
+    ////////////////////////////////////-->
+    <header class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="{{ path('pi_homepage') }}" class="logo">
+                        <img src="{{ asset('images/logo-top.png') }}" alt="Image Alternative text" title="Image Title" />
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="flexnav-menu-button" id="flexnav-menu-button">Menu</div>
+                    <nav>
+                        <ul class="nav nav-pills flexnav" id="flexnav" data-breakpoint="800">
+                            <li class="active"><a href="{{ path('pi_homepage') }}">Acceuil</a>
 
-                        </li>
-                        <li><a href="{{ path('Find_Filter') }}">Plans</a>
-                            <ul>
-                                <li><a href="{{ path('plan_Filter_Gaspage') }}">Gastronomie</a>
-                                </li>
-                                <li><a href="{{ path('plan_Filter_Divpage') }}">Divertissement</a>
-                                </li>
+                            </li>
+                            <li><a href="{{ path('Find_Filter') }}">Plans</a>
+                                <ul>
+                                    <li><a href="{{ path('plan_Filter_Gaspage') }}">Gastronomie</a>
+                                    </li>
+                                    <li><a href="{{ path('plan_Filter_Divpage') }}">Divertissement</a>
+                                    </li>
 
-                                <li><a href="{{ path('plan_FilterBE') }}">Bien-Etre</a>
-                                </li>
+                                    <li><a href="{{ path('plan_FilterBE') }}">Bien-Etre</a>
+                                    </li>
+                                    <li><a href="{{ path('plan_new') }}">Ajouter Plan</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="{{ path('evennement_listall') }}">Evenements </a>
+                                <ul id="list_menu_event">
+                                </ul>
+                            </li>
+                            <li><a href="{{ path('hebergement_index') }}">Hebergements</a>
+                                <ul>
+                                    <li><a href="{{ path('hotels_index') }}">Hôtels</a>
+                                    </li>
+                                    <li><a href="{{ path('maisons_index') }}">Maisons d'hôtes</a>
+                                    </li>
+                                    <li><a href="{{ path('pensions_index') }}">Pensions</a>
+                                    </li>
+                                    {% if app.user %}
+                                        <li><a href="{{ path('esp') }}">Espace Personnel</a>
+                                        </li>
+                                    {% endif %}
+                                </ul>
+                            </li>
+                            <li><a href="{{ path('article_index') }}">Articles</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
-                            </ul>
-                        </li>
-                        <li><a href="{{ path('evennement_listall') }}">Evenements </a>
-                            <ul id="list_menu_event">
-                            </ul>
-                        </li>
-                        <li><a href="{{ path('hebergement_index') }}">Hebergements</a>
-                            <ul>
-                                <li><a href="{{ path('hotels_index') }}">Hôtels</a>
-                                </li>
-                                <li><a href="{{ path('maisons_index') }}">Maisons d'hôtes</a>
-                                </li>
-                                <li><a href="{{ path('pensions_index') }}">Pensions</a>
-                                </li>
-                                {% if app.user %}
-                                <li><a href="{{ path('esp') }}">Espace Personnel</a>
-                                </li>
-                                {% endif %}
-                            </ul>
-                        </li>
-                     <li><a href="{{ path('article_index') }}">Articles</a>
-                     </li>
+
+                <div class="col-md-4">
+                    <ul class="login-register">
+                        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                            <li class="shopping-cart"><a  href="{{ path('profil') }}"><i class="fa fa-user"></i> Mon Profil</a>
+                                <div class="shopping-cart-box">
+                                    <ul class="shopping-cart-items">
+                                        <li>
+                                            <a href="{{ path('evennement_list') }}">
+                                                <h5>Mes evennement</h5>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <h5>Mes Plans</h5>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href='{{ path('publicite_index') }}'>
+                                                <h5>Mes Publicités</h5>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href='{{ path('article_indexPerso') }}'>
+                                                <h5>Mes Articles</h5>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="list-inline text-center">
+
+                                        <li><a href="{{ path('fos_user_security_logout')}}"><i class="fa fa-sign-out"> </i>  Déconnexion</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        {% elseif app.user == null %}
+                            <li><a  href="{{ path('fos_user_security_login') }}" ><i class="fa fa-sign-in"></i>Se connecter</a>
+                            </li>
+                            <li><a href="{{ path('fos_user_registration_register') }}" ><i class="fa fa-edit"></i>S'inscrire</a>
+                            </li>
+                        {% endif %}
                     </ul>
-                </nav>
-            </div>
-
-
-            <div class="col-md-4">
-                <ul class="login-register">
-                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <li class="shopping-cart"><a  href="{{ path('profil') }}"><i class="fa fa-user"></i> Mon Profil</a>
-                        <div class="shopping-cart-box">
-                            <ul class="shopping-cart-items">
-                                <li>
-                                    <a href="{{ path('evennement_list') }}">
-                                        <h5>Mes evennement</h5>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <h5>Mes Plans</h5>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href='{{ path('publicite_index') }}'>
-                                        <h5>Mes Publicités</h5>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href='{{ path('article_indexPerso') }}'>
-                                        <h5>Mes Articles</h5>
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="list-inline text-center">
-
-                                <li><a href="{{ path('fos_user_security_logout')}}"><i class="fa fa-sign-out"> </i>  Déconnexion</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    {% elseif app.user == null %}
-                    <li><a  href="{{ path('fos_user_security_login') }}" ><i class="fa fa-sign-in"></i>Se connecter</a>
-                    </li>
-                    <li><a href="{{ path('fos_user_registration_register') }}" ><i class="fa fa-edit"></i>S'inscrire</a>
-                    </li>
-                    {% endif %}
-                </ul>
-            </div>
-        </div>
-
-    </div>
-</header>
-<!-- LOGIN REGISTER LINKS CONTENT -->
-
-
-
-<!-- END LOGIN REGISTER LINKS CONTENT -->
-
-<!-- SEARCH AREA -->
-<form class="search-area form-group">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 clearfix">
-                <label><i class="fa fa-search"></i><span>Je cherche</span>
-                </label>
-                <div class="search-area-division search-area-division-input">
-                    <input id="id_lib"  name="titre"  class="form-control" type="text" placeholder="un bon plan" />
                 </div>
-            </div>
-            <div class="col-md-3 clearfix">
-                <label><i class="fa fa-map-marker"></i><span>à</span>
-                </label>
-                <div class="search-area-division search-area-division-location">
-                    <input id="reg"  name="region" class="form-control" type="text" placeholder="Region" />
-                </div>
-            </div>
-            <div class="col-md-1">
-               <button class="btn btn-block btn-white search-btn" type="submit"
-                          >Chercher</button>
             </div>
 
         </div>
-    </div>
-</form>
-<!-- END SEARCH AREA -->
+    </header>
+    <!-- LOGIN REGISTER LINKS CONTENT -->
+
+
+
+    <!-- END LOGIN REGISTER LINKS CONTENT -->
+
+    <!-- SEARCH AREA -->
+    <form class="search-area form-group">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 clearfix">
+                    <label><i class="fa fa-search"></i><span>Je cherche</span>
+                    </label>
+                    <div class="search-area-division search-area-division-input">
+                        <input c id="id_lib"  name="titre" type="text" placeholder="un bon plan" />
+                    </div>
+                </div>
+                <div class="col-md-3 clearfix">
+                    <label><i class="fa fa-map-marker"></i><span>à</span>
+                    </label>
+                    <div class="search-area-division search-area-division-location">
+                        <input id="reg"  name="region" type="text" placeholder="Region" />
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-block btn-white search-btn" type="submit"
+                              >Chercher</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <!-- END SEARCH AREA -->
+
 
     <div class="container">
         <!-- script 4 seconde notif close -->
         <script type="text/javascript">
 
 
-                window.setTimeout(function() {
-                    $(".alert").fadeTo(1500, 0).slideUp(500, function(){
-                        $(this).remove();
-                    });
-                }, 4000);
+            window.setTimeout(function() {
+                $(".alert").fadeTo(1500, 0).slideUp(500, function(){
+                    $(this).remove();
+                });
+            }, 4000);
 
         </script>
 
         <!-- alert notification -->
-    {# bootstrap ready for your convenience ;] #}
-    {% if app.session.flashbag.has('notice') %}
-        {% for flashMessage in app.session.flashbag.get('notice') %}
-            <div class="alert alert-success alert-dismissible"  id="myAlert{{flashMessage }}">
-                <a href="{{ path('delete_notifs', {'idP':flashMessage}) }}"
-                   class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                <strong>Plan!</strong>   {{ flashMessage }}
-            </div>
+        {# bootstrap ready for your convenience ;] #}
+        {% if app.session.flashbag.has('notice') %}
+            {% for flashMessage in app.session.flashbag.get('notice') %}
+                <div class="alert alert-success alert-dismissible"  id="myAlert{{flashMessage }}">
+                    <a href="{{ path('delete_notifs', {'idP':flashMessage}) }}"
+                       class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Plan!</strong>   {{ flashMessage }}
+                </div>
 
-        {% endfor %}
-    {% endif %}
+            {% endfor %}
+        {% endif %}
     </div>
 
+    <!-- //////////////////////////////////
+    //////////////END MAIN HEADER//////////
+    ////////////////////////////////////-->
 
-<!-- //////////////////////////////////
-//////////////END MAIN HEADER//////////
-////////////////////////////////////-->
+
 
     <!-- Scripts queries -->
     <script src="{{ asset('js/jquery.js') }}"></script>
@@ -233,21 +228,19 @@
     <script src="{{ asset('js/masonry.js') }}"></script>
     <script src="{{ asset('js/nicescroll.js') }}"></script>
 
-<!-- Custom scripts -->
+    <!-- Custom scripts -->
     <script src="{{ asset('js/general_main.js') }}"></script>
     <script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>
     <script src="{{ asset('js/bootstrap-datepicker.fr.js') }}"></script>
     <script>
         $('#calendar').datepicker({
         });
-
         !function ($) {
             $(document).on("click","ul.nav li.parent > a > span.icon", function(){
                 $(this).find('em:first').toggleClass("glyphicon-minus");
             });
             $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
         }(window.jQuery);
-
         $(window).on('resize', function () {
             if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
         })
@@ -255,131 +248,102 @@
             if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
         })
     </script>
-<script src="{{ asset('js/custom.js') }}"></script>
-<script src="{{ asset('js/switcher.js') }}"></script>
-    <!-- Custom scripts -->
     <script src="{{ asset('js/custom.js') }}"></script>
     <script src="{{ asset('js/switcher.js') }}"></script>
 
 
     <script src="{{ asset('js/general_main_front.js') }}"></script>
-
     <script>
         load_menu_event('{{ path('menu_event') }}')
     </script>
 
 
 
-{% block body %}
-{% endblock %}
+    {% block body %}
+    {% endblock %}
 
-    <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script>
+    <!-- //////////////////////////////////
+    //////////////MAIN FOOTER//////////////
+    ////////////////////////////////////-->
 
-        $('#text').keyup(function(){
-            var input= $("#id_lib").val();
-            var input2= $("#reg").val();
-            $.ajax({
-                type: "POST",
-                url: "{{ path('Find_Filter') }}",
-                data: {'text': input,'text': input2},
-                success: function (data) {
-
-                    console.log(data);
-
-                    $("#res").html(data);
-
-
-                }
-            });
-
-        });
-
-    </script>
-
-<!-- //////////////////////////////////
-//////////////MAIN FOOTER//////////////
-////////////////////////////////////-->
-
-<footer class="main" id="main-footer">
-    <div class="footer-top-area">
-        <div class="container">
-            <div class="row row-wrap">
-                <div class="col-md-3">
-                    <a href="{{ path('pi_homepage') }}">
-                        <img src="{{ asset('images/logo-pidev2.png') }}" alt="logo" title="logo" class="logo">
-                    </a>
+    <footer class="main" id="main-footer">
+        <div class="footer-top-area">
+            <div class="container">
+                <div class="row row-wrap">
+                    <div class="col-md-3">
+                        <a href="{{ path('pi_homepage') }}">
+                            <img src="{{ asset('images/logo-pidev2.png') }}" alt="logo" title="logo" class="logo">
+                        </a>
                     </div>
-                <div class="col-md-3">
+                    <div class="col-md-3">
 
-                </div>
-                <div class="col-md-3">
-                </div>
-                <div class="col-md-3">
-                    <ul class="list list-social">
-                        <li>
-                            <a class="fa fa-facebook box-icon" href="#" data-toggle="tooltip" title="Facebook"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-twitter box-icon" href="#" data-toggle="tooltip" title="Twitter"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-flickr box-icon" href="#" data-toggle="tooltip" title="Flickr"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-linkedin box-icon" href="#" data-toggle="tooltip" title="LinkedIn"></a>
-                        </li>
-                        <li>
-                            <a class="fa fa-tumblr box-icon" href="#" data-toggle="tooltip" title="Tumblr"></a>
-                        </li>
-                    </ul>
-                    <p>Le site de référence pour profiter des meilleurs bons plans du net, d'échantillons gratuits, produits remboursés et deals en tous en genre.</p>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <p>Copyright © 2018, Your Store, All Rights Reserved</p>
-                </div>
-                <div class="col-md-6 col-md-offset-2">
-                    <div class="pull-right">
-                        <ul class="list-inline list-payment">
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                        <ul class="list list-social">
                             <li>
-                                <img src="{{ asset('img/payment/american-express-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                <a class="fa fa-facebook box-icon" href="#" data-toggle="tooltip" title="Facebook"></a>
                             </li>
                             <li>
-                                <img src="{{ asset('img/payment/cirrus-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                <a class="fa fa-twitter box-icon" href="#" data-toggle="tooltip" title="Twitter"></a>
                             </li>
                             <li>
-                                <img src="{{ asset('img/payment/discover-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                <a class="fa fa-flickr box-icon" href="#" data-toggle="tooltip" title="Flickr"></a>
                             </li>
                             <li>
-                                <img src="{{ asset('img/payment/ebay-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                <a class="fa fa-linkedin box-icon" href="#" data-toggle="tooltip" title="LinkedIn"></a>
                             </li>
                             <li>
-                                <img src="{{ asset('img/payment/maestro-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
-                            </li>
-                            <li>
-                                <img src="{{ asset('img/payment/mastercard-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
-                            </li>
-                            <li>
-                                <img src="{{ asset('img/payment/visa-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                <a class="fa fa-tumblr box-icon" href="#" data-toggle="tooltip" title="Tumblr"></a>
                             </li>
                         </ul>
+                        <p>Le site de référence pour profiter des meilleurs bons plans du net, d'échantillons gratuits, produits remboursés et deals en tous en genre.</p>
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
-<!-- //////////////////////////////////
-//////////////END MAIN  FOOTER/////////
-////////////////////////////////////-->
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>Copyright © 2018, Your Store, All Rights Reserved</p>
+                    </div>
+                    <div class="col-md-6 col-md-offset-2">
+                        <div class="pull-right">
+                            <ul class="list-inline list-payment">
+                                <li>
+                                    <img src="{{ asset('img/payment/american-express-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                </li>
+                                <li>
+                                    <img src="{{ asset('img/payment/cirrus-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                </li>
+                                <li>
+                                    <img src="{{ asset('img/payment/discover-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                </li>
+                                <li>
+                                    <img src="{{ asset('img/payment/ebay-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                </li>
+                                <li>
+                                    <img src="{{ asset('img/payment/maestro-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                </li>
+                                <li>
+                                    <img src="{{ asset('img/payment/mastercard-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                </li>
+                                <li>
+                                    <img src="{{ asset('img/payment/visa-curved-32px.png') }}" alt="Image Alternative text" title="Image Title" />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //////////////////////////////////
+    //////////////END MAIN  FOOTER/////////
+    ////////////////////////////////////-->
 </div>
 </body>
 

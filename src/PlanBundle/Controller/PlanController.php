@@ -12,17 +12,215 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 /**
  * Plan controller.
  *
  */
 class PlanController extends Controller
 {
+
+/* Web service*/
+/* list all */
+    public function allAction()
+    {
+        $tasks = $this->getDoctrine()->getManager()
+            ->getRepository('PlanBundle:Plan')
+            ->findAll();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+    /* list gastro */
+public function allGasAction()
+    {
+        $tasks = $this->getDoctrine()->getManager()
+            ->getRepository('PlanBundle:Plan')
+            ->GastronomieAction();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+    /* list Div */
+    public function allDivAction()
+    {
+        $tasks = $this->getDoctrine()->getManager()
+            ->getRepository('PlanBundle:Plan')
+            ->DivertisementsAction();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+
+
+    }
+    /* list Bien etre */
+    public function allBEAction()
+    {
+        $tasks = $this->getDoctrine()->getManager()
+            ->getRepository('PlanBundle:Plan')
+            ->BienEAction();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+
+
+    public function WSfindAction($id)
+    {
+        $tasks = $this->getDoctrine()->getManager()
+            ->getRepository('PlanBundle:Plan')
+            ->find($id);
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+    /* Ajouter plan */
+    public function WSnewAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $plan = new Plan();
+       // $sc = new SousCategorie();
+        $repository = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('PlanBundle:SousCategorie');
+
+        $pl = $repository->findOneBy(array('idSc' => $request->get('idSc')));
+       // $plan->setIdSc($request->get('idSc'));
+        $plan->setIdSc($pl);
+
+        $plan->setLibelle($request->get('libelle'));
+        $plan->setAdresse($request->get('adresse'));
+        $plan->setVille($request->get('ville'));
+        $plan->setDescription($request->get('description'));
+        $plan->setPrix($request->get('prix'));
+        $plan->setLatitude($request->get('latitude'));
+        $plan->setLongitude($request->get('longitude'));
+        $plan->setImage($request->get('image'));
+        $plan->setEtat(0) ;
+        $em->persist($plan);
+        $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($plan);
+        return new JsonResponse($formatted);
+    }
+
+/*
+    public function WsModifierAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $plan = new Plan();
+        $plan->setLibelle($request->get('libelle'));
+        $plan->setAdresse($request->get('adresse'));
+        $plan->setVille($request->get('ville'));
+        $em->persist($plan);
+        $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($plan);
+        return new JsonResponse($formatted);
+    }
+*/
+    /* Modifier Plan*/
+    public function WSModifierAction(Request $request, Plan $plan)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $plan = new Plan();
+
+        $repository = $this->getDoctrine()
+            ->getManager()
+            ->getRepository('PlanBundle:SousCategorie');
+
+        $pl = $repository->findOneBy(array('idSc' => $request->get('idSc')));
+        $plan->setIdSc($pl);
+
+
+       // $User = $repository->findOneBy(array('id' => $request->get('iduser')));
+        $plan->setLibelle($request->get('libelle'));
+        $plan->setAdresse($request->get('adresse'));
+        $plan->setVille($request->get('ville'));
+        $plan->setDescription($request->get('description'));
+        $plan->setPrix($request->get('prix'));
+        $plan->setLatitude($request->get('latitude'));
+        $plan->setLongitude($request->get('longitude'));
+        $plan->setImage($request->get('image'));
+        $plan->setEtat(0) ;
+
+
+        $em->persist($plan);
+        $em->flush();
+
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($plan);
+        return new JsonResponse($formatted);
+
+    }
+
+
+
+
+
+    /* Supprimer plan  */
+
+
+    public function WsdeleteAction($idP)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $plan = $em->getRepository("PlanBundle:Plan")->find($idP);
+        $em->remove($plan);
+        $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($plan);
+        return new JsonResponse($formatted);
+    }
+
+
+    /* Recherche */
+
+
+    public function WSRechercherAction( $ville )
+    {
+        $plan = $this->getDoctrine()->getEntityManager()->createQuery("select v from PlanBundle:Plan v WHERE v.ville like '%$ville%'  ");
+
+
+
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($plan);
+        return new JsonResponse($formatted);
+
+    }
+
+    public function FindPlanAction($recher,$Reg)
+    {
+
+        $query = $this->getManager()->createQuery("SELECT p FROM PlanBundle:Plan p
+                              JOIN  PlanBundle:SousCategorie s
+                              WITH p.idSc=s.idSc JOIN  PlanBundle:Categorie a WITH s.idC = a.idC 
+                              WHERE p.etat=1 and   p.libelle like '%$recher%' 
+                              and   p.ville like '%$Reg%' 
+                              order by p.idP ASC");
+
+        return $query->getResult();
+
+
+    }
+    /*********************************************************************/
+
+
+
+
+
     /**
      * Lists all plan entities.
      *
      */
+
+
+
+
+
 
 
     public function indexAction()
@@ -189,6 +387,7 @@ class PlanController extends Controller
             $image = $plan->getImage();
             $imageName = $this->generateUniqueFileName() . '.' . $image->guessExtension();
             $image->move($this->getParameter('brochures_directory'), $imageName);
+
             $plan->setImage($imageName);
 
             $plan->SetEtat(0);
@@ -198,6 +397,7 @@ class PlanController extends Controller
 
             $em->persist($plan);
             $em->flush();
+            return $this->redirectToRoute('Profil_index', array('idP' => $plan->getIdp()));
 
         }
 //        return $this->render('@Plan/plan/NewPlanDesign.html.twig', array(
@@ -560,7 +760,7 @@ class PlanController extends Controller
 
     public function RechercheFilterAction(Request $request )
     {
-        $em = $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine();
         //  if ($request->isMethod('POST'))
         //  {
             $nom = $request->get('titre');
@@ -659,18 +859,16 @@ class PlanController extends Controller
 
     }
 
-    public function FindAction($recher,$Reg)
+    public function RechercAction($nom  )
     {
-        $query = $this->getEntityManager()->createQuery("SELECT p FROM PlanBundle:Plan p
-                              JOIN  PlanBundle:SousCategorie s
-                              WITH p.idSc=s.idSc JOIN  PlanBundle:Categorie a WITH s.idC = a.idC 
-                              WHERE p.etat=1 and   p.libelle like '%$recher%' 
-                              and   p.ville like '%$Reg%' 
-                              order by p.idP ASC");
-        //  ->setParameter('n2', '%'.$recher.'%');
+        $em = $this->getDoctrine();
 
-        return $query->getResult();
+        $plans = $em->getRepository('PlanBundle:Plan')->FindplanAction($nom );
 
-
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($plans);
+        return new JsonResponse($formatted);
     }
+
+
 }

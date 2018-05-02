@@ -28,3 +28,48 @@ plan_FilterBEHorizontale:
 delete_Profil:
     path:     /delete/{idP}
     defaults: { _controller: PlanBundle:Default:delete3}
+all:
+    path:     /tasks/all
+    defaults: { _controller: PlanBundle:Plan:all }
+New:
+    path:     /tasks/Wnew
+    defaults: { _controller: PlanBundle:Plan:WSnew }
+Edit:
+    path:     /Update
+    defaults: { _controller: PlanBundle:Plan:WSModifier }
+allGas:
+    path:     /tasks/allGas
+    defaults: { _controller: PlanBundle:Plan:allGas }
+allDiv:
+    path:     /tasks/allDiv
+    defaults: { _controller: PlanBundle:Plan:allDiv }
+allBE:
+    path:     /tasks/allBE
+    defaults: { _controller: PlanBundle:Plan:allBE }
+find_task:
+    path:     /tasks/find/{id}
+    defaults: { _controller: PlanBundle:Plan:WSfind}
+Supp_PlanWs:
+    path:     /WsSupp/{idP}
+    defaults: { _controller: PlanBundle:Plan:Wsdelete}
+allC:
+    path:     /cat/all
+    defaults: { _controller: PlanBundle:Categorie:all }
+allSC:
+    path:     /SC/all
+    defaults: { _controller: PlanBundle:Sous_Categorie:all }
+FindSc:
+    path:     /getSc/{idC}
+    defaults: { _controller: PlanBundle:Sous_Categorie:FindByID }
+WsModif_Plan:
+    path:     /{idP}/edit
+    defaults: { _controller: PlanBundle:Plan:WSModifier}
+wsFind_Filter:
+    path:     /FindWS/{ville}
+    defaults: { _controller: PlanBundle:Plan:WSRechercher }
+PlanFind_Filter:
+    path:     /FindP/{recher}/{Reg}
+    defaults: { _controller: PlanBundle:Plan:FindPlan }
+PlanF_Filter:
+    path:     /Recherch/{nom}
+    defaults: { _controller: PlanBundle:Plan:Recherc }

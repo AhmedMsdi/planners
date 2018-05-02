@@ -5,6 +5,9 @@ namespace PiBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 class DefaultController extends Controller
 {
@@ -60,6 +63,47 @@ class DefaultController extends Controller
     }
 
 
+    /*************************************************/
 
 
+    public function allUserAction()
+    {
+        $tasks = $this->getDoctrine()->getManager()
+            ->getRepository('PiBundle:User')
+            ->findAll();
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+    public function FindLogin0IDAction($user)
+    {
+        $queryBuilder = $this->createQueryBuilder('f');
+        $queryBuilder->select($queryBuilder->expr()->count('f'));
+        $queryBuilder->where('f.User = :User')->setParameter('User', $user);
+
+        $query = $queryBuilder->getQuery();
+        $singleScalar = $query->getSingleScalarResult();
+        return $singleScalar;
+    }
+    public function FindLoginIDAction($login,$pswd)
+    {
+
+/* $query = $this->getEntityManager()->createQuery("SELECT count(u.id) FROM PiBundle:User u
+        WHERE u.username='$login'    and   p.password='$pswd'  ");
+
+        return $query->getResult();
+,'password' =>$pswd
+       */
+
+        $tasks = $this->getDoctrine()->getManager()
+            ->getRepository('PiBundle:User')
+            ->findBy(array('username' =>$login)
+                ,null,6);
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+
+
+    }
 }
