@@ -1,0 +1,17 @@
+{% extends '::baseuser.html.twig' %}
+
+{% block body %}
+    <h1>Modifier votre commentaire</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Edit" />
+    {{ form_end(edit_form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('commentaire_index') }}">Back to the list</a>
+        </li>
+
+    </ul>
+{% endblock %}

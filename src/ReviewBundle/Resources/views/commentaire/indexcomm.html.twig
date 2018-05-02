@@ -1,0 +1,36 @@
+{% for commentaire in all %}
+    {% if app.request.get('idP') == commentaire.idP.idP %}
+        <li>
+        <!-- REVIEW -->
+        <article class="comment">
+        <div class="comment-author">
+            <img src="{{ asset("mummy.png") }}" alt="Image Alternative text" title="Gamer Chick" />
+        </div>
+        <div class="comment-inner">
+        <ul class="icon-group icon-list-rating comment-review-rate" title="5/5 rating">
+
+        </ul><span class="comment-author-name">{{ commentaire.idUser.nom }} {{ commentaire.idUser.prenom }}</span>
+        <p class="comment-content">{{ commentaire.contenu }}</p>
+        {% if app.user == null %}
+
+        {% elseif app.user.id != commentaire.idUser.id %}
+
+        {% elseif app.user.id == commentaire.idUser.id %}
+            <li><a href="{{ path('commentaire_edit', { 'id': commentaire.id }) }}" class="btn btn-primary">
+
+                    <i class="fa fa-pencil-square-o"></i> Modifier</a>
+
+                <a  href="{{ path('commentaire_delete', { 'id': commentaire.id }) }}" class="btn">
+
+                    <i class="fa fa-trash-o"></i> Supprimer</a>
+            </li>
+        {% endif %}
+
+        </article>
+        </li>
+
+    {% endif %}
+
+{% endfor %}
+
+<button class="popup-text btn btn-primary" data-title="Edit" data-toggle="modal" data-target="#edit " data-effect="mfp-zoom-out"><i class="fa fa-pencil"></i> Ajouter commentaire</button>

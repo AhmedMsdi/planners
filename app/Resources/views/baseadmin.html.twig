@@ -83,22 +83,22 @@
         <li><a href="{{ path('demandeArticle') }}"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg> Mes Articles</a></li>
         <li class="parent ">
             <a href="#">
-                <span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Review
+                <span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Gestion Utilisateurs
             </a>
             <ul class="children collapse" id="sub-item-1">
                 <li>
-                    <a class="" href="#">
-                        <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Sub Item 1
+                    <a class="" href="{{ path('tousutilisat') }}">
+                        <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Tous les utilisateurs
                     </a>
                 </li>
                 <li>
-                    <a class="" href="#">
-                        <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Sub Item 2
+                    <a class="" href="{{ path('signalutilisat') }}">
+                        <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Utilisateurs signalés
                     </a>
                 </li>
                 <li>
-                    <a class="" href="#">
-                        <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Sub Item 3
+                    <a class="" href="{{ path('bloquerutilisat') }}">
+                        <svg class="glyph stroked chevron-right"><use xlink:href="#stroked-chevron-right"></use></svg> Utilisateurs bloqués
                     </a>
                 </li>
             </ul>

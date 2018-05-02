@@ -1,0 +1,63 @@
+{% extends ('baseadmin.html.twig') %}
+
+{% block body %}
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <div class="span7">
+        <div class="widget stacked widget-table action-table">
+
+            <div class="widget-header">
+                <i class="icon-th-list"></i>
+                <h3>Les utilisateurs signalés !</h3>
+            </div> <!-- /widget-header -->
+
+            <div class="widget-content">
+
+                <table class="table table-striped table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Email</th>
+
+
+                        <th class="td-actions"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for utilisateur in utilisateurs %}
+                        {% if utilisateur.nom != null %}
+                            {% if utilisateur.nbreSignal >10 %}
+                                {% if utilisateur.enabled ==1 %}
+                            <tr>
+                                <td>{{ utilisateur.nom }}</td>
+                                <td>{{ utilisateur.prenom }}</td>
+                                <td>{{ utilisateur.email }}</td>
+
+
+                                <td class="td-actions">
+                                    <a href="{{ path('validuser', {'id': utilisateur.id}) }}" class="btn btn-small btn-primary">
+                                        <i class="btn-icon-only icon-ok"></i> Bloquer
+                                    </a>
+
+                                    <a href="{{ path('refususer', {'id': utilisateur.id}) }}" class="btn btn-small">
+                                        <i class="btn-icon-only icon-remove"></i> Ignorer
+                                    </a>
+                                </td>
+                            </tr>
+                                    {% endif %}
+                                {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+            </div> <!-- /widget-content -->
+
+        </div> <!-- /widget -->
+    </div>
+{% endblock %}

@@ -1,6 +1,17 @@
 {% extends 'baseuser.html.twig' %}
 
 {% block body %}
+
+
+
+    <head> <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
+
+    </head>
+
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <style>
 
@@ -29,6 +40,19 @@
                 </article>
                 <!-- BLOG POST -->
                 <!-- BLOG POST -->
+                <div class="gap"></div>
+                <div class="tabbable">
+                    <ul class="nav nav-tabs" id="myTab">
+                        <li class="active"><a href="#tab-1" data-toggle="tab"><i class="fa fa-info"></i>Les commentaires</a>
+                        </li>
+                    </ul>
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="tab-1">
+                            <p>{% include '@Review/commentaire/index.html.twig' %}</p>
+                    </div>
+                </div>
+                </div>
+
                 <!-- BLOG POST -->
                 <!-- BLOG POST -->
                 <!-- BLOG POST -->
@@ -46,33 +70,39 @@
                             </li>
                             <li><i class="glyphicon glyphicon-map-marker" style="padding-top: 10px;padding-bottom: 10px"></i> Ville : {{ plan.ville }}
                             </li>
-                            <li><a href="#"><i class="glyphicon glyphicon-euro" style="padding-top: 10px;padding-bottom: 10px"></i> Prix : {{ plan.prix }}</a>
-                            </li>
-                            <li><a href="#"><i class="glyphicon glyphicon-envelope" style="padding-top: 10px;padding-bottom: 10px"></i> €mail : {{ plan.email }}</a>
+                            <li><a href="#"><i class="glyphicon glyphicon-euro"></i> Prix : {{ plan.prix }}</a></li>
+                              <li>  <a href="#"><i class="glyphicon glyphicon-envelope" style="padding-top: 10px;padding-bottom: 10px"></i> €mail : {{ plan.email }}</a>
                             </li>
 
+                            <li>
+
+                            {{ form_start(form) }}
+                            <div class="controls">
+                                <h5>Donnez une note</h5>
+                                {{ form_widget(form.rating) }}   </div>
+                            {{ form_end(form) }}
+                            <a href="{{ path('signalisation', {'id': plan.idP}) }}">Signaler</a>
+                            <a href="{{ path('favoris', {'id': plan.idP}) }}">Ajouter aux favoris</a>
+                            </li>
+
+                            <div class="gap"></div>
+
+                            <div class="gap gap-small"></div>
                         </ul>
                     </div>
 
+                </aside>
+                    </div>
                     {{ socialButtons( {'googleplus':false,
                         'linkedin':false,'twitter':false,'pinterest':false,
                         'facebook': {'locale':'fr_FR', 'url':''~ plan.avis ,
-                            'send':true}} ) }} <br>
-                    <br>
+                            'send':true}} ) }}
 
 
-                    <div style="margin-left:70px">
-                        {{ twitterButton() }}
-                    </div>
-
-
-                </aside>
 
 
             </div>
         </div>
-
-    </div>
 
 
     <!-- //////////////////////////////////
