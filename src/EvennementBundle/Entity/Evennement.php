@@ -87,7 +87,7 @@ class Evennement
     private $contact;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     private $etat;
 
@@ -117,7 +117,7 @@ class Evennement
 
     /**
      * @ORM\ManyToOne(targetEntity="PiBundle\Entity\User")
-     * @ORM\JoinColumn(name="User",referencedColumnName="id",nullable=true)
+     * @ORM\JoinColumn(name="User",referencedColumnName="id")
      */
     private $User;
 

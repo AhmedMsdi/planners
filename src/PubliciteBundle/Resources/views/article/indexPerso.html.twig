@@ -109,11 +109,11 @@
     <script>
 
         $('#text').keyup(function(){
-            var input= $("#text").val();
+
             $.ajax({
                 type: "POST",
                 url: "{{ path('recherche_article') }}",
-                data: {'text': input},
+                data: {'btns': true, 'text': $("#text").val()},
                 success: function (data) {
 
                     console.log(data);

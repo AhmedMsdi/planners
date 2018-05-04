@@ -42,6 +42,13 @@ class User extends BaseUser
      */
     protected $point_fidelite = '0';
 
+    /**
+     *
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $nbre_signal = '0';
+
 
     /**
      * Set nom
@@ -65,6 +72,22 @@ class User extends BaseUser
     public function getNom()
     {
         return $this->nom;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
     }
 
     /**
@@ -119,5 +142,29 @@ class User extends BaseUser
     public function getPointFidelite()
     {
         return $this->point_fidelite;
+    }
+
+    /**
+     * Set nbreSignal
+     *
+     * @param integer $nbreSignal
+     *
+     * @return User
+     */
+    public function setNbreSignal($nbreSignal)
+    {
+        $this->nbre_signal = $nbreSignal;
+
+        return $this;
+    }
+
+    /**
+     * Get nbreSignal
+     *
+     * @return integer
+     */
+    public function getNbreSignal()
+    {
+        return $this->nbre_signal;
     }
 }

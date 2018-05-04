@@ -1,0 +1,26 @@
+commentaire_index:
+    path:     /
+    defaults: { _controller: "ReviewBundle:Commentaire:index" }
+    methods:  GET
+
+commentaire_show:
+    path:     /{id}/show
+    defaults: { _controller: "ReviewBundle:Commentaire:show" }
+    methods:  GET
+
+commentaire_new:
+    path:     /{idP}/new
+    defaults: { _controller: "ReviewBundle:Commentaire:ajout" }
+    methods:  [GET, POST]
+
+commentaire_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ReviewBundle:Commentaire:edit" }
+    methods:  [GET, POST]
+
+commentaire_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ReviewBundle:Commentaire:delete" }
+    methods:  [GET, POST]
+
+

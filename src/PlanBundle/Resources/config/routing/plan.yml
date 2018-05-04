@@ -38,10 +38,7 @@ plan_new:
     path:     /AjouterPlan
     defaults: { _controller: "PlanBundle:Plan:new" }
     methods:  [GET, POST]
-plan_edit:
-    path:     /edit/{idP}
-    defaults: { _controller: "PlanBundle:Plan:edit" }
-    methods:  [GET, POST]
+
 plan_delete:
     path:     /{idP}/delete
     defaults: { _controller: "PlanBundle:Plan:delete" }
@@ -50,13 +47,13 @@ plan_NewPlanDesign:
     path:     /NPD
     defaults: { _controller: "PlanBundle:Plan:newPlanDesign" }
     methods:  [GET, POST]
-plan_N:
-    path:     /{idP}/ph
-    defaults: { _controller: "PlanBundle:Plan:ModifPhoto" }
-    methods:  [GET, POST]
+
 delete_modele:
     path:     /delete/{idP}
     defaults: { _controller: PlanBundle:Plan:delete2}
+Edit_Plan:
+    path:     /{idP}/edit
+    defaults: { _controller: PlanBundle:Plan:edit}
 Details_plans:
     path:     /detailG/{idP}
     defaults: { _controller: "PlanBundle:Plan:Details" }
@@ -109,10 +106,12 @@ Make_Up_Filter:
 Tatoo_Filter:
     path:     /TattoF
     defaults: { _controller: "PlanBundle:Plan:piercing_tatoosFilter" }
-
-Find_Filter:
-    path:     /Find
-    defaults: { _controller: "PlanBundle:Plan:RechercheFilter" }
 stat_stat:
     path:     /stat
     defaults: { _controller: "PlanBundle:Plan:Stat2" }
+delete_notifs:
+    path:     /delnotif
+    defaults: { _controller: "PlanBundle:Plan:delete_notif" }
+recherche_Gastro:
+    path:     /chercher
+    defaults: { _controller: "PlanBundle:Plan:chercherGastro"}

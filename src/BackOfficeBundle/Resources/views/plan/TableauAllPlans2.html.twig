@@ -1,0 +1,121 @@
+{% extends ('baseadmin.html.twig') %}
+
+
+{% block body %}
+
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <style>
+
+        table.paleBlueRows {
+            font-family: "Garamond", Times, serif;
+            border: 1px solid #FFFFFF;
+            width: 350px;
+            height: 200px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        table.paleBlueRows td, table.paleBlueRows th {
+            border: 1px solid #FFFFFF;
+            padding: 5px 13px;
+        }
+
+        table.paleBlueRows tbody td {
+            font-size: 16px;
+        }
+
+        table.paleBlueRows tr:nth-child(even) {
+            background: #D0E4F5;
+        }
+
+        table.paleBlueRows thead {
+            background: #0B6FA4;
+            border-bottom: 5px solid #FFFFFF;
+        }
+
+        table.paleBlueRows thead th {
+            font-size: 18px;
+            font-weight: bold;
+            color: #FFFFFF;
+            text-align: center;
+            border-left: 2px solid #FFFFFF;
+        }
+
+        table.paleBlueRows thead th:first-child {
+            border-left: none;
+        }
+
+        table.paleBlueRows tfoot {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333333;
+            background: #D0E4F5;
+            border-top: 3px solid #444444;
+        }
+
+        table.paleBlueRows tfoot td {
+            font-size: 14px;
+        }
+
+        #desc {
+            padding: 10px 65px;
+
+        }
+
+
+
+    </style>
+
+    <div class="container" style="margin-left: -180px ;margin-top: -320px">
+        <div class="row col-md-6 col-md-offset-2 custyle">
+
+            <table class="paleBlueRows">
+
+                <thead>
+                <tr>
+
+                    <th id="lib">libelle</th>
+                    <th>Image</th>
+                    <th>Adresse</th>
+                    <th>Ville</th>
+                    <th>Prix</th>
+                    <th id="desc">description</th>
+                    <th>longitude</th>
+                    <th>latitude</th>
+                    <th>Etat</th>
+                    <th> Valider</th>
+                    <th> Supprimer</th>
+
+                </tr>
+                </thead>
+                {% for plan in plans %}
+                    <tr>
+
+                        <td>{{ plan.libelle }}</td>
+                        <td><img src="{{ asset('uploads/ImagesPlans/' ~ plan.image) }}"  style="width: 100px;height:100px "></td>
+                        <td>{{ plan.adresse }}</td>
+                        <td>{{ plan.ville }}</td>
+                        <td>{{ plan.prix }}</td>
+                        <td>{{ plan.description }}</td>
+                        <td>{{ plan.longitude }}</td>
+                        <td>{{ plan.latitude }}</td>
+                        <td>{{ plan.etat }}</td>
+
+                        <td class="text-center"><a class='btn btn-success'
+                                                   href="{{ path('plan_valider', {'idP': plan.idP  }) }}">
+                                <span class="glyphicon glyphicon-ok"></span> Valider </a>
+
+                        </td>
+                        <td class="text-center"><a class='btn btn-danger'
+                                                   href="{{ path('plan_Nonvalide', { 'idP': plan.idP  }) }}">
+                                <span class="glyphicon glyphicon-remove"></span> delete </a>
+
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

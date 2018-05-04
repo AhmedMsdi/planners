@@ -108,7 +108,7 @@
                           <td>{% if evennement.dateevent %}{{ evennement.dateevent|date('d-m-Y') }}{% endif %}</td>
                           <td>{% if evennement.timeevent %}{{ evennement.timeevent|date('H:i') }}{% endif %}</td>
                           <td>{{ evennement.description }}</td>
-                          <td>{{ evennement.image }}</td>
+                          <td> <img src="{{ asset('imageEvent/'~evennement.image)  }}" style="width: 150%"></td>
                           <td>{{ evennement.prix|number_format(3,'.','') }}</td>
                           <td>{{ evennement.contact }}</td>
                           <td>{% if evennement.etat==1 %} Validé {% else %} En Attente {% endif %} </td>

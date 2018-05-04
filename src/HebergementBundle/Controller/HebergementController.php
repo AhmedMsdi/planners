@@ -384,6 +384,7 @@ class HebergementController extends Controller
      */
     public function editAction(Request $request, Hebergement $hebergement)
     {
+
         global $kernel;
         $user = $kernel->getContainer()->get('security.token_storage')->getToken()->getUser();
         if ($user === 'anon.' or $user!==$hebergement->getIdUser() xor in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {

@@ -161,6 +161,25 @@ class FrontEvennementController extends Controller
 
         ));
     }
+    /**
+     * Finds and displays a evennement entity.
+     *
+     * @Route("/{id}/infoeventParticip", name="evennement_infoP")
+     * @Method("GET")
+     */
+    public function infoEventParticipAction(Evennement $evennement,$id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $participant=$em->getRepository(Participant::class)->countVisitedEvent($id);
+
+        return $this->render('participant/new.html.twig', array(
+            'evennement' => $evennement,'participant'=>$participant
+
+        ));
+    }
+
+
 
     /**
      * Creates a new evennement entity.
@@ -187,9 +206,10 @@ class FrontEvennementController extends Controller
                 $this->getParameter('imageEvent'), $fileName
             );
             $evennement->setImage($fileName);
+            $evennement->setUser($this->getUser());
             $em->persist($evennement);
             $em->flush();
-            return $this->redirectToRoute('evennement_show', array('id' => $evennement->getId()));
+            return $this->redirectToRoute('evennement_list', array('id' => $evennement->getId()));
         }
 
         return $this->render('EvennementBundle:evennement:front/new.html.twig', array(

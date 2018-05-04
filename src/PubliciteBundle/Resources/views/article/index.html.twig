@@ -11,9 +11,16 @@
                     <h5>Tags Populaires</h5>
                     <ul class="tags-list">
                         {% for article in articles %}
-                        <li><a  href="#">{{ article.tags }}</a>
+                        <li><a name="{{ article.tags }}"  id="xxx{{ article.tags }}" href="#">{{ article.tags }}</a>
                         </li>
                         {% endfor %}
+                    </ul>
+                    <ul>
+
+                        <div class="product-wishlist-remove">
+
+                            <a name="" id="xxx" class="btn btn-ghost btn-sm" href="#"><i class="fa fa-times"></i> Annuler</a>
+                        </div>
                     </ul>
                 </div>
             </aside>
@@ -54,6 +61,31 @@
 
 </div>
 
+
+
+    <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script>
+
+        $('[id^=xxx]').click(function(){
+
+            $.ajax({
+                type: "POST",
+                url: "{{ path('recherche_article') }}",
+                data: {'btnval': true, 'text':$(this).attr('name')},
+                success: function (data) {
+
+                    console.log(data);
+
+                    $("#res").html(data);
+
+
+                }
+            });
+
+        });
+
+    </script>
 
 
 {% endblock %}

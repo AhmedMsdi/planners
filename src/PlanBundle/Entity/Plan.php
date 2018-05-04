@@ -59,7 +59,7 @@ class Plan
     /**
      * @var string
      *
-     * @ORM\Column(name="avis", type="string", length=20, nullable=true)
+     * @ORM\Column(name="avis", type="string", length=255, nullable=true)
      */
     private $avis;
 
