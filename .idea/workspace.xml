@@ -2,64 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="mahdi final">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/edit.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/index.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/new.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/Resources/views/participant/show.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/ParticipantController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/Participant.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Form/ParticipantType.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/ParticipantRepository.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/valider.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/MesEvent.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Tests/Controller/ParticipantControllerTest.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_06_04_18_19_11_c.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_06_04_18_20_50_s.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/map.html.twig" />
       <change beforePath="$PROJECT_DIR$/.idea/pidev.iml" afterPath="$PROJECT_DIR$/.idea/pidev.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/baseuser.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/bin/console" afterPath="$PROJECT_DIR$/bin/console" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/TableauAllPlans.html.twig" afterPath="$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/TableauAllPlans.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/edit.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/edit.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/new.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/new.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/infoevent.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/new.html.twig" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/new.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" afterPath="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Controller/DefaultController.php" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Repository/PlanRepository.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Repository/PlanRepository.php" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing.yml" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/BienEtreSousCatAffichage.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/BienEtreSousCatAffichage.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/DivertissementSousCatAffichage.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/DivertissementSousCatAffichage.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/Default/GastronomieFilter.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/NewPlanDesign.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/NewPlanDesign.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/PlanMaps.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/PlanMaps.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/details2.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/details2.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/indexProfil.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/indexProfil.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/single-news.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/single-news.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/stat.html.twig" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/stat.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/views/plan/tableau.html.twig" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/web/js/bootstrap-datepicker.fr.js" afterPath="$PROJECT_DIR$/web/js/bootstrap-datepicker.fr.js" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Entity/Hebergement.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Entity/Hebergement.php" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/hebergement.yml" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/hebergement.yml" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/messagerie.yml" afterPath="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/messagerie.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -87,99 +38,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig">
+      <file leaf-file-name="map.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/map.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="141" column="33" lean-forward="false" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
+            <state relative-caret-position="0">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppKernel.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <file leaf-file-name="MessagerieController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="528">
+              <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/show.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-306">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="allevent.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="146" column="63" lean-forward="false" selection-start-line="146" selection-start-column="52" selection-end-line="146" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-              <folding>
-                <element signature="e#39#96#0#PHP" expanded="true" />
-                <element signature="e#803#820#1#PHP" expanded="true" />
-                <element signature="e#924#953#1#PHP" expanded="true" />
-                <element signature="e#1183#1217#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Evennement.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-969">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="110" column="45" lean-forward="false" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profil.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
-              <caret line="37" column="58" lean-forward="false" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="62" />
-              <folding>
-                <element signature="e#13#31#0#Twig" expanded="true" />
-                <marker date="1523472418039" expanded="true" signature="735:784" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HebergementController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="HebergementController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="48" />
+            <state relative-caret-position="277">
+              <caret line="79" column="55" lean-forward="true" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/new.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2040">
+              <caret line="120" column="28" lean-forward="false" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -196,18 +89,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$list_categ</find>
-      <find>new g</find>
-      <find>150</find>
-      <find>price</find>
-      <find>.js</find>
-      <find>genera</find>
-      <find>even</find>
-      <find>$evennements</find>
-      <find>evennemen</find>
-      <find>Hello</find>
-      <find>Hello W</find>
-      <find>js</find>
       <find>css</find>
       <find>heber</find>
       <find>header</find>
@@ -226,6 +107,18 @@
       <find>Mes publ</find>
       <find>evenne</find>
       <find>index</find>
+      <find>find</find>
+      <find>newa</find>
+      <find>ena</find>
+      <find>mes</find>
+      <find>edit</find>
+      <find>newA</find>
+      <find>dele</find>
+      <find>map</find>
+      <find>start</find>
+      <find>view</find>
+      <find>dep</find>
+      <find>inp</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wamp64\www\pidev</dir>
@@ -235,9 +128,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="s doctrine:schema:update -f " />
-      <command text="s doctrine:schema:update --force" />
-      <command text="c update " />
       <command text="c dump-autoload" />
       <command text="c update " />
       <command text="c require knplabs/knp-paginator-bundle" />
@@ -260,6 +150,9 @@
       <command text="s fos:user:create admin admin@gmail.com admin --super-admin" />
       <command text="c require spipu/html2pdf" />
       <command text="s doctrine:schema:update -f " />
+      <command text="s server:run " />
+      <command text="s doctrine:generate:entities HebergementBundle:Hebergement" />
+      <command text="s doctrine:schema:update --force " />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -270,18 +163,9 @@
       </map>
     </option>
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/new.html.twig" />
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/public/css/css_event.css" />
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/edit.html.twig" />
-        <option value="$PROJECT_DIR$/../template/features-lightbox.html" />
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/detailevent.html.twig" />
         <option value="$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/resultatsearch.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" />
@@ -312,9 +196,7 @@
         <option value="$PROJECT_DIR$/src/HebergementBundle/Entity/Messagerie.php" />
         <option value="$PROJECT_DIR$/src/HebergementBundle/Form/MessagerieType.php" />
         <option value="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig" />
         <option value="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" />
         <option value="$PROJECT_DIR$/src/PiBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/PubliciteBundle/Form/PubliciteType.php" />
         <option value="$PROJECT_DIR$/src/BackOfficeBundle/Resources/config/routing.yml" />
@@ -327,6 +209,14 @@
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/index.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/baseadmin.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php" />
+        <option value="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/messagerie.yml" />
+        <option value="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/new.html.twig" />
+        <option value="$PROJECT_DIR$/src/HebergementBundle/Entity/Hebergement.php" />
+        <option value="$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/map.html.twig" />
+        <option value="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" />
+        <option value="$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/hebergement.yml" />
       </list>
     </option>
   </component>
@@ -426,122 +316,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="EvennementBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="EvennementBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="EvennementBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="EvennementBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="EvennementBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="evennement" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="EvennementBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="evennement" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="front" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PiBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PiBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PiBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PiBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="PiBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Default" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -558,26 +332,95 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="HebergementBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="HebergementBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="HebergementBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="HebergementBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="HebergementBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routing" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FirstSymfony" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="wrapped&#9;null&#9;null&#10;validator.&#9;FILE&#9;file://C:/wamp64/www/pidev/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.ar.yml&#10;/login&#9;FILE&#9;file://C:/wamp64/www/pidev/app/Resources/views/FOSUser/views/Security/login_content.html.twig" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\planners\src\EvennementBundle\Resources\views\evennement\admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\planners\vendor\symfony\symfony\src\Symfony\Bundle\WebServerBundle\Resources" />
+      <recent name="C:\wamp64\www\planners\vendor\symfony\symfony\src\Symfony\Bundle\WebServerBundle\Resources\config" />
       <recent name="C:\wamp64\www\planners\web\bundles" />
       <recent name="C:\wamp64\www\planners\src\BackOfficeBundle\Controller" />
       <recent name="C:\wamp64\www\planners\src\EvennementBundle\Resources\views\evennement\admin" />
-      <recent name="C:\wamp64\www\planners\web\templatelist" />
-      <recent name="C:\wamp64\www\planners\web\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\planners\vendor\symfony\symfony\src\Symfony\Bundle\WebServerBundle\Resources" />
+      <recent name="C:\wamp64\www\planners\src\EvennementBundle\Resources\views\evennement\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -715,6 +558,29 @@
       <workItem from="1523053821959" duration="8024000" />
       <workItem from="1523097680736" duration="403000" />
       <workItem from="1523152322162" duration="96000" />
+      <workItem from="1524516284774" duration="3424000" />
+      <workItem from="1524590592895" duration="5638000" />
+      <workItem from="1524799726029" duration="67000" />
+      <workItem from="1524823482726" duration="6272000" />
+      <workItem from="1524918879015" duration="1325000" />
+      <workItem from="1525095618728" duration="3341000" />
+      <workItem from="1525100273118" duration="451000" />
+      <workItem from="1525104359619" duration="910000" />
+      <workItem from="1525140234799" duration="526000" />
+      <workItem from="1525140953803" duration="2835000" />
+      <workItem from="1525145161137" duration="480000" />
+      <workItem from="1525225194392" duration="8148000" />
+      <workItem from="1525234404640" duration="628000" />
+      <workItem from="1525299595675" duration="1621000" />
+      <workItem from="1525304138651" duration="5331000" />
+      <workItem from="1525312162282" duration="1602000" />
+      <workItem from="1525316348562" duration="1261000" />
+      <workItem from="1525350642382" duration="568000" />
+      <workItem from="1525360578200" duration="1560000" />
+      <workItem from="1525362697751" duration="788000" />
+      <workItem from="1525380508119" duration="375000" />
+      <workItem from="1525388550552" duration="592000" />
+      <workItem from="1525402700633" duration="1228000" />
     </task>
     <task id="LOCAL-00001" summary="lina">
       <created>1521680998570</created>
@@ -737,11 +603,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523058812366</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mahdi final">
+      <created>1523474375675</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1523474375675</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="272109000" />
+    <option name="totallyTimeSpent" value="321301000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -754,66 +627,58 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034258" sideWeight="0.51134646" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2903752" sideWeight="0.48865354" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32789558" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12274959" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034258" sideWeight="0.51134646" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.122349106" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034258" sideWeight="0.51134646" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2903752" sideWeight="0.48865354" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12274959" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23827533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.50832075" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034258" sideWeight="0.51134646" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31674957" sideWeight="0.49167928" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2903752" sideWeight="0.48865354" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12274959" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22844176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21255673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -834,134 +699,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/esp.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Entity/Messagerie.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="82" column="7" lean-forward="false" selection-start-line="82" selection-start-column="7" selection-end-line="82" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Form/HebergementType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-42">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Form/MessagerieType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="82" lean-forward="false" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="209" column="46" lean-forward="false" selection-start-line="209" selection-start-column="46" selection-end-line="209" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PiBundle/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="106" column="65" lean-forward="false" selection-start-line="106" selection-start-column="65" selection-end-line="106" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="116" column="5" lean-forward="false" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="41" column="41" lean-forward="false" selection-start-line="41" selection-start-column="41" selection-end-line="41" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/FOSUser/views/Registration/register_content.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="26" column="91" lean-forward="false" selection-start-line="26" selection-start-column="91" selection-end-line="26" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-212">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PiBundle/Redirection/AfterLoginRedirection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Type/RegistrationFormType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="49" column="45" lean-forward="false" selection-start-line="49" selection-start-column="25" selection-end-line="50" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="44" column="41" lean-forward="false" selection-start-line="44" selection-start-column="41" selection-end-line="44" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Form/Factory/FormFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PiBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="42" column="36" lean-forward="false" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
-          <folding>
-            <element signature="e#6#88#0#PHP" expanded="false" />
-            <element signature="e#116#158#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -969,7 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1087,22 +827,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="663">
           <caret line="41" column="27" lean-forward="false" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          <folding>
-            <element signature="e#39#96#0#PHP" expanded="true" />
-            <element signature="e#803#820#1#PHP" expanded="true" />
-            <element signature="e#924#953#1#PHP" expanded="true" />
-            <element signature="e#1183#1217#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PiBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="2397">
           <caret line="141" column="33" lean-forward="false" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1117,15 +850,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-969">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,9 +869,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
+        <state relative-caret-position="1870">
           <caret line="110" column="45" lean-forward="false" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1188,8 +918,126 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2482">
+          <caret line="146" column="63" lean-forward="false" selection-start-line="146" selection-start-column="52" selection-end-line="146" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PiBundle/Resources/views/Default/profil.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="58" lean-forward="false" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebServerBundle/Resources/config/router.php" />
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Bundle/WebServerBundle/Resources/config/webserver.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/messagerie/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="90" lean-forward="false" selection-start-line="29" selection-start-column="90" selection-end-line="29" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Form/HebergementType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="23" column="23" lean-forward="true" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Entity/Messagerie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2242">
+          <caret line="154" column="20" lean-forward="false" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/messagerie.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Entity/Hebergement.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="438" column="0" lean-forward="false" selection-start-line="438" selection-start-column="0" selection-end-line="438" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="120" column="28" lean-forward="false" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/views/hebergement/map.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Controller/MessagerieController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing/hebergement.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="100" column="71" lean-forward="false" selection-start-line="100" selection-start-column="71" selection-end-line="100" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="79" column="55" lean-forward="true" selection-start-line="79" selection-start-column="55" selection-end-line="79" selection-end-column="55" />
           <folding />
         </state>
       </provider>

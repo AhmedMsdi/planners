@@ -59,6 +59,7 @@ class Hebergement
      * @ORM\ManyToOne(targetEntity="\PiBundle\Entity\User")
      * @ORM\JoinColumn(name="idUser", referencedColumnName="id")
      */
+
     private $idUser;
 
 
@@ -118,6 +119,51 @@ class Hebergement
      * @ORM\Column(name="y", type="float", nullable=false)
      */
     private $y;
+
+
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="depart", type="string", length=255)
+     */
+    private $depart;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="depart_id", type="string", length=255)
+     */
+    private $departId;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="depart_lat", type="float")
+     */
+    private $departLat;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="depart_lng", type="float")
+     */
+    private $departLng;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="destination", type="string", length=255)
+     */
+    private $destination;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="destination_id", type="string", length=255)
+     */
+    private $destinationId;
 
     public function getId()
     {
@@ -342,5 +388,158 @@ class Hebergement
 
 
 
-}
 
+    /**
+     * Get enable
+     *
+     * @return boolean
+     */
+    public function getEnable()
+    {
+        return $this->enable;
+    }
+
+    /**
+     * Set depart
+     *
+     * @param string $depart
+     *
+     * @return Hebergement
+     */
+    public function setDepart($depart)
+    {
+        $this->depart = $depart;
+
+        return $this;
+    }
+
+    /**
+     * Get depart
+     *
+     * @return string
+     */
+    public function getDepart()
+    {
+        return $this->depart;
+    }
+
+    /**
+     * Set departId
+     *
+     * @param string $departId
+     *
+     * @return Hebergement
+     */
+    public function setDepartId($departId)
+    {
+        $this->departId = $departId;
+
+        return $this;
+    }
+
+    /**
+     * Get departId
+     *
+     * @return string
+     */
+    public function getDepartId()
+    {
+        return $this->departId;
+    }
+
+    /**
+     * Set departLat
+     *
+     * @param float $departLat
+     *
+     * @return Hebergement
+     */
+    public function setDepartLat($departLat)
+    {
+        $this->departLat = $departLat;
+
+        return $this;
+    }
+
+    /**
+     * Get departLat
+     *
+     * @return float
+     */
+    public function getDepartLat()
+    {
+        return $this->departLat;
+    }
+
+    /**
+     * Set departLng
+     *
+     * @param float $departLng
+     *
+     * @return Hebergement
+     */
+    public function setDepartLng($departLng)
+    {
+        $this->departLng = $departLng;
+
+        return $this;
+    }
+
+    /**
+     * Get departLng
+     *
+     * @return float
+     */
+    public function getDepartLng()
+    {
+        return $this->departLng;
+    }
+
+    /**
+     * Set destination
+     *
+     * @param string $destination
+     *
+     * @return Hebergement
+     */
+    public function setDestination($destination)
+    {
+        $this->destination = $destination;
+
+        return $this;
+    }
+
+    /**
+     * Get destination
+     *
+     * @return string
+     */
+    public function getDestination()
+    {
+        return $this->destination;
+    }
+
+    /**
+     * Set destinationId
+     *
+     * @param string $destinationId
+     *
+     * @return Hebergement
+     */
+    public function setDestinationId($destinationId)
+    {
+        $this->destinationId = $destinationId;
+
+        return $this;
+    }
+
+    /**
+     * Get destinationId
+     *
+     * @return string
+     */
+    public function getDestinationId()
+    {
+        return $this->destinationId;
+    }
+}
