@@ -9,6 +9,9 @@ use ReviewBundle\Entity\Signaisation;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 /**
  * Commentaireomar controller.
@@ -16,6 +19,87 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class CommentaireController extends Controller
 {
+
+    public function allAction()
+    {
+        $commentaires = $this->getDoctrine()->getManager()
+                ->getRepository('ReviewBundle:Commentaire')
+                ->findAll();
+
+        $serializer = new Serializer([ new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($commentaires);
+
+        return new JsonResponse($formatted);
+    }
+
+
+    public function findAction($id){
+        $commentaires= $this->getDoctrine()->getManager()
+            ->getRepository('ReviewBundle:Commentaire')
+            ->find($id);
+
+        $serialzer = new Serializer([ new ObjectNormalizer()]);
+        $formatted = $serialzer -> normalize($commentaires);
+
+        return new JsonResponse($formatted);
+    }
+
+
+
+    public function  new2Action(Request $request){
+
+        $em= $this->getDoctrine()->getManager();
+        $commentaire = new Commentaire();
+
+        $user=$em->getRepository('PiBundle:User')->find($request->get('id'));
+        $plan=$em->getRepository('PlanBundle:Plan')->find($request->get('idPlan'));
+
+        $commentaire ->setContenu($request->get('contenu'));
+        $commentaire->setIdUser($user);
+        $commentaire->setIdP($plan);
+
+        $em->persist($commentaire);
+        $em->flush();
+        $serializer = new Serializer([ new ObjectNormalizer()]);
+        $formatted = $serializer-> normalize($commentaire);
+
+        return new JsonResponse($formatted);
+
+    }
+
+
+    public function delete2Action($id){
+        $em=$this->getDoctrine()->getManager();
+           $commentaire=$em->getRepository(Commentaire::class)->find($id);
+
+        $em->remove($commentaire);
+        $em->flush();
+
+        return new Response("true");
+    }
+
+
+
+    /*
+    public function deleteAction($id)
+    {
+
+
+        $em=$this->getDoctrine()->getManager();
+        $commentaire=$em->getRepository(Commentaire::class)->find($id);
+
+        $em->remove($commentaire);
+        $em->flush();
+
+        return $this->redirectToRoute('Details_plans',array('idP' => $commentaire->getIdP()->getIdP())  );
+
+
+
+    }*/
+
+
+
+
     /**
      * Lists all commentaire entities.
      *
@@ -46,10 +130,6 @@ class CommentaireController extends Controller
             $contenu=$request->get('contenu');
 
 
-
-
-
-
             $commentaire->setContenu($contenu);
             $commentaire->setIdUser($user);
             $commentaire->setIdP($plan);
@@ -64,8 +144,6 @@ class CommentaireController extends Controller
         return new JsonResponse(array("status"=>true));
 
     }
-
-
 
 
 
