@@ -7,6 +7,17 @@ use PlanBundle\Entity\Plan;
 
 class PlanRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    function WSChercherDQL ($ville){
+
+        $query = $this->getEntityManager()->createQuery("select v from PlanBundle:Plan v WHERE v.ville=:n1 ")
+            ->setParameter('n1',  $ville )  ;
+        $query->getResult();
+        return $query->getResult();
+
+
+    }
+
     public function DivertisementsAction()
     {
         $query = $this->getEntityManager()
@@ -96,17 +107,32 @@ class PlanRepository extends \Doctrine\ORM\EntityRepository
 
     }
     public function FindAction($recher,$Reg)
-    {
+{
 
-        $query = $this->getEntityManager()->createQuery("SELECT p FROM PlanBundle:Plan p
+    $query = $this->getEntityManager()->createQuery("SELECT p FROM PlanBundle:Plan p
                               JOIN  PlanBundle:SousCategorie s
                               WITH p.idSc=s.idSc JOIN  PlanBundle:Categorie a WITH s.idC = a.idC 
                               WHERE p.etat=1 and   p.libelle like '%$recher%' 
                               and   p.ville like '%$Reg%' 
                               order by p.idP ASC");
-      //  ->setParameter('n2', '%'.$recher.'%');
+    //  ->setParameter('n2', '%'.$recher.'%');
 
-        return $query->getResult();
+    return $query->getResult();
+
+
+}
+
+
+    public function FindplanAction($nom)
+    {
+        $query = $this->getEntityManager()->createQuery("SELECT p FROM PlanBundle:Plan p
+                              JOIN  PlanBundle:SousCategorie s
+                              WITH p.idSc=s.idSc JOIN  PlanBundle:Categorie a WITH s.idC = a.idC 
+                              WHERE p.etat=1 and   p.libelle like '%$nom%' 
+                              or   p.ville like '%$nom%' 
+                              order by p.idP ASC");
+
+       return $query->getResult();
 
 
     }
