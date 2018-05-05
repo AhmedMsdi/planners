@@ -76,3 +76,26 @@ rechadmin:
     defaults: { _controller: "HebergementBundle:Hebergement:rechadmin" }
     methods:  POST
 
+hebergement_allM:
+    path:     /all
+    defaults: { _controller: "HebergementBundle:Hebergement:all" }
+
+hebergement_findM:
+    path:     /find/{id}
+    defaults: { _controller: "HebergementBundle:Hebergement:find" }
+
+hebergement_ajoutM:
+    path:     /newM
+    defaults: { _controller: "HebergementBundle:Hebergement:WSnew" }
+
+hebergement_suppM:
+    path:     /{id}/deleteM
+    defaults: { _controller: "HebergementBundle:Hebergement:WSdelete" }
+
+hebergement_map:
+    path:     /map
+    defaults: { _controller: "HebergementBundle:Hebergement:map" }
+
+hebergement_image:
+    path:     /image
+    defaults: { _controller: "HebergementBundle:Hebergement:uploadImage" }

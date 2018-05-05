@@ -6,7 +6,13 @@
     <!-- //////////////////////////////////
   //////////////PAGE CONTENT/////////////
   ////////////////////////////////////-->
+    <head> <link rel="stylesheet" type="text/css" href="{{ asset('bundles/starrating/css/rating.css') }}" />
 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="{{ asset('bundles/starrating/js/rating.js') }}"></script>
+
+
+    </head>
     <div class="gap"></div>
 
     <div class="container">
@@ -22,19 +28,13 @@
                     </div>
                     <div class="col-md-5">
                         <div class="product-info box">
-                            <ul class="icon-group icon-list-rating text-color" title="4.5/5 rating">
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star"></i>
-                                </li>
-                                <li><i class="fa fa-star-half-empty"></i>
-                                </li>
-                            </ul>	<small><a href="#" class="text-muted">based on 8 reviews</a></small>
+
                             <h3>{{ publicite.text }}</h3>
+                            {{ form_start(form) }}
+                            <div class="controls">
+                                <h5>Donnez une note</h5>
+                                {{ form_widget(form.rating) }}
+                            {{ form_end(form) }}
                             <p class="product-info-price">{{ publicite.nbClick }} clicks</p>
                             <p class="text-smaller text-muted"><a href="http://{{ publicite.siteWeb }}" >{{ publicite.siteWeb }}</a></p>
                             <ul class="icon-list list-space product-info-list">
@@ -89,6 +89,8 @@
                         </li>
                         <li><a href="#tab-2" data-toggle="tab"><i class="fa fa-tags"></i>Les mots clés</a>
                         </li>
+                        <li><a href="#tab-3" data-toggle="tab"><i class="fa fa-tags"></i>Les commentaires</a>
+                        </li>
 
 
                     </ul>
@@ -99,7 +101,13 @@
                         </div>
                         <div class="tab-pane fade" id="tab-2">
                            <p>{{ publicite.tags }}</p>
+
                             {{ twitterButton() }}
+                        </div>
+                        <div class="tab-pane fade" id="tab-3">
+
+
+
                         </div>
 
                     </div>

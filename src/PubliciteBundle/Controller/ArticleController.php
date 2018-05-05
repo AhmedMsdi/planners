@@ -43,28 +43,53 @@ class ArticleController extends Controller
 
 
     public function chercherAction(Request $request)
-    {    $em = $this->getDoctrine()->getManager();
+    {     $em = $this->getDoctrine()->getManager();
 
         $articles = $em->getRepository('PubliciteBundle:Article')->findBy(array('user' =>$this->getUser()));
-
+        $all = $em->getRepository('PubliciteBundle:Article')->findAll();
 
         if($request->isXmlHttpRequest() && $request->isMethod('post') && $request->get('text')!=null){
 
             $text =$request->get('text');
             $em = $this->getDoctrine()->getEntityManager();
+           if($request->get("btns")!=null)
+           {
             $query =$em->getRepository('PubliciteBundle:Article')->createQueryBuilder('u');
             $annonce= $query->where($query->expr()->like('u.titre',':p'))
                 ->setParameter('p','%'.$text.'%')
                 ->getQuery()->getResult();
+               $response = $this->renderView('@Publicite/article/search.html.twig',array('articles'=>$annonce));
+               return  new JsonResponse($response) ;
 
-            $response = $this->renderView('@Publicite/article/search.html.twig',array('articles'=>$annonce));
-            return  new JsonResponse($response) ;
-        }elseif ( $request->get('text')==null){
+
+
+           }
+            if($request->get("btnval")!=null)
+            {
+                $query =$em->getRepository('PubliciteBundle:Article')->createQueryBuilder('u');
+                $annonce= $query->where($query->expr()->like('u.tags',':p'))
+                    ->setParameter('p','%'.$text.'%')
+                    ->getQuery()->getResult();
+
+                $response = $this->renderView('@Publicite/article/searchAll.html.twig',array('articles'=>$annonce));
+                return  new JsonResponse($response) ;
+            }
+
+        }elseif ( $request->get('text')==null && $request->get("btns")!=null){
             $em = $this->getDoctrine()->getEntityManager();
             $query =$em->getRepository('PubliciteBundle:Article')->createQueryBuilder('u');
             $annonce= $query
                 ->getQuery()->getResult();
             $response = $this->renderView('@Publicite/article/search.html.twig',array('articles'=>$articles));
+            return  new JsonResponse($response) ;
+
+
+        }elseif ( $request->get('text')==null && $request->get("btnval")!=null ){
+            $em = $this->getDoctrine()->getEntityManager();
+            $query =$em->getRepository('PubliciteBundle:Article')->createQueryBuilder('u');
+            $annonce= $query
+                ->getQuery()->getResult();
+            $response = $this->renderView('@Publicite/article/searchAll.html.twig',array('articles'=>$all));
             return  new JsonResponse($response) ;
         }
 

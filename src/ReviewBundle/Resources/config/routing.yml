@@ -1,3 +1,42 @@
+review_commentaire:
+    resource: "@ReviewBundle/Resources/config/routing/commentaire.yml"
+    prefix:   /commentaire
+
 commentaire_ajout:
     path:     /ajoutcom
-    defaults: { _controller: "" }
+    defaults: { _controller: "ReviewBundle:Commentaireomar:ajoutercom" }
+
+signalisation:
+    path:     /{id}/signal
+    defaults: { _controller: "ReviewBundle:Signaisation:signaler" }
+    methods:  [GET, POST]
+
+favoris:
+    path:     /{id}/favoris
+    defaults: { _controller: "ReviewBundle:Favoris:favoris" }
+    methods:  [GET, POST]
+
+favorisindex:
+    path:     /favoris
+    defaults: { _controller: "ReviewBundle:Favoris:index" }
+    methods:  [GET, POST]
+
+all:
+    path:     /all
+    defaults: { _controller: "ReviewBundle:Commentaire:all" }
+
+all:
+    path:     /find/{id}
+    defaults: { _controller: "ReviewBundle:Commentaire:find" }
+
+create_com:
+    path:     /new2
+    defaults: { _controller: "ReviewBundle:Commentaire:new2" }
+
+create_comc:
+    path:     /del2/{id}
+    defaults: { _controller: "ReviewBundle:Commentaire:delete2" }
+
+create_comco:
+    path:     /fav
+    defaults: { _controller: "ReviewBundle:Favoris:newFav" }

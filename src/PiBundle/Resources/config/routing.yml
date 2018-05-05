@@ -5,6 +5,11 @@ pi_homepage:
 profil:
     path:     /profil
     defaults: { _controller: PiBundle:Default:profil }
-
+UserWs:
+    path:     /AllUser
+    defaults: { _controller: PiBundle:Default:allUser }
+Userlog:
+    path:     /FindLoginID/{login}/{pswd}
+    defaults: { _controller: PiBundle:Default:FindLoginID }
 
 

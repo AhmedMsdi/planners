@@ -1,0 +1,25 @@
+signaisation_index:
+    path:     /
+    defaults: { _controller: "ReviewBundle:Signaisation:index" }
+    methods:  GET
+
+signaisation_show:
+    path:     /{id}/show
+    defaults: { _controller: "ReviewBundle:Signaisation:show" }
+    methods:  GET
+
+signaisation_new:
+    path:     /new
+    defaults: { _controller: "ReviewBundle:Signaisation:new" }
+    methods:  [GET, POST]
+
+signaisation_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ReviewBundle:Signaisation:edit" }
+    methods:  [GET, POST]
+
+signaisation_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ReviewBundle:Signaisation:delete" }
+    methods:  DELETE
+

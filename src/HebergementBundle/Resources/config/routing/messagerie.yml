@@ -27,3 +27,15 @@ messagerie_indexAdmin:
     path:     /
     defaults: { _controller: "HebergementBundle:Messagerie:indexAdmin" }
     methods:  GET
+
+messagerie_ajoutM:
+    path:     /newMessaMob
+    defaults: { _controller: "HebergementBundle:Messagerie:WSnewMess" }
+
+messagerie_editM:
+    path:     /{id}/editM
+    defaults: { _controller: "HebergementBundle:Messagerie:editM" }
+
+messagerie_showM:
+    path:     /all
+    defaults: { _controller: "HebergementBundle:Messagerie:all" }

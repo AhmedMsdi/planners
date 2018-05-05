@@ -9,3 +9,27 @@ publicite_homepage:
 article:
     resource: "@PubliciteBundle/Resources/config/routing/article.yml"
     prefix:   /article
+
+publicite_json:
+    path:     /pubjson
+    defaults: { _controller: PubliciteBundle:Default:all }
+
+publicite_jsonbyid:
+    path:     /pubjsonid/{id}
+    defaults: { _controller: PubliciteBundle:Default:byid }
+
+publicite_jsonnew:
+    path:     /pubjsonnew
+    defaults: { _controller: PubliciteBundle:Default:new }
+
+publicite_jsondelete:
+    path:     /pubjsondelete/{id}
+    defaults: { _controller: PubliciteBundle:Default:delete }
+
+article_json:
+    path:     /articlejson
+    defaults: { _controller: PubliciteBundle:Default:allArticle }
+
+image_json:
+    path:     /imageupload
+    defaults: { _controller: PubliciteBundle:Default:uploadImage }
