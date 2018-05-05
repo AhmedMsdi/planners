@@ -69,6 +69,7 @@ class HebergementController extends Controller
     public function WSnewAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
+        $user=$em->getRepository('PiBundle:User')->find($request->get('idUser'));
         $hebergement = new Hebergement();
         $hebergement->setTitre($request->get('titre'));
         $hebergement->setCategorie($request->get('categorie'));
@@ -79,7 +80,7 @@ class HebergementController extends Controller
         $hebergement->setSiteWeb($request->get('siteWeb'));
         $hebergement->setPhoto($request->get('photo'));
         $hebergement->setEnable(0);
-       // $hebergement->setIdUser($request->get('idUser'));
+        $hebergement->setIdUser($user);
         $hebergement->setDatecreation(new \DateTime());
         $hebergement->setX(35.829994611617);
         $hebergement->setY(10.629039578049);
