@@ -109,7 +109,7 @@ class Evennement
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="CategorieEvent")
+     * @ORM\ManyToOne(targetEntity="EvennementBundle\Entity\CategorieEvent")
      * @ORM\JoinColumn(name="CatEvent",referencedColumnName="id",nullable=false)
      * @Assert\NotBlank(message="Champs obligatoire")
      */
@@ -330,6 +330,7 @@ class Evennement
         return $this;
     }
 
+
     /**
      * Get catEvent
      *
@@ -338,6 +339,7 @@ class Evennement
     public function getCatEvent()
     {
         return $this->CatEvent;
+
     }
 
     /**
@@ -416,6 +418,8 @@ class Evennement
     function __toString()
     {
            return(string) $this->titre;
+
+
     }
 
 }

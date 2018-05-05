@@ -34,6 +34,7 @@ evennement_evennement_front:
     resource: "@EvennementBundle/Controller/FrontEvennementController.php"
     type:     annotation
 
+
 back_office:
     resource: "@BackOfficeBundle/Resources/config/routing.yml"
     prefix:   /
