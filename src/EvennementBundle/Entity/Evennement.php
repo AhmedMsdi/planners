@@ -57,7 +57,7 @@ class Evennement
     private $date_event;
 
     /**
-     * @ORM\Column(type="time",name="time_event")
+     * @ORM\Column(type="time",name="time_event", nullable=true)
      * @Assert\NotBlank(message="Champs obligatoire")
      */
     private $time_event;
