@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pidev.iml" afterPath="$PROJECT_DIR$/.idea/pidev.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" />
     </list>
@@ -40,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="421">
-              <caret line="576" column="4" lean-forward="false" selection-start-line="576" selection-start-column="4" selection-end-line="576" selection-end-column="4" />
+              <caret line="576" column="0" lean-forward="false" selection-start-line="576" selection-start-column="0" selection-end-line="576" selection-end-column="0" />
               <folding>
                 <element signature="e#47#86#0#PHP" expanded="true" />
                 <element signature="e#981#1010#1#PHP" expanded="true" />
@@ -962,6 +962,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
     <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
@@ -1081,7 +1092,7 @@
       <workItem from="1525297079585" duration="4158000" />
       <workItem from="1525384591606" duration="5602000" />
       <workItem from="1525525050896" duration="10000" />
-      <workItem from="1525606016980" duration="6492000" />
+      <workItem from="1525606016980" duration="6550000" />
     </task>
     <task id="LOCAL-00001" summary="lina">
       <created>1521680998570</created>
@@ -1132,11 +1143,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525525634336</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="lina wS finaaaaaal !!">
+      <created>1525647899477</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1525647899477</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="330102000" />
+    <option name="totallyTimeSpent" value="330160000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1217,7 +1235,8 @@
     <MESSAGE value="omar final" />
     <MESSAGE value="ahmed mobile avec hebergement mahdi" />
     <MESSAGE value="lina mobile push" />
-    <option name="LAST_COMMIT_MESSAGE" value="lina mobile push" />
+    <MESSAGE value="lina wS finaaaaaal !!" />
+    <option name="LAST_COMMIT_MESSAGE" value="lina wS finaaaaaal !!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1587,7 +1606,7 @@
     <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
-          <caret line="576" column="4" lean-forward="false" selection-start-line="576" selection-start-column="4" selection-end-line="576" selection-end-column="4" />
+          <caret line="576" column="0" lean-forward="false" selection-start-line="576" selection-start-column="0" selection-end-line="576" selection-end-column="0" />
           <folding>
             <element signature="e#47#86#0#PHP" expanded="true" />
             <element signature="e#981#1010#1#PHP" expanded="true" />
