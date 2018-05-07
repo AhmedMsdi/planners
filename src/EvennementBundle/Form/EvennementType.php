@@ -56,8 +56,7 @@ class EvennementType extends AbstractType
                 'attr' => [
                     'autocomplete' => 'off',
                     'placeholder' => "Date",
-                    'class' => 'datepicker']
-            ])
+                    'class' => 'datepicker']])
             ->add('time_event',TimeType::class,[
                 'label'=>'Heure',
                 'required'=>false,

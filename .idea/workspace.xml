@@ -1,8 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="">
+    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="mahdi final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
+      <change beforePath="$PROJECT_DIR$/scriptup.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/EvennementController.php" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Entity/Evennement.php" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Form/EvennementType.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Form/EvennementType.php" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Repository/CategorieEventRepository.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/CategorieEventRepository.php" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/config/routing.yml" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/MesEvent.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/MesEvent.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" afterPath="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/allevent.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php" />
+      <change beforePath="$PROJECT_DIR$/src/HebergementBundle/Entity/Hebergement.php" afterPath="$PROJECT_DIR$/src/HebergementBundle/Entity/Hebergement.php" />
+      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Entity/Article.php" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Entity/Article.php" />
+      <change beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing.yml" />
+      <change beforePath="$PROJECT_DIR$/vendor.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/,.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/07.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/1 (2).jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/1.PNG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/10325219_1442153816048967_7261436260539719071_n.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/11.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/15871486_1172471156193548_2360718954981349863_n.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/1610920_1209875915733637_1742412582138412751_n.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/165c872a166f121d97f92fa81daf5d6f.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/201d1a62bf3f06fe6a91e323664a468b.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/39b525b49a7c8f7291b558a59c42a981.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/3b01f777a3c895ca8d6aefee5bda21a7.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/46c1613df12108a54617d07dba3d29a9.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/5.JPG" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/540346-636220588362252438-16x9.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/55fac191cb03f1006e96b84bf3e0aeb3.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/593876_large.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/8567d668ccac0b9eb1a632019626e11c.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/8693c2f0c1a2fcbfb9da80790fc816a3.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/8b3b0300101f6eb9ee28a166f20040be.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/8ceff14de8a3575500f9eecf903501a5.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/9230fabd3a667a761b6bda3caf30e69f.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/97219004.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/99fd124822f3cf3b32efee13e524510b.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/9b19489d2b29dcaf2c1a93831560cbd4.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/9f71d2c2913fecc62d86d7875718e4e0.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/BellagioExterior3_54_990x660_201404251834.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/Chrysanthemum.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/Desert.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/Hydrangeas.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/IduserTest.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/05f006945c973e909835025736e8cae6.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/0b2cabace3944b70b2bfdfdeb0eab71d.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/116511a8f75c98a982762a36a36299e2.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/1d6a6bf408e1830f728e759e66f1ff09.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/2ee4bda41dab551a16e7727c00d435c4.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/3331c84a934851cca304706711c00cd0.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/45dc908ef644c5c40df6a0c9392f34a3.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/5b985a2cb37317e3cc410a5619a65f05.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/63dca4f8ff33d660cf754feca7f6daef.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/6a9c8195d1e2770edbe25293af679c72.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/6c9fe953fe7389d1ac344db6c971fe3c.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/6d5b08930caa67f956cae98480ba9f0b.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/7cc762aafa6e2e35e655fc9c177477f8.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/8333b8dbc4002e42dc18b2e23a904328.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/91c95398d2b83fe882d64a32506cf2c7.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/9901757d653f4baa6f98b2841b422d8f.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/a0f5afede50234b740127f34e595fcfc.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/acc2dcab68ed8f87b4a3cdbc59477797.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/b004983395330ab6a2a45e9fe58be7a4.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/bbe8aa62217fdf450f992aee78c14eda.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/de5652ae685a790f2c863f6f27a5db4c.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ImagesPlans/test2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/Jellyfish.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/Koala.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/Lighthouse.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/OMG.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/Penguins.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/a.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/a9792d0b08a83aa6b165e59b300e826d.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/aa.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/aaaa.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/abc.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/add.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ahmed m3alem.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ahmed phone.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ahmed.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ahmedddd.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/avatar-10.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/avatar-5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/avatar-7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/b7362c2601eee5cea257a7094e847d6e.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/chambre-5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ck send .jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ck2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ckeditor.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/comment-choisir-le-meilleur-hotel-au-meilleur-prix-.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/complex image.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/d1f27c206b4c12ad383da5ec027849ac.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/d39caaf38c4c8d6db9a8933f21d0451f.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/da29055bd7d443244281652bdd1cd5c1.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ddbece18d27700a95da88bbaf3ea439e.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/de9293502719c00e97ee6e30e2e79823.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/e63e2038f465c903e36bea7cf566dfaa.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/f2614834e61a29bc6e44db06d0d65656.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/f3dd9ea333f8ce8b49a9a6d61866c2c1.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/fe7c2e56ad5185077d46ecf69f48163b.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/ff74dd32dfe42848ed6211a953f1e7f5.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/gg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/hii.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/hotels-4.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/hotls-rodents-in-hotels-rodrepel-blogs.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/10_d1fea75c982fd921396d0d7726d3eeb3.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/2_09a561a6829e0575bed175280237b38a.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/4_986726c47339f359d2c36df7a6f61cbb.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/5_d69f07585e4a8ec41b71580fd76f5104.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/5aef6b77252ef.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/5aef6de0c22d5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/5aef6deced278.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/5aef71214a31b.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/5aef8ceecbc18.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/5aef91f3e10d7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/5aef994fba143.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/6_0b6213068cd2935e84912667127ba5f7.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/7_2df81b7fad3b8561e9339bf4f2cb44d1.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/8_b4dd36446d649a39b812c70e11942fd6.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/9_79d4774236a546becf12b5944600cf85.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/CAMP.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/Camping.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/Parachute.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/Planche1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/Planche2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/Rando1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/activité2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/holi.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/holly.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/hollyday.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/karim-gharbi.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/imageEvent/rando3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/kidz.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/logo1.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/mahdi.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/masonhotes-100117-1.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/mummy.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/printjs.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/profile.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/scriptup.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/test bon affichage.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/test.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/testesatat.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/testimage.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/teststat.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/top10-luxury-hotels-in-bangkok.jpg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/tr.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/tst.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/uploads/15871486_1172471156193548_2360718954981349863_n.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/uploads/Mahdi test.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/uploads/aaaa.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/uploads/abc.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/uploads/dghjkl.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/uploads/ggg.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/uploads/mahdi hotel.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/uploads/testiduser.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/waaw.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web/yoo.jpg" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,77 +195,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HebergementController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HebergementController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HebergementBundle/Controller/HebergementController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
               <caret line="73" column="63" lean-forward="false" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Controller/DefaultController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-474">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#675#715#0#PHP" expanded="true" />
-                <element signature="e#972#1003#1#PHP" expanded="true" />
-                <element signature="e#1430#1461#1#PHP" expanded="true" />
-                <element signature="e#1927#1958#1#PHP" expanded="true" />
-                <element signature="e#3790#3821#1#PHP" expanded="true" />
-                <element signature="e#3908#3939#1#PHP" expanded="true" />
-                <element signature="e#4034#4065#1#PHP" expanded="true" />
-                <element signature="e#4167#4198#1#PHP" expanded="true" />
-                <element signature="e#4780#4811#1#PHP" expanded="true" />
-                <element signature="e#5349#5396#0#PHP" expanded="true" />
-                <element signature="e#5582#5624#0#PHP" expanded="true" />
-                <element signature="e#5902#5933#1#PHP" expanded="true" />
-                <element signature="e#6028#6059#1#PHP" expanded="true" />
-                <element signature="e#6149#6180#1#PHP" expanded="true" />
-                <element signature="e#6257#6288#1#PHP" expanded="true" />
-                <element signature="e#6944#6975#1#PHP" expanded="true" />
-                <element signature="e#7044#7092#0#PHP" expanded="true" />
-                <element signature="e#7264#7307#0#PHP" expanded="true" />
-                <element signature="e#7582#7613#1#PHP" expanded="true" />
-                <element signature="e#7700#7731#1#PHP" expanded="true" />
-                <element signature="e#7821#7852#1#PHP" expanded="true" />
-                <element signature="e#7930#7961#1#PHP" expanded="true" />
-                <element signature="e#8626#8657#1#PHP" expanded="true" />
-                <element signature="e#8726#8775#0#PHP" expanded="true" />
-                <element signature="e#8960#9004#0#PHP" expanded="true" />
-                <element signature="e#9283#9314#1#PHP" expanded="true" />
-                <element signature="e#9401#9432#1#PHP" expanded="true" />
-                <element signature="e#9527#9558#1#PHP" expanded="true" />
-                <element signature="e#9636#9667#1#PHP" expanded="true" />
-                <element signature="e#10326#10357#1#PHP" expanded="true" />
-                <element signature="e#10426#10476#0#PHP" expanded="true" />
-                <element signature="e#10662#10707#0#PHP" expanded="true" />
-                <element signature="e#13481#13521#0#PHP" expanded="true" />
-                <element signature="e#14337#14367#1#PHP" expanded="true" />
-                <element signature="e#14605#14651#0#PHP" expanded="true" />
-                <element signature="e#14908#14949#0#PHP" expanded="true" />
-                <element signature="e#17091#17137#0#PHP" expanded="true" />
-                <element signature="e#17383#17424#0#PHP" expanded="true" />
-                <element signature="e#18692#18723#1#PHP" expanded="true" />
-                <element signature="e#18795#18826#1#PHP" expanded="true" />
-                <element signature="e#18906#18937#1#PHP" expanded="true" />
-                <element signature="e#19024#19055#1#PHP" expanded="true" />
-                <element signature="e#19379#19425#0#PHP" expanded="true" />
-                <element signature="e#19613#19654#0#PHP" expanded="true" />
-                <element signature="e#19913#19944#1#PHP" expanded="true" />
-                <element signature="e#20016#20047#1#PHP" expanded="true" />
-                <element signature="e#20127#20158#1#PHP" expanded="true" />
-                <element signature="e#20245#20276#1#PHP" expanded="true" />
-                <element signature="e#20602#20648#0#PHP" expanded="true" />
-                <element signature="e#20836#20877#0#PHP" expanded="true" />
-                <element signature="e#21158#21203#1#PHP" expanded="true" />
-                <element signature="e#21247#21287#1#PHP" expanded="true" />
-                <element signature="e#21650#21681#1#PHP" expanded="true" />
-                <element signature="e#21769#21800#1#PHP" expanded="true" />
-                <element signature="e#21896#21927#1#PHP" expanded="true" />
-                <element signature="e#22030#22061#1#PHP" expanded="true" />
-                <element signature="e#22382#22434#0#PHP" expanded="true" />
-                <element signature="e#22647#22694#0#PHP" expanded="true" />
-                <element signature="e#23351#23381#1#PHP" expanded="true" />
-                <element signature="e#23547#23587#0#PHP" expanded="true" />
-                <element signature="e#24563#24594#1#PHP" expanded="true" />
-                <element signature="e#25036#25067#1#PHP" expanded="true" />
-                <element signature="e#25154#25185#1#PHP" expanded="true" />
-                <element signature="e#25280#25311#1#PHP" expanded="true" />
-                <element signature="e#25404#25455#0#PHP" expanded="true" />
+                <marker date="1525665155179" expanded="true" signature="824:865" ph="SELECT u FRO... PubliciteBundle" />
+                <marker date="1525665155179" expanded="true" signature="1347:1404" ph="SELECT u FRO... PubliciteBundle" />
+                <marker date="1525665155179" expanded="true" signature="5011:5071" ph="SELECT u.con... PubliciteBundle" />
               </folding>
             </state>
           </provider>
@@ -179,7 +289,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="s doctrine:schema:update --force" />
       <command text="c update " />
       <command text="c dump-autoload" />
       <command text="c update " />
@@ -204,6 +313,7 @@
       <command text="c require spipu/html2pdf" />
       <command text="s doctrine:schema:update -f " />
       <command text="c require spipu/html2pdf" />
+      <command text="s doctrine:schema:update -f " />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -218,6 +328,9 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -373,8 +486,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -400,10 +511,25 @@
               <item name="PiBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Entity" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PubliciteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="planners" type="b2602c69:ProjectViewProjectNode" />
+              <item name="planners" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="PubliciteBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -426,6 +552,143 @@
       <recent name="C:\wamp64\www\planners\src\EvennementBundle\Resources\views\evennement\admin" />
       <recent name="C:\wamp64\www\planners\web\templatelist" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/pidev.iml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/config/config.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/PubliciteBundle/Controller/DefaultController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/PubliciteBundle/Repository/RatingRepository.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ReviewBundle/Controller/FavorisController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ReviewBundle/Entity/Commentaire.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ReviewBundle/Repository/CommentaireRepository.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing.yml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/aaa.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/yy.jpg</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/commandlinetools/Composer_06_04_18_17_35_c.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/commandlinetools/Composer_06_04_18_18_26_c.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/commandlinetools/Composer_4_3_18_12_42_PM_c.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/commandlinetools/Symfony_06_04_18_18_37_s.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/commandlinetools/Symfony_10_04_18_17_47_s.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/commandlinetools/Symfony_4_3_18_12_42_PM_s.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/PlanBundle/Entity/Evaluaion.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/3e23ab36832dc7316aedb891cac9df0c.jpeg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/9a183a20bae604b0d3de537cafa85a2c.jpeg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/img/50x50.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/uploads/ImagesPlans/73df38fb74e40122e686914ffd54302d.jpeg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/uploads/ImagesPlans/a2d847a6e3b02df1268101370dc08fe6.jpeg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/uploads/ImagesPlans/acbde43eb98eaf4319bcf93512852573.jpeg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/web/uploads/ImagesPlans/c261b23e0325f4cbbcc7d1a29bc93768.jpeg</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -564,7 +827,8 @@
       <workItem from="1525645593610" duration="610000" />
       <workItem from="1525652362515" duration="258000" />
       <workItem from="1525659599370" duration="1009000" />
-      <workItem from="1525661454219" duration="994000" />
+      <workItem from="1525661454219" duration="1545000" />
+      <workItem from="1525664152026" duration="1041000" />
     </task>
     <task id="LOCAL-00001" summary="lina">
       <created>1521680998570</created>
@@ -608,11 +872,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525663505369</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="mahdi final">
+      <created>1525663614901</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1525663614901</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="321187000" />
+    <option name="totallyTimeSpent" value="322779000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -625,17 +896,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22768533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034258" sideWeight="0.51134646" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2903752" sideWeight="0.48865354" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32626426" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12274959" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23146747" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -643,7 +916,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2903752" sideWeight="0.48865354" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -697,13 +969,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/EvennementBundle/Controller/ParticipantController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="46" column="70" lean-forward="false" selection-start-line="46" selection-start-column="66" selection-end-line="46" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Entity/Publicite.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
@@ -1034,7 +1299,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="568">
           <caret line="96" column="24" lean-forward="true" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1050,72 +1314,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="73" column="63" lean-forward="false" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-474">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#675#715#0#PHP" expanded="true" />
-            <element signature="e#972#1003#1#PHP" expanded="true" />
-            <element signature="e#1430#1461#1#PHP" expanded="true" />
-            <element signature="e#1927#1958#1#PHP" expanded="true" />
-            <element signature="e#3790#3821#1#PHP" expanded="true" />
-            <element signature="e#3908#3939#1#PHP" expanded="true" />
-            <element signature="e#4034#4065#1#PHP" expanded="true" />
-            <element signature="e#4167#4198#1#PHP" expanded="true" />
-            <element signature="e#4780#4811#1#PHP" expanded="true" />
-            <element signature="e#5349#5396#0#PHP" expanded="true" />
-            <element signature="e#5582#5624#0#PHP" expanded="true" />
-            <element signature="e#5902#5933#1#PHP" expanded="true" />
-            <element signature="e#6028#6059#1#PHP" expanded="true" />
-            <element signature="e#6149#6180#1#PHP" expanded="true" />
-            <element signature="e#6257#6288#1#PHP" expanded="true" />
-            <element signature="e#6944#6975#1#PHP" expanded="true" />
-            <element signature="e#7044#7092#0#PHP" expanded="true" />
-            <element signature="e#7264#7307#0#PHP" expanded="true" />
-            <element signature="e#7582#7613#1#PHP" expanded="true" />
-            <element signature="e#7700#7731#1#PHP" expanded="true" />
-            <element signature="e#7821#7852#1#PHP" expanded="true" />
-            <element signature="e#7930#7961#1#PHP" expanded="true" />
-            <element signature="e#8626#8657#1#PHP" expanded="true" />
-            <element signature="e#8726#8775#0#PHP" expanded="true" />
-            <element signature="e#8960#9004#0#PHP" expanded="true" />
-            <element signature="e#9283#9314#1#PHP" expanded="true" />
-            <element signature="e#9401#9432#1#PHP" expanded="true" />
-            <element signature="e#9527#9558#1#PHP" expanded="true" />
-            <element signature="e#9636#9667#1#PHP" expanded="true" />
-            <element signature="e#10326#10357#1#PHP" expanded="true" />
-            <element signature="e#10426#10476#0#PHP" expanded="true" />
-            <element signature="e#10662#10707#0#PHP" expanded="true" />
-            <element signature="e#13481#13521#0#PHP" expanded="true" />
-            <element signature="e#14337#14367#1#PHP" expanded="true" />
-            <element signature="e#14605#14651#0#PHP" expanded="true" />
-            <element signature="e#14908#14949#0#PHP" expanded="true" />
-            <element signature="e#17091#17137#0#PHP" expanded="true" />
-            <element signature="e#17383#17424#0#PHP" expanded="true" />
-            <element signature="e#18692#18723#1#PHP" expanded="true" />
-            <element signature="e#18795#18826#1#PHP" expanded="true" />
-            <element signature="e#18906#18937#1#PHP" expanded="true" />
-            <element signature="e#19024#19055#1#PHP" expanded="true" />
-            <element signature="e#19379#19425#0#PHP" expanded="true" />
-            <element signature="e#19613#19654#0#PHP" expanded="true" />
-            <element signature="e#19913#19944#1#PHP" expanded="true" />
-            <element signature="e#20016#20047#1#PHP" expanded="true" />
-            <element signature="e#20127#20158#1#PHP" expanded="true" />
-            <element signature="e#20245#20276#1#PHP" expanded="true" />
-            <element signature="e#20602#20648#0#PHP" expanded="true" />
-            <element signature="e#20836#20877#0#PHP" expanded="true" />
-            <element signature="e#21158#21203#1#PHP" expanded="true" />
-            <element signature="e#21247#21287#1#PHP" expanded="true" />
-            <element signature="e#21650#21681#1#PHP" expanded="true" />
-            <element signature="e#21769#21800#1#PHP" expanded="true" />
-            <element signature="e#21896#21927#1#PHP" expanded="true" />
-            <element signature="e#22030#22061#1#PHP" expanded="true" />
-            <element signature="e#22382#22434#0#PHP" expanded="true" />
-            <element signature="e#22647#22694#0#PHP" expanded="true" />
-            <element signature="e#23351#23381#1#PHP" expanded="true" />
-            <element signature="e#23547#23587#0#PHP" expanded="true" />
-            <element signature="e#24563#24594#1#PHP" expanded="true" />
-            <element signature="e#25036#25067#1#PHP" expanded="true" />
-            <element signature="e#25154#25185#1#PHP" expanded="true" />
-            <element signature="e#25280#25311#1#PHP" expanded="true" />
-            <element signature="e#25404#25455#0#PHP" expanded="true" />
+            <marker date="1525665155179" expanded="true" signature="824:865" ph="SELECT u FRO... PubliciteBundle" />
+            <marker date="1525665155179" expanded="true" signature="1347:1404" ph="SELECT u FRO... PubliciteBundle" />
+            <marker date="1525665155179" expanded="true" signature="5011:5071" ph="SELECT u.con... PubliciteBundle" />
           </folding>
         </state>
       </provider>

@@ -10,5 +10,4 @@ namespace EvennementBundle\Repository;
  */
 class CategorieEventRepository extends \Doctrine\ORM\EntityRepository
 {
-
 }
