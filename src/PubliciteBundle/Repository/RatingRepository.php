@@ -19,6 +19,16 @@ class RatingRepository extends \Doctrine\ORM\EntityRepository
             );
         return $query->getResult();
     }
+
+    public function Trend()
+    {
+        $query = $this->getEntityManager()
+            ->createQuery("SELECT c FROM
+                      PubliciteBundle:Publicite c 
+                      ORDER BY c.nbClick DESC "
+            );
+        return $query->getResult();
+    }
 }
 
 

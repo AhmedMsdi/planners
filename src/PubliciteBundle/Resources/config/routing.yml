@@ -14,6 +14,14 @@ publicite_json:
     path:     /pubjson
     defaults: { _controller: PubliciteBundle:Default:all }
 
+publicite_jsontrend:
+    path:     /pubtrend
+    defaults: { _controller: PubliciteBundle:Default:trend }
+
+publicite_jsonpreso:
+    path:     /pubperso
+    defaults: { _controller: PubliciteBundle:Default:allPerso }
+
 publicite_jsonbyid:
     path:     /pubjsonid/{id}
     defaults: { _controller: PubliciteBundle:Default:byid }
