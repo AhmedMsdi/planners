@@ -2,6 +2,7 @@
 
 namespace PubliciteBundle\Controller;
 
+use PiBundle\Entity\User;
 use PubliciteBundle\Entity\Article;
 use PubliciteBundle\Entity\Publicite;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -137,6 +138,42 @@ class DefaultController extends Controller
         $tasks->setNbClick($tasks->getNbClick()+1);
         $em->persist($tasks);
         $em->flush();
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+
+    public function newUserAction(Request $request){
+        $em= $this->getDoctrine()->getManager();
+       // $user=$em->getRepository('PiBundle:User')->find($request->get('idUser'));
+        $task= new User();
+        $task->setNom($request->get('nom'));
+        $task->setPrenom($request->get('prenom'));
+
+        $task->setEmail($request->get('email'));
+        $task->setNbreSignal(0);
+        $task->setPointFidelite(0);
+        $task->setUsername($request->get('username'));
+        $task->setPlainPassword($request->get('password'));
+
+        $em= $this->getDoctrine()->getManager();
+        $tasks= $this->getDoctrine()->getManager()
+            ->getRepository('PiBundle:User')
+            ->findAll();
+
+        $em->persist($task);
+        $em->flush();
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+
+    public function allUserAction(){
+
+        $tasks= $this->getDoctrine()->getManager()
+            ->getRepository('PiBundle:User')
+            ->findAll();
+
         $serializer= new Serializer([new ObjectNormalizer()]);
         $formatted= $serializer->normalize($tasks);
         return new JsonResponse($formatted);
