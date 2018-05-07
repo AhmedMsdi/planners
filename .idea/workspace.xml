@@ -1,9 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="">
+    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="lina wS finaaaaaal !!">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/aaa.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ahmed.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/10_d1fea75c982fd921396d0d7726d3eeb3.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/2_09a561a6829e0575bed175280237b38a.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/4_986726c47339f359d2c36df7a6f61cbb.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5_d69f07585e4a8ec41b71580fd76f5104.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef6b77252ef.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef6de0c22d5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef6deced278.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef71214a31b.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef8ceecbc18.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef994fba143.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/6_0b6213068cd2935e84912667127ba5f7.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/7_2df81b7fad3b8561e9339bf4f2cb44d1.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/8_b4dd36446d649a39b812c70e11942fd6.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/9_79d4774236a546becf12b5944600cf85.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/CAMP.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/Camping.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/Parachute.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/Planche1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/Planche2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/Rando1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/activité2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/holi.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/holly.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/hollyday.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/karim-gharbi.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/rando3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/aaaa.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/dghjkl.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/ggg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_06_04_18_17_35_c.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_10_04_18_17_47_s.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scriptup.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/scriptup.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Repository/EvennementRepository.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -454,6 +489,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -1141,7 +1190,7 @@
       <workItem from="1525297079585" duration="4158000" />
       <workItem from="1525384591606" duration="5602000" />
       <workItem from="1525525050896" duration="10000" />
-      <workItem from="1525606016980" duration="9192000" />
+      <workItem from="1525606016980" duration="9523000" />
     </task>
     <task id="LOCAL-00001" summary="lina">
       <created>1521680998570</created>
@@ -1206,11 +1255,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525647939465</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lina wS finaaaaaal !!">
+      <created>1525653494969</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1525653494969</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="332802000" />
+    <option name="totallyTimeSpent" value="333133000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1223,10 +1279,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20499243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20499243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034258" sideWeight="0.51134646" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
