@@ -2,7 +2,6 @@
 
 namespace ReviewBundle\Controller;
 
-use PiBundle\Entity\User;
 use PlanBundle\Entity\Plan;
 use PubliciteBundle\Entity\Publicite;
 use ReviewBundle\Entity\Commentaire;
@@ -262,62 +261,4 @@ class CommentaireController extends Controller
             ->getForm()
         ;
     }
-
-
-    public function Contact_MailAction(Request $request){
-      /*
-        $reponse = "";
-        $em2=$this->getDoctrine()->getManager();
-        $id_cov=$request->get('id_cov');
-        $em5=$this->getDoctrine()->getManager();
-        $cov = $em5->getRepository(Covoiturage::class)->findOneBy(
-            ['idCov' => $id_cov]);
-
-        $user_contact=$request->get('id_contact');
-        $em3=$this->getDoctrine()->getManager();
-        $user_contact2change = $em3->getRepository(User::class)->findOneBy(
-            ['id' => $user_contact]);
-
-
-        $message=$request->get('message');
-
-        $em3=$this->getDoctrine()->getManager();
-        $user2change = $em3->getRepository(User::class)->findOneBy(
-            ['id' => $cov->getIdUser()]);
-
-        $em=$this->getDoctrine()->getManager();
-        $contenudemail = "Le etudiant : ".$user_contact2change->getPrenom()." de Class : ".$user_contact2change->getClasse()." Email : ".$user_contact2change->getEmail()." vien de vous envoyer cetter message a propo voter demande de coviturage : ".$message;
-       */
-
-        $user_contact=$request->get('id_contact');
-        $em3=$this->getDoctrine()->getManager();
-        $user_contact2change = $em3->getRepository(User::class)->findOneBy(
-            ['id' => $user_contact]);
-
-        $em=$this->getDoctrine()->getManager();
-        $res=$em->getRepository('ReviewBundle:Commentaire')->commentidommarDQL($request->get('id_res'));
-
-        $message = \Swift_Message::newInstance()
-            ->setSubject('Un commantaire ')
-            ->setFrom("omar.dagdoug@esprit.tn")
-            ->setTo($res[0]->getEmail())
-            ->setBody(
-                "un commentaire a été ajouteé sur votre publication merci de conculter l application "
-                ,
-                'text/html'
-            );
-        $this->get('mailer')->send($message);
-
-
-        $reponse[0]="Mail Envoyer";
-        $serializer = new Serializer([new ObjectNormalizer()]);
-        $formatted = $serializer->normalize($reponse);
-        return new JsonResponse($formatted);
-
-    }
-
-
-
-
-
 }

@@ -10,18 +10,4 @@ namespace ReviewBundle\Repository;
  */
 class CommentaireRepository extends \Doctrine\ORM\EntityRepository
 {
-    public function commentidommarDQL($id){
-
-        $req=$this->getEntityManager()->createQuery("SELECT c FROM
-                      PiBundle:User c JOIN 
-                      PlanBundle:Plan r WHERE c.id = r.user and r.idP=:p")
-            ->setParameter('p',$id);
-
-        return $req->getResult();
-
-
-    }
-
-
-
 }

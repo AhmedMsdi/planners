@@ -115,12 +115,3 @@ delete_notifs:
 recherche_Gastro:
     path:     /chercher
     defaults: { _controller: "PlanBundle:Plan:chercherGastro"}
-
-
-rate_add_mob:
-    path:     /rate/{note}/{iduser}/{idpub}
-    defaults: { _controller: "PlanBundle:Plan:ratemob"}
-
-rate_value_mob:
-    path:     /rateval/{idpub}
-    defaults: { _controller: "PlanBundle:Plan:rateval"}

@@ -31,6 +31,32 @@ class DefaultController extends Controller
         return new JsonResponse($formatted);
     }
 
+    public function allPersoAction(Request $request){
+        $em= $this->getDoctrine()->getManager();
+        $tasks= $this->getDoctrine()->getManager()
+            ->getRepository('PubliciteBundle:Publicite')
+            ->findAll();
+        $query = $em->createQuery('SELECT u FROM PubliciteBundle:Publicite u WHERE u.user=:p ')
+            ->setParameter('p',$request->get('idUser'));
+        $users = $query->getResult();
+
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($users);
+        return new JsonResponse($formatted);
+    }
+
+    public function trendAction(){
+        $em= $this->getDoctrine()->getManager();
+        $tasks= $this->getDoctrine()->getManager()
+            ->getRepository('PubliciteBundle:Rating')
+            ->Trend();
+
+
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+
     public function byidAction($id){
         $tasks= $this->getDoctrine()->getManager()
             ->getRepository('PubliciteBundle:Publicite')
@@ -50,7 +76,7 @@ class DefaultController extends Controller
         $task->setTags($request->get('tags'));
         $task->setImage($request->get('image'));
         $task->setUser($user);
-
+        $user->setPointFidelite($user->getPointFidelite()-100);
 
         $em->persist($task);
         $em->flush();
@@ -82,7 +108,7 @@ class DefaultController extends Controller
         $task->setImage($request->get('image'));
         $task->setUser($user);
         $task->setDatecreation(new \DateTime());
-
+        $user->setPointFidelite($user->getPointFidelite()+50);
         $em->persist($task);
         $em->flush();
         $serializer= new Serializer([new ObjectNormalizer()]);
