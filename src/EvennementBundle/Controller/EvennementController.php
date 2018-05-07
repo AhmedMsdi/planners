@@ -8,6 +8,9 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 /**
  * Evennement controller.
@@ -209,4 +212,5 @@ class EvennementController extends Controller
         // uniqid(), which is based on timestamps
         return md5(uniqid());
     }
+
 }

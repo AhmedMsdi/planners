@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Commentaireomar
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="ReviewBundle\Repository\CommentaireRepository")
  */
 class Commentaire
 {

@@ -2,6 +2,8 @@
 
 namespace PubliciteBundle\Controller;
 
+use PiBundle\Entity\User;
+use PubliciteBundle\Entity\Article;
 use PubliciteBundle\Entity\Publicite;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -40,12 +42,14 @@ class DefaultController extends Controller
 
     public function newAction(Request $request){
         $em= $this->getDoctrine()->getManager();
+        $user=$em->getRepository('PiBundle:User')->find($request->get('idUser'));
         $task= new Publicite();
         $task->setText($request->get('text'));
         $task->setDescription($request->get('description'));
         $task->setSiteWeb($request->get('siteweb'));
         $task->setTags($request->get('tags'));
         $task->setImage($request->get('image'));
+        $task->setUser($user);
 
 
         $em->persist($task);
@@ -67,19 +71,47 @@ class DefaultController extends Controller
         return new JsonResponse($formatted);
     }
 
+    public function newarticleAction(Request $request){
+        $em= $this->getDoctrine()->getManager();
+        $user=$em->getRepository('PiBundle:User')->find($request->get('idUser'));
+        $task= new Article();
+        $task->setTitre($request->get('titre'));
+        $task->setContenu($request->get('contenu'));
+
+        $task->setTags($request->get('tags'));
+        $task->setImage($request->get('image'));
+        $task->setUser($user);
+        $task->setDatecreation(new \DateTime());
+
+        $em->persist($task);
+        $em->flush();
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($task);
+        return new JsonResponse($formatted);
+    }
+
+    public function deletearticleAction(Article $article){
+        $em=$this->getDoctrine()->getManager();
+        //   $commentaire=$em->getRepository(Article::class)->find($id);
+
+        $em->remove($article);
+        $em->flush();
+
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($article);
+        return new JsonResponse($formatted);
+    }
+
     public function allArticleAction(){
         $em= $this->getDoctrine()->getManager();
         $tasks= $this->getDoctrine()->getManager()
             ->getRepository('PubliciteBundle:Article')
-            ->find(1);
+            ->findAll();
         $query = $em->createQuery('SELECT u.contenu FROM PubliciteBundle:Article u WHERE u.id=1 ');
         $users = $query->getResult();
-        $qq=$tasks->getContenu();
-       // $aa='https://www.instagram.com/';
-var_dump($qq);
-       header('Location: '.$qq );
-
-        exit();
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
     }
 
     public function uploadImageAction(Request $request)
@@ -96,5 +128,54 @@ var_dump($qq);
         } else {
             return new JsonResponse(array('info' => 'erreur'));
         }
+    }
+
+    public function clickAction($id){
+        $em= $this->getDoctrine()->getManager();
+        $tasks= $this->getDoctrine()->getManager()
+            ->getRepository('PubliciteBundle:Publicite')
+            ->find($id);
+        $tasks->setNbClick($tasks->getNbClick()+1);
+        $em->persist($tasks);
+        $em->flush();
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+
+    public function newUserAction(Request $request){
+        $em= $this->getDoctrine()->getManager();
+       // $user=$em->getRepository('PiBundle:User')->find($request->get('idUser'));
+        $task= new User();
+        $task->setNom($request->get('nom'));
+        $task->setPrenom($request->get('prenom'));
+
+        $task->setEmail($request->get('email'));
+        $task->setNbreSignal(0);
+        $task->setPointFidelite(0);
+        $task->setUsername($request->get('username'));
+        $task->setPlainPassword($request->get('password'));
+
+        $em= $this->getDoctrine()->getManager();
+        $tasks= $this->getDoctrine()->getManager()
+            ->getRepository('PiBundle:User')
+            ->findAll();
+
+        $em->persist($task);
+        $em->flush();
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+
+    public function allUserAction(){
+
+        $tasks= $this->getDoctrine()->getManager()
+            ->getRepository('PiBundle:User')
+            ->findAll();
+
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
     }
 }

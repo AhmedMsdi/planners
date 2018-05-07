@@ -57,7 +57,7 @@ class Hebergement
 
     /**
      * @ORM\ManyToOne(targetEntity="\PiBundle\Entity\User")
-     * @ORM\JoinColumn(name="idUser", referencedColumnName="id")
+     * @ORM\JoinColumn(name="idUser", referencedColumnName="id", nullable=true)
      */
 
     private $idUser;
@@ -109,14 +109,14 @@ class Hebergement
     /**
      * @var float
      *
-     * @ORM\Column(name="x", type="float", nullable=false)
+     * @ORM\Column(name="x", type="float", nullable=true)
      */
     private $x;
 
     /**
      * @var float
      *
-     * @ORM\Column(name="y", type="float", nullable=false)
+     * @ORM\Column(name="y", type="float", nullable=true)
      */
     private $y;
 
@@ -126,42 +126,42 @@ class Hebergement
     /**
      * @var string
      *
-     * @ORM\Column(name="depart", type="string", length=255)
+     * @ORM\Column(name="depart", type="string", length=255, nullable=true)
      */
     private $depart;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="depart_id", type="string", length=255)
+     * @ORM\Column(name="depart_id", type="string", length=255, nullable=true)
      */
     private $departId;
 
     /**
      * @var float
      *
-     * @ORM\Column(name="depart_lat", type="float")
+     * @ORM\Column(name="depart_lat", type="float", nullable=true)
      */
     private $departLat;
 
     /**
      * @var float
      *
-     * @ORM\Column(name="depart_lng", type="float")
+     * @ORM\Column(name="depart_lng", type="float", nullable=true)
      */
     private $departLng;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="destination", type="string", length=255)
+     * @ORM\Column(name="destination", type="string", length=255, nullable=true)
      */
     private $destination;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="destination_id", type="string", length=255)
+     * @ORM\Column(name="destination_id", type="string", length=255, nullable=true)
      */
     private $destinationId;
 

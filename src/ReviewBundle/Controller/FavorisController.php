@@ -32,6 +32,7 @@ class FavorisController extends Controller
         $utilisateur = new User();
         $em = $this->getDoctrine()->getManager();
         $signal = $em->getRepository('ReviewBundle:Favoris')->findBy(array('idUser' =>$this->getUser(),'idPlan' =>$plan));
+
         if($signal==null ){
             $user = $this->getUser();
 
