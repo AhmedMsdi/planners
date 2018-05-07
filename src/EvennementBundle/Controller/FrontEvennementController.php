@@ -3,12 +3,16 @@
 namespace EvennementBundle\Controller;
 
 use EvennementBundle\Entity\Evennement;
+use EvennementBundle\Entity\CategorieEvent;
 use EvennementBundle\Entity\Participant;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 /**
  * Evennement controller.
@@ -164,7 +168,7 @@ class FrontEvennementController extends Controller
     /**
      * Finds and displays a evennement entity.
      *
-     * @Route("/{id}/infoeventParticip", name="evennement_infoP")
+     * @Route("/{id}/infoeventParticip", name="evennement_info")
      * @Method("GET")
      */
     public function infoEventParticipAction(Evennement $evennement,$id)
@@ -271,7 +275,7 @@ if(!empty($file)) {
 }
                     $em->persist($evennement);
                     $em->flush();
-                    return $this->redirectToRoute('evennement_edit', array('id' => $evennement->getId()));
+                    return $this->redirectToRoute('evennement_list', array('id' => $evennement->getId()));
                 }
 
         return $this->render('EvennementBundle:evennement:front/edit.html.twig', array(
@@ -337,4 +341,226 @@ if(!empty($file)) {
     {
         return $this->render('EvennementBundle:evennement/front:Meteo.html.twig');
     }
+
+
+    /**
+     * Lists all evennement entities.
+     *
+     * @Route("/{id}/byId", name="byId_task")
+     * @Method("GET")
+     */
+    public function byidAction($id){
+        $tasks= $this->getDoctrine()->getManager()
+            ->getRepository('EvennementBundle:Evennement')
+            ->find($id);
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+
+
+
+    /**
+     * Lists all evennement entities.
+     *
+     * @Route("/all", name="all_task")
+     * @Method("GET")
+     */
+    public function allAction(){
+        $tasks= $this->getDoctrine()->getManager()
+            ->getRepository('EvennementBundle:Evennement')
+            ->MyFindAllMobile();
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($tasks);
+        return new JsonResponse($formatted);
+    }
+
+
+    /**
+     * Creates a new evennement entity.
+     *
+     * @Route("/newTask", name="task_new")
+     * @Method({"GET", "POST"})
+     */
+    public function newTaskAction(Request $request){
+        $em= $this->getDoctrine()->getManager();
+        $task= new Evennement();
+        $categorieEvents = $em->getRepository('EvennementBundle:CategorieEvent')->find($request->get('CatEvent'));
+        $userEvent = $em->getRepository('PiBundle:User')->find($request->get('User'));
+       // var_dump($categorieEvents);
+        //$catEventObj = find($request->get('CatEvent'));
+        $task->setTitre($request->get('titre'));
+        $task->setDescription($request->get('description'));
+        $task->setContact($request->get('contact'));
+        $task->setAdresse($request->get('adresse'));
+        $task->setPrix($request->get('prix'));
+        $task->setVille($request->get('ville'));
+        $task->setCatEvent($categorieEvents);
+        $task->setDateEvent(date_create($request->get('date_event')));
+        //$task->setTimeEvent(Time_create($request->get('time_event')));
+        $task->setImage($request->get('image'));
+        $task->setUser($userEvent);
+        $task->setEtat($request->get('etat'));
+        //var_dump($task);
+        $em->persist($task);
+        $em->flush();
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($task);
+        return new JsonResponse($formatted);
+    }
+
+    /**
+     * Creates a new evennement entity.
+     *
+     * @Route("/{id}/deleteTask", name="task_delete")
+     */
+    public function deleteTaskAction($id){
+
+        $em=$this->getDoctrine()->getManager();
+        $event= $em->getRepository("EvennementBundle:Evennement")->find("$id");
+
+        $em->remove($event);
+        $em->flush();
+
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($event);
+        return new JsonResponse($formatted);
+    }
+    /**
+     * Displays a form to edit an existing evennement entity.
+     *
+     * @Route("/{id}/updateTask", name="task_update")
+     * @Method({"GET", "POST"})
+     */
+    public function updateTaskAction(Request $request)
+    {
+        $id = $request->get('id');
+        //$type= $request->get('type');
+
+
+        $em = $this->getDoctrine()->getManager();
+        $task = $em->getRepository('EvennementBundle:Evennement')->find($id);
+
+        $categorieEvents = $em->getRepository('EvennementBundle:CategorieEvent')->find($request->get('CatEvent'));
+        $task->setTitre($request->get('titre'));
+        $task->setDescription($request->get('description'));
+        $task->setContact($request->get('contact'));
+        $task->setAdresse($request->get('adresse'));
+        $task->setPrix($request->get('prix'));
+        $task->setVille($request->get('ville'));
+        $task->setCatEvent($categorieEvents);
+        $task->setImage($request->get('image'));
+            // $client= new Utilisateur();
+            //$client->setRef($request->get('refClientFk'));
+
+            // $hotel= new Hebergement();
+            ///$hotel->setRef($request->get('refHebergementFk'));
+
+
+
+            $em->merge($task);
+            $em->flush();
+            $serializer = new Serializer([new ObjectNormalizer()]);
+            $formatted = $serializer->normalize($task);
+            return new JsonResponse($formatted);
+
+
+        }
+
+    /**
+     * Finds and displays a evennement entity.
+     *
+     * @Route("/{id}/EventParticipant", name="evennement_PTask")
+     * @Method("GET")
+     */
+    public function EventParticipantAction(Evennement $evennement,$id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $participant=$em->getRepository(Participant::class)->countVisitedEvent($id);
+
+        //return $this->render('participant/new.html.twig', array(
+           // 'evennement' => $evennement,'participant'=>$participant
+
+        //));
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($participant);
+        return new JsonResponse($formatted);
+    }
+    /**
+     * Lists all evennement entities.
+     *
+     * @Route("/MesEvent/{id}", name="MesEvennement_Task")
+     * @Method("GET")
+     */
+    public function MesEventAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('PiBundle:User')->find($id);
+        $evennements = $em->getRepository('EvennementBundle:Evennement')->findBy(['User'=>$user->getId()]);
+
+        //return $this->render('EvennementBundle:evennement:front/MesEvent.html.twig', array(
+           // 'evennements' => $evennements,
+       // ));
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($evennements );
+        return new JsonResponse($formatted);
+
+    }
+    /**
+     * Lists all categorieEvent entities.
+     *
+     * @Route("/indexCategorie", name="categorieevent_index")
+     * @Method("GET")
+     */
+    public function indexCategorieAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $categorieEvents = $em->getRepository('EvennementBundle:CategorieEvent')->findAll();
+
+       // return $this->render('EvennementBundle:categorieevent:index.html.twig', array(
+           // 'categorieEvents' => $categorieEvents,
+        //));
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($categorieEvents);
+        return new JsonResponse($formatted);
+
+    }
+    /**
+     * Creates a new participant entity.
+     *
+     * @Route("/newParicipant/{id}/{id_user}", name="participant_newP")
+     * @Method({"GET", "POST"})
+     */
+    public function newParicipantAction(Request $request,Evennement $evennement,$id,$id_user)
+    {
+        $em=$this->getDoctrine()->getManager();
+
+        $participant = new Participant();
+        $event=$em->getRepository('EvennementBundle:Evennement')->find($evennement);
+        $user=$em->getRepository('PiBundle:User')->find($id_user);
+
+
+        $participant->setUser($user);
+        $participant->setEvent($event);
+        $em->persist($participant);
+        $em->flush();
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($participant);
+        return new JsonResponse($formatted);
+    }
+
+
+    /**
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return new \DateTime('now', (new \DateTimeZone('Africa/Tunis')));
+    }
+
 }

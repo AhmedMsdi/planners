@@ -12,15 +12,31 @@ class EvennementRepository extends \Doctrine\ORM\EntityRepository
 {
     public function MyFindAll($data) {
         $currentdate = new \DateTime('now');
-        $queryBuilder = $this->createQueryBuilder('a')->where('a.date_event >= :date')
+        $queryBuilder = $this->createQueryBuilder('a')
+            ->where('a.date_event >= :date')
             ->orderBy('a.date_event','DESC')
             ->setParameter('date', $currentdate->format('Y-m-d'));
 
         $this->searchEvent($queryBuilder,$data);
+        $this->ordreEvent($queryBuilder,$data);
         $result = $queryBuilder->getQuery()->execute();
         return $result;
-
     }
+
+    public function MyFindAllMobile() {
+        $currentdate = new \DateTime('now');
+        $queryBuilder = $this->createQueryBuilder('a')
+            ->where('a.date_event >= :date')
+            ->andWhere('a.etat  = 1')
+            ->orderBy('a.date_event','ASC')
+            ->setParameter('date', $currentdate->format('Y-m-d')
+            );
+
+
+        $result = $queryBuilder->getQuery()->execute();
+        return $result;
+    }
+
     private function searchEvent(QueryBuilder $qb, $data)
     {
         if(isset($data['CatEvent']) && !empty($data['CatEvent'])){
@@ -36,6 +52,7 @@ class EvennementRepository extends \Doctrine\ORM\EntityRepository
                 ->setParameter('ville', '%'.$data['ville'].'%');
         }
     }
+
     private function ordreEvent(QueryBuilder $qb, $data)
     {
         if(isset($data['ordre']) && !empty($data['ordre'])){

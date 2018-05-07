@@ -8,13 +8,101 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Validator\Constraints\DateTime;
-
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 /**
  * Hebergement controller.
  *
  */
 class HebergementController extends Controller
 {
+
+
+    public function mapAction(Request $request)
+    {
+        return $this->render("@Hebergement/hebergement/map.html.twig",['departid'=>$request->get("departid") , 'destinationid' => $request->get("destinationid")]);
+    }
+
+
+    public function editMAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $messageries = $em->getRepository('HebergementBundle:Hebergement')->find($id);
+        $messageries->setDepart();
+        $em->persist($messageries);
+        $em->flush();
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($messageries);
+        return new JsonResponse($formatted);
+
+    }
+
+
+    /* Web service*/
+    public function allAction()
+    {
+        $hebergements = $this->getDoctrine()->getManager()
+        ->getRepository('HebergementBundle:Hebergement')->createQueryBuilder('e')
+            ->andWhere('e.enable like :val')
+            ->setParameter('val',true)
+            ->getQuery()
+            ->execute();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($hebergements);
+        return new JsonResponse($formatted);
+    }
+
+
+    public function findAction($id)
+    {
+        $hebergement = $this->getDoctrine()->getManager()
+            ->getRepository('HebergementBundle:Hebergement')
+            ->find($id);
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($hebergement);
+        return new JsonResponse($formatted);
+    }
+
+    public function WSnewAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user=$em->getRepository('PiBundle:User')->find($request->get('idUser'));
+        $hebergement = new Hebergement();
+        $hebergement->setTitre($request->get('titre'));
+        $hebergement->setCategorie($request->get('categorie'));
+        $hebergement->setPrix($request->get('prix'));
+        $hebergement->setDescription($request->get('description'));
+        $hebergement->setTel($request->get('tel'));
+        $hebergement->setLieu($request->get('lieu'));
+        $hebergement->setSiteWeb($request->get('siteWeb'));
+        $hebergement->setPhoto($request->get('photo'));
+        $hebergement->setEnable(0);
+        $hebergement->setIdUser($user);
+        $hebergement->setDatecreation(new \DateTime());
+        $hebergement->setX(35.829994611617);
+        $hebergement->setY(10.629039578049);
+
+        $em->persist($hebergement);
+        $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($hebergement);
+        return new JsonResponse($formatted);
+    }
+
+
+    public function WSdeleteAction(Hebergement $hebergement){
+        $em=$this->getDoctrine()->getManager();
+
+        $em->remove($hebergement);
+        $em->flush();
+
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($hebergement);
+        return new JsonResponse($formatted);
+    }
     /**
      * Lists all hebergement entities.
      *
@@ -355,13 +443,13 @@ class HebergementController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->remove($hebergement);
-            $em->flush();
-        }
+    $em->remove($hebergement);
+$em->flush();
+}
 
 
-        return $this->redirectToRoute('hebergement_index');
-    }
+return $this->redirectToRoute('hebergement_index');
+}
 
     /**
      * Creates a form to delete a hebergement entity.
@@ -559,6 +647,22 @@ class HebergementController extends Controller
                 'p'=>$p,
             ));
 
+    }
+
+    public function uploadImageAction(Request $request)
+    {
+        $imagename = $request->request->get('imagename');
+        $Imagecode = $request->request->get('image');
+        define('UPLOAD_DIR', 'C:/wamp64/www/planners/web/uploads/');
+        $img = base64_decode($Imagecode);
+        $uid = uniqid();
+        $file = UPLOAD_DIR . $imagename . '.jpg';
+        $success = file_put_contents($file, $img);
+        if ($success) {
+            return new JsonResponse(array('info' => $imagename . '.jpg'));
+        } else {
+            return new JsonResponse(array('info' => 'erreur'));
+        }
     }
 
 

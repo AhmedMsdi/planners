@@ -43,7 +43,7 @@ class ArticleController extends Controller
 
 
     public function chercherAction(Request $request)
-    {    $em = $this->getDoctrine()->getManager();
+    {     $em = $this->getDoctrine()->getManager();
 
         $articles = $em->getRepository('PubliciteBundle:Article')->findBy(array('user' =>$this->getUser()));
         $all = $em->getRepository('PubliciteBundle:Article')->findAll();

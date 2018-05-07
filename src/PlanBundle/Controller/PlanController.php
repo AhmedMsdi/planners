@@ -871,10 +871,11 @@ public function allGasAction()
         //  {
             $nom = $request->get('titre');
             $Reg = $request->get('Region');
-
+        $rating = $em->getRepository('PlanBundle:Rating')->AVGRating();
         $plans = $em->getRepository('PlanBundle:Plan')->FindAction($nom,$Reg);
         return $this->render('@Plan/Default/GastronomieFilter.html.twig', array(
             'plans' => $plans,
+            'rating' => $rating
         ));
 
 

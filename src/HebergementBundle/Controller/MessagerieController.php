@@ -7,6 +7,10 @@ use HebergementBundle\Entity\Messagerie;
 use PiBundle\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use DateTime;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 /**
  * Messagerie controller.
@@ -14,6 +18,60 @@ use Symfony\Component\HttpFoundation\Request;
  */
 class MessagerieController extends Controller
 {
+
+    public function editMAction(Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+            $messageries = $em->getRepository('HebergementBundle:Messagerie')->find($id);
+            $messageries->setEtat(2);
+            $em->persist($messageries);
+            $em->flush();
+
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($messageries);
+        return new JsonResponse($formatted);
+
+    }
+
+    public function allAction()
+    {
+        $messagerie = $this->getDoctrine()->getManager()
+            ->getRepository('HebergementBundle:Messagerie')->createQueryBuilder('e')
+            ->andWhere('e.etat like :val')
+            ->setParameter('val',1)
+            ->getQuery()
+            ->execute();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($messagerie );
+        return new JsonResponse($formatted);
+    }
+
+
+    public function WSnewMessAction(Request $request)
+    {
+
+
+        $em = $this->getDoctrine()->getManager();
+        $messageries = new Messagerie();
+        $DD= DateTime::createFromFormat('Y-m-d', $request->get('dateDebut'));
+        $DF= DateTime::createFromFormat('Y-m-d', $request->get('dateFin'));
+        $messageries->setDatedebut($DD);
+        $messageries->setDatefin($DF);
+        $messageries->setNbrPerson($request->get('nbrPerson'));
+        $messageries->setIdheb($request->get('idheb'));
+        $messageries->setIdClient($request->get('idClient'));
+        $messageries->setTypemessage('Client');
+      //  $u = $em->getRepository('PiBundle:User')->find($heb->getIdUser());
+        $messageries->setIdUser($request->get('idUser'));
+        $messageries->setEtat(1);
+        $em->persist($messageries);
+        $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($messageries);
+        return new JsonResponse($formatted);
+    }
+
     /**
      * Lists all messagerie entities.
      *
