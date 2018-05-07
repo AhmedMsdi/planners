@@ -27,8 +27,10 @@ class EvennementRepository extends \Doctrine\ORM\EntityRepository
         $currentdate = new \DateTime('now');
         $queryBuilder = $this->createQueryBuilder('a')
             ->where('a.date_event >= :date')
+            ->andWhere('a.etat  = 1')
             ->orderBy('a.date_event','ASC')
-            ->setParameter('date', $currentdate->format('Y-m-d'));
+            ->setParameter('date', $currentdate->format('Y-m-d')
+            );
 
 
         $result = $queryBuilder->getQuery()->execute();
