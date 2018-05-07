@@ -21,11 +21,11 @@ favorisindex:
     defaults: { _controller: "ReviewBundle:Favoris:index" }
     methods:  [GET, POST]
 
-all:
-    path:     /all
+alljson:
+    path:     /allcommentaire
     defaults: { _controller: "ReviewBundle:Commentaire:all" }
 
-all:
+all2:
     path:     /find/{id}
     defaults: { _controller: "ReviewBundle:Commentaire:find" }
 
@@ -40,3 +40,7 @@ create_comc:
 create_comco:
     path:     /fav
     defaults: { _controller: "ReviewBundle:Favoris:newFav" }
+
+mail_mobile:
+    path:     /mailmobile
+    defaults: { _controller: "ReviewBundle:Commentaire:Contact_Mail" }

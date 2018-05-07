@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="">
+    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="omar mobile">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PlanBundle/Entity/Evaluaion.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php" afterPath="$PROJECT_DIR$/src/PlanBundle/Controller/PlanController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml" afterPath="$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php" afterPath="$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Controller/FavorisController.php" afterPath="$PROJECT_DIR$/src/ReviewBundle/Controller/FavorisController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Entity/Commentaire.php" afterPath="$PROJECT_DIR$/src/ReviewBundle/Entity/Commentaire.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Repository/CommentaireRepository.php" afterPath="$PROJECT_DIR$/src/ReviewBundle/Repository/CommentaireRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ReviewBundle/Resources/views/favoris/indexfavoris.html.twig" afterPath="$PROJECT_DIR$/src/ReviewBundle/Resources/views/favoris/indexfavoris.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,35 +46,28 @@
       <file leaf-file-name="CommentaireController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="53" column="73" lean-forward="false" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
+            <state relative-caret-position="401">
+              <caret line="301" column="45" lean-forward="false" selection-start-line="301" selection-start-column="45" selection-end-line="301" selection-end-column="45" />
               <folding>
-                <element signature="e#43#70#0#PHP" expanded="true" />
-                <element signature="e#1486#1501#1#PHP" expanded="true" />
-                <element signature="e#1564#1581#1#PHP" expanded="true" />
-                <marker date="1525386799056" expanded="false" signature="2532:2545" ph="/detailG/{idP}" />
+                <element signature="e#43#68#0#PHP" expanded="true" />
+                <marker date="1525657232752" expanded="false" signature="2558:2571" ph="/detailG/{idP}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FavorisController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Controller/FavorisController.php">
+      <file leaf-file-name="plan.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="84" column="5" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
-              <folding>
-                <element signature="e#1776#1791#1#PHP" expanded="true" />
-                <element signature="e#1858#1875#1#PHP" expanded="true" />
-                <element signature="e#1947#1969#1#PHP" expanded="true" />
-                <element signature="e#2410#2432#1#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1673">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Favoris.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Entity/Favoris.php">
+      <file leaf-file-name="Evaluaion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PlanBundle/Entity/Evaluaion.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -78,11 +76,80 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing.yml">
+      <file leaf-file-name="Commentaire.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Entity/Commentaire.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="41" column="42" lean-forward="false" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+            <state relative-caret-position="119">
+              <caret line="8" column="77" lean-forward="false" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommentaireRepository.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Repository/CommentaireRepository.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <marker date="1525560503617" expanded="true" signature="344:474" ph="SELECT c FRO... PiBundle" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Plan.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PlanBundle/Entity/Plan.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PiBundle/Entity/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="18" />
+              <folding>
+                <element signature="e#6#88#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3689">
+              <caret line="225" column="25" lean-forward="false" selection-start-line="225" selection-start-column="20" selection-end-line="225" selection-end-column="25" />
+              <folding>
+                <element signature="e#7#259#0#PHP" expanded="false" />
+                <element signature="e#294#342#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FavorisController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Controller/FavorisController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+              <folding>
+                <element signature="e#846#886#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1513">
+              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,9 +166,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>150</find>
-      <find>price</find>
-      <find>.js</find>
       <find>genera</find>
       <find>even</find>
       <find>$evennements</find>
@@ -129,6 +193,9 @@
       <find>index</find>
       <find>search are</find>
       <find>resu</find>
+      <find>getem</find>
+      <find>user</find>
+      <find>id</find>
     </findStrings>
     <dirStrings>
       <dir>C:\wamp64\www\pidev</dir>
@@ -138,8 +205,6 @@
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="s doctrine:schema:update --force" />
-      <command text="c update " />
       <command text="c dump-autoload" />
       <command text="c update " />
       <command text="c require knplabs/knp-paginator-bundle" />
@@ -163,6 +228,8 @@
       <command text="c require spipu/html2pdf" />
       <command text="s doctrine:schema:update -f " />
       <command text="c require spipu/html2pdf" />
+      <command text="s swiftmailer:email:send" />
+      <command text="s doctrine:schema:update -f " />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -178,12 +245,12 @@
       </map>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/resultatsearch.html.twig" />
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/categorieevent/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/EvennementBundle/Controller/CategorieEventController.php" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/menuevent.twig" />
         <option value="$PROJECT_DIR$/web/js/general_main.js" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/menuevent.html.twig" />
@@ -195,7 +262,6 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" />
-        <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/front/Meteo.html.twig" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Form/EvennementEditType.php" />
         <option value="$PROJECT_DIR$/src/EvennementBundle/Resources/views/evennement/admin/new.html.twig" />
@@ -229,9 +295,13 @@
         <option value="$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/show.html.twig" />
         <option value="$PROJECT_DIR$/src/ReviewBundle/Resources/views/favoris/indexfavoris.html.twig" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php" />
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+        <option value="$PROJECT_DIR$/src/ReviewBundle/Entity/Commentaire.php" />
+        <option value="$PROJECT_DIR$/src/ReviewBundle/Repository/CommentaireRepository.php" />
         <option value="$PROJECT_DIR$/src/ReviewBundle/Controller/FavorisController.php" />
+        <option value="$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php" />
       </list>
     </option>
   </component>
@@ -332,7 +402,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -395,55 +464,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="planners" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="planners" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ReviewBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="planners" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="planners" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ReviewBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
+              <option name="myItemId" value="Repository" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -469,16 +490,71 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlanBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PlanBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="planners" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FirstSymfony" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../plannersSkan" />
     <property name="SearchEverywhereHistoryKey" value="wrapped&#9;null&#9;null&#10;validator.&#9;FILE&#9;file://C:/wamp64/www/pidev/vendor/friendsofsymfony/user-bundle/Resources/translations/validators.ar.yml&#10;/login&#9;FILE&#9;file://C:/wamp64/www/pidev/app/Resources/views/FOSUser/views/Security/login_content.html.twig" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="js.eslint.eslintPackage" value="" />
@@ -625,7 +701,8 @@
       <workItem from="1524829276783" duration="979000" />
       <workItem from="1524995906611" duration="8601000" />
       <workItem from="1525297079585" duration="4158000" />
-      <workItem from="1525384591606" duration="5602000" />
+      <workItem from="1525384591606" duration="17865000" />
+      <workItem from="1525643897965" duration="4737000" />
     </task>
     <task id="LOCAL-00001" summary="lina">
       <created>1521680998570</created>
@@ -662,11 +739,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523513392496</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="omar mobile">
+      <created>1525399017084</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1525399017084</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309651000" />
+    <option name="totallyTimeSpent" value="326651000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -679,30 +763,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31164902" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31164902" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034258" sideWeight="0.51134646" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5312" sideWeight="0.48865354" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12274959" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2903752" sideWeight="0.48865354" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -721,102 +805,14 @@
     <MESSAGE value="lina presque fini" />
     <MESSAGE value="mahdi final" />
     <MESSAGE value="omar final" />
-    <option name="LAST_COMMIT_MESSAGE" value="omar final" />
+    <MESSAGE value="omar mobile" />
+    <option name="LAST_COMMIT_MESSAGE" value="omar mobile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing/publicite.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/publicite/demandePub.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Form/PubliciteType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="12" lean-forward="false" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Controller/PubliciteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="28" column="112" lean-forward="false" selection-start-line="28" selection-start-column="72" selection-end-line="28" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Controller/PlanBackOffController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="53" column="61" lean-forward="false" selection-start-line="53" selection-start-column="61" selection-end-line="53" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Controller/PubBackController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="42" column="40" lean-forward="false" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/indexsmall.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/views/publicite/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="90" column="34" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="90" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/templatelist/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/templatelist/vendor/bootstrap/css/bootstrap-grid.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BackOfficeBundle/Resources/views/plan/TableauAllPlans.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PiBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -988,14 +984,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlanBundle/Entity/Plan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Controller/SignaisationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1887">
@@ -1028,7 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,7 +1033,6 @@
           <caret line="112" column="32" lean-forward="false" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="32" />
           <folding>
             <element signature="e#41#98#0#PHP" expanded="false" />
-            <marker date="1523512801091" expanded="true" signature="22560:22939" ph="SELECT p FRO... PlanBundle" />
           </folding>
         </state>
       </provider>
@@ -1067,36 +1053,146 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing/publicite.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlanBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing/commentaire.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing/signaisation.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="41" column="42" lean-forward="false" selection-start-line="41" selection-start-column="42" selection-end-line="41" selection-end-column="42" />
+        <state relative-caret-position="765">
+          <caret line="45" column="42" lean-forward="false" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Model/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3689">
+          <caret line="225" column="25" lean-forward="false" selection-start-line="225" selection-start-column="20" selection-end-line="225" selection-end-column="25" />
+          <folding>
+            <element signature="e#7#259#0#PHP" expanded="false" />
+            <element signature="e#294#342#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlanBundle/Entity/Plan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="15" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Entity/Commentaire.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="77" lean-forward="false" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Controller/FavorisController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="84" column="5" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
+        <state relative-caret-position="282">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding>
-            <element signature="e#1776#1791#1#PHP" expanded="true" />
-            <element signature="e#1858#1875#1#PHP" expanded="true" />
-            <element signature="e#1947#1969#1#PHP" expanded="true" />
-            <element signature="e#2410#2432#1#PHP" expanded="true" />
+            <element signature="e#846#886#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlanBundle/Entity/Evaluaion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PlanBundle/Resources/config/routing/plan.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1673">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PiBundle/Entity/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="21" column="18" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="18" />
+          <folding>
+            <element signature="e#6#88#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Repository/CommentaireRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <marker date="1525560503617" expanded="true" signature="344:474" ph="SELECT c FRO... PiBundle" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ReviewBundle/Controller/CommentaireController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="53" column="73" lean-forward="false" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
+        <state relative-caret-position="401">
+          <caret line="301" column="45" lean-forward="false" selection-start-line="301" selection-start-column="45" selection-end-line="301" selection-end-column="45" />
           <folding>
-            <element signature="e#43#70#0#PHP" expanded="true" />
-            <element signature="e#1486#1501#1#PHP" expanded="true" />
-            <element signature="e#1564#1581#1#PHP" expanded="true" />
-            <marker date="1525386799056" expanded="false" signature="2532:2545" ph="/detailG/{idP}" />
+            <element signature="e#43#68#0#PHP" expanded="true" />
+            <marker date="1525657232752" expanded="false" signature="2558:2571" ph="/detailG/{idP}" />
           </folding>
         </state>
       </provider>
