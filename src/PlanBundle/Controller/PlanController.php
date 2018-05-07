@@ -3,6 +3,7 @@
 namespace PlanBundle\Controller;
 
 use CMEN\GoogleChartsBundle\GoogleCharts\Charts\PieChart;
+use PlanBundle\Entity\Evaluaion;
 use PlanBundle\Entity\Plan;
 use PlanBundle\Entity\Rating;
 use PlanBundle\Form\ModifierAjoutType;
@@ -24,7 +25,62 @@ use Symfony\Component\Serializer\Serializer;
  */
 class PlanController extends Controller
 {
+    public function ratevalAction($idpub)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $rating = $em->getRepository('PlanBundle:Evaluaion')->findBy(array('idPub'=>$idpub));
+        $div=0;
+        $somme=0;
+        $total=0;
+        foreach ($rating as $item)
+        {
+            $div=$div+1;
+            $somme=$somme+$item->getNote();
+          if ($div==0)
+          {$total=0;}
+          else{
+            $total=$somme/$div;
+        }}
+        $send=array('nombre'=>$div,'note'=>$total);
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($send);
+        return new JsonResponse($formatted);
+    }
 
+
+
+
+    public function ratemobAction($note,$iduser,$idpub)
+    { $eva=new Evaluaion();
+        $em = $this->getDoctrine()->getManager();
+        $eva->setNote($note);
+        $eva->setIdPub($idpub);
+        $eva->setIdUsr($iduser);
+        try{
+            $em->persist($eva);
+            $em->flush();
+        }
+        catch(\Exception $exception ){
+            var_dump("error");
+            $em = $this->getDoctrine()->resetManager();
+            $eva=$em->getRepository("PlanBundle:Evaluaion")->findOneBy(array('idPub'=>$idpub,'idUsr'=>$iduser));
+            $eva->setNote($note);
+            $em->persist($eva);
+            $em->flush();
+
+        }
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($eva);
+        return new JsonResponse($formatted);
+
+    }
+
+
+
+
+
+
+//********************************************************
 /* Web service*/
 /* list all */
     public function allAction()
