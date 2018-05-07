@@ -397,7 +397,7 @@ if(!empty($file)) {
         $task->setVille($request->get('ville'));
         $task->setCatEvent($categorieEvents);
         $task->setDateEvent(date_create($request->get('date_event')));
-        $task->setTimeEvent(date_create($request->get('time_event')));
+        //$task->setTimeEvent(Time_create($request->get('time_event')));
         $task->setImage($request->get('image'));
         $task->setUser($userEvent);
         $task->setEtat($request->get('etat'));
@@ -449,10 +449,14 @@ if(!empty($file)) {
         $task->setPrix($request->get('prix'));
         $task->setVille($request->get('ville'));
         $task->setCatEvent($categorieEvents);
-        $task->setDateEvent(date_create($request->get('date_event')));
-        $task->setTimeEvent(date_create($request->get('time_event')));
         $task->setImage($request->get('image'));
-        $task->setEtat($request->get('etat'));
+            // $client= new Utilisateur();
+            //$client->setRef($request->get('refClientFk'));
+
+            // $hotel= new Hebergement();
+            ///$hotel->setRef($request->get('refHebergementFk'));
+
+
 
             $em->merge($task);
             $em->flush();
@@ -549,22 +553,6 @@ if(!empty($file)) {
         return new JsonResponse($formatted);
     }
 
-    /**
-     * Finds and displays a categorieEvent entity.
-     *
-     * @Route("/{id}/categorie", name="categorieevent_show")
-     * @Method("GET")
-     */
-    public function showCategorieByAction($id)
-    {
-
-        $em= $this->getDoctrine()->getManager();
-        $categorieEvent = $em->getRepository('EvennementBundle:CategorieEvent')->find($id);
-
-        $serializer = new Serializer([new ObjectNormalizer()]);
-        $formatted = $serializer->normalize($categorieEvent);
-        return new JsonResponse($formatted);
-    }
 
     /**
      *

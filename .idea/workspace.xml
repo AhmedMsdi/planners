@@ -1,44 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="lina wS finaaaaaal !!">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/aaa.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ahmed.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/10_d1fea75c982fd921396d0d7726d3eeb3.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/2_09a561a6829e0575bed175280237b38a.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/4_986726c47339f359d2c36df7a6f61cbb.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5_d69f07585e4a8ec41b71580fd76f5104.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef6b77252ef.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef6de0c22d5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef6deced278.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef71214a31b.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef8ceecbc18.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef994fba143.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/6_0b6213068cd2935e84912667127ba5f7.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/7_2df81b7fad3b8561e9339bf4f2cb44d1.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/8_b4dd36446d649a39b812c70e11942fd6.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/9_79d4774236a546becf12b5944600cf85.jpeg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/CAMP.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/Camping.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/Parachute.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/Planche1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/Planche2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/Rando1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/activité2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/holi.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/holly.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/hollyday.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/karim-gharbi.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/rando3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/aaaa.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/dghjkl.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/ggg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_06_04_18_17_35_c.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_10_04_18_17_47_s.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scriptup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/scriptup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="d40db2e8-d966-4859-8380-0c1e3cbe4253" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/,.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/07.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/1 (2).jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/1.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/10325219_1442153816048967_7261436260539719071_n.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/15871486_1172471156193548_2360718954981349863_n.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/1610920_1209875915733637_1742412582138412751_n.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/165c872a166f121d97f92fa81daf5d6f.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/201d1a62bf3f06fe6a91e323664a468b.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/39b525b49a7c8f7291b558a59c42a981.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/3b01f777a3c895ca8d6aefee5bda21a7.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/46c1613df12108a54617d07dba3d29a9.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/5.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/540346-636220588362252438-16x9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/55fac191cb03f1006e96b84bf3e0aeb3.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/593876_large.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/8567d668ccac0b9eb1a632019626e11c.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/8693c2f0c1a2fcbfb9da80790fc816a3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/8b3b0300101f6eb9ee28a166f20040be.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/8ceff14de8a3575500f9eecf903501a5.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/9230fabd3a667a761b6bda3caf30e69f.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/97219004.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/99fd124822f3cf3b32efee13e524510b.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/9b19489d2b29dcaf2c1a93831560cbd4.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/9f71d2c2913fecc62d86d7875718e4e0.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/BellagioExterior3_54_990x660_201404251834.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Chrysanthemum.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Desert.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Hydrangeas.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/IduserTest.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/05f006945c973e909835025736e8cae6.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/0b2cabace3944b70b2bfdfdeb0eab71d.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/116511a8f75c98a982762a36a36299e2.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/1d6a6bf408e1830f728e759e66f1ff09.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/2ee4bda41dab551a16e7727c00d435c4.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/3331c84a934851cca304706711c00cd0.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/45dc908ef644c5c40df6a0c9392f34a3.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/5b985a2cb37317e3cc410a5619a65f05.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/63dca4f8ff33d660cf754feca7f6daef.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/6a9c8195d1e2770edbe25293af679c72.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/6c9fe953fe7389d1ac344db6c971fe3c.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/6d5b08930caa67f956cae98480ba9f0b.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/7cc762aafa6e2e35e655fc9c177477f8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/8333b8dbc4002e42dc18b2e23a904328.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/91c95398d2b83fe882d64a32506cf2c7.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/9901757d653f4baa6f98b2841b422d8f.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/a0f5afede50234b740127f34e595fcfc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/acc2dcab68ed8f87b4a3cdbc59477797.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/b004983395330ab6a2a45e9fe58be7a4.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/bbe8aa62217fdf450f992aee78c14eda.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/de5652ae685a790f2c863f6f27a5db4c.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ImagesPlans/test2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Jellyfish.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Koala.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Lighthouse.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/OMG.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Penguins.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/a.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/a9792d0b08a83aa6b165e59b300e826d.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/aa.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/aaaa.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/abc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ahmed m3alem.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ahmed phone.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ahmedddd.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/avatar-10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/avatar-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/avatar-7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/b7362c2601eee5cea257a7094e847d6e.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/chambre-5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ck send .jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ck2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ckeditor.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/comment-choisir-le-meilleur-hotel-au-meilleur-prix-.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/complex image.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/d1f27c206b4c12ad383da5ec027849ac.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/d39caaf38c4c8d6db9a8933f21d0451f.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/da29055bd7d443244281652bdd1cd5c1.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ddbece18d27700a95da88bbaf3ea439e.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/de9293502719c00e97ee6e30e2e79823.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/e63e2038f465c903e36bea7cf566dfaa.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/f2614834e61a29bc6e44db06d0d65656.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/f3dd9ea333f8ce8b49a9a6d61866c2c1.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/fe7c2e56ad5185077d46ecf69f48163b.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ff74dd32dfe42848ed6211a953f1e7f5.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/gg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/hii.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/hotels-4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/hotls-rodents-in-hotels-rodrepel-blogs.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/imageEvent/5aef91f3e10d7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/logo-pidev.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/logo-pidev2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/messagerie.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/kidz.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/logo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/mahdi.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/masonhotes-100117-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/mummy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/printjs.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/profile.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/test bon affichage.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/test.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/testesatat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/testimage.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/teststat.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/top10-luxury-hotels-in-bangkok.jpg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/tr.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/tst.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/1.PNG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/15871486_1172471156193548_2360718954981349863_n.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/5.JPG" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Chrysanthemum.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/ImagesPlans/05f006945c973e909835025736e8cae6.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/ImagesPlans/116511a8f75c98a982762a36a36299e2.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/ImagesPlans/91c95398d2b83fe882d64a32506cf2c7.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/ImagesPlans/de5652ae685a790f2c863f6f27a5db4c.jpeg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Koala.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Mahdi test.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/Penguins.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/abc.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/comment-choisir-le-meilleur-hotel-au-meilleur-prix-.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/mahdi hotel.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/mahdi.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/uploads/testiduser.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/waaw.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/yoo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/yy.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_4_3_18_12_42_PM_c.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_4_3_18_12_42_PM_s.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/DefaultController.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/pidev.iml" afterPath="$PROJECT_DIR$/.idea/pidev.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" afterPath="$PROJECT_DIR$/src/EvennementBundle/Controller/FrontEvennementController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/PubliciteBundle/Resources/config/routing.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,19 +204,10 @@
                 <element signature="e#11642#11671#1#PHP" expanded="true" />
                 <element signature="e#12193#12226#1#PHP" expanded="true" />
                 <element signature="e#12302#12317#1#PHP" expanded="true" />
-                <element signature="e#13565#13594#1#PHP" expanded="true" />
-                <element signature="e#14223#14252#1#PHP" expanded="true" />
-                <element signature="e#14313#14346#1#PHP" expanded="true" />
-                <element signature="e#15383#15919#0#PHP" expanded="false" />
-                <element signature="e#16066#16659#0#PHP" expanded="false" />
-                <element signature="e#16193#16208#1#PHP" expanded="true" />
-                <element signature="e#16264#16293#1#PHP" expanded="true" />
-                <element signature="e#16813#17337#0#PHP" expanded="false" />
-                <element signature="e#16955#16988#1#PHP" expanded="true" />
-                <element signature="e#17510#18161#0#PHP" expanded="false" />
-                <element signature="e#17731#17760#1#PHP" expanded="true" />
-                <element signature="e#17815#17830#1#PHP" expanded="true" />
-                <element signature="e#18468#18501#1#PHP" expanded="true" />
+                <marker date="1525653835196" expanded="true" signature="706:18358" ph="{...}" />
+                <marker date="1525653835196" expanded="true" signature="12064:12882" ph="..." />
+                <marker date="1525653835196" expanded="true" signature="18199:18237" ph=" ..." />
+                <marker date="1525653835196" expanded="true" signature="18269:18355" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -155,12 +246,21 @@
       <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1891">
+            <state relative-caret-position="-2821">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1525525319669" expanded="false" signature="50:73" ph="..." />
-                <marker date="1525525319669" expanded="true" signature="798:839" ph="SELECT u FRO... PubliciteBundle" />
-                <marker date="1525525319669" expanded="true" signature="3884:3944" ph="SELECT u.con... PubliciteBundle" />
+                <element signature="e#46#71#0#PHP" expanded="true" />
+                <element signature="e#523#564#1#PHP" expanded="true" />
+                <element signature="e#735#762#1#PHP" expanded="true" />
+                <element signature="e#1192#1219#1#PHP" expanded="true" />
+                <element signature="e#1544#1559#1#PHP" expanded="true" />
+                <element signature="e#2675#2690#1#PHP" expanded="true" />
+                <element signature="e#3823#3848#1#PHP" expanded="true" />
+                <element signature="e#4946#4973#1#PHP" expanded="true" />
+                <element signature="e#5943#5958#1#PHP" expanded="true" />
+                <element signature="e#6321#6336#1#PHP" expanded="true" />
+                <marker date="1525653835206" expanded="true" signature="824:865" ph="SELECT u FRO... PubliciteBundle" />
+                <marker date="1525653835206" expanded="true" signature="3910:3970" ph="SELECT u.con... PubliciteBundle" />
               </folding>
             </state>
           </provider>
@@ -1036,15 +1136,15 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\planners\src\EvennementBundle\Resources\views\evennement\admin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\planners\app\Resources\views" />
       <recent name="C:\wamp64\www\planners\web\bundles" />
       <recent name="C:\wamp64\www\planners\src\BackOfficeBundle\Controller" />
       <recent name="C:\wamp64\www\planners\src\EvennementBundle\Resources\views\evennement\admin" />
       <recent name="C:\wamp64\www\planners\web\templatelist" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\planners\src\EvennementBundle\Resources\views\evennement\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1266,7 +1366,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333133000" />
+    <option name="totallyTimeSpent" value="333167000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1281,28 +1381,39 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20499243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20499243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034258" sideWeight="0.51134646" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12274959" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3034258" sideWeight="0.51134646" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.289644" sideWeight="0.48865354" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12274959" sideWeight="0.4924357" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20499243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1625,7 +1736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="714">
           <caret line="45" column="51" lean-forward="false" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1681,7 +1791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1744,31 +1853,31 @@
             <element signature="e#11642#11671#1#PHP" expanded="true" />
             <element signature="e#12193#12226#1#PHP" expanded="true" />
             <element signature="e#12302#12317#1#PHP" expanded="true" />
-            <element signature="e#13565#13594#1#PHP" expanded="true" />
-            <element signature="e#14223#14252#1#PHP" expanded="true" />
-            <element signature="e#14313#14346#1#PHP" expanded="true" />
-            <element signature="e#15383#15919#0#PHP" expanded="false" />
-            <element signature="e#16066#16659#0#PHP" expanded="false" />
-            <element signature="e#16193#16208#1#PHP" expanded="true" />
-            <element signature="e#16264#16293#1#PHP" expanded="true" />
-            <element signature="e#16813#17337#0#PHP" expanded="false" />
-            <element signature="e#16955#16988#1#PHP" expanded="true" />
-            <element signature="e#17510#18161#0#PHP" expanded="false" />
-            <element signature="e#17731#17760#1#PHP" expanded="true" />
-            <element signature="e#17815#17830#1#PHP" expanded="true" />
-            <element signature="e#18468#18501#1#PHP" expanded="true" />
+            <marker date="1525653835196" expanded="true" signature="706:18358" ph="{...}" />
+            <marker date="1525653835196" expanded="true" signature="12064:12882" ph="..." />
+            <marker date="1525653835196" expanded="true" signature="18199:18237" ph=" ..." />
+            <marker date="1525653835196" expanded="true" signature="18269:18355" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PubliciteBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1891">
+        <state relative-caret-position="-2821">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1525525319669" expanded="false" signature="50:73" ph="..." />
-            <marker date="1525525319669" expanded="true" signature="798:839" ph="SELECT u FRO... PubliciteBundle" />
-            <marker date="1525525319669" expanded="true" signature="3884:3944" ph="SELECT u.con... PubliciteBundle" />
+            <element signature="e#46#71#0#PHP" expanded="true" />
+            <element signature="e#523#564#1#PHP" expanded="true" />
+            <element signature="e#735#762#1#PHP" expanded="true" />
+            <element signature="e#1192#1219#1#PHP" expanded="true" />
+            <element signature="e#1544#1559#1#PHP" expanded="true" />
+            <element signature="e#2675#2690#1#PHP" expanded="true" />
+            <element signature="e#3823#3848#1#PHP" expanded="true" />
+            <element signature="e#4946#4973#1#PHP" expanded="true" />
+            <element signature="e#5943#5958#1#PHP" expanded="true" />
+            <element signature="e#6321#6336#1#PHP" expanded="true" />
+            <marker date="1525653835206" expanded="true" signature="824:865" ph="SELECT u FRO... PubliciteBundle" />
+            <marker date="1525653835206" expanded="true" signature="3910:3970" ph="SELECT u.con... PubliciteBundle" />
           </folding>
         </state>
       </provider>

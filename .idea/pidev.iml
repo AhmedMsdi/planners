@@ -93,7 +93,6 @@
     <orderEntry type="module-library">
       <library name="PHP" type="php">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/blackknight467/star-rating-bundle" />
           <root url="file://$MODULE_DIR$/vendor/cmen/google-charts-bundle" />
           <root url="file://$MODULE_DIR$/vendor/cocur/slugify" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
@@ -159,7 +158,6 @@
           <root url="file://$MODULE_DIR$/vendor/zendframework/zenddiagnostics" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/blackknight467/star-rating-bundle" />
           <root url="file://$MODULE_DIR$/vendor/cmen/google-charts-bundle" />
           <root url="file://$MODULE_DIR$/vendor/cocur/slugify" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
