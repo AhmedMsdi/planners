@@ -39,3 +39,11 @@ messagerie_editM:
 messagerie_showM:
     path:     /all
     defaults: { _controller: "HebergementBundle:Messagerie:all" }
+
+messagerie_deleteM:
+    path:     /{id}/deleteM
+    defaults: { _controller: "HebergementBundle:Messagerie:WSdelete" }
+
+messagerie_mail:
+    path:     /mail/{id}
+    defaults: { _controller: "HebergementBundle:Messagerie:WSmail" }

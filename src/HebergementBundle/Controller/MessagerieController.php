@@ -23,10 +23,10 @@ class MessagerieController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-            $messageries = $em->getRepository('HebergementBundle:Messagerie')->find($id);
-            $messageries->setEtat(2);
-            $em->persist($messageries);
-            $em->flush();
+        $messageries = $em->getRepository('HebergementBundle:Messagerie')->find($id);
+        $messageries->setEtat(2);
+        $em->persist($messageries);
+        $em->flush();
 
         $serializer = new Serializer([new ObjectNormalizer()]);
         $formatted = $serializer->normalize($messageries);
@@ -37,13 +37,26 @@ class MessagerieController extends Controller
     public function allAction()
     {
         $messagerie = $this->getDoctrine()->getManager()
-            ->getRepository('HebergementBundle:Messagerie')->createQueryBuilder('e')
-            ->andWhere('e.etat like :val')
-            ->setParameter('val',1)
-            ->getQuery()
-            ->execute();
+            ->getRepository('HebergementBundle:Messagerie')->findAll();
         $serializer = new Serializer([new ObjectNormalizer()]);
         $formatted = $serializer->normalize($messagerie );
+        return new JsonResponse($formatted);
+    }
+
+    public function WSdeleteAction(Messagerie $messagerie){
+        $em=$this->getDoctrine()->getManager();
+        $em->remove($messagerie);
+        $em->flush();
+        $serializer= new Serializer([new ObjectNormalizer()]);
+        $formatted= $serializer->normalize($messagerie);
+        return new JsonResponse($formatted);
+    }
+
+    public function WSmailAction(Request $request, $id){
+        $user = $this->getDoctrine()->getManager()
+            ->getRepository('PiBundle:User')->find($id);
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($user);
         return new JsonResponse($formatted);
     }
 
@@ -62,7 +75,6 @@ class MessagerieController extends Controller
         $messageries->setIdheb($request->get('idheb'));
         $messageries->setIdClient($request->get('idClient'));
         $messageries->setTypemessage('Client');
-      //  $u = $em->getRepository('PiBundle:User')->find($heb->getIdUser());
         $messageries->setIdUser($request->get('idUser'));
         $messageries->setEtat(1);
         $em->persist($messageries);
@@ -135,7 +147,7 @@ class MessagerieController extends Controller
             $em->persist($messageries);
             $em->flush();
             if ($user->getId()!=$messageries->getIdUser())
-            return $this->redirectToRoute('hebergement_show', array('id' => $idh));
+                return $this->redirectToRoute('hebergement_show', array('id' => $idh));
             else
                 return $this->redirectToRoute('hebergement_index');
 
@@ -195,9 +207,9 @@ class MessagerieController extends Controller
     public function deleteAction(Request $request, Messagerie $messagerie)
     {
         var_dump($messagerie);
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($messagerie);
-            $em->flush();
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($messagerie);
+        $em->flush();
 
 
         return $this->redirectToRoute('messagerie_index');
@@ -216,6 +228,6 @@ class MessagerieController extends Controller
             ->setAction($this->generateUrl('messagerie_delete', array('id' => $messagerie->getId())))
             ->setMethod('DELETE')
             ->getForm()
-        ;
+            ;
     }
 }

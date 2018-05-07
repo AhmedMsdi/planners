@@ -4,6 +4,8 @@ namespace HebergementBundle\Controller;
 
 use HebergementBundle\Entity\Hebergement;
 use HebergementBundle\Entity\Messagerie;
+use PiBundle\Entity\User;
+use PlanBundle\PlanBundle;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
@@ -45,7 +47,7 @@ class HebergementController extends Controller
     public function allAction()
     {
         $hebergements = $this->getDoctrine()->getManager()
-        ->getRepository('HebergementBundle:Hebergement')->createQueryBuilder('e')
+            ->getRepository('HebergementBundle:Hebergement')->createQueryBuilder('e')
             ->andWhere('e.enable like :val')
             ->setParameter('val',true)
             ->getQuery()
@@ -79,7 +81,8 @@ class HebergementController extends Controller
         $hebergement->setSiteWeb($request->get('siteWeb'));
         $hebergement->setPhoto($request->get('photo'));
         $hebergement->setEnable(0);
-       // $hebergement->setIdUser($request->get('idUser'));
+        $u =$em->getRepository("PiBundle:User")->find($request->get('idUser'));
+        $hebergement->setIdUser($u);
         $hebergement->setDatecreation(new \DateTime());
         $hebergement->setX(35.829994611617);
         $hebergement->setY(10.629039578049);
@@ -189,7 +192,7 @@ class HebergementController extends Controller
             'm'=>$m,
             'p'=>$p,
             'a'=>$a,
-    ));
+        ));
     }
 
     public function indexmaisonsAction(Request $request)
@@ -284,7 +287,7 @@ class HebergementController extends Controller
         $user = $kernel->getContainer()->get('security.token_storage')->getToken()->getUser();
         if ($user === 'anon.' ) {
             $this->addFlash('danger','veuiller Connecter!!!');
-             return $this->redirectToRoute('pi_homepage');
+            return $this->redirectToRoute('pi_homepage');
         }elseif (in_array('ROLE_CLIENT', $this->getUser()->getRoles())) {
             $hebergement = new Hebergement();
             $form = $this->createForm('HebergementBundle\Form\HebergementType', $hebergement);
@@ -309,30 +312,30 @@ class HebergementController extends Controller
                 return $this->redirectToRoute('hebergement_show', array('id' => $hebergement->getId()));
             }
         }
-            if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
-                $hebergement = new Hebergement();
-                $form = $this->createForm('HebergementBundle\Form\HebergementType', $hebergement);
-                $form->handleRequest($request);
-                if ($form->isSubmitted() && $form->isValid()) {
-                    /**
-                     * @var UploadedFile $file
-                     */
-                    $file = $hebergement->getPhoto();
+        if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+            $hebergement = new Hebergement();
+            $form = $this->createForm('HebergementBundle\Form\HebergementType', $hebergement);
+            $form->handleRequest($request);
+            if ($form->isSubmitted() && $form->isValid()) {
+                /**
+                 * @var UploadedFile $file
+                 */
+                $file = $hebergement->getPhoto();
 
-                    $file->move(
-                        $this->getParameter('images_directory'), $file->getClientOriginalName());
-                    $hebergement->setPhoto($file->getClientOriginalName());
-                    $hebergement->setDatecreation(new \DateTime());
-                    $em = $this->getDoctrine()->getManager();
-                    $hebergement->setIdUser($user);
-                    $hebergement->setEnable(1);
-                    $em->persist($hebergement);
-                    $em->flush();
+                $file->move(
+                    $this->getParameter('images_directory'), $file->getClientOriginalName());
+                $hebergement->setPhoto($file->getClientOriginalName());
+                $hebergement->setDatecreation(new \DateTime());
+                $em = $this->getDoctrine()->getManager();
+                $hebergement->setIdUser($user);
+                $hebergement->setEnable(1);
+                $em->persist($hebergement);
+                $em->flush();
 
-                    return $this->redirectToRoute('hebergement_show', array('id' => $hebergement->getId()));
-                }
+                return $this->redirectToRoute('hebergement_show', array('id' => $hebergement->getId()));
+            }
         }
-                return $this->render('@Hebergement/hebergement/new.html.twig', array(
+        return $this->render('@Hebergement/hebergement/new.html.twig', array(
             'hebergement' => $hebergement,
             'form' => $form->createView(),
         ));
@@ -349,7 +352,7 @@ class HebergementController extends Controller
         if ($user === 'anon.' ) {
             return $this->redirectToRoute('fos_user_security_login');
         }else
-        $em = $this->getDoctrine()->getManager();
+            $em = $this->getDoctrine()->getManager();
 
         $deleteForm = $this->createDeleteForm($hebergement);
         $messagerie=new Messagerie();
@@ -358,7 +361,7 @@ class HebergementController extends Controller
 
         $mes = $em->getRepository('HebergementBundle:Messagerie')->findOneBy(array('idheb'=>$hebergement->getId()));
         if ($mes!==null)
-        $etat=$mes->getEtat();
+            $etat=$mes->getEtat();
         else $etat=0;
         if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
             return $this->render('@Hebergement/hebergementadmin/show.html.twig', array(
@@ -369,7 +372,7 @@ class HebergementController extends Controller
 
             ));
         }
-            return $this->render('@Hebergement/hebergement/show.html.twig', array(
+        return $this->render('@Hebergement/hebergement/show.html.twig', array(
             'hebergement' => $hebergement,
             'etat' => $etat,
             'formres'=>$form->createView(),
@@ -395,7 +398,7 @@ class HebergementController extends Controller
             $deleteForm = $this->createDeleteForm($hebergement);
             $editForm = $this->createForm('HebergementBundle\Form\HebergementType', $hebergement);
             $editForm->handleRequest($request);
-                $x=$hebergement->getPhoto();
+            $x=$hebergement->getPhoto();
             if ($editForm->isSubmitted() && $editForm->isValid()) {
                 if ($hebergement->getPhoto()=="")
                 {
@@ -442,13 +445,13 @@ class HebergementController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-    $em->remove($hebergement);
-$em->flush();
-}
+            $em->remove($hebergement);
+            $em->flush();
+        }
 
 
-return $this->redirectToRoute('hebergement_index');
-}
+        return $this->redirectToRoute('hebergement_index');
+    }
 
     /**
      * Creates a form to delete a hebergement entity.
@@ -463,7 +466,7 @@ return $this->redirectToRoute('hebergement_index');
             ->setAction($this->generateUrl('hebergement_delete', array('id' => $hebergement->getId())))
             ->setMethod('DELETE')
             ->getForm()
-        ;
+            ;
     }
 
     public function rechAction($name)
@@ -543,17 +546,17 @@ return $this->redirectToRoute('hebergement_index');
         if ($user === 'anon.' ) {
             return $this->redirectToRoute('pi_homepage');
         }else{
-        $em = $this->getDoctrine()->getManager();
-        $h = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Hôtel",'idUser'=>$user));
-        $m = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Maison_d'hôte",'idUser'=>$user));
-        $p = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Pensions",'idUser'=>$user));
+            $em = $this->getDoctrine()->getManager();
+            $h = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Hôtel",'idUser'=>$user));
+            $m = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Maison_d'hôte",'idUser'=>$user));
+            $p = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Pensions",'idUser'=>$user));
 
-        $hebergements = $em->getRepository('HebergementBundle:Hebergement')->createQueryBuilder('e')
-            ->where('e.idUser =:val')
-            ->setParameter('val',$user)
-            ->addORderBy('e.datecreation', 'DESC')
-            ->getQuery()
-            ->execute();
+            $hebergements = $em->getRepository('HebergementBundle:Hebergement')->createQueryBuilder('e')
+                ->where('e.idUser =:val')
+                ->setParameter('val',$user)
+                ->addORderBy('e.datecreation', 'DESC')
+                ->getQuery()
+                ->execute();
             if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
                 return $this->render('@Hebergement/hebergementadmin/mesbonplan.html.twig', array(
                     'hebergements' => $hebergements,
@@ -563,12 +566,12 @@ return $this->redirectToRoute('hebergement_index');
                 ));
 
             }
-        return $this->render('@Hebergement/hebergement/mesbonplan.html.twig', array(
-            'hebergements' => $hebergements,
-            'm'=>$m,
-            'h'=>$h,
-            'p'=>$p,
-        ));
+            return $this->render('@Hebergement/hebergement/mesbonplan.html.twig', array(
+                'hebergements' => $hebergements,
+                'm'=>$m,
+                'h'=>$h,
+                'p'=>$p,
+            ));
         }
     }
     public function pdfAction(Request $request,Hebergement $hebergement)
@@ -608,16 +611,16 @@ return $this->redirectToRoute('hebergement_index');
     public function confAction(Request $request, Hebergement $hebergement)
     {
 
-            if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
-               $hebergement->setEnable(1);
-                $this->getDoctrine()->getManager()->flush();
+        if (in_array('ROLE_SUPER_ADMIN', $this->getUser()->getRoles())) {
+            $hebergement->setEnable(1);
+            $this->getDoctrine()->getManager()->flush();
 
-                return $this->redirectToRoute('hebergement_index');
-            }
-            else{
-                return $this->redirectToRoute('hebergement_index');
+            return $this->redirectToRoute('hebergement_index');
+        }
+        else{
+            return $this->redirectToRoute('hebergement_index');
 
-            }
+        }
     }
 
     public function rechadminAction(Request $request)
@@ -639,12 +642,12 @@ return $this->redirectToRoute('hebergement_index');
         $p = $em->getRepository('HebergementBundle:Hebergement')->findBy(array('categorie'=>"Pensions",'enable'=>true));
 
 
-            return $this->render('@Hebergement/hebergementadmin/rechadmin.html.twig', array(
-                'hebergements' => $hebergements,
-                'm'=>$m,
-                'h'=>$h,
-                'p'=>$p,
-            ));
+        return $this->render('@Hebergement/hebergementadmin/rechadmin.html.twig', array(
+            'hebergements' => $hebergements,
+            'm'=>$m,
+            'h'=>$h,
+            'p'=>$p,
+        ));
 
     }
 
